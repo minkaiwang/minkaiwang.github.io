@@ -1,62 +1,131 @@
 ---
-title: "Yujun Lian"
-image: images/lianyujun_2025.png
-about:
-  id: hero-heading
-  template: trestles
-  image-width: 12em
-  image-shape: round
-  links:
-    - icon: mailbox
-      text: arlionn@163.com
-      href: mailto:arlionn@163.com
-    - icon: github
-      text: arlionn
-      href: https://github.com/lianyujun
-    - icon: book
-      text: Google Scholar
-      href: https://scholar.google.com/citations?user=tlkDP2AAAAAJ
-    - icon: fingerprint
-      text: ORCID
-      href: https://orcid.org/0000-0002-2011-7535
-    - icon: brands zhihu
-      text: 知乎
-      href: https://www.zhihu.com/people/arlionn/
-    - icon: brands weibo
-      text: 微博
-      href: https://weibo.com/arlionn
-    - icon: brands xing
-      text: 小红书
-      href: https://www.xiaohongshu.com/user/profile/682968d9000000000a03da1a
-    - icon: solid user
-      text: 工作主页
-      href: https://lingnan.sysu.edu.cn/faculty/LianYujun
-    - icon: brands home
-      text: 连享会
-      href: https://www.lianxh.cn
-    - icon: 📝
-      text: CV
-      href: CV.pdf  
+title: "Minkai Wang"
 ---
 
-::: {#hero-heading}
+::: {.about-entity}
+![](images/fig.png){style="display: block; margin: 0 auto; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.15); width: 12em; height: 12em; object-fit: cover;"}
+:::
 
-Professor Lian's research interests lie in the field of causal inference methods and stochastic frontier analysis, with specific applications in investment, trade credit, and supply chain dynamics. He has been actively researching topics such as supply chain finance, leverage adjustment, trade credit, and innovation. He teaches courses in Financial Econometrics and Applied Econometrics. 
+<div class="about-links" style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
+  <a href="mailto:wmkhappy7@gmail.com" style="text-decoration: none; margin: 0 10px;">
+    <i class="bi bi-envelope"></i> Email
+  </a> | 
+  <a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl" style="text-decoration: none; margin: 0 10px;">
+    <i class="bi bi-mortarboard"></i> Google Scholar
+  </a> | 
+  <a href="https://orcid.org/0009-0003-9591-1076" style="text-decoration: none; margin: 0 10px;">
+    <i class="bi bi-fingerprint"></i> ORCID
+  </a>
+</div>
 
-His teaching abilities have been highly regarded, as evidenced by his consecutive perfect teaching evaluations in the MBA corporate finance course over a span of three years. He was was awarded the title of *My Favorite Teacher* in 2022 by Lignan College. 
+**Minkai Wang** is a Ph.D. student in the Department of Educational Technology at **Zhejiang University**, supervised by Prof. Xuesong Zhai. He is also a veteran who served in the Strategic Support Force of the Chinese People's Liberation Army (PLA).
 
-With his expertise in applied econometrics, he has made significant contributions to the [Stata](https://www.stata.com/) community by developing several popular packages, including `winsor2`, `xtbalance`, `bdiff`, and `sftt`, which have been widely used by researchers in various fields. He is one of the initiators of the Chinese Stata Users Group Meeting, which is one of the imporat meeting of Stata Corporation. He has been invited several times as a guest speaker to deliver keynote speeches ([2018th](https://www.stata.com/meeting/china18/), [2020th](https://www.stata.com/meeting/china20-Uone-Tech/), [2021th](https://www.stata.com/meeting/china21-Uone-Tech/), [2022th](https://www.stata.com/meeting/china22-Uone-Tech/), [2023th](https://www.stata.com/meeting/china23-Uone-Tech/)).
+His research interests lie at the intersection of **Game-based Learning (GBL)**, **Artificial Intelligence in Education (AIED)**, and the **Metaverse**. He is dedicated to exploring how emerging technologies can reshape learning experiences and cognitive development.
 
-He is also the founder of the website <https://www.lianxh.cn>, one of the largest academic websites in mainland China specializing in management and economics. Currently, it has published over 1300 articles introducing econometric and statistical methods. The WeChat official account lianxh_cn, established based on this website, has accumulated over 280,000 subscribers, with a total reading volume exceeding 20 million and a daily average reading volume exceeding 10,000.
+His academic work has been published in international authoritative journals such as *Journal of Computer Assisted Learning*, *Journal of Educational Computing Research*, and *Entertainment Computing*.
 
+## Education
 
-## Background
+- **Sept 2026 - Present** | **Zhejiang University** | Ph.D. in Educational Technology | Supervisor: Xuesong Zhai
+- **Sept 2023 - June 2026** | **Zhejiang University of Technology** | Master in Educational Technology | Supervisor: Jingdong Zhu
+- **Sept 2019 - June 2023** | **Zhejiang Shuren University** | Bachelor in Digital Media Technology | Supervisor: Hanjie Gu
+- **Sept 2017 - Sept 2019** | **Chinese People's Liberation Army (PLA)** | Strategic Support Force | Soldier
 
-- Jan 2024 - Aug 2024: Visiting Professor, DeGroote School of Business, McMaster Univeristy. 
-- Aug 2015 - Jan 2016: Visiting Scholar, MIT Sloan School of Management, Massachusetts Institute of Technology
-- 2011 - Present: Associate Professor, Lingnan College, Sun Yat-sen University, specializing in Quantitative Economics
-- 2007-2010: Lecturer, Department of Finance, Lingnan College, Sun Yat-sen University
-- 2001-2007: Ph.D. in Economics, Xi'an Jiaotong University, China, specializing in Econometrics
-- 1997-2001: Bachelor of Engineering, Xi'an Jiaotong University, China, majoring in Materials Science.
+## Academic Publications
+
+### 📄 Journal Papers (Selected)
+
+- **Wang, M.**, Zhu, J., Hwang, G., Chang, S., Yang Q., & Zhang, D. Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games. **Journal of Computer Assisted Learning**, 41(6): e70138. [[Link]](https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139)
+- **Wang, M.**, Zhang, D., Zhu, J., & Gu, H. Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students’ Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns. **Journal of Educational Computing Research**, 63(3), 662-694. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251321719)
+- **Wang, M.**, Zhu, J., Gu, H., Zhang, J, & Wu, D. Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning. **Entertainment Computing**, 100960. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952125000400)
+- **Wang, M.**, Zhu, J., Qian, Wei., Gu, H. Integrating artificial intelligence and gamification in rehabilitation: a scoping review. **Entertainment Computing**, 101011. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952125000916)
+- Gong, Y., **Wang, M.**, He, L., Xu, C., & Yu, Y. Asking, playing, learning: Investigating large language model-based scaffolding in digital game-based learning for elementary artificial intelligence education. **Journal of Educational Computing Research**, 07356331251396354. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251396354)
+- Xu, Y., Zhu, J., **Wang, M.**, Qian, F., Yang, Y., & Zhang, J. The Impact of a Digital Game-Based AI Chatbot on Students’ Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum. **Applied Sciences**, 2024, 14(15): 6418. [[Link]](https://www.mdpi.com/2076-3417/14/15/6418)
+- Zhang, J., Zhu, J., Tu, W., **Wang, M.**, Yang, Y., Qian, F., & Xu, Y.  The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture. **Applied Sciences**, 2024, 14(15): 6484. [[Link]](https://www.mdpi.com/2076-3417/14/15/6484)
+
+### 🗣️ Conference Presentations
+- **2024 (Xiamen)** | The 1st National Symposium on AI-Empowered Interdisciplinary Project-Based Learning
+
+### 📘 Reports & Blue Books
+- Deeply participated in the compilation of the **"Blue Book on Digital Education Development in Zhejiang Province"**
+- Deeply participated in the compilation of the **"Development Report on New Comprehensive Practical Education Venues in Zhejiang Province"**
+
+## Engineering & Software Development
+
+### 🎮 Educational Games
+
+::: {layout-ncol=3}
+
+![[**"Waiting for an Egg"** (Steam)](https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg)](images/game1.png){group="games" style="border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%;"}
+
+![[**"Sprout's Journey"** (ITCH)](https://charmpoint.itch.io/xiaoshuya-chufa)](images/game2.png){group="games" style="border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%;"}
+
+![[**"Centennial Shuttle"** (ITCH)](https://charmpoint.itch.io/bncsj)](images/game3.png){group="games" style="border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%;"}
 
 :::
+
+### 💻 Software Copyrights
+- Educational Game Software for Campus Navigation
+- Role-Playing Based Red Tourism Educational Game
+- Information Technology Classroom Attendance System
+- Information Technology Classroom Interaction System
+- Student Project Management Platform
+
+## Research Grants
+
+1. **Host** | Zhejiang University of Technology "Canal Cup" Key Project: Research on the Application of LLM Virtual Agents Replacing Reality Games in STEAM Education (2024-2025)
+2. **Host** | Zhejiang University of Technology "Canal Cup" Key Project: Design and Practice of LLM-Driven Adaptive Science Education Contextual Games (2024-2025)
+3. **Participant** | Zhejiang Educational Technology Center Project: Theme Science Museum — Primary School Practical Education in the Digital Intelligence Era (2023-2024)
+4. **Participant** | Ministry of Education National Innovation and Entrepreneurship Training Program: Deep Development of "Immersive Red Tour" Digital Red Tourism Application (2022-2023)
+5. **Host** | Zhejiang Provincial Innovation and Entrepreneurship Training Program: Research and Development of Role-Playing Based Campus Navigation Game (2021-2022)
+
+**Other Participated Projects (PI: Prof. Jingdong Zhu)**
+
+1. **Participant** | Research on Excellent Teaching Cases of AI Education in Primary and Secondary Schools (National Institute of Education Sciences, etc., 2024-2025)
+2. **Participant** | Geely Automobile Industry Sci-Tech Innovation Practice Education Base (Geely Automobile Research Institute, etc., 2024-2025)
+3. **Participant** | Intelligent Learning Space for Motor Skills (Hangzhou Renmin Vocational School, 2024-2025)
+4. **Participant** | Cultivation of New Comprehensive Practical Education Venues (Zhejiang Educational Technology Center, 2024-2025)
+5. **Participant** | Theoretical Research and Technical Service for Project-Based Learning Activities in Wuzhong District (Suzhou Wuzhong District Teacher Development Center, 2023-2025)
+6. **Participant** | "Moral Education in Subject Courses" Classroom Teaching Cases (National Center for Educational Technology, etc., 2023-2024)
+
+## Academic Service
+
+- **Journal Reviewer**: 
+  - *npj Digital Medicine* (SCI, Nature Partner Journal)
+  - *BMC Medical Ethics* (SCI)
+  - *Virtual Reality* (SCI)
+  - *Humanities & Social Science Communications* (SCI, Nature Portfolio)
+  - *Entertainment Computing* (SCI)
+  - *Cognitive Development* (SSCI)
+  - *IEEE Access* (SCI)
+  - *Scientific Reports* (SCI)
+- **Academic Community**: 
+  - Person in charge of WeChat Official Accounts: "Digital Game-based Learning Research" (数字游戏学习研究), "Child Rehabilitation Research Institute" (儿康研究院)
+
+## Honors & Awards
+
+**🏆 Academic & Research Competitions**
+- Second Prize in "Challenge Cup" Special Competition (University Level)
+- Third Prize in the 10th NCDA National University Digital Art & Design Competition (Zhejiang Division)
+- Second Prize in the 20th Zhejiang Provincial University Multimedia Works Design Competition
+- Finalist Award in the 17th China International Cartoon & Animation Festival "Dream Cup" Game Creative Competition
+- Finalist Award in the National University Student Anti-Smuggling Creation Competition
+
+**🍎 Teaching & Mentoring Achievements**
+- **Referee**: Main Referee for the Matata Category, 2025 World Robot Contest – Youth Robot Design Contest (Hangzhou Selection)
+- **Instructor**: Guided students from Wuchang Primary School, etc., to win Second/Third Prizes in the 2024 Hangzhou Yuhang District "Endeavor Cup" STEAM Innovation & Creativity Competition (Intelligent Robot Contest)
+
+**🎖️ Comprehensive Honors & Military Service**
+- **Comprehensive**: National Scholarship, First-Class Academic Scholarship, Outstanding Graduate, Outstanding Student Party Member, Outstanding Student Cadre.
+- **Military**: **Excellent Recruit**, **Excellent Conscript**, Third Prize in Team Combat Injury Rescue Competition (Strategic Support Force Unit), Commendation.
+
+## Teaching Experience
+
+- **Nov 2025** | **Teaching Assistant** | Advanced Workshop on AI Literacy Improvement for Primary and Secondary School Teachers in Yuhang District (Hosted by NCET/ZJUT, etc.)
+- **Apr 2025 - Nov 2025** | **Intern Teacher** | Jiaxing Experimental Junior High School (Information Technology)
+- **June 2025 - July 2025** | **Camp Mentor** | Decoding Zhejiang Science & Technology Genes Study Tour (AI General Education / Robotic Arm Programming)
+- **Mar 2024 - June 2024** | **Programming Teacher** | Hangzhou Wenxin Primary School (3D Printing), Zhongtai Center Primary School (Robot Programming)
+- **Mar 2024 - May 2024** | **Competition Instructor** | Robotic Arm Competition Training for multiple schools in Hangzhou
+- **Mar 2023 - Dec 2024** | **Part-time Teacher** | Hangzhou Cuiyuan No.2 Primary School (Scratch) & Programming Institutions
+- **2020 - 2022** | **Military Instructor** | Zhejiang Shuren University, Jiashan No.2 Senior High School, etc.
+- **Sept 2018 - Sept 2019** | **Squad Leader** | Strategic Support Force Unit, PLA

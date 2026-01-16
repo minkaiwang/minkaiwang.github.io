@@ -1,43 +1,29 @@
 project:
   type: website
   output-dir: docs
-  
+
 website:
   page-navigation: true
-  title: "Yujun Lian"
-  site-url: https://lianyujun.github.io
-  favicon: images/site-logo.png
-  repo-url: https://github.com/lianyujun/lianyujun.github.io
-  repo-actions: [edit, issue]
-  
-  page-footer:
-    left: |
-      [lianxh.cn](https://www.lianxh.cn)<br>
-    right: |
-      Made with [Quarto](https://quarto.org/)<br>
-    
+  title: "Minkai Wang"
+  site-url: https://minkaiwang.github.io
+  favicon: images/site-logo.png # 确保你有这个图标，没有的话可以注释掉
+  repo-url: https://github.com/minkaiwang/minkaiwang.github.io
+  repo-actions: []
+
   navbar: 
-    background: "#A9CCE3"
+    # 这里修改为“宁静海洋”的主色调：深钢蓝
+    background: "#4682B4" 
     search: true
     right: 
       - text: "Home"
         href: index.qmd
-      - text: "Publications"
-        href: publications.qmd
-      - text: "Books"
-        href: books.qmd
-      - text: "Blogs"
-        href: blog.qmd
-      - text: "Codes"
-        href: codes.qmd
+      # 别的都删了，只保留这个
       - text: "中文"
         href: Chinese.qmd
-      - text: "CV"
-        href: CV.pdf
 
 format:
   html:
-    theme: styles.scss
-    toc: true            # 启用目录
-    toc-position: right  # 将目录放置在页面的右侧
-    toc-depth: 3         # 设置目录的深度，数字越大，目录越详细
+    theme: styles.scss   # 这一行非常重要，它告诉系统去读我们下面要写的配色文件
+    toc: true
+    toc-position: right
+    toc-depth: 3

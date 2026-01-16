@@ -1,54 +1,6 @@
 /*-- scss:defaults --*/
 
-/* 主题颜色定义 */
-$theme-black: #4c4c4c;
-$theme-white: white;
-$theme-grey: #e9ecef;
-
-$theme-purple3: #88398A;
-$theme-purple4: #9d709e;
-$theme-purple5: #562457;
-$theme-purplebrown1: #b996a4;
-$theme-purplebrown2: #7c6c84;
-$theme-darkcoffee1: #570e06;
-$theme-darkcoffee2: #78504b;
-$theme-darkcoffee3: #632e0d;
-$theme-milkcoffee0: #f2ece3;
-$theme-milkcoffee3: #cca79f;
-$theme-milkcoffee2: #b98f68;
-$theme-milkcoffee1: #9e736a;
-$theme-mocha1: #7f2606;
-$theme-mocha2: #9a4c28;
-$theme-mocha3: #b46939;
-$theme-orange: #f9af11;
-$theme-pumpkin: #d05808;
-$theme-darkgreen1: #355E3B;
-$theme-darkgreen2: #445740;
-
-/* 新增红色变量定义 */
-$red: #ff0000; /* 定义红色变量 */
-$blue: #0000ff;  /* 定义蓝色变量 */
-
-/* 主要背景和字体颜色 */
-$body-bg: $theme-white;
-$body-color: $theme-darkcoffee1; /* 正文字体颜色 */
-$headings-color: $theme-milkcoffee2; /* 标题字体颜色 */
-$link-color: $red; /* 默认超链接颜色 */
-
-/* 代码样式 */
-$code-color: $theme-mocha2; /* 代码文本颜色 */
-$code-bg: $theme-milkcoffee0; /* 代码背景颜色 */
-$code-block-bg-alpha: -0.8; /* 代码块背景的透明度 */
-$background-color: $theme-milkcoffee0; /* 页面背景色 */
-
-/* 导航栏 */
-$navbar-bg: $theme-darkgreen1; /* 导航栏背景颜色 */
-
-/* 提示框颜色 */
-$callout-color-note: $theme-darkgreen2; /* 提示框的注释颜色 */
-$callout-color-tip: $theme-darkgreen1; /* 提示框的小贴士颜色 */
-
-/* 字体设置 */
+/* 1. 字体设置 (保留了你原文件中的优秀字体) */
 @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code_Pro&display=swap');
@@ -58,93 +10,109 @@ $callout-color-tip: $theme-darkgreen1; /* 提示框的小贴士颜色 */
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 
-$font-family-sans-serif: 'Lato', sans-serif; /* 无衬线字体 */
-$font-family-monospace: 'Source Code Pro', monospace; /* 等宽字体 */
-$font-poppins: 'Poppins', sans-serif; 
+$font-family-sans-serif: 'Lato', sans-serif;
+$font-family-monospace: 'Source Code Pro', monospace;
 $font-pt: 'PT Serif', sans-serif;
-$font-cabin: 'Cabin', sans-serif;
-$font-montserrat: 'Montserrat', sans-serif;
-$font-prompt: 'Prompt', sans-serif;
 
-$font-size-root: 16px; /* 根字体大小 */
+/* 2. 定义你的“宁静海洋”色板 */
+$ocean-deep:   #4682B4;  /* 深钢蓝 - 主色调 */
+$ocean-mid:    #87CEEB;  /* 天空蓝 - 辅助色/悬停 */
+$ocean-light:  #B0E0E6;  /* 粉蓝 - 装饰/边框 */
+$ocean-pale:   #E0FFFF;  /* 淡青 - 背景点缀 */
+$ocean-bg:     #FAFDFF;  /* 极淡的蓝白 - 网页主背景 (比纯E0FFFF更护眼) */
 
-/* 链接颜色 */
-$link-color: $red; /* 链接的颜色为红色 */
-$link-hover-color: $blue; /* 链接悬停时的颜色 */
+$text-dark:    #2c3e50;  /* 深灰 - 正文阅读色 */
+
+/* 3. 覆盖 Quarto 系统变量 */
+$body-bg:      $ocean-bg;      /* 页面背景 */
+$body-color:   $text-dark;     /* 正文颜色 */
+$link-color:   $ocean-deep;    /* 链接默认颜色 */
+$primary:      $ocean-deep;    /*由于 Quarto 也会用 primary 控制很多组件 */
+
+/* 导航栏背景 (会被下面的 CSS 规则进一步美化为渐变) */
+$navbar-bg:    $ocean-deep;
+$navbar-fg:    white;          /* 导航栏文字颜色 */
+
+/* 代码块颜色 */
+$code-color:   #d63384;        /* 保留 GitHub 风格红 */
+$code-bg:      rgba(176, 224, 230, 0.2); /* 使用 $ocean-light 的淡化版作为代码背景 */
+
 
 /*-- scss:rules --*/
 
-/* 1. 正文行间距和字体颜色调整 */
+/* 1. 导航栏高级美化：海平面渐变效果 */
+.navbar {
+  /* 稍微降低透明度，0.95 表示 95% 不透明 */
+  background: linear-gradient(to right, rgba(70, 130, 180, 0.95), rgba(135, 206, 235, 0.95)) !important;
+  /* 增加磨砂玻璃效果 (仅在支持的浏览器可见，如 Chrome/Safari) */
+  backdrop-filter: blur(10px); 
+  border-bottom: 3px solid $ocean-light;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* 加一点淡淡的阴影，让导航栏更立体 */
+}
+
+/* 2. 字体与排版 */
 body {
-  line-height: 1.7; /* 正文的行间距设置为 1.7 */
-  color: #000000; /* 正文字体颜色为黑色 */
+  line-height: 1.7;
+  font-family: $font-family-sans-serif;
 }
 
-/* 2. 列表项的行间距调整 */
-ul, ol {
-  line-height: 1.7; /* 列表项的行间距设置为 1.7 */
+/* 修改标题字体为更现代的 Montserrat */
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif; /* 改这里 */
+  font-weight: 600; /* 加粗一点，更有分量 */
+  color: $ocean-deep;
+  margin-top: 1.5em;
+  letter-spacing: -0.5px; /* 稍微收紧字母间距，显得更精致 */
 }
 
-/* 3. 超链接颜色和悬停颜色调整 */
+/* 3. 链接交互效果 */
 a {
-  color: #0066cc; /* 超链接的颜色设置为蓝色 */
-  text-decoration: none; /* 去除默认的下划线 */
+  color: $ocean-deep;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 a:hover {
-  color: #006400; /* 悬停时的颜色设置为深绿色 */
+  color: $ocean-mid; /* 悬停变天蓝色 */
+  text-decoration: underline;
+  text-decoration-color: $ocean-light;
 }
 
-/* 4. 代码样式高亮调整，背景为浅灰色，github 风格 */
-code {
-  color: #d63384; /* 代码文本的颜色，使用 GitHub 风格的红色 */
-  background-color: #f5f5f5; /* 代码块的背景色为浅灰色 */
-  padding: 2px 4px; /* 增加内边距，使代码更加突出 */
-  border-radius: 3px; /* 为代码块添加圆角 */
-  font-family: Consolas, 'Courier New', monospace; /* 设置字体为等宽字体 */
+/* 专门针对首页图标链接的动画 */
+.about-links a { 
+  /* 注意：你需要去 index.qmd 和 Chinese.qmd 把那一段 <div ...> 加上 class="about-links" */
+  display: inline-block; /* 必须变成块级元素才能动 */
+  transition: transform 0.2s ease, color 0.3s ease;
 }
 
-/* 标题样式 */
-h1 {
-  color: $theme-darkcoffee3;
-  font-family: $font-pt;
-  font-size: 40px;
+.about-links a:hover {
+  transform: translateY(-3px); /* 鼠标放上去，图标上浮 3像素 */
+  color: $ocean-mid;
 }
 
-h2 {
-  color: $theme-darkcoffee3;
-  font-family: $font-pt;
-  font-size: 30px;
+/* 4. 图片与头像样式 */
+.about-entity img {
+  border-color: $ocean-deep !important;
+  box-shadow: 0 4px 12px rgba(70, 130, 180, 0.3) !important; /* 蓝色的投影 */
 }
 
-h3, h4 {
-  color: $theme-mocha1;
-  font-family: $font-pt;
+/* 5. 提示框 (Callout) 适配海洋风 */
+.callout-note {
+  border-left-color: $ocean-deep !important;
+  background-color: rgba(70, 130, 180, 0.1) !important;
 }
 
-h4 {
-  color: $theme-darkgreen1;
+/* 6. 列表样式 */
+ul, ol {
+  line-height: 1.7;
 }
 
-/* 代码块和推送样式 */
-.render-commit-push {
-  padding: 0.5em 0.5em 0em 3em;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  background: #f8f8f8 5px center/3em no-repeat;
-  border-top: 1px solid #5B888C;
-  border-bottom: 1px solid #5B888C;
-  background-size: 2em;
-  background-position: 0.5em 0.5em;
-}
-
-.pull {
-  padding: 0.5em 0.5em 0em 3em;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  background: #f8f8f8 5px center/3em no-repeat;
-  border-top: 1px solid #E0A890;
-  border-bottom: 1px solid #E0A890;
-  background-size: 1em;
-  background-position: 1em 0.5em;
+/* 针对首页布局的优化 */
+#hero-heading { /* 这是 index.qmd 里的 id */
+  background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+  padding: 2em; /* 增加内边距 */
+  border-radius: 20px; /* 大圆角 */
+  box-shadow: 0 10px 30px rgba(70, 130, 180, 0.1); /* 柔和的深蓝投影 */
+  margin-top: 1em;
 }
