@@ -13,8 +13,8 @@ editor:
 
 <div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
   <a href="mailto:wmkhappy7@gmail.com" style="text-decoration: none; margin: 0 10px;">
-    <i class="bi bi-envelope"></i> 邮箱
-  </a> | 
+    <i class="bi bi-envelope"></i> wmkhappy7@gmail.com
+  </a> |
   <a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl" style="text-decoration: none; margin: 0 10px;">
     <i class="bi bi-mortarboard"></i> 谷歌学术
   </a> | 
