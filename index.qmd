@@ -86,12 +86,12 @@ His academic work has been published in international authoritative journals suc
    Wenzhou Haixia Cultural Development Center; responsible for designing and developing practical activities/curricula.
 2. **Mar 2026 - Jun 2026 | Zhejiang University Digital Esports Experience/Practice/Assessment System**  
    ZJU International Joint R\&D Center for Esports Education; responsible for Unity/Web frontend and backend design and development.
-3. **Nov 2024 - May 2025 | Research on Excellent AI Education Teaching Cases for Primary and Secondary Schools**  
-   National Institute of Education Sciences, Educational Science Publishing House, and Yuhang Institute of Education Development; responsible for designing, producing, and organizing outstanding AI education cases in Yuhang District.
-4. **Nov 2025 - Aug 2025 | Geely Automobile Industry Sci-Tech Innovation Practice Education Base**  
+3. **Nov 2025 - Aug 2025 | Geely Automobile Industry Sci-Tech Innovation Practice Education Base**  
    Linhai Haoqing Automobile Industry School; responsible for project-based study tour design and premium curriculum development.
-5. **Dec 2024 - Jul 2025 | Intelligent Learning Space for Motor Skills**  
+4. **Dec 2024 - Jul 2025 | Intelligent Learning Space for Motor Skills**  
    Hangzhou Renmin Vocational School; responsible for instructional space design and gamified learning platform design.
+5. **Nov 2024 - May 2025 | Research on Excellent AI Education Teaching Cases for Primary and Secondary Schools**  
+   National Institute of Education Sciences, Educational Science Publishing House, and Yuhang Institute of Education Development; responsible for designing, producing, and organizing outstanding AI education cases in Yuhang District.
 6. **Nov 2024 - Apr 2025 | Cultivation of New Comprehensive Practical Education Venues**  
    Zhejiang Educational Technology Center; responsible for practice-base curriculum design and application documentation.
 7. **Sep 2023 - Oct 2025 | Theoretical Research and Technical Service for Project-Based Learning Activities in Wuzhong District**  
