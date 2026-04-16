@@ -117,7 +117,7 @@ format:
   - *BMC Medical Education* (SCI)
   - *BMC Medical Ethics* (SCI)
   - *Virtual Reality* (SCI)
-  - *Humanities & Social Science Communications* (SCI, Nature Portfolio)
+  - *Humanities & Social Science Communication* (SSCI)
   - *Journal of Academic Librarianship* (SSCI)
   - *Cognitive Neurodynamics* (SCI)
   - *Entertainment Computing* (SCI)
