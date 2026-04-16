@@ -39,6 +39,7 @@ His academic work has been published in international authoritative journals suc
 - **Wang, M.**, Zhang, D., Zhu, J., & Gu, H. Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students’ Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns. **Journal of Educational Computing Research**, 63(3), 662-694. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251321719)
 - **Wang, M.**, Zhu, J., Gu, H., Zhang, J, & Wu, D. Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning. **Entertainment Computing**, 100960. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952125000400)
 - **Wang, M.**, Zhu, J., Qian, Wei., Gu, H. Integrating artificial intelligence and gamification in rehabilitation: a scoping review. **Entertainment Computing**, 101011. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952125000916)
+- Gong, Y., **Wang, M.** (王珉锴), Tu, Y., Huang, C., & Zhang, D. (2026). Beyond pre-scripted interactions: Mapping the integration of LLMs in digital game-based learning - a scoping review. **Entertainment Computing**, 101082. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952126000042)
 - Gong, Y., **Wang, M.**, He, L., Xu, C., & Yu, Y. Asking, playing, learning: Investigating large language model-based scaffolding in digital game-based learning for elementary artificial intelligence education. **Journal of Educational Computing Research**, 07356331251396354. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251396354)
 - Xu, Y., Zhu, J., **Wang, M.**, Qian, F., Yang, Y., & Zhang, J. The Impact of a Digital Game-Based AI Chatbot on Students’ Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum. **Applied Sciences**, 2024, 14(15): 6418. [[Link]](https://www.mdpi.com/2076-3417/14/15/6418)
 - Zhang, J., Zhu, J., Tu, W., **Wang, M.**, Yang, Y., Qian, F., & Xu, Y.  The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture. **Applied Sciences**, 2024, 14(15): 6484. [[Link]](https://www.mdpi.com/2076-3417/14/15/6484)
@@ -79,7 +80,7 @@ His academic work has been published in international authoritative journals suc
 4. **Participant** | Ministry of Education National Innovation and Entrepreneurship Training Program: Deep Development of "Immersive Red Tour" Digital Red Tourism Application (2022-2023)
 5. **Host** | Zhejiang Provincial Innovation and Entrepreneurship Training Program: Research and Development of Role-Playing Based Campus Navigation Game (2021-2022)
 
-**Other Participated Projects (PI: Prof. Jingdong Zhu)**
+**Other Participated Projects**
 
 1. **Participant** | Research on Excellent Teaching Cases of AI Education in Primary and Secondary Schools (National Institute of Education Sciences, etc., 2024-2025)
 2. **Participant** | Geely Automobile Industry Sci-Tech Innovation Practice Education Base (Geely Automobile Research Institute, etc., 2024-2025)
@@ -87,18 +88,31 @@ His academic work has been published in international authoritative journals suc
 4. **Participant** | Cultivation of New Comprehensive Practical Education Venues (Zhejiang Educational Technology Center, 2024-2025)
 5. **Participant** | Theoretical Research and Technical Service for Project-Based Learning Activities in Wuzhong District (Suzhou Wuzhong District Teacher Development Center, 2023-2025)
 6. **Participant** | "Moral Education in Subject Courses" Classroom Teaching Cases (National Center for Educational Technology, etc., 2023-2024)
+7. **Mar 2026 - Jun 2026** | Zhejiang University Digital Esports Experience/Practice/Assessment System (ZJU International Joint R&D Center for Esports Education) | Responsible for Unity/Web frontend and backend design and development
+8. **Mar 2026 - Aug 2026** | Dongtou PBL Gamified Practice Education Curriculum Development (Wenzhou Haixia Cultural Development Center) | Responsible for designing and developing practical activities/curricula
 
 ## Academic Service
 
 - **Journal Reviewer**: 
+  - *Artificial Intelligence Review* (SCI, TOP)
   - *npj Digital Medicine* (SCI, Nature Partner Journal)
+  - *BMC Medical Education* (SCI)
   - *BMC Medical Ethics* (SCI)
   - *Virtual Reality* (SCI)
   - *Humanities & Social Science Communications* (SCI, Nature Portfolio)
+  - *Journal of Academic Librarianship* (SSCI)
+  - *Cognitive Neurodynamics* (SCI)
   - *Entertainment Computing* (SCI)
   - *Cognitive Development* (SSCI)
+  - *Acta Psychologica* (SSCI)
+  - *Frontiers in Psychology* (SSCI)
+  - *International Journal of Computational Intelligence Systems* (SCI)
   - *IEEE Access* (SCI)
   - *Scientific Reports* (SCI)
+  - *Discover Sustainability* (ESCI)
+  - *Social Sciences & Humanities Open* (EI)
+  - *Discover Artificial Intelligence* (EI)
+  - *Discover Psychology* (ESCI)
 - **Academic Community**: 
   - Person in charge of WeChat Official Accounts: "Digital Game-based Learning Research" (数字游戏学习研究), "Child Rehabilitation Research Institute" (儿康研究院)
 
@@ -115,8 +129,8 @@ His academic work has been published in international authoritative journals suc
 - **Referee**: Main Referee for the Matata Category, 2025 World Robot Contest – Youth Robot Design Contest (Hangzhou Selection)
 - **Instructor**: Guided students from Wuchang Primary School, etc., to win Second/Third Prizes in the 2024 Hangzhou Yuhang District "Endeavor Cup" STEAM Innovation & Creativity Competition (Intelligent Robot Contest)
 
-**🎖️ Comprehensive Honors & Military Service**
-- **Comprehensive**: National Scholarship, First-Class Academic Scholarship, Outstanding Graduate, Outstanding Student Party Member, Outstanding Student Cadre.
+**🎖️ Academic and Comprehensive Honors & Military Service**
+- **Academic and Comprehensive Honors**: Provincial Outstanding Graduate (Master's), National Scholarship, First-Class Academic Scholarship, University Outstanding Graduate (Bachelor's), University Outstanding Undergraduate Thesis, University Outstanding Student Party Member, Outstanding Youth League Cadre.
 - **Military**: **Excellent Recruit**, **Excellent Conscript**, Third Prize in Team Combat Injury Rescue Competition (Strategic Support Force Unit), Commendation.
 
 ## Teaching Experience
