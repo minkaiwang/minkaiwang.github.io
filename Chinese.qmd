@@ -113,7 +113,7 @@ format:
 
 - **期刊审稿人 (Reviewer)**: 
   - *Artificial Intelligence Review* (SCI)
-  - *npj Digital Medicine* (SCI, Nature Partner Journal)
+  - *npj Digital Medicine* (SCI)
   - *BMC Medical Education* (SCI)
   - *BMC Medical Ethics* (SCI)
   - *Virtual Reality* (SCI)

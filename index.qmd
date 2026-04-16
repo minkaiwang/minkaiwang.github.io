@@ -105,7 +105,7 @@ His academic work has been published in international authoritative journals suc
 
 - **Journal Reviewer**: 
   - *Artificial Intelligence Review* (SCI)
-  - *npj Digital Medicine* (SCI, Nature Partner Journal)
+  - *npj Digital Medicine* (SCI)
   - *BMC Medical Education* (SCI)
   - *BMC Medical Ethics* (SCI)
   - *Virtual Reality* (SCI)
