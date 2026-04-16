@@ -15,7 +15,7 @@ website:
     background: "#4682B4" 
     search: true
     right: 
-      - text: "Home"
+      - text: "English"
         href: index.qmd
       # 别的都删了，只保留这个
       - text: "中文"

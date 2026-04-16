@@ -39,7 +39,7 @@ His academic work has been published in international authoritative journals suc
 - **Wang, M.**, Zhang, D., Zhu, J., & Gu, H. Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students’ Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns. **Journal of Educational Computing Research**, 63(3), 662-694. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251321719)
 - **Wang, M.**, Zhu, J., Gu, H., Zhang, J, & Wu, D. Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning. **Entertainment Computing**, 100960. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952125000400)
 - **Wang, M.**, Zhu, J., Qian, Wei., Gu, H. Integrating artificial intelligence and gamification in rehabilitation: a scoping review. **Entertainment Computing**, 101011. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952125000916)
-- Gong, Y., **Wang, M.** (王珉锴), Tu, Y., Huang, C., & Zhang, D. (2026). Beyond pre-scripted interactions: Mapping the integration of LLMs in digital game-based learning - a scoping review. **Entertainment Computing**, 101082. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952126000042)
+- Gong, Y., **Wang, M.**, Tu, Y., Huang, C., & Zhang, D. (2026). Beyond pre-scripted interactions: Mapping the integration of LLMs in digital game-based learning - a scoping review. **Entertainment Computing**, 101082. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952126000042)
 - Gong, Y., **Wang, M.**, He, L., Xu, C., & Yu, Y. Asking, playing, learning: Investigating large language model-based scaffolding in digital game-based learning for elementary artificial intelligence education. **Journal of Educational Computing Research**, 07356331251396354. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251396354)
 - Xu, Y., Zhu, J., **Wang, M.**, Qian, F., Yang, Y., & Zhang, J. The Impact of a Digital Game-Based AI Chatbot on Students’ Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum. **Applied Sciences**, 2024, 14(15): 6418. [[Link]](https://www.mdpi.com/2076-3417/14/15/6418)
 - Zhang, J., Zhu, J., Tu, W., **Wang, M.**, Yang, Y., Qian, F., & Xu, Y.  The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture. **Applied Sciences**, 2024, 14(15): 6484. [[Link]](https://www.mdpi.com/2076-3417/14/15/6484)
@@ -80,21 +80,31 @@ His academic work has been published in international authoritative journals suc
 4. **Participant** | Ministry of Education National Innovation and Entrepreneurship Training Program: Deep Development of "Immersive Red Tour" Digital Red Tourism Application (2022-2023)
 5. **Host** | Zhejiang Provincial Innovation and Entrepreneurship Training Program: Research and Development of Role-Playing Based Campus Navigation Game (2021-2022)
 
-**Other Participated Projects**
+**Other Participated Projects/Programs:**
 
-1. **Participant** | Research on Excellent Teaching Cases of AI Education in Primary and Secondary Schools (National Institute of Education Sciences, etc., 2024-2025)
-2. **Participant** | Geely Automobile Industry Sci-Tech Innovation Practice Education Base (Geely Automobile Research Institute, etc., 2024-2025)
-3. **Participant** | Intelligent Learning Space for Motor Skills (Hangzhou Renmin Vocational School, 2024-2025)
-4. **Participant** | Cultivation of New Comprehensive Practical Education Venues (Zhejiang Educational Technology Center, 2024-2025)
-5. **Participant** | Theoretical Research and Technical Service for Project-Based Learning Activities in Wuzhong District (Suzhou Wuzhong District Teacher Development Center, 2023-2025)
-6. **Participant** | "Moral Education in Subject Courses" Classroom Teaching Cases (National Center for Educational Technology, etc., 2023-2024)
-7. **Mar 2026 - Jun 2026** | Zhejiang University Digital Esports Experience/Practice/Assessment System (ZJU International Joint R&D Center for Esports Education) | Responsible for Unity/Web frontend and backend design and development
-8. **Mar 2026 - Aug 2026** | Dongtou PBL Gamified Practice Education Curriculum Development (Wenzhou Haixia Cultural Development Center) | Responsible for designing and developing practical activities/curricula
+1. **Mar 2026 - Aug 2026 | Dongtou PBL Gamified Practice Education Curriculum Development**  
+   Wenzhou Haixia Cultural Development Center; responsible for designing and developing practical activities/curricula.
+2. **Mar 2026 - Jun 2026 | Zhejiang University Digital Esports Experience/Practice/Assessment System**  
+   ZJU International Joint R\&D Center for Esports Education; responsible for Unity/Web frontend and backend design and development.
+3. **Nov 2024 - May 2025 | Research on Excellent AI Education Teaching Cases for Primary and Secondary Schools**  
+   National Institute of Education Sciences, Educational Science Publishing House, and Yuhang Institute of Education Development; responsible for designing, producing, and organizing outstanding AI education cases in Yuhang District.
+4. **Nov 2025 - Aug 2025 | Geely Automobile Industry Sci-Tech Innovation Practice Education Base**  
+   Linhai Haoqing Automobile Industry School; responsible for project-based study tour design and premium curriculum development.
+5. **Dec 2024 - Jul 2025 | Intelligent Learning Space for Motor Skills**  
+   Hangzhou Renmin Vocational School; responsible for instructional space design and gamified learning platform design.
+6. **Nov 2024 - Apr 2025 | Cultivation of New Comprehensive Practical Education Venues**  
+   Zhejiang Educational Technology Center; responsible for practice-base curriculum design and application documentation.
+7. **Sep 2023 - Oct 2025 | Theoretical Research and Technical Service for Project-Based Learning Activities in Wuzhong District**  
+   Suzhou Wuzhong District Teacher Development Center; responsible for project-based learning cloud platform and digital twin platform services.
+8. **Apr 2023 - Dec 2023 | "Moral Education in Subject Courses" Classroom Teaching Cases**  
+   National Center for Educational Technology and Hangzhou Shangcheng District Institute of Education; responsible for filming and editing micro-lessons on moral education.
+9. **May 2023 - Dec 2023 | Digital-Intelligence Garden Reading-and-Farming Learning Space**  
+   Hangzhou Tourism Vocational School; responsible for digital twin teaching platform development.
 
 ## Academic Service
 
 - **Journal Reviewer**: 
-  - *Artificial Intelligence Review* (SCI, TOP)
+  - *Artificial Intelligence Review* (SCI)
   - *npj Digital Medicine* (SCI, Nature Partner Journal)
   - *BMC Medical Education* (SCI)
   - *BMC Medical Ethics* (SCI)
