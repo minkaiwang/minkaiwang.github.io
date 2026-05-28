@@ -3,12 +3,15 @@ title: "Minkai Wang"
 ---
 
 ::: {.about-entity}
-![](images/fig.png){style="display: block; margin: 0 auto; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.15); width: 12em; height: 12em; object-fit: cover;"}
+![](images/fig.png)
 :::
 
 <div class="about-links" style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
   <a href="mailto:wmkhappy7@gmail.com" style="text-decoration: none; margin: 0 10px;">
     <i class="bi bi-envelope"></i> wmkhappy7@gmail.com
+  </a> |
+  <a href="https://github.com/minkaiwang" style="text-decoration: none; margin: 0 10px;">
+    <i class="bi bi-github"></i> GitHub
   </a> |
   <a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl" style="text-decoration: none; margin: 0 10px;">
     <i class="bi bi-mortarboard"></i> Google Scholar
@@ -20,13 +23,15 @@ title: "Minkai Wang"
 
 **Minkai Wang** is a Ph.D. student in the Department of Educational Technology at **Zhejiang University**, supervised by Prof. Xuesong Zhai. He is also a veteran who served in the Strategic Support Force of the Chinese People's Liberation Army (PLA).
 
-His research interests lie at the intersection of **Game-based Learning (GBL)**, **Artificial Intelligence in Education (AIED)**, and the **Metaverse**. He is dedicated to exploring how emerging technologies can reshape learning experiences and cognitive development.
+His research interests lie at the intersection of **Game-based Learning (GBL)**, **Artificial Intelligence in Education (AIED)**, the **Metaverse**, and **Esports Education**. He is dedicated to exploring how emerging technologies can reshape learning experiences and cognitive development.
 
 His academic work has been published in international authoritative journals such as *Journal of Computer Assisted Learning*, *Journal of Educational Computing Research*, and *Entertainment Computing*.
 
 ## Education
 
 - **Sept 2026 - Present** | **Zhejiang University** | Ph.D. in Educational Technology | Supervisor: Xuesong Zhai
+- **Mar 2026 - Present** | **Zhejiang University Yangtze River Delta Wisdom Oasis Innovation Center · Future Imaging Laboratory** | Joint Training Student in Esports Education | Joint Training Supervisor: Yupei Zhao
+- **Mar 2026 - Present** | **ZJU International Joint R&D Center for Esports Education** | Joint Training Student in Esports Education | Joint Training Supervisor: Yupei Zhao
 - **Sept 2023 - June 2026** | **Zhejiang University of Technology** | Master in Educational Technology | Supervisor: Jingdong Zhu
 - **Sept 2019 - June 2023** | **Zhejiang Shuren University** | Bachelor in Digital Media Technology | Supervisor: Hanjie Gu
 - **Sept 2017 - Sept 2019** | **Chinese People's Liberation Army (PLA)** | Strategic Support Force | Soldier
@@ -35,6 +40,7 @@ His academic work has been published in international authoritative journals suc
 
 ### 📄 Journal Papers (Selected)
 
+- Zhai, X., **Wang, M.**, Cheng, L., & Zhao, C. (2026). What Should Education Be in the Intelligent Era? A Review of the 2026 World Digital Education Conference. **Open Education Research**. (Accepted, CSSCI)
 - **Wang, M.**, Zhu, J., Hwang, G., Chang, S., Yang Q., & Zhang, D. Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games. **Journal of Computer Assisted Learning**, 41(6): e70138. [[Link]](https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139)
 - **Wang, M.**, Zhang, D., Zhu, J., & Gu, H. Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students’ Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns. **Journal of Educational Computing Research**, 63(3), 662-694. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251321719)
 - **Wang, M.**, Zhu, J., Gu, H., Zhang, J, & Wu, D. Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning. **Entertainment Computing**, 100960. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952125000400)
@@ -45,6 +51,8 @@ His academic work has been published in international authoritative journals suc
 - Zhang, J., Zhu, J., Tu, W., **Wang, M.**, Yang, Y., Qian, F., & Xu, Y.  The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture. **Applied Sciences**, 2024, 14(15): 6484. [[Link]](https://www.mdpi.com/2076-3417/14/15/6484)
 
 ### 🗣️ Conference Presentations
+- **2026 (Hangzhou)** | China Educational Technology Academic Conference
+- **2026 (Jiaxing)** | Puyuan Esports Summit
 - **2024 (Xiamen)** | The 1st National Symposium on AI-Empowered Interdisciplinary Project-Based Learning
 
 ### 📘 Reports & Blue Books
@@ -57,11 +65,11 @@ His academic work has been published in international authoritative journals suc
 
 ::: {layout-ncol=3}
 
-![[**"Waiting for an Egg"** (Steam)](https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg)](images/game1.png){group="games" style="border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%;"}
+![[**"Waiting for an Egg"** (Steam)](https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg)](images/game1.png){group="games" width="100%"}
 
-![[**"Sprout's Journey"** (ITCH)](https://charmpoint.itch.io/xiaoshuya-chufa)](images/game2.png){group="games" style="border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%;"}
+![[**"Sprout's Journey"** (ITCH)](https://charmpoint.itch.io/xiaoshuya-chufa)](images/game2.png){group="games" width="100%"}
 
-![[**"Centennial Shuttle"** (ITCH)](https://charmpoint.itch.io/bncsj)](images/game3.png){group="games" style="border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%;"}
+![[**"Centennial Shuttle"** (ITCH)](https://charmpoint.itch.io/bncsj)](images/game3.png){group="games" width="100%"}
 
 :::
 
@@ -86,12 +94,12 @@ His academic work has been published in international authoritative journals suc
    Wenzhou Haixia Cultural Development Center; responsible for designing and developing practical activities/curricula.
 2. **Mar 2026 - Jun 2026 | Zhejiang University Digital Esports Experience/Practice/Assessment System**  
    ZJU International Joint R\&D Center for Esports Education; responsible for Unity/Web frontend and backend design and development.
-3. **Nov 2025 - Aug 2025 | Geely Automobile Industry Sci-Tech Innovation Practice Education Base**  
-   Linhai Haoqing Automobile Industry School; responsible for project-based study tour design and premium curriculum development.
-4. **Dec 2024 - Jul 2025 | Intelligent Learning Space for Motor Skills**  
-   Hangzhou Renmin Vocational School; responsible for instructional space design and gamified learning platform design.
-5. **Nov 2024 - May 2025 | Research on Excellent AI Education Teaching Cases for Primary and Secondary Schools**  
+3. **Nov 2024 - May 2025 | Research on Excellent AI Education Teaching Cases for Primary and Secondary Schools**  
    National Institute of Education Sciences, Educational Science Publishing House, and Yuhang Institute of Education Development; responsible for designing, producing, and organizing outstanding AI education cases in Yuhang District.
+4. **Nov 2024 - Aug 2025 | Geely Automobile Industry Sci-Tech Innovation Practice Education Base**  
+   Linhai Haoqing Automobile Industry School; responsible for project-based study tour design and premium curriculum development.
+5. **Dec 2024 - Jul 2025 | Intelligent Learning Space for Motor Skills**  
+   Hangzhou Renmin Vocational School; responsible for instructional space design and gamified learning platform design.
 6. **Nov 2024 - Apr 2025 | Cultivation of New Comprehensive Practical Education Venues**  
    Zhejiang Educational Technology Center; responsible for practice-base curriculum design and application documentation.
 7. **Sep 2023 - Oct 2025 | Theoretical Research and Technical Service for Project-Based Learning Activities in Wuzhong District**  
@@ -106,8 +114,8 @@ His academic work has been published in international authoritative journals suc
 - **Journal Reviewer**: 
   - *Artificial Intelligence Review* (SCI)
   - *npj Digital Medicine* (SCI)
-  - *BMC Medical Education* (SCI)
   - *BMC Medical Ethics* (SCI)
+  - *BMC Medical Education* (SCI)
   - *Virtual Reality* (SCI)
   - *Humanities & Social Science Communication* (SSCI)
   - *Journal of Academic Librarianship* (SSCI)
@@ -117,8 +125,10 @@ His academic work has been published in international authoritative journals suc
   - *Acta Psychologica* (SSCI)
   - *Frontiers in Psychology* (SSCI)
   - *International Journal of Computational Intelligence Systems* (SCI)
+  - *JoVE—Journal of Visualized Experiments* (SCI)
   - *IEEE Access* (SCI)
   - *Scientific Reports* (SCI)
+  - *Frontiers in Rehabilitation Sciences* (ESCI)
   - *Discover Sustainability* (ESCI)
   - *Social Sciences & Humanities Open* (EI)
   - *Discover Artificial Intelligence* (EI)
@@ -140,14 +150,15 @@ His academic work has been published in international authoritative journals suc
 - **Instructor**: Guided students from Wuchang Primary School, etc., to win Second/Third Prizes in the 2024 Hangzhou Yuhang District "Endeavor Cup" STEAM Innovation & Creativity Competition (Intelligent Robot Contest)
 
 **🎖️ Academic and Comprehensive Honors & Military Service**
-- **Academic and Comprehensive Honors**: Provincial Outstanding Graduate (Master's), National Scholarship, First-Class Academic Scholarship, University Outstanding Graduate (Bachelor's), University Outstanding Undergraduate Thesis, University Outstanding Student Party Member, Outstanding Youth League Cadre.
-- **Military**: **Excellent Recruit**, **Excellent Conscript**, Third Prize in Team Combat Injury Rescue Competition (Strategic Support Force Unit), Commendation.
+- **Master's**: Provincial Outstanding Graduate, National Scholarship, Candidate for University Graduate Academic Star Award, First-Class Academic Scholarship
+- **Bachelor's**: University Outstanding Graduate, University Outstanding Undergraduate Thesis, University Outstanding Student Party Member, Outstanding Youth League Cadre
+- **Military**: Excellent Recruit, Excellent Conscript, Third Prize in Team Combat Injury Rescue Competition (Strategic Support Force Unit), Commendation
 
 ## Teaching Experience
 
 - **Nov 2025** | **Teaching Assistant** | Advanced Workshop on AI Literacy Improvement for Primary and Secondary School Teachers in Yuhang District (Hosted by NCET/ZJUT, etc.)
 - **Apr 2025 - Nov 2025** | **Intern Teacher** | Jiaxing Experimental Junior High School (Information Technology)
-- **June 2025 - July 2025** | **Camp Mentor** | Decoding Zhejiang Science & Technology Genes Study Tour (AI General Education / Robotic Arm Programming)
+- **Jun 2025 - Jul 2025** | **Camp Mentor** | Decoding Zhejiang Science & Technology Genes Study Tour (AI General Education / Robotic Arm Programming)
 - **Mar 2024 - June 2024** | **Programming Teacher** | Hangzhou Wenxin Primary School (3D Printing), Zhongtai Center Primary School (Robot Programming)
 - **Mar 2024 - May 2024** | **Competition Instructor** | Robotic Arm Competition Training for multiple schools in Hangzhou
 - **Mar 2023 - Dec 2024** | **Part-time Teacher** | Hangzhou Cuiyuan No.2 Primary School (Scratch) & Programming Institutions

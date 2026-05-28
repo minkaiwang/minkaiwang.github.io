@@ -11,8 +11,7 @@ website:
   repo-actions: []
 
   navbar: 
-    # 这里修改为“宁静海洋”的主色调：深钢蓝
-    background: "#4682B4" 
+    background: "#E6A4B4"
     search: true
     right: 
       - text: "English"

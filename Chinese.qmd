@@ -11,12 +11,15 @@ format:
 ## 个人简介 {#profile}
 
 ::: {.about-entity}
-![](images/fig.png){#profile-img style="display: block; margin: 0 auto; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.15); width: 12em; height: 12em; object-fit: cover;"}
+![](images/fig.png){#profile-img}
 :::
 
-<div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
+<div class="about-links" style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
   <a href="mailto:wmkhappy7@gmail.com" style="text-decoration: none; margin: 0 10px;">
     <i class="bi bi-envelope"></i> wmkhappy7@gmail.com
+  </a> |
+  <a href="https://github.com/minkaiwang" style="text-decoration: none; margin: 0 10px;">
+    <i class="bi bi-github"></i> GitHub
   </a> |
   <a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl" style="text-decoration: none; margin: 0 10px;">
     <i class="bi bi-mortarboard"></i> 谷歌学术
@@ -28,11 +31,13 @@ format:
 
 **王珉锴**，男，浙江嘉兴人，中共党员，退伍军人。现为浙江大学教育技术学专业博士研究生。
 
-主要研究方向为**游戏化学习 (Game-based Learning)**、**人工智能教育应用 (AI in Education)** 和 **元宇宙 (Metaverse)**。致力于探索技术如何重塑学习体验，研究成果发表于 *Journal of Computer Assisted Learning*, *Journal of Educational Computing Research*, *Entertainment Computing* 等国际权威期刊。
+主要研究方向为**游戏化学习 (Game-based Learning)**、**人工智能教育应用 (AI in Education)**、**元宇宙 (Metaverse)** 和 **电竞教育 (Esports Education)**。致力于探索技术如何重塑学习体验，研究成果发表于 *Journal of Computer Assisted Learning*, *Journal of Educational Computing Research*, *Entertainment Computing* 等国际权威期刊。
 
 ## 教育背景 {#education}
 
 - **2026.09 - 至今** | 浙江大学 | 教育技术学 | 博士 (导师：翟雪松)
+- **2026.03 - 至今** | 浙江大学长三角智慧绿洲创新中心·未来影像实验室 | 电竞教育 联培学生 (联培导师：赵瑜佩)
+- **2026.03 - 至今** | 浙江大学电竞国际教育联合研发中心 | 电竞教育 联培学生 (联培导师：赵瑜佩)
 - **2023.09 - 2026.06** | 浙江工业大学 | 教育技术学 | 硕士 (导师：朱敬东)
 - **2019.09 - 2023.06** | 浙江树人学院 | 数字媒体技术 | 学士 (导师：顾汉杰)
 - **2017.09 - 2019.09** | 中国人民解放军 | 战略支援部队 | 战士
@@ -41,17 +46,20 @@ format:
 
 ### 📄 期刊论文 (Selected)
 
+- 翟雪松, **王珉锴**, 程莉莉, 赵川 (2026). 智能时代，教育何为——2026世界数字教育大会综述[J]. **开放教育研究**. (录用, CSSCI)
 - **Wang, M. (王珉锴)**, Zhu, J., Hwang, G., Chang, S., Yang Q., & Zhang, D. Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games. **Journal of Computer Assisted Learning**, 41(6): e70138. [[Link]](https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139)
 - **Wang, M. (王珉锴)**, Zhang, D., Zhu, J., & Gu, H. Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students’ Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns. **Journal of Educational Computing Research**, 63(3), 662-694. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251321719)
 - **Wang, M. (王珉锴)**, Zhu, J., Gu, H., Zhang, J, & Wu, D. Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning. **Entertainment Computing**, 100960. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952125000400)
 - **Wang, M. (王珉锴)**, Zhu, J., Qian, Wei., Gu, H. Integrating artificial intelligence and gamification in rehabilitation: a scoping review. **Entertainment Computing**, 101011. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952125000916)
 - Gong, Y., **Wang, M. (王珉锴)**, Tu, Y., Huang, C., & Zhang, D. (2026). Beyond pre-scripted interactions: Mapping the integration of LLMs in digital game-based learning - a scoping review. **Entertainment Computing**, 101082. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952126000042)
-- Gong, Y., **Wang, M. (王珉锴)**, He, L., Xu, C., & Yu, Y. Asking, playing, learning: Investigating large language model-based scaffolding in digital game-based learning for elementary artificial intelligence education. **Journal of Educational Computing Research**, 07356331251396354. [-Link-](https://journals.sagepub.com/doi/abs/10.1177/07356331251396354)
-- Xu, Y., Zhu, J., **Wang, M. (王珉锴)**, Qian, F., Yang, Y., & Zhang, J. The Impact of a Digital Game-Based AI Chatbot on Students’ Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum. **Applied Sciences**, 2024, 14(15): 6418. [-Link-](https://www.mdpi.com/2076-3417/14/15/6418)
-- Zhang, J., Zhu, J., Tu, W., **Wang, M. (王珉锴)**, Yang, Y., Qian, F., & Xu, Y.  The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture. **Applied Sciences**, 2024, 14(15): 6484. [-Link-](https://www.mdpi.com/2076-3417/14/15/6484)
+- Gong, Y., **Wang, M. (王珉锴)**, He, L., Xu, C., & Yu, Y. Asking, playing, learning: Investigating large language model-based scaffolding in digital game-based learning for elementary artificial intelligence education. **Journal of Educational Computing Research**, 07356331251396354. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251396354)
+- Xu, Y., Zhu, J., **Wang, M. (王珉锴)**, Qian, F., Yang, Y., & Zhang, J. The Impact of a Digital Game-Based AI Chatbot on Students’ Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum. **Applied Sciences**, 2024, 14(15): 6418. [[Link]](https://www.mdpi.com/2076-3417/14/15/6418)
+- Zhang, J., Zhu, J., Tu, W., **Wang, M. (王珉锴)**, Yang, Y., Qian, F., & Xu, Y.  The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture. **Applied Sciences**, 2024, 14(15): 6484. [[Link]](https://www.mdpi.com/2076-3417/14/15/6484)
 
 
 ### 🗣️ 学术会议
+- **2026 (杭州)** | 中国教育技术学术大会
+- **2026 (嘉兴)** | 濮院电竞峰会
 - **2024 (厦门)** | 全国首届人工智能赋能跨学科项目式学习专题会议
 
 ### 📘 参编报告
@@ -64,11 +72,11 @@ format:
 
 ::: {layout-ncol=3}
 
-![[**《等一个蛋》** (Steam平台)](https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg)](images/game1.png){group="games" style="border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%;"}
+![[**《等一个蛋》** (Steam平台)](https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg)](images/game1.png){group="games" width="100%"}
 
-![[**《小树芽出发》** (ITCH平台)](https://charmpoint.itch.io/xiaoshuya-chufa)](images/game2.png){group="games" style="border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%;"}
+![[**《小树芽出发》** (ITCH平台)](https://charmpoint.itch.io/xiaoshuya-chufa)](images/game2.png){group="games" width="100%"}
 
-![[**《百年穿梭机》** (ITCH平台)](https://charmpoint.itch.io/bncsj)](images/game3.png){group="games" style="border-radius: 10px; border: 1px solid #eee; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 100%;"}
+![[**《百年穿梭机》** (ITCH平台)](https://charmpoint.itch.io/bncsj)](images/game3.png){group="games" width="100%"}
 
 :::
 
@@ -95,7 +103,7 @@ format:
    浙江大学电竞国际教育联合研发中心；负责Unity/Web前后端设计与开发。
 3. **2024.11 - 2025.05 | 中小学人工智能教育优秀教学案例研究**  
    中国教育科学研究院、教育科学出版社、杭州市余杭区教育发展研究学院；负责余杭区人工智能教育优秀案例的设计、制作与整理。
-4. **2025.11 - 2025.08 | 吉利汽车工业科创实践教育基地**  
+4. **2024.11 - 2025.08 | 吉利汽车工业科创实践教育基地**  
    临海市豪情汽车工业学校；负责项目化研学及精品课程设计与制作。
 5. **2024.12 - 2025.07 | 动作技能智能学习空间项目**  
    杭州市人民职业学校；负责教学空间设计及游戏化学习平台设计。
@@ -114,8 +122,8 @@ format:
 - **期刊审稿人 (Reviewer)**: 
   - *Artificial Intelligence Review* (SCI)
   - *npj Digital Medicine* (SCI)
-  - *BMC Medical Education* (SCI)
   - *BMC Medical Ethics* (SCI)
+  - *BMC Medical Education* (SCI)
   - *Virtual Reality* (SCI)
   - *Humanities & Social Science Communication* (SSCI)
   - *Journal of Academic Librarianship* (SSCI)
@@ -125,8 +133,10 @@ format:
   - *Acta Psychologica* (SSCI)
   - *Frontiers in Psychology* (SSCI)
   - *International Journal of Computational Intelligence Systems* (SCI)
+  - *JoVE—Journal of Visualized Experiments* (SCI)
   - *IEEE Access* (SCI)
   - *Scientific Reports* (SCI)
+  - *Frontiers in Rehabilitation Sciences* (ESCI)
   - *Discover Sustainability* (ESCI)
   - *Social Sciences & Humanities Open* (EI)
   - *Discover Artificial Intelligence* (EI)
@@ -137,6 +147,7 @@ format:
 ## 荣誉奖项 {#honors}
 
 **🏆 学术与科研竞赛**
+- “挑战杯”校赛二等奖
 - 第十届NCDA全国高校数字艺术设计大赛浙江赛区三等奖
 - 第二十届浙江省大学生多媒体作品设计竞赛二等奖
 - 第十七届中国国际动漫节“梦梦杯”游戏创意大赛入围奖
@@ -147,8 +158,9 @@ format:
 - **指导教师**: 2024年杭州市余杭区中小学生“奋进杯”STEAM创新创意大赛智能机器人竞赛 (指导多所学校获二、三等奖)
 
 **🎖️ 学业与综合荣誉 & 部队服役**
-- **学业与综合荣誉**: 省优秀毕业生（硕士）、国家奖学金、校一等学业奖学金、校优秀毕业生（本科）、校优秀毕业论文（本科）、校优秀学生党员、优秀团干
-- **部队**: **优秀新兵**、**优秀义务兵**、战略支援部队某部战伤救助比武团体三等奖、嘉奖
+- **硕士**: 省优秀毕业生、国家奖学金、校研究生学术之星候选人、校一等学业奖学金
+- **本科**: 校优秀毕业生、校优秀毕业论文、校优秀学生党员、优秀团干
+- **部队**: 优秀新兵、优秀义务兵、战略支援部队某部战伤救助比武团体三等奖、嘉奖
 
 ## 教学经历 {#teaching}
 

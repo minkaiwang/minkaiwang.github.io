@@ -1,6 +1,6 @@
 /*-- scss:defaults --*/
 
-/* 1. 字体设置 (保留了你原文件中的优秀字体) */
+/* 1. 字体设置 */
 @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code_Pro&display=swap');
@@ -14,105 +14,154 @@ $font-family-sans-serif: 'Lato', sans-serif;
 $font-family-monospace: 'Source Code Pro', monospace;
 $font-pt: 'PT Serif', sans-serif;
 
-/* 2. 定义你的“宁静海洋”色板 */
-$ocean-deep:   #4682B4;  /* 深钢蓝 - 主色调 */
-$ocean-mid:    #87CEEB;  /* 天空蓝 - 辅助色/悬停 */
-$ocean-light:  #B0E0E6;  /* 粉蓝 - 装饰/边框 */
-$ocean-pale:   #E0FFFF;  /* 淡青 - 背景点缀 */
-$ocean-bg:     #FAFDFF;  /* 极淡的蓝白 - 网页主背景 (比纯E0FFFF更护眼) */
+/* 2. 粉彩色板 */
+$pastel-rose:      #E6A4B4;  /* 玫瑰粉 - 主色 / 强调 */
+$pastel-peach:     #F3D7CA;  /* 蜜桃杏 - 边框 / 悬停 */
+$pastel-cream:     #FFF8E3;  /* 奶油黄 - 主背景 */
+$pastel-warm:      #F5EEE6;  /* 暖米白 - 卡片 / 点缀 */
 
-$text-dark:    #2c3e50;  /* 深灰 - 正文阅读色 */
+$pastel-rose-dark: #B87388;  /* 深玫瑰 - 标题 / 链接（保证可读性） */
+$text-warm:        #4A4039;  /* 暖棕灰 - 正文 */
 
 /* 3. 覆盖 Quarto 系统变量 */
-$body-bg:      $ocean-bg;      /* 页面背景 */
-$body-color:   $text-dark;     /* 正文颜色 */
-$link-color:   $ocean-deep;    /* 链接默认颜色 */
-$primary:      $ocean-deep;    /*由于 Quarto 也会用 primary 控制很多组件 */
+$body-bg:          $pastel-cream;
+$body-color:       $text-warm;
+$link-color:       $pastel-rose-dark;
+$primary:          $pastel-rose-dark;
 
-/* 导航栏背景 (会被下面的 CSS 规则进一步美化为渐变) */
-$navbar-bg:    $ocean-deep;
-$navbar-fg:    white;          /* 导航栏文字颜色 */
+$navbar-bg:        $pastel-rose;
+$navbar-fg:        $text-warm;
 
-/* 代码块颜色 */
-$code-color:   #d63384;        /* 保留 GitHub 风格红 */
-$code-bg:      rgba(176, 224, 230, 0.2); /* 使用 $ocean-light 的淡化版作为代码背景 */
+$code-color:       $pastel-rose-dark;
+$code-bg:          rgba(243, 215, 202, 0.45);
+
+$border-color:     $pastel-peach;
 
 
 /*-- scss:rules --*/
 
-/* 1. 导航栏高级美化：海平面渐变效果 */
+/* 导航栏：粉彩渐变 + 轻磨砂 */
 .navbar {
-  /* 稍微降低透明度，0.95 表示 95% 不透明 */
-  background: linear-gradient(to right, rgba(70, 130, 180, 0.95), rgba(135, 206, 235, 0.95)) !important;
-  /* 增加磨砂玻璃效果 (仅在支持的浏览器可见，如 Chrome/Safari) */
-  backdrop-filter: blur(10px); 
-  border-bottom: 3px solid $ocean-light;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* 加一点淡淡的阴影，让导航栏更立体 */
+  background: linear-gradient(
+    135deg,
+    rgba(230, 164, 180, 0.94) 0%,
+    rgba(243, 215, 202, 0.94) 55%,
+    rgba(255, 248, 227, 0.92) 100%
+  ) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 248, 227, 0.9);
+  box-shadow: 0 2px 18px rgba(184, 115, 136, 0.12);
 }
 
-/* 2. 字体与排版 */
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: $text-warm !important;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: $pastel-rose-dark !important;
+}
+
+/* 正文与标题 */
 body {
-  line-height: 1.7;
+  line-height: 1.75;
   font-family: $font-family-sans-serif;
+  background: linear-gradient(180deg, $pastel-cream 0%, $pastel-warm 100%) fixed;
 }
 
-/* 修改标题字体为更现代的 Montserrat */
 h1, h2, h3, h4 {
-  font-family: 'Montserrat', sans-serif; /* 改这里 */
-  font-weight: 600; /* 加粗一点，更有分量 */
-  color: $ocean-deep;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: $pastel-rose-dark;
   margin-top: 1.5em;
-  letter-spacing: -0.5px; /* 稍微收紧字母间距，显得更精致 */
+  letter-spacing: -0.3px;
 }
 
-/* 3. 链接交互效果 */
+h2 {
+  border-bottom: 2px solid rgba(243, 215, 202, 0.8);
+  padding-bottom: 0.35em;
+}
+
+/* 链接 */
 a {
-  color: $ocean-deep;
+  color: $pastel-rose-dark;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
   font-weight: 500;
 }
 
 a:hover {
-  color: $ocean-mid; /* 悬停变天蓝色 */
+  color: $pastel-rose;
   text-decoration: underline;
-  text-decoration-color: $ocean-light;
+  text-decoration-color: $pastel-peach;
 }
 
-/* 专门针对首页图标链接的动画 */
-.about-links a { 
-  /* 注意：你需要去 index.qmd 和 Chinese.qmd 把那一段 <div ...> 加上 class="about-links" */
-  display: inline-block; /* 必须变成块级元素才能动 */
-  transition: transform 0.2s ease, color 0.3s ease;
+.about-links a {
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.25s ease;
 }
 
 .about-links a:hover {
-  transform: translateY(-3px); /* 鼠标放上去，图标上浮 3像素 */
-  color: $ocean-mid;
+  transform: translateY(-3px);
+  color: $pastel-rose;
 }
 
-/* 4. 图片与头像样式 */
+/* 头像 */
+#profile-img,
 .about-entity img {
-  border-color: $ocean-deep !important;
-  box-shadow: 0 4px 12px rgba(70, 130, 180, 0.3) !important; /* 蓝色的投影 */
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 12em;
+  height: 12em;
+  object-fit: cover;
+  border: 4px solid $pastel-cream !important;
+  box-shadow: 0 6px 22px rgba(230, 164, 180, 0.32) !important;
 }
 
-/* 5. 提示框 (Callout) 适配海洋风 */
+/* 游戏缩略图卡片 */
+.quarto-layout-row .quarto-figure {
+  border-radius: 12px;
+  border: 1px solid $pastel-peach;
+  box-shadow: 0 4px 14px rgba(184, 115, 136, 0.1);
+  overflow: hidden;
+  background: $pastel-warm;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quarto-layout-row .quarto-figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(230, 164, 180, 0.2);
+}
+
+/* Callout */
 .callout-note {
-  border-left-color: $ocean-deep !important;
-  background-color: rgba(70, 130, 180, 0.1) !important;
+  border-left-color: $pastel-rose !important;
+  background-color: rgba(243, 215, 202, 0.35) !important;
 }
 
-/* 6. 列表样式 */
+/* 列表 */
 ul, ol {
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
-/* 针对首页布局的优化 */
-#hero-heading { /* 这是 index.qmd 里的 id */
-  background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
-  padding: 2em; /* 增加内边距 */
-  border-radius: 20px; /* 大圆角 */
-  box-shadow: 0 10px 30px rgba(70, 130, 180, 0.1); /* 柔和的深蓝投影 */
+/* 右侧目录区域 */
+.sidebar {
+  border-left: 1px solid rgba(243, 215, 202, 0.9);
+}
+
+#quarto-margin-sidebar .toc-active {
+  color: $pastel-rose-dark;
+}
+
+/* 首页 hero 区块 */
+#hero-heading {
+  background-color: rgba(255, 248, 227, 0.85);
+  padding: 2em;
+  border-radius: 20px;
+  border: 1px solid rgba(243, 215, 202, 0.7);
+  box-shadow: 0 10px 32px rgba(230, 164, 180, 0.12);
   margin-top: 1em;
 }
