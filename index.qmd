@@ -2,43 +2,53 @@
 title: "Minkai Wang"
 ---
 
+::: {.profile-hero}
+::: {.profile-hero-media}
 ::: {.about-entity}
 ![](images/fig.png)
 :::
+:::
 
-<div class="about-links" style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
-  <a href="mailto:wmkhappy7@gmail.com" style="text-decoration: none; margin: 0 10px;">
+::: {.profile-hero-body}
+<div class="about-links">
+  <a href="mailto:wmkhappy7@gmail.com">
     <i class="bi bi-envelope"></i> wmkhappy7@gmail.com
-  </a> |
-  <a href="https://github.com/minkaiwang" style="text-decoration: none; margin: 0 10px;">
+  </a>
+  <a href="https://github.com/minkaiwang">
     <i class="bi bi-github"></i> GitHub
-  </a> |
-  <a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl" style="text-decoration: none; margin: 0 10px;">
+  </a>
+  <a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl">
     <i class="bi bi-mortarboard"></i> Google Scholar
-  </a> | 
-  <a href="https://orcid.org/0009-0003-9591-1076" style="text-decoration: none; margin: 0 10px;">
+  </a>
+  <a href="https://orcid.org/0009-0003-9591-1076">
     <i class="bi bi-fingerprint"></i> ORCID
   </a>
 </div>
 
 **Minkai Wang** is a Ph.D. student in the Department of Educational Technology at **Zhejiang University**, supervised by Prof. Xuesong Zhai. He is also a veteran who served in the Strategic Support Force of the Chinese People's Liberation Army (PLA).
 
+::: {.profile-interests}
 His research interests lie at the intersection of **Game-based Learning (GBL)**, **Artificial Intelligence in Education (AIED)**, the **Metaverse**, and **Esports Education**. He is dedicated to exploring how emerging technologies can reshape learning experiences and cognitive development.
+:::
 
 His academic work has been published in international authoritative journals such as *Journal of Computer Assisted Learning*, *Journal of Educational Computing Research*, and *Entertainment Computing*.
+:::
+:::
 
 ## Education
 
+::: {.timeline}
 - **Sept 2026 - Present** | **Zhejiang University** | Ph.D. in Educational Technology | Supervisor: Xuesong Zhai
 - **Mar 2026 - Present** | **Zhejiang University Yangtze River Delta Wisdom Oasis Innovation Center · Future Imaging Laboratory** | Joint Training Student in Esports Education | Joint Training Supervisor: Yupei Zhao
 - **Mar 2026 - Present** | **ZJU International Joint R&D Center for Esports Education** | Joint Training Student in Esports Education | Joint Training Supervisor: Yupei Zhao
 - **Sept 2023 - June 2026** | **Zhejiang University of Technology** | Master in Educational Technology | Supervisor: Jingdong Zhu
 - **Sept 2019 - June 2023** | **Zhejiang Shuren University** | Bachelor in Digital Media Technology | Supervisor: Hanjie Gu
 - **Sept 2017 - Sept 2019** | **Chinese People's Liberation Army (PLA)** | Strategic Support Force | Soldier
+:::
 
 ## Academic Publications
 
-### 📄 Journal Papers (Selected)
+### Journal Papers (Selected)
 
 - Zhai, X., **Wang, M.**, Cheng, L., & Zhao, C. (2026). What Should Education Be in the Intelligent Era? A Review of the 2026 World Digital Education Conference. **Open Education Research**. (Accepted, CSSCI)
 - **Wang, M.**, Zhu, J., Hwang, G., Chang, S., Yang Q., & Zhang, D. Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games. **Journal of Computer Assisted Learning**, 41(6): e70138. [[Link]](https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139)
@@ -50,18 +60,21 @@ His academic work has been published in international authoritative journals suc
 - Xu, Y., Zhu, J., **Wang, M.**, Qian, F., Yang, Y., & Zhang, J. The Impact of a Digital Game-Based AI Chatbot on Students’ Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum. **Applied Sciences**, 2024, 14(15): 6418. [[Link]](https://www.mdpi.com/2076-3417/14/15/6418)
 - Zhang, J., Zhu, J., Tu, W., **Wang, M.**, Yang, Y., Qian, F., & Xu, Y.  The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture. **Applied Sciences**, 2024, 14(15): 6484. [[Link]](https://www.mdpi.com/2076-3417/14/15/6484)
 
-### 🗣️ Conference Presentations
-- **2026 (Hangzhou)** | China Educational Technology Academic Conference
-- **2026 (Jiaxing)** | Puyuan Esports Summit
-- **2024 (Xiamen)** | The 1st National Symposium on AI-Empowered Interdisciplinary Project-Based Learning
+### Conference Presentations
 
-### 📘 Reports & Blue Books
+::: {.conference-list}
+- The 1st National Symposium on AI-Empowered Interdisciplinary Project-Based Learning (2024, Xiamen)
+- China Educational Technology Academic Conference (2026, Hangzhou)
+- Puyuan Esports Summit (2026, Jiaxing)
+:::
+
+### Reports & Blue Books
 - Deeply participated in the compilation of the **"Blue Book on Digital Education Development in Zhejiang Province"**
 - Deeply participated in the compilation of the **"Development Report on New Comprehensive Practical Education Venues in Zhejiang Province"**
 
 ## Engineering & Software Development
 
-### 🎮 Educational Games
+### Educational Games
 
 ::: {layout-ncol=3}
 
@@ -73,7 +86,7 @@ His academic work has been published in international authoritative journals suc
 
 :::
 
-### 💻 Software Copyrights
+### Software Copyrights
 - Educational Game Software for Campus Navigation
 - Role-Playing Based Red Tourism Educational Game
 - Information Technology Classroom Attendance System
@@ -156,6 +169,7 @@ His academic work has been published in international authoritative journals suc
 
 ## Teaching Experience
 
+::: {.timeline}
 - **Nov 2025** | **Teaching Assistant** | Advanced Workshop on AI Literacy Improvement for Primary and Secondary School Teachers in Yuhang District (Hosted by NCET/ZJUT, etc.)
 - **Apr 2025 - Nov 2025** | **Intern Teacher** | Jiaxing Experimental Junior High School (Information Technology)
 - **Jun 2025 - Jul 2025** | **Camp Mentor** | Decoding Zhejiang Science & Technology Genes Study Tour (AI General Education / Robotic Arm Programming)
@@ -164,3 +178,4 @@ His academic work has been published in international authoritative journals suc
 - **Mar 2023 - Dec 2024** | **Part-time Teacher** | Hangzhou Cuiyuan No.2 Primary School (Scratch) & Programming Institutions
 - **2020 - 2022** | **Military Instructor** | Zhejiang Shuren University, Jiashan No.2 Senior High School, etc.
 - **Sept 2018 - Sept 2019** | **Squad Leader** | Strategic Support Force Unit, PLA
+:::

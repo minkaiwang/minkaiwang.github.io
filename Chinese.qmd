@@ -6,45 +6,56 @@ editor:
 format:
   html:
     toc-title: "本页目录"
+    toc-depth: 2
 ---
 
 ## 个人简介 {#profile}
 
+::: {.profile-hero}
+::: {.profile-hero-media}
 ::: {.about-entity}
 ![](images/fig.png){#profile-img}
 :::
+:::
 
-<div class="about-links" style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
-  <a href="mailto:wmkhappy7@gmail.com" style="text-decoration: none; margin: 0 10px;">
+::: {.profile-hero-body}
+<div class="about-links">
+  <a href="mailto:wmkhappy7@gmail.com">
     <i class="bi bi-envelope"></i> wmkhappy7@gmail.com
-  </a> |
-  <a href="https://github.com/minkaiwang" style="text-decoration: none; margin: 0 10px;">
+  </a>
+  <a href="https://github.com/minkaiwang">
     <i class="bi bi-github"></i> GitHub
-  </a> |
-  <a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl" style="text-decoration: none; margin: 0 10px;">
+  </a>
+  <a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl">
     <i class="bi bi-mortarboard"></i> 谷歌学术
-  </a> | 
-  <a href="https://orcid.org/0009-0003-9591-1076" style="text-decoration: none; margin: 0 10px;">
+  </a>
+  <a href="https://orcid.org/0009-0003-9591-1076">
     <i class="bi bi-fingerprint"></i> ORCID
   </a>
 </div>
 
 **王珉锴**，男，浙江嘉兴人，中共党员，退伍军人。现为浙江大学教育技术学专业博士研究生。
 
+::: {.profile-interests}
 主要研究方向为**游戏化学习 (Game-based Learning)**、**人工智能教育应用 (AI in Education)**、**元宇宙 (Metaverse)** 和 **电竞教育 (Esports Education)**。致力于探索技术如何重塑学习体验，研究成果发表于 *Journal of Computer Assisted Learning*, *Journal of Educational Computing Research*, *Entertainment Computing* 等国际权威期刊。
+:::
+:::
+:::
 
 ## 教育背景 {#education}
 
+::: {.timeline}
 - **2026.09 - 至今** | 浙江大学 | 教育技术学 | 博士 (导师：翟雪松)
 - **2026.03 - 至今** | 浙江大学长三角智慧绿洲创新中心·未来影像实验室 | 电竞教育 联培学生 (联培导师：赵瑜佩)
 - **2026.03 - 至今** | 浙江大学电竞国际教育联合研发中心 | 电竞教育 联培学生 (联培导师：赵瑜佩)
 - **2023.09 - 2026.06** | 浙江工业大学 | 教育技术学 | 硕士 (导师：朱敬东)
 - **2019.09 - 2023.06** | 浙江树人学院 | 数字媒体技术 | 学士 (导师：顾汉杰)
 - **2017.09 - 2019.09** | 中国人民解放军 | 战略支援部队 | 战士
+:::
 
 ## 学术成果 {#publications}
 
-### 📄 期刊论文 (Selected)
+### 期刊论文 (Selected) {#journal-papers-selected}
 
 - 翟雪松, **王珉锴**, 程莉莉, 赵川 (2026). 智能时代，教育何为——2026世界数字教育大会综述[J]. **开放教育研究**. (录用, CSSCI)
 - **Wang, M. (王珉锴)**, Zhu, J., Hwang, G., Chang, S., Yang Q., & Zhang, D. Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games. **Journal of Computer Assisted Learning**, 41(6): e70138. [[Link]](https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139)
@@ -57,18 +68,21 @@ format:
 - Zhang, J., Zhu, J., Tu, W., **Wang, M. (王珉锴)**, Yang, Y., Qian, F., & Xu, Y.  The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture. **Applied Sciences**, 2024, 14(15): 6484. [[Link]](https://www.mdpi.com/2076-3417/14/15/6484)
 
 
-### 🗣️ 学术会议
-- **2026 (杭州)** | 中国教育技术学术大会
-- **2026 (嘉兴)** | 濮院电竞峰会
-- **2024 (厦门)** | 全国首届人工智能赋能跨学科项目式学习专题会议
+### 学术会议
 
-### 📘 参编报告
+::: {.conference-list}
+- 全国首届人工智能赋能跨学科项目式学习专题会议（2024，厦门）
+- 中国教育技术学术大会（2026，杭州）
+- 濮院电竞峰会（2026，嘉兴）
+:::
+
+### 参编报告
 - 深度参与编制 **《浙江省数字教育发展蓝皮书》**
 - 深度参与编制 **《浙江省新型综合实践教育场所发展报告》**
 
 ## 工程与软件开发 {#projects}
 
-### 🎮 教育游戏作品
+### 教育游戏作品
 
 ::: {layout-ncol=3}
 
@@ -80,7 +94,7 @@ format:
 
 :::
 
-### 💻 计算机软件著作权
+### 计算机软件著作权
 - 校园导览教育游戏软件
 - 基于角色扮演的红色旅游教育游戏
 - 信息技术课堂点名系统
@@ -164,6 +178,7 @@ format:
 
 ## 教学经历 {#teaching}
 
+::: {.timeline}
 - **2025.11** | **助教** | 余杭区中小学教师人工智能素养提升高级研修班 (中央电教馆/浙工大等主办)
 - **2025.04 - 11** | **初中实习老师** | 嘉兴市实验初级中学 (信息科技)
 - **2025.06 - 07** | **研学导师** | 解码浙江科技基因研学活动 (人工智能通识/机械臂编程)
@@ -172,4 +187,5 @@ format:
 - **2023.03 - 2024.12** | **兼职教师** | 杭州市翠苑第二小学 (Scratch) 及 编程机构
 - **2020 - 2022** | **军训教官** | 浙江树人学院、嘉善第二高级中学等多所学校
 - **2018.09 - 2019.09** | **新兵班长** | 战略支援部队某部
+:::
 

@@ -1,56 +1,78 @@
 /*-- scss:defaults --*/
 
-/* 1. 字体设置 */
-@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code_Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato&family=Yanone+Kaffeesatz&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 $font-family-sans-serif: 'Lato', sans-serif;
 $font-family-monospace: 'Source Code Pro', monospace;
-$font-pt: 'PT Serif', sans-serif;
 
-/* 2. 粉彩色板 */
-$pastel-rose:      #E6A4B4;  /* 玫瑰粉 - 主色 / 强调 */
-$pastel-peach:     #F3D7CA;  /* 蜜桃杏 - 边框 / 悬停 */
-$pastel-cream:     #FFF8E3;  /* 奶油黄 - 主背景 */
-$pastel-warm:      #F5EEE6;  /* 暖米白 - 卡片 / 点缀 */
+/* 粉彩色板 */
+$pastel-rose:      #E6A4B4;
+$pastel-peach:     #F3D7CA;
+$pastel-cream:     #FFF8E3;
+$pastel-warm:      #F5EEE6;
+$pastel-rose-dark: #B87388;
+$text-warm:        #4A4039;
+$text-muted:       #7A6E65;
 
-$pastel-rose-dark: #B87388;  /* 深玫瑰 - 标题 / 链接（保证可读性） */
-$text-warm:        #4A4039;  /* 暖棕灰 - 正文 */
-
-/* 3. 覆盖 Quarto 系统变量 */
 $body-bg:          $pastel-cream;
 $body-color:       $text-warm;
 $link-color:       $pastel-rose-dark;
 $primary:          $pastel-rose-dark;
-
 $navbar-bg:        $pastel-rose;
 $navbar-fg:        $text-warm;
-
 $code-color:       $pastel-rose-dark;
 $code-bg:          rgba(243, 215, 202, 0.45);
-
 $border-color:     $pastel-peach;
 
 
 /*-- scss:rules --*/
 
-/* 导航栏：粉彩渐变 + 轻磨砂 */
+/* ── 全局 ── */
+body {
+  line-height: 1.75;
+  font-family: $font-family-sans-serif;
+  background: linear-gradient(180deg, $pastel-cream 0%, $pastel-warm 100%) fixed;
+}
+
+main.content p,
+main.content li,
+.profile-hero-body p {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  hyphens: auto;
+}
+
+h1, h2, h3, h4,
+.about-links,
+#TOC,
+section.level2 > p > strong:first-child {
+  text-align: left;
+  hyphens: none;
+}
+
+#title-block-header {
+  display: none;
+}
+
+main.content {
+  max-width: 52rem;
+  padding-top: 1.5rem;
+}
+
+/* ── 导航栏 ── */
 .navbar {
   background: linear-gradient(
     135deg,
-    rgba(230, 164, 180, 0.94) 0%,
-    rgba(243, 215, 202, 0.94) 55%,
+    rgba(230, 164, 180, 0.96) 0%,
+    rgba(243, 215, 202, 0.94) 60%,
     rgba(255, 248, 227, 0.92) 100%
   ) !important;
   backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(255, 248, 227, 0.9);
-  box-shadow: 0 2px 18px rgba(184, 115, 136, 0.12);
+  border-bottom: 1px solid rgba(255, 248, 227, 0.95);
+  box-shadow: 0 2px 14px rgba(184, 115, 136, 0.1);
+  min-height: 3.25rem;
 }
 
 .navbar .navbar-brand,
@@ -59,37 +81,157 @@ $border-color:     $pastel-peach;
   font-weight: 500;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link:focus {
+.navbar .navbar-nav .nav-link {
+  border-radius: 999px;
+  padding: 0.35rem 0.95rem !important;
+  margin-left: 0.2rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
   color: $pastel-rose-dark !important;
+  background: rgba(255, 248, 227, 0.88);
 }
 
-/* 正文与标题 */
-body {
-  line-height: 1.75;
-  font-family: $font-family-sans-serif;
-  background: linear-gradient(180deg, $pastel-cream 0%, $pastel-warm 100%) fixed;
-}
-
+/* ── 标题 ── */
 h1, h2, h3, h4 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
   color: $pastel-rose-dark;
-  margin-top: 1.5em;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  border-bottom: 2px solid rgba(243, 215, 202, 0.8);
-  padding-bottom: 0.35em;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-/* 链接 */
+h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: $text-warm;
+}
+
+/* ── 分区卡片 ── */
+.content > section.level2 {
+  background: rgba(255, 248, 227, 0.62);
+  border: 1px solid rgba(243, 215, 202, 0.85);
+  border-radius: 18px;
+  padding: 1.35rem 1.5rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 24px rgba(184, 115, 136, 0.07);
+}
+
+#profile.level2 {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Hero 区 ── */
+.profile-hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.75rem 2rem;
+  align-items: start;
+  background: rgba(255, 248, 227, 0.82);
+  border: 1px solid rgba(243, 215, 202, 0.9);
+  border-radius: 20px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 32px rgba(184, 115, 136, 0.1);
+}
+
+.profile-hero-media {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-hero-body > p:first-of-type {
+  margin-top: 0;
+}
+
+.profile-hero-body .about-links {
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .profile-hero {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .profile-hero-body .about-links {
+    justify-content: center;
+  }
+}
+
+/* ── 头像 ── */
+#profile-img,
+.about-entity img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 11em;
+  height: 11em;
+  object-fit: cover;
+  border: 4px solid $pastel-cream !important;
+  box-shadow: 0 8px 24px rgba(230, 164, 180, 0.28) !important;
+}
+
+/* ── 联系方式 pill ── */
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0 0 1.1rem;
+}
+
+.about-links p {
+  display: contents;
+  margin: 0;
+}
+
+.about-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.42rem 0.95rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(243, 215, 202, 0.95);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.about-links a:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 248, 227, 1);
+  box-shadow: 0 4px 12px rgba(230, 164, 180, 0.18);
+  color: $pastel-rose-dark;
+  text-decoration: none;
+}
+
+/* ── 研究方向（行内强调，避免 pill 撑开标点） ── */
+.profile-interests strong {
+  color: $pastel-rose-dark;
+  font-weight: 700;
+}
+
+/* ── 链接 ── */
 a {
   color: $pastel-rose-dark;
   text-decoration: none;
-  transition: color 0.25s ease, text-decoration-color 0.25s ease;
-  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 a:hover {
@@ -98,34 +240,100 @@ a:hover {
   text-decoration-color: $pastel-peach;
 }
 
-.about-links a {
-  display: inline-block;
-  transition: transform 0.2s ease, color 0.25s ease;
+/* ── 时间线（教育 / 教学等） ── */
+.timeline > ul,
+#teaching-experience > ul,
+#teaching > ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  border-left: 2px solid rgba(230, 164, 180, 0.55);
+  margin-left: 0.4rem;
 }
 
-.about-links a:hover {
-  transform: translateY(-3px);
-  color: $pastel-rose;
+.timeline > ul > li,
+#teaching-experience > ul > li,
+#teaching > ul > li {
+  position: relative;
+  padding: 0.65rem 0 0.65rem 1.35rem;
+  margin-bottom: 0.15rem;
 }
 
-/* 头像 */
-#profile-img,
-.about-entity img {
-  display: block;
-  margin: 0 auto;
+.timeline > ul > li::before,
+#teaching-experience > ul > li::before,
+#teaching > ul > li::before {
+  content: "";
+  position: absolute;
+  left: -0.42rem;
+  top: 1rem;
+  width: 0.65rem;
+  height: 0.65rem;
   border-radius: 50%;
-  width: 12em;
-  height: 12em;
-  object-fit: cover;
-  border: 4px solid $pastel-cream !important;
-  box-shadow: 0 6px 22px rgba(230, 164, 180, 0.32) !important;
+  background: $pastel-rose;
+  border: 2px solid $pastel-cream;
+  box-shadow: 0 0 0 2px rgba(230, 164, 180, 0.25);
 }
 
-/* 游戏缩略图卡片 */
+/* ── 论文列表 ── */
+#journal-papers-selected ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+#journal-papers-selected ul > li {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(243, 215, 202, 0.75);
+  line-height: 1.65;
+}
+
+#journal-papers-selected ul > li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+#journal-papers-selected ul > li a[href^="http"] {
+  display: inline-block;
+  padding: 0.12rem 0.55rem;
+  margin-left: 0.2rem;
+  background: rgba(230, 164, 180, 0.2);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+#journal-papers-selected ul > li a[href^="http"]:hover {
+  background: rgba(230, 164, 180, 0.38);
+  text-decoration: none;
+}
+
+/* ── 会议条目 ── */
+.conference-list > ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.conference-list > ul > li {
+  padding: 0.55rem 0 0.55rem 0.9rem;
+  margin-bottom: 0.35rem;
+  background: transparent;
+  border: none;
+  border-left: 3px solid rgba(230, 164, 180, 0.55);
+  border-radius: 0;
+  line-height: 1.55;
+}
+
+.conference-list > ul > li:last-child {
+  margin-bottom: 0;
+}
+
+/* ── 游戏作品网格 ── */
 .quarto-layout-row .quarto-figure {
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid $pastel-peach;
-  box-shadow: 0 4px 14px rgba(184, 115, 136, 0.1);
+  box-shadow: 0 4px 16px rgba(184, 115, 136, 0.1);
   overflow: hidden;
   background: $pastel-warm;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -133,35 +341,82 @@ a:hover {
 
 .quarto-layout-row .quarto-figure:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 26px rgba(230, 164, 180, 0.2);
+  box-shadow: 0 12px 28px rgba(230, 164, 180, 0.2);
 }
 
-/* Callout */
-.callout-note {
-  border-left-color: $pastel-rose !important;
-  background-color: rgba(243, 215, 202, 0.35) !important;
+/* ── 审稿期刊网格 ── */
+#academic-service > ul > li:first-child > ul,
+#service > ul > li:first-child > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.45rem;
+  list-style: none;
+  padding-left: 0;
+  margin: 0.75rem 0 0;
 }
 
-/* 列表 */
+#academic-service > ul > li:first-child > ul > li,
+#service > ul > li:first-child > ul > li {
+  background: rgba(245, 238, 230, 0.85);
+  border: 1px solid rgba(243, 215, 202, 0.9);
+  border-radius: 8px;
+  padding: 0.38rem 0.6rem;
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+/* ── 荣誉子分类 ── */
+section.level2 > p > strong:first-child {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+  color: $pastel-rose-dark;
+}
+
+section.level2 > p:first-of-type > strong:first-child {
+  margin-top: 0;
+}
+
+/* ── 右侧目录 ── */
+#quarto-margin-sidebar {
+  border-left: 1px solid rgba(243, 215, 202, 0.9);
+}
+
+/* Quarto 会给 TOC 根 ul 加 bootstrap collapse，导致目录不可见 */
+#TOC > ul.collapse {
+  display: block !important;
+  visibility: visible !important;
+  height: auto !important;
+}
+
+#TOC .nav-link {
+  font-size: 0.88rem;
+  padding: 0.28rem 0 0.28rem 0.65rem;
+  border-left: 2px solid transparent;
+  color: $text-muted;
+  text-align: left;
+}
+
+#TOC .nav-link.active,
+#TOC .nav-link:hover {
+  color: $pastel-rose-dark;
+  border-left-color: $pastel-rose;
+  font-weight: 600;
+}
+
+/* 仅隐藏三级子目录，不影响一级 TOC */
+#TOC > ul > li > ul {
+  display: none;
+}
+
+/* ── 列表 ── */
 ul, ol {
   line-height: 1.75;
 }
 
-/* 右侧目录区域 */
-.sidebar {
-  border-left: 1px solid rgba(243, 215, 202, 0.9);
-}
-
-#quarto-margin-sidebar .toc-active {
-  color: $pastel-rose-dark;
-}
-
-/* 首页 hero 区块 */
-#hero-heading {
-  background-color: rgba(255, 248, 227, 0.85);
-  padding: 2em;
-  border-radius: 20px;
-  border: 1px solid rgba(243, 215, 202, 0.7);
-  box-shadow: 0 10px 32px rgba(230, 164, 180, 0.12);
-  margin-top: 1em;
+/* ── Callout ── */
+.callout-note {
+  border-left-color: $pastel-rose !important;
+  background-color: rgba(243, 215, 202, 0.35) !important;
 }

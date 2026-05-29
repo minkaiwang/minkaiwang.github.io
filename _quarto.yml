@@ -25,4 +25,4 @@ format:
     theme: styles.scss   # 这一行非常重要，它告诉系统去读我们下面要写的配色文件
     toc: true
     toc-position: right
-    toc-depth: 3
+    toc-depth: 2
