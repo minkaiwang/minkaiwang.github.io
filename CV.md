@@ -42,7 +42,7 @@ format:
 
 ## 期刊论文（共发表 8 篇 SCI/SSCI，一作 SCI/SSCI 4 篇，二作 SCI/SSCI 2 篇）
 
-- 翟雪松, **王珉锴**, 程莉莉, 赵川 (2026). 智能时代，教育何为——2026 世界数字教育大会综述[J]. **开放教育研究**. (录用, CSSCI)
+- 翟雪松, **王珉锴**, 程莉莉, 赵川 (2026). 智能时代，教育何为——2026 世界数字教育大会综述[J]. **开放教育研究**, 32(3): 59-66. (CSSCI)
 - **Wang, M. (王珉锴)**, Zhu, J., Hwang, G., Chang, S., Yang Q., & Zhang, D. (2025). Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games. **Journal of Computer Assisted Learning**, 41(6): e70138. (Q1 SSCI, IF = 5.7, 中科院 1 区 TOP)
 - **Wang, M. (王珉锴)**, Zhang, D., Zhu, J., & Gu, H. (2025). Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students' Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns. **Journal of Educational Computing Research**, 63(3), 662-694. (Q1 SSCI, IF = 8.5, 中科院 2 区)
 - **Wang, M. (王珉锴)**, Zhu, J., Gu, H., Zhang, J, & Wu, D. (2025). Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning. **Entertainment Computing**, 100960. (Q2 SCI, IF = 2.8, 中科院 3 区)

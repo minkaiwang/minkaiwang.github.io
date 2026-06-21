@@ -61,13 +61,13 @@ format:
 
 ### 期刊论文 (Selected) {#journal-papers-selected}
 
-- 翟雪松, **王珉锴**, 程莉莉, 赵川 (2026). 智能时代，教育何为——2026世界数字教育大会综述[J]. **开放教育研究**. (录用, CSSCI)
+- 翟雪松, **王珉锴**, 程莉莉, 赵川 (2026). 智能时代，教育何为——2026世界数字教育大会综述[J]. **开放教育研究**, 32(3): 59-66. (CSSCI)
 - **Wang, M. (王珉锴)**, Zhu, J., Hwang, G., Chang, S., Yang Q., & Zhang, D. Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games. **Journal of Computer Assisted Learning**, 41(6): e70138. [[Link]](https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139)
 - **Wang, M. (王珉锴)**, Zhang, D., Zhu, J., & Gu, H. Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students’ Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns. **Journal of Educational Computing Research**, 63(3), 662-694. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251321719)
 - **Wang, M. (王珉锴)**, Zhu, J., Gu, H., Zhang, J, & Wu, D. Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning. **Entertainment Computing**, 100960. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952125000400)
 - **Wang, M. (王珉锴)**, Zhu, J., Qian, Wei., Gu, H. Integrating artificial intelligence and gamification in rehabilitation: a scoping review. **Entertainment Computing**, 101011. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952125000916)
 - Gong, Y., **Wang, M. (王珉锴)**, Tu, Y., Huang, C., & Zhang, D. (2026). Beyond pre-scripted interactions: Mapping the integration of LLMs in digital game-based learning - a scoping review. **Entertainment Computing**, 101082. [[Link]](https://www.sciencedirect.com/science/article/pii/S1875952126000042)
-- Gong, Y., **Wang, M. (王珉锴)**, He, L., Xu, C., & Yu, Y. Asking, playing, learning: Investigating large language model-based scaffolding in digital game-based learning for elementary artificial intelligence education. **Journal of Educational Computing Research**, 07356331251396354. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251396354)
+- Gong, Y., **Wang, M. (王珉锴)**, He, L., Xu, C., & Yu, Y. (2025). Asking, playing, learning: Investigating LLM-based support in digital game-based AI education for elementary students. **Journal of Educational Computing Research**, 64(2), 311-343. [[Link]](https://journals.sagepub.com/doi/abs/10.1177/07356331251396354)
 - Xu, Y., Zhu, J., **Wang, M. (王珉锴)**, Qian, F., Yang, Y., & Zhang, J. The Impact of a Digital Game-Based AI Chatbot on Students’ Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum. **Applied Sciences**, 2024, 14(15): 6418. [[Link]](https://www.mdpi.com/2076-3417/14/15/6418)
 - Zhang, J., Zhu, J., Tu, W., **Wang, M. (王珉锴)**, Yang, Y., Qian, F., & Xu, Y.  The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture. **Applied Sciences**, 2024, 14(15): 6484. [[Link]](https://www.mdpi.com/2076-3417/14/15/6484)
 
