@@ -1,24 +1,37 @@
+---
+title: "README"
+editor: 
+  markdown: 
+    wrap: 72
+---
 
-## 如何生成个人主页
+## 王珉锴个人主页
 
-我的 [个人主页](https://lianxhcn.github.io/) 是基于 [Chi Zhang](https://chizapoth.github.io/) ([github](https://github.com/chizapoth/chizapoth.github.io)) 的个人主页修改而来的。 
+这是 **王珉锴 (Minkai Wang)** 的个人简历网站，基于 [Quarto](https://quarto.org/) 构建，通过 GitHub Pages 部署。
 
-你可以 Fork 本仓库，然后酌情修改你的个人信息，编译后即可生成你的个人主页。这种方法无需注册域名，也不用学习 HTML 和 CSS 等前端知识，直接使用 GitHub Pages 即可完成个人主页的搭建。
+👉 访问地址：<https://minkaiwang.github.io>
 
-具体制作过程参见：
+### 网站内容
 
-- 连小白, 2025, [50 分钟搞定个人主页：Fork 模板 + GitHub Pages + Quarto 完整教程](https://www.lianxh.cn/details/1644.html).
+- **[English CV](index.html)** / **[中文简历](Chinese.html)**：完整简历（教育背景、论文、项目、教学经历、获奖等）。
+- **[Publications](publications.html)**：学术论文成果。
+- **[Codes & Projects](codes.html)**：教育游戏与软件开发项目。
+- **[Blog & Updates](blog.html)**：研究动态与学术活动。
+- **[Reports & Books](books.html)**：参编报告与著作。
+- **[About](about.html)**：个人简介。
 
-本仓库的使用方法：
+### 技术栈
 
-- 你可以点击本页右上方的 ⭐**Star** 按钮来收藏本仓库，方便日后查阅；
-- 也可以点击 **Use this template** 按钮来快速 Fork 本仓库。
-- 你制作个人主页期间有任何问题，可以在 [Discussions](https://github.com/lianyujun/lianyujun.github.io/discussions) 提问和讨论。
+- 站点生成：Quarto
+- 主题样式：自定义粉彩色系（`styles.scss`）
+- 部署：GitHub Pages（输出目录 `docs/`）
 
---- 
+### 本地预览
 
-<center>
+```bash
+quarto preview
+```
 
-[主页](https://www.lianxh.cn/) | [课程](https://www.lianxh.cn/details/17.html) | [视频](https://lianxh-class.cn/) | [推文](https://www.lianxh.cn/blogs/all.html) | [资料](https://www.lianxh.cn/share.html)
+### 致谢
 
-</center>
+本站点最初基于开源个人主页模板搭建，感谢原作者的分享。

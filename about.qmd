@@ -1,5 +1,33 @@
 ---
 title: "About"
+format:
+  html:
+    toc-title: "本页目录"
+    toc-depth: 2
 ---
 
-连玉君的个人主页
+## 王珉锴 (Minkai Wang)
+
+**王珉锴**，男，浙江嘉善人，退伍军人。现为浙江大学教育技术学专业博士研究生（2026 年起，导师：翟雪松教授），同时为浙江大学长三角智慧绿洲创新中心·未来影像实验室与浙江大学电竞国际教育联合研发中心联培学生（联培导师：赵瑜佩）。曾服役于中国人民解放军战略支援部队，担任新兵班班长。
+
+### 联系方式
+
+- 邮箱：wmkhappy7@gmail.com
+- GitHub：<https://github.com/minkaiwang>
+- Google Scholar：<https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl>
+- ORCID：<https://orcid.org/0009-0003-9591-1076>
+
+### 研究方向
+
+- 游戏化学习 (Game-based Learning)
+- 人工智能教育应用 (AI in Education)
+- 教育元宇宙 (Metaverse)
+- 电竞教育 (Esports Education)
+
+致力于探索大语言模型、虚拟代理、数字游戏等新兴技术如何重塑学习体验与认知发展，已在 *Journal of Computer Assisted Learning*、*Journal of Educational Computing Research*、*Entertainment Computing* 等国际权威期刊发表多篇论文。
+
+### 更多
+
+- 完整简历：[中文简历](Chinese.html) ｜ [English](index.html)
+- 论文成果：[Publications](publications.html)
+- 工程项目：[Codes & Projects](codes.html)

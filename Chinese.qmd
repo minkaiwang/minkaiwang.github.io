@@ -34,7 +34,11 @@ format:
   </a>
 </div>
 
-**王珉锴**，男，浙江嘉兴人，中共党员，退伍军人。现为浙江大学教育技术学专业博士研究生。
+**王珉锴**，男，浙江嘉善人，退伍军人。现为浙江大学教育技术学专业博士研究生。
+
+::: {.profile-meta}
+籍贯：浙江嘉善 ｜ 出生日期：1999.04 ｜ MBTI：ENFJ ｜ 技能证书：教资中学信息、大学英语六级、计算机 C 语言二级
+:::
 
 ::: {.profile-interests}
 主要研究方向为**游戏化学习 (Game-based Learning)**、**人工智能教育应用 (AI in Education)**、**元宇宙 (Metaverse)** 和 **电竞教育 (Esports Education)**。致力于探索技术如何重塑学习体验，研究成果发表于 *Journal of Computer Assisted Learning*, *Journal of Educational Computing Research*, *Entertainment Computing* 等国际权威期刊。
@@ -142,8 +146,10 @@ format:
   - *Humanities & Social Science Communication* (SSCI)
   - *Journal of Academic Librarianship* (SSCI)
   - *Cognitive Neurodynamics* (SCI)
+  - *Universal Access in the Information Society* (SCI)
   - *Entertainment Computing* (SCI)
   - *Cognitive Development* (SSCI)
+  - *SoftwareX* (SCI)
   - *Acta Psychologica* (SSCI)
   - *Frontiers in Psychology* (SSCI)
   - *International Journal of Computational Intelligence Systems* (SCI)
@@ -156,16 +162,20 @@ format:
   - *Discover Artificial Intelligence* (EI)
   - *Discover Psychology* (ESCI)
 - **学术社群**: 
-  - 微信公众号负责人：“数字游戏学习研究”、“儿康研究院”
+  - 微信公众号负责人：“数字游戏学习研究”、“儿康研究院”、“信息科技学习研究”
 
 ## 荣誉奖项 {#honors}
 
 **🏆 学术与科研竞赛**
-- “挑战杯”校赛二等奖
+- “挑战杯”专项赛校赛二等奖
 - 第十届NCDA全国高校数字艺术设计大赛浙江赛区三等奖
 - 第二十届浙江省大学生多媒体作品设计竞赛二等奖
 - 第十七届中国国际动漫节“梦梦杯”游戏创意大赛入围奖
 - 全国大学生反走私创作大赛入围奖
+
+**🎨 文体与社会活动**
+- 柯桥区消防比武团体三等奖
+- 柯桥区红十字会原创艺术作品征集大赛三等奖
 
 **🍎 教学与指导成果**
 - **裁判**: 2025年世界机器人大赛–青少年机器人设计大赛杭州选拔赛 (Matata赛项主裁判)
@@ -185,6 +195,8 @@ format:
 - **2024.03 - 06** | **编程教师** | 杭州市文新小学 (3D打印)、中泰中心小学 (机器人编程)
 - **2024.03 - 05** | **竞赛指导** | 杭州市多所中小学 (机械臂竞赛培训)
 - **2023.03 - 2024.12** | **兼职教师** | 杭州市翠苑第二小学 (Scratch) 及 编程机构
+- **2023.02 / 2024.02** | **滑雪教练** | 孩本 Camps 滑雪冬令营 (双板滑雪)
+- **2020.07** | **编程教师** | 嘉善实验小学 (人工智能机器人拓展班)
 - **2020 - 2022** | **军训教官** | 浙江树人学院、嘉善第二高级中学等多所学校
 - **2018.09 - 2019.09** | **新兵班长** | 战略支援部队某部
 :::

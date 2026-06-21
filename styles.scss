@@ -227,6 +227,18 @@ h3 {
   font-weight: 700;
 }
 
+/* ── 个人基本信息条 ── */
+.profile-meta {
+  margin: 0.6rem 0 1rem;
+  padding: 0.6rem 1rem;
+  background: rgba(255, 248, 227, 0.55);
+  border-left: 3px solid $pastel-rose;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b5b55;
+  line-height: 1.7;
+}
+
 /* ── 链接 ── */
 a {
   color: $pastel-rose-dark;

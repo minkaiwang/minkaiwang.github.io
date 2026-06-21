@@ -27,6 +27,10 @@ title: "Minkai Wang"
 
 **Minkai Wang** is a Ph.D. student in the Department of Educational Technology at **Zhejiang University**, supervised by Prof. Xuesong Zhai. He is also a veteran who served in the Strategic Support Force of the Chinese People's Liberation Army (PLA).
 
+::: {.profile-meta}
+Hometown: Jiashan, Zhejiang ｜ Date of Birth: Apr 1999 ｜ MBTI: ENFJ ｜ Certificates: Secondary-School Information Technology Teacher Qualification, CET-6, Computer C Language Level 2
+:::
+
 ::: {.profile-interests}
 His research interests lie at the intersection of **Game-based Learning (GBL)**, **Artificial Intelligence in Education (AIED)**, the **Metaverse**, and **Esports Education**. He is dedicated to exploring how emerging technologies can reshape learning experiences and cognitive development.
 :::
@@ -133,8 +137,10 @@ His academic work has been published in international authoritative journals suc
   - *Humanities & Social Science Communication* (SSCI)
   - *Journal of Academic Librarianship* (SSCI)
   - *Cognitive Neurodynamics* (SCI)
+  - *Universal Access in the Information Society* (SCI)
   - *Entertainment Computing* (SCI)
   - *Cognitive Development* (SSCI)
+  - *SoftwareX* (SCI)
   - *Acta Psychologica* (SSCI)
   - *Frontiers in Psychology* (SSCI)
   - *International Journal of Computational Intelligence Systems* (SCI)
@@ -147,7 +153,7 @@ His academic work has been published in international authoritative journals suc
   - *Discover Artificial Intelligence* (EI)
   - *Discover Psychology* (ESCI)
 - **Academic Community**: 
-  - Person in charge of WeChat Official Accounts: "Digital Game-based Learning Research" (数字游戏学习研究), "Child Rehabilitation Research Institute" (儿康研究院)
+  - Person in charge of WeChat Official Accounts: "Digital Game-based Learning Research" (数字游戏学习研究), "Child Rehabilitation Research Institute" (儿康研究院), "Information Technology Learning Research" (信息科技学习研究)
 
 ## Honors & Awards
 
@@ -157,6 +163,10 @@ His academic work has been published in international authoritative journals suc
 - Second Prize in the 20th Zhejiang Provincial University Multimedia Works Design Competition
 - Finalist Award in the 17th China International Cartoon & Animation Festival "Dream Cup" Game Creative Competition
 - Finalist Award in the National University Student Anti-Smuggling Creation Competition
+
+**🎨 Cultural, Sports & Social Activities**
+- Third Prize (Team) in the Keqiao District Firefighting Competition
+- Third Prize in the Keqiao District Red Cross Original Artworks Contest
 
 **🍎 Teaching & Mentoring Achievements**
 - **Referee**: Main Referee for the Matata Category, 2025 World Robot Contest – Youth Robot Design Contest (Hangzhou Selection)
@@ -176,6 +186,8 @@ His academic work has been published in international authoritative journals suc
 - **Mar 2024 - June 2024** | **Programming Teacher** | Hangzhou Wenxin Primary School (3D Printing), Zhongtai Center Primary School (Robot Programming)
 - **Mar 2024 - May 2024** | **Competition Instructor** | Robotic Arm Competition Training for multiple schools in Hangzhou
 - **Mar 2023 - Dec 2024** | **Part-time Teacher** | Hangzhou Cuiyuan No.2 Primary School (Scratch) & Programming Institutions
+- **Feb 2023 / Feb 2024** | **Skiing Instructor** | Hai Ben Camps Ski Winter Camp (Alpine Skiing)
+- **Jul 2020** | **Programming Teacher** | Jiashan Experimental Primary School (AI & Robotics Extracurricular Class)
 - **2020 - 2022** | **Military Instructor** | Zhejiang Shuren University, Jiashan No.2 Senior High School, etc.
 - **Sept 2018 - Sept 2019** | **Squad Leader** | Strategic Support Force Unit, PLA
 :::

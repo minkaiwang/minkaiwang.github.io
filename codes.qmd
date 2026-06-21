@@ -1,31 +1,49 @@
 ---
-title: "Codes"
+title: "Codes & Projects"
 editor: 
   markdown: 
     wrap: 72
+format:
+  html:
+    toc-title: "本页目录"
+    toc-depth: 2
 ---
 
-Many of the links below will take you to content on GitHub
-([my github](https://github.com/arlionn)).
+我的工程实践聚焦于**教育游戏开发**与**教育数字化平台设计**，技术栈涵盖 Unity、Web 前后端、数字孪生等。GitHub 主页：<https://github.com/minkaiwang>。
 
-- `lianxh`：在 Stata 中快速搜索 [lianxh.cn](https://www.lianxh.cn) 推文并按指定格式输出
-  - 连享会, 2020, [ssc install lianxh：你想要的 Stata 都在这里](https://www.lianxh.cn/details/233.html)
-  - 连享会, 2023, [新版lianxh命令发布了！](https://www.lianxh.cn/details/1296.html)
+&emsp;
 
-- `bdiff`：组间系数差异检验
-  - 李烨阳, 2023, [Stata：自己动手做组间系数差异检验-bootstrap-bdiff](https://www.lianxh.cn/details/1286.html).
-  - 连玉君, 2020, [Stata: 如何检验分组回归后的组间系数差异？](https://www.lianxh.cn/details/19.html).
-- `winsor2`：批量缩尾处理
-  - 袁煜玲, 2021, [winsor2：离群值和异常值的缩尾处理](https://www.lianxh.cn/details/562.html).
-- `ihelp` / `wwwhelp`  
-  - 连享会, 2024, [ihelp: 快速打开Stata帮助文件PDF手册](https://www.lianxh.cn/details/1416.html).
-  - Chen Yongli, **Lian Yujun**\*. Browse and cite Stata manuals easily: the `wwwhelp` command. **Stata Journal**, 2024, 24 (1): 161–168. [-PDF-](https://file-lianxh.oss-cn-shenzhen.aliyuncs.com/Refs/LianPub/Chen-Lian-2024-SJ-wwwhelp-ihelp.pdf). 安装：`ssc install ihelp, replace`
-- `getiref`
-  - 连玉君, 2024, [getiref：快速获得文献的引文和PDF原文](https://www.lianxh.cn/details/1382.html).
-- `sftt`：双边随机边界模型
-  - **Lian Yujun**, Chang Liu, Christopher F. Parmeter. Two-tier stochastic frontier analysis using Stata. **Stata Journal**, 2023, 23(1): 197-229. [-Link-](https://journals.sagepub.com/doi/abs/10.1177/1536867X231162033), [-PDF-](https://file.lianxh.cn/Refs/LianPub/Lian-2023-SJ-sftt-Two-tier-SFA.pdf), [Codes & Data](https://gitee.com/arlionn/sftt), [github](https://github.com/arlionn/sftt). 安装：`net install st0705.pkg, all replace` 
-- `hhi5`：赫芬达尔指数
-  - 连享会, 2020, [Stata数据处理：赫芬达尔指数-(hhi5)-命令介绍](https://www.lianxh.cn/details/327.html)
+## 教育游戏作品
 
-- `xtbalance`：非平衡面板 &rarr; 平衡面板
-  - 吴雄, 2020, [Stata数据处理：xtbalance-非平衡面板之转换](https://www.lianxh.cn/details/316.html).
+:::: {layout-ncol=3}
+
+![[**《等一个蛋》** (Steam 平台)](https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg)](images/game1.png){group="games" width="100%"}
+
+![[**《小树芽出发》** (ITCH 平台)](https://charmpoint.itch.io/xiaoshuya-chufa)](images/game2.png){group="games" width="100%"}
+
+![[**《百年穿梭机》** (ITCH 平台)](https://charmpoint.itch.io/bncsj)](images/game3.png){group="games" width="100%"}
+
+::::
+
+- **《等一个蛋》**（Waiting for an Egg）：已上架 [Steam](https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg) 平台的教育游戏。
+- **《小树芽出发》**：发布于 [ITCH](https://charmpoint.itch.io/xiaoshuya-chufa) 平台的校园导览类教育游戏。
+- **《百年穿梭机》**：发布于 [ITCH](https://charmpoint.itch.io/bncsj) 平台的红色文化主题教育游戏。
+
+&emsp;
+
+## 教育数字化系统
+
+- **数字竞技潜能测评系统**：基于 WEB/Unity 开发的电竞教育体验/练习/测评系统，服务于浙江大学电竞国际教育联合研发中心。
+- **项目式学习云平台 & 数字孪生平台**：为苏州市吴中区项目式学习活动提供平台技术服务。
+- **数智园林耕读学习空间**：为杭州市旅游职业学校开发数字孪生教学平台。
+- **动作技能智能学习空间**：为杭州市人民职业学校设计教学空间及游戏化学习平台。
+
+&emsp;
+
+## 计算机软件著作权
+
+- 校园导览教育游戏软件
+- 基于角色扮演的红色旅游教育游戏
+- 信息技术课堂点名系统
+- 信息技术课堂互动系统
+- 学生作品项目管理平台
