@@ -8,7 +8,7 @@
   <style>
     @page {
       size: A4;
-      margin: 0;
+      margin: 8mm 9mm 10mm;
     }
 
     * {
@@ -20,8 +20,8 @@
       background: #ece7df;
       color: #22262d;
       font-family: "Microsoft YaHei", "Noto Sans CJK SC", "SimSun", Arial, sans-serif;
-      font-size: 8.25pt;
-      line-height: 1.35;
+      font-size: 8.55pt;
+      line-height: 1.38;
     }
 
     .toolbar {
@@ -51,11 +51,11 @@
       width: 210mm;
       min-height: 297mm;
       margin: 0 auto 18px;
-      padding: 7.2mm 8.5mm 6.5mm;
+      padding: 8mm 9mm 9mm;
       overflow: hidden;
       background:
-        linear-gradient(90deg, rgba(92, 120, 158, 0.055) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(92, 120, 158, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(92, 120, 158, 0.05) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(92, 120, 158, 0.04) 1px, transparent 1px),
         #fffaf1;
       background-size: 8mm 8mm, 8mm 8mm, auto;
       box-shadow: 0 14px 36px rgba(27, 32, 41, 0.18);
@@ -64,16 +64,16 @@
     .sheet::before,
     .sheet::after {
       content: "";
-      position: absolute;
+      position: fixed;
       pointer-events: none;
-      opacity: 0.55;
+      opacity: 0.45;
     }
 
     .sheet::before {
       right: 8mm;
-      top: 8mm;
+      top: 7mm;
       width: 30mm;
-      height: 22mm;
+      height: 18mm;
       background:
         linear-gradient(#f0c24f 0 0) 0 0 / 4mm 4mm no-repeat,
         linear-gradient(#7a3440 0 0) 8mm 4mm / 4mm 4mm no-repeat,
@@ -84,34 +84,35 @@
     .sheet::after {
       left: 0;
       bottom: 0;
-      width: 30mm;
-      height: 30mm;
+      width: 28mm;
+      height: 24mm;
       background:
-        linear-gradient(#7a3440 0 0) 0 18mm / 4mm 4mm no-repeat,
-        linear-gradient(#f0c24f 0 0) 8mm 22mm / 4mm 4mm no-repeat,
-        linear-gradient(#4d6f7f 0 0) 16mm 26mm / 4mm 4mm no-repeat;
+        linear-gradient(#7a3440 0 0) 0 14mm / 4mm 4mm no-repeat,
+        linear-gradient(#f0c24f 0 0) 8mm 18mm / 4mm 4mm no-repeat,
+        linear-gradient(#4d6f7f 0 0) 16mm 22mm / 4mm 4mm no-repeat;
     }
 
     .hero {
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: 1fr 76mm;
-      gap: 7mm;
-      min-height: 30mm;
-      padding: 5.5mm 6.5mm;
+      grid-template-columns: 1fr 78mm;
+      gap: 8mm;
+      min-height: 31mm;
+      padding: 6mm 7mm;
       color: #fff;
       background:
         linear-gradient(135deg, rgba(34, 39, 47, 0.98), rgba(122, 52, 64, 0.96) 62%, rgba(177, 92, 95, 0.92)),
         #7a3440;
       border-radius: 8px;
       box-shadow: 0 6px 18px rgba(122, 52, 64, 0.2);
+      break-inside: avoid;
     }
 
     .eyebrow {
       margin: 0 0 3px;
       color: #f3d37a;
-      font-size: 7.2pt;
+      font-size: 7.4pt;
       font-weight: 800;
       letter-spacing: 0.04em;
       text-transform: uppercase;
@@ -119,7 +120,7 @@
 
     h1 {
       margin: 0;
-      font-size: 23pt;
+      font-size: 24pt;
       line-height: 1;
       letter-spacing: 0;
     }
@@ -128,7 +129,7 @@
       display: inline-block;
       margin-left: 5px;
       color: rgba(255, 255, 255, 0.78);
-      font-size: 10pt;
+      font-size: 10.2pt;
       font-weight: 600;
       vertical-align: 4px;
     }
@@ -137,16 +138,16 @@
       margin: 3px 0 0;
       max-width: 82mm;
       color: rgba(255, 255, 255, 0.86);
-      font-size: 8.5pt;
+      font-size: 8.6pt;
     }
 
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-content: center;
-      gap: 2px 7px;
+      gap: 2px 8px;
       color: rgba(255, 255, 255, 0.9);
-      font-size: 7.45pt;
+      font-size: 7.5pt;
     }
 
     .contact-grid span {
@@ -154,7 +155,7 @@
       overflow-wrap: anywhere;
     }
 
-    .resume-layout {
+    .summary-grid {
       position: relative;
       z-index: 1;
       display: grid;
@@ -163,19 +164,19 @@
       margin-top: 5mm;
     }
 
-    aside,
-    main {
-      min-width: 0;
+    .resume-body {
+      position: relative;
+      z-index: 1;
     }
 
     section {
-      margin: 0 0 3.1mm;
+      margin: 0 0 3.4mm;
       break-inside: avoid;
     }
 
     .panel {
-      padding: 3.2mm;
-      background: rgba(255, 255, 255, 0.72);
+      padding: 3.4mm;
+      background: rgba(255, 255, 255, 0.76);
       border: 1px solid rgba(122, 52, 64, 0.12);
       border-radius: 7px;
     }
@@ -183,21 +184,22 @@
     h2 {
       display: flex;
       align-items: center;
-      gap: 5px;
-      margin: 0 0 1.7mm;
+      gap: 8px;
+      margin: 0 0 2mm;
       color: #7a3440;
-      font-size: 9.8pt;
-      line-height: 1.15;
+      font-size: 10pt;
+      line-height: 1.2;
       letter-spacing: 0;
     }
 
     h2::before {
       content: "";
-      width: 7px;
-      height: 7px;
-      flex: 0 0 auto;
-      background: #f0c24f;
-      box-shadow: 7px 0 0 #4d6f7f;
+      width: 14px;
+      height: 8px;
+      flex: 0 0 14px;
+      background:
+        linear-gradient(#f0c24f 0 0) left 2px top 0 / 7px 7px no-repeat,
+        linear-gradient(#4d6f7f 0 0) right 0 top 1px / 5px 5px no-repeat;
     }
 
     p {
@@ -207,17 +209,21 @@
     ul,
     ol {
       margin: 0;
-      padding-left: 4.4mm;
+      padding-left: 4.5mm;
     }
 
     li {
-      margin: 0 0 1.1mm;
+      margin: 0 0 1.05mm;
       break-inside: avoid;
     }
 
     strong {
       color: #171b22;
       font-weight: 800;
+    }
+
+    em {
+      color: #343942;
     }
 
     .chips {
@@ -235,13 +241,13 @@
       background: rgba(240, 194, 79, 0.22);
       border: 1px solid rgba(122, 52, 64, 0.1);
       border-radius: 4px;
-      font-size: 7.6pt;
+      font-size: 7.35pt;
       font-weight: 700;
     }
 
     .item {
       margin-bottom: 1.8mm;
-      padding-bottom: 1.4mm;
+      padding-bottom: 1.35mm;
       border-bottom: 1px solid rgba(34, 38, 45, 0.08);
     }
 
@@ -262,37 +268,57 @@
       display: block;
       margin-top: 1px;
       color: #616872;
-      font-size: 7.2pt;
+      font-size: 7.25pt;
     }
 
-    .compact-list li {
-      margin-bottom: 0.9mm;
+    .compact-list li,
+    .pub-list li {
+      margin-bottom: 1.15mm;
     }
 
     .pub-list {
       padding-left: 5mm;
     }
 
-    .pub-list li {
-      margin-bottom: 1.15mm;
-    }
-
-    .split {
+    .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4mm;
+      gap: 4.5mm;
+      align-items: start;
+    }
+
+    .three-col {
+      columns: 3;
+      column-gap: 7mm;
+      padding-left: 4mm;
+    }
+
+    .three-col li {
+      break-inside: avoid;
+      margin-bottom: 0.9mm;
+    }
+
+    .section-break {
+      margin-top: 4mm;
+      padding-top: 4mm;
+      border-top: 1px solid rgba(122, 52, 64, 0.14);
     }
 
     .note {
       color: #555c66;
-      font-size: 7.3pt;
+      font-size: 7.45pt;
+    }
+
+    a {
+      color: #7a3440;
+      text-decoration: none;
     }
 
     @media print {
       html,
       body {
-        width: 210mm;
-        min-height: 297mm;
+        width: auto;
+        min-height: auto;
         background: #fffaf1;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -303,9 +329,11 @@
       }
 
       .sheet {
-        width: 210mm;
-        min-height: 297mm;
+        width: auto;
+        min-height: auto;
         margin: 0;
+        padding: 0;
+        overflow: visible;
         box-shadow: none;
       }
     }
@@ -324,8 +352,8 @@
       }
 
       .hero,
-      .resume-layout,
-      .split {
+      .summary-grid,
+      .two-col {
         display: block;
       }
 
@@ -339,6 +367,10 @@
 
       .panel {
         margin-bottom: 14px;
+      }
+
+      .three-col {
+        columns: 1;
       }
     }
   </style>
@@ -366,7 +398,7 @@
       </div>
     </header>
 
-    <div class="resume-layout">
+    <div class="summary-grid">
       <aside>
         <section class="panel">
           <h2>研究关键词</h2>
@@ -387,7 +419,7 @@
             <span class="meta">2026.09 - 至今｜导师：翟雪松</span>
           </div>
           <div class="item">
-            <span class="item-title">浙江大学未来影像实验室 / 电竞国际教育联合研发中心</span>
+            <span class="item-title">浙江大学长三角智慧绿洲创新中心·未来影像实验室 / 浙江大学电竞国际教育联合研发中心</span>
             <span class="meta">2026.03 - 至今｜电竞教育联培学生；联培导师：赵瑜佩</span>
           </div>
           <div class="item">
@@ -403,16 +435,6 @@
             <span class="meta">2017.09 - 2019.09</span>
           </div>
         </section>
-
-        <section class="panel">
-          <h2>荣誉亮点</h2>
-          <ul class="compact-list">
-            <li>硕士阶段：省优秀毕业生、国家奖学金、校研究生学术之星、校一等学业奖学金</li>
-            <li>本科阶段：校优秀毕业生、校优秀毕业论文、校优秀学生党员、优秀团干</li>
-            <li>部队服役：优秀新兵、优秀义务兵、战伤救助比武团体三等奖、嘉奖</li>
-            <li>2025 年世界机器人大赛杭州选拔赛 Matata 赛项主裁判</li>
-          </ul>
-        </section>
       </aside>
 
       <main>
@@ -422,58 +444,148 @@
         </section>
 
         <section>
-          <h2>代表性论文</h2>
+          <h2>论文成果</h2>
           <ol class="pub-list">
             <li>翟雪松, <strong>王珉锴</strong>, 程莉莉, 赵川 (2026). 智能时代，教育何为——2026 世界数字教育大会综述[J]. <strong>开放教育研究</strong>, 32(3), 59-66. (CSSCI)</li>
-            <li><strong>Wang, M.</strong>, Zhu, J., Hwang, G., Chang, S., Yang, Q., &amp; Zhang, D. Enhancing Student Engagement in STEM Education... <strong>Journal of Computer Assisted Learning</strong>, 41(6), e70138.</li>
-            <li><strong>Wang, M.</strong>, Zhang, D., Zhu, J., &amp; Gu, H. Effects of LLM-Based Adaptive Mechanism Into Contextual Games... <strong>Journal of Educational Computing Research</strong>, 63(3), 662-694.</li>
-            <li><strong>Wang, M.</strong>, Zhu, J., Gu, H., Zhang, J., &amp; Wu, D. Optimizing experiential learning in science education... <strong>Entertainment Computing</strong>, 100960.</li>
-            <li><strong>Wang, M.</strong>, Zhu, J., Qian, W., &amp; Gu, H. Integrating artificial intelligence and gamification in rehabilitation... <strong>Entertainment Computing</strong>, 101011.</li>
+            <li><strong>Wang, M.</strong>, Zhu, J., Hwang, G., Chang, S., Yang, Q., &amp; Zhang, D. Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games. <strong>Journal of Computer Assisted Learning</strong>, 41(6), e70138.</li>
+            <li><strong>Wang, M.</strong>, Zhang, D., Zhu, J., &amp; Gu, H. Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students' Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns. <strong>Journal of Educational Computing Research</strong>, 63(3), 662-694.</li>
+            <li><strong>Wang, M.</strong>, Zhu, J., Gu, H., Zhang, J., &amp; Wu, D. Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning. <strong>Entertainment Computing</strong>, 100960.</li>
+            <li><strong>Wang, M.</strong>, Zhu, J., Qian, W., &amp; Gu, H. Integrating artificial intelligence and gamification in rehabilitation: a scoping review. <strong>Entertainment Computing</strong>, 101011.</li>
+            <li>Gong, Y., <strong>Wang, M.</strong>, Tu, Y., Huang, C., &amp; Zhang, D. (2026). Beyond pre-scripted interactions: Mapping the integration of LLMs in digital game-based learning - a scoping review. <strong>Entertainment Computing</strong>, 101082.</li>
+            <li>Gong, Y., <strong>Wang, M.</strong>, He, L., Xu, C., &amp; Yu, Y. (2025). Asking, playing, learning: Investigating LLM-based support in digital game-based AI education for elementary students. <strong>Journal of Educational Computing Research</strong>, 64(2), 311-343.</li>
+            <li>Xu, Y., Zhu, J., <strong>Wang, M.</strong>, Qian, F., Yang, Y., &amp; Zhang, J. (2024). The Impact of a Digital Game-Based AI Chatbot on Students' Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum. <strong>Applied Sciences</strong>, 14(15), 6418.</li>
+            <li>Zhang, J., Zhu, J., Tu, W., <strong>Wang, M.</strong>, Yang, Y., Qian, F., &amp; Xu, Y. (2024). The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture. <strong>Applied Sciences</strong>, 14(15), 6484.</li>
           </ol>
         </section>
+      </main>
+    </div>
 
-        <section>
+    <div class="resume-body section-break">
+      <section class="two-col">
+        <div>
           <h2>项目与作品</h2>
           <ul class="compact-list">
-            <li><strong>数字竞技潜能测评系统</strong>：参与设计 / 开发的网页系统，支持电竞选手能力画像、体验测评、排名与数据化反馈。</li>
-            <li><strong>《等一个蛋》</strong>：Steam 平台教育游戏作品，探索轻量叙事、交互体验与学习动机。</li>
-            <li><strong>《小树芽出发》</strong>：ITCH 平台校园导览教育游戏，融合数字媒体设计与角色扮演式学习交互。</li>
-            <li><strong>《百年穿梭机》</strong>：ITCH 平台红色旅游教育游戏，通过情境探索支持红色文化学习。</li>
+            <li><strong>数字竞技潜能测评系统</strong>：参与设计 / 开发的网页系统，面向电竞选手能力画像与成长追踪，支持体验、测评、排名与数据化反馈等功能。</li>
+            <li><strong>《等一个蛋》</strong>：Steam 平台教育游戏作品，面向轻量叙事、交互体验与学习动机探索。</li>
+            <li><strong>《小树芽出发》</strong>：ITCH 平台校园导览教育游戏，结合数字媒体设计、校园导览与角色扮演式学习交互。</li>
+            <li><strong>《百年穿梭机》</strong>：ITCH 平台红色旅游教育游戏，通过情境探索与角色扮演支持红色文化学习。</li>
           </ul>
-        </section>
-
-        <section>
+        </div>
+        <div>
           <h2>科研项目</h2>
           <ul class="compact-list">
             <li><strong>主持</strong>｜浙江工业大学“运河杯”重点项目：LLM 虚拟代理替代现实游戏在 STEAM 教育中的应用研究（2024-2025）</li>
             <li><strong>主持</strong>｜浙江工业大学“运河杯”重点项目：大语言模型驱动的自适应科学教育情境游戏设计与实践（2024-2025）</li>
             <li><strong>参与</strong>｜浙江省教育技术中心课题：主题科学馆——数智时代下小学实践教育（2023-2024）</li>
             <li><strong>参与</strong>｜教育部国家级大创项目：“沉浸式红色游”数字化红色旅游应用深度开发（2022-2023）</li>
+            <li><strong>主持</strong>｜浙江省大创项目：基于角色扮演的树大校园导览游戏研发（2021-2022）</li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section class="split">
-          <div>
-            <h2>学术服务</h2>
-            <ul class="compact-list">
-              <li>Reviewer: <em>Artificial Intelligence Review</em>, <em>npj Digital Medicine</em>, <em>Entertainment Computing</em>, <em>IEEE Access</em>, <em>Scientific Reports</em> 等。</li>
-              <li>参与编制《浙江省数字教育发展蓝皮书》《浙江省新型综合实践教育场所发展报告》。</li>
-              <li>参加中国教育技术学术大会、濮院电竞峰会、全国首届人工智能赋能跨学科项目式学习专题会议。</li>
-            </ul>
-          </div>
-          <div>
-            <h2>教学经历</h2>
-            <ul class="compact-list">
-              <li>2025.11｜助教｜余杭区中小学教师人工智能素养提升高级研修班</li>
-              <li>2025.04 - 11｜初中实习老师｜嘉兴市实验初级中学（信息科技）</li>
-              <li>2024.03 - 06｜编程教师｜杭州市文新小学、中泰中心小学</li>
-              <li>2020 - 2022｜军训教官｜浙江树人学院、嘉善第二高级中学等多所学校</li>
-            </ul>
-          </div>
-        </section>
+      <section>
+        <h2>其他参与课题 / 项目</h2>
+        <ul class="three-col">
+          <li>洞头 PBL 游戏化实践教育课程开发</li>
+          <li>浙江大学数字竞技体验 / 练习 / 测评系统</li>
+          <li>中小学人工智能教育优秀教学案例研究</li>
+          <li>吉利汽车工业科创实践教育基地</li>
+          <li>动作技能智能学习空间项目</li>
+          <li>新型综合实践教育场所培育工作</li>
+          <li>吴中区项目式学习活动理论研究与技术服务</li>
+          <li>“学科课程中的德育”课堂教学案例</li>
+          <li>数智园林耕读学习空间</li>
+        </ul>
+      </section>
 
-        <p class="note">注：本 PDF 为网页导出简历版本；完整论文列表、项目链接与英文页面见个人主页。</p>
-      </main>
+      <section class="two-col">
+        <div>
+          <h2>学术与科研竞赛</h2>
+          <ul class="compact-list">
+            <li>“挑战杯”专项赛校赛二等奖</li>
+            <li>第十届 NCDA 全国高校数字艺术设计大赛浙江赛区三等奖</li>
+            <li>第二十届浙江省大学生多媒体作品设计竞赛二等奖</li>
+            <li>第十七届中国国际动漫节“梦梦杯”游戏创意大赛入围奖</li>
+            <li>全国大学生反走私创作大赛入围奖</li>
+          </ul>
+        </div>
+        <div>
+          <h2>教学、指导与综合荣誉</h2>
+          <ul class="compact-list">
+            <li>2025 年世界机器人大赛杭州选拔赛 Matata 赛项主裁判</li>
+            <li>指导余杭区“奋进杯”STEAM 创新创意大赛获二、三等奖</li>
+            <li>硕士阶段：省优秀毕业生、国家奖学金、校研究生学术之星、校一等学业奖学金</li>
+            <li>本科阶段：校优秀毕业生、校优秀毕业论文、校优秀学生党员、优秀团干</li>
+            <li>部队服役：优秀新兵、优秀义务兵、战伤救助比武团体三等奖、嘉奖</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>期刊审稿 Reviewer</h2>
+        <ul class="three-col">
+          <li><em>Artificial Intelligence Review</em></li>
+          <li><em>npj Digital Medicine</em></li>
+          <li><em>BMC Medical Ethics</em></li>
+          <li><em>BMC Medical Education</em></li>
+          <li><em>Virtual Reality</em></li>
+          <li><em>Humanities &amp; Social Science Communication</em></li>
+          <li><em>Journal of Academic Librarianship</em></li>
+          <li><em>Cognitive Neurodynamics</em></li>
+          <li><em>Universal Access in the Information Society</em></li>
+          <li><em>Entertainment Computing</em></li>
+          <li><em>Cognitive Development</em></li>
+          <li><em>SoftwareX</em></li>
+          <li><em>Acta Psychologica</em></li>
+          <li><em>Frontiers in Psychology</em></li>
+          <li><em>International Journal of Computational Intelligence Systems</em></li>
+          <li><em>JoVE - Journal of Visualized Experiments</em></li>
+          <li><em>IEEE Access</em></li>
+          <li><em>Scientific Reports</em></li>
+          <li><em>Frontiers in Rehabilitation Sciences</em></li>
+          <li><em>Discover Sustainability</em></li>
+          <li><em>Social Sciences &amp; Humanities Open</em></li>
+          <li><em>Discover Artificial Intelligence</em></li>
+          <li><em>Discover Psychology</em></li>
+        </ul>
+      </section>
+
+      <section class="two-col">
+        <div>
+          <h2>学术社群与报告</h2>
+          <ul class="compact-list">
+            <li>微信公众号负责人：“数字游戏学习研究”、“儿康研究院”、“信息科技学习研究”</li>
+            <li>深度参与编制《浙江省数字教育发展蓝皮书》</li>
+            <li>深度参与编制《浙江省新型综合实践教育场所发展报告》</li>
+          </ul>
+        </div>
+        <div>
+          <h2>学术会议</h2>
+          <ul class="compact-list">
+            <li>全国首届人工智能赋能跨学科项目式学习专题会议（2024，厦门）</li>
+            <li>中国教育技术学术大会（2026，杭州）</li>
+            <li>濮院电竞峰会（2026，嘉兴）</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>教学经历</h2>
+        <ul class="three-col">
+          <li><strong>2025.11</strong>｜助教｜余杭区中小学教师人工智能素养提升高级研修班</li>
+          <li><strong>2025.04 - 11</strong>｜初中实习老师｜嘉兴市实验初级中学（信息科技）</li>
+          <li><strong>2025.06 - 07</strong>｜研学导师｜解码浙江科技基因研学活动</li>
+          <li><strong>2024.03 - 06</strong>｜编程教师｜杭州市文新小学、中泰中心小学</li>
+          <li><strong>2024.03 - 05</strong>｜竞赛指导｜杭州市多所中小学机械臂竞赛培训</li>
+          <li><strong>2023.03 - 2024.12</strong>｜兼职教师｜杭州市翠苑第二小学及编程机构</li>
+          <li><strong>2023.02 / 2024.02</strong>｜滑雪教练｜孩本 Camps 滑雪冬令营</li>
+          <li><strong>2020.07</strong>｜编程教师｜嘉善实验小学</li>
+          <li><strong>2020 - 2022</strong>｜军训教官｜浙江树人学院、嘉善第二高级中学等</li>
+          <li><strong>2018.09 - 2019.09</strong>｜新兵班长｜战略支援部队某部</li>
+        </ul>
+      </section>
+
+      <p class="note">注：本 PDF 为网页导出简历版本；论文链接、项目链接与英文页面见个人主页。</p>
     </div>
   </article>
 </body>

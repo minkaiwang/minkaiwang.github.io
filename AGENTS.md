@@ -14,7 +14,7 @@
 - `_config.yml`：Jekyll 网站配置、作者侧栏信息、构建输出目录和排除规则。当前 `destination` 为 `docs`，以兼容原 GitHub Pages 发布目录。
 - `_pages/about.md`：中文默认首页和主要简历内容，包含最新动态、经历、Publications、项目、荣誉、服务、会议、教学经历等单页锚点分区。
 - `_pages/en.md`：英文版本页面，访问路径为 `/en/`，正文和侧栏作者资料使用英文口径。
-- `_pages/resume.html`：PDF 简历打印版页面，访问路径为 `/resume/`，用于生成一页 A4 PDF 简历；当前为双栏信息结构，带轻量像素网格背景和少量像素色块。
+- `_pages/resume.html`：PDF 简历打印版页面，访问路径为 `/resume/`，用于生成完整内容版 A4 PDF 简历；当前为分栏信息结构，带轻量像素网格背景和少量像素色块。
 - `_data/navigation.yml`：顶部导航链接，包含中文默认导航和英文页导航；当前不在导航栏放 CV。
 - `assets/css/home.css`：主页自定义样式，基于 WowPage 模板调整；包含首页轻像素背景、欢迎语横幅、卡片与响应式样式。
 - `files/Minkai_Wang_CV.pdf`：历史 PDF 文件仍保留在 `files/`，当前不作为导航入口，也不进入 sitemap。

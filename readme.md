@@ -22,7 +22,7 @@ Jekyll 模板改造，用于展示个人简介、学术经历、论文成果、�
 - **英文版本页**：`_pages/en.md`，访问路径为 `/en/`。
 - **Publications**：当前只展示 Full Publications List，不再使用 Core
   Publications 切换。
-- **PDF 简历**：`_pages/resume.html` 是一页 A4 打印版页面；当前下载文件为
+- **PDF 简历**：`_pages/resume.html` 是 A4 打印版页面；当前下载文件为
   `files/Minkai_Wang_Resume_CN.pdf`。
 - **Images**：头像和项目图片放在 `images/`。
 - **发布目录**：Jekyll 构建结果输出到 `docs/`，以兼容 GitHub Pages
@@ -53,8 +53,8 @@ bundle exec jekyll build
 ### PDF 简历
 
 PDF 简历由 `/resume/` 打印版页面生成，下载入口在中英文首页顶部。当前 PDF
-为一页 A4 简历，采用双栏信息结构、低饱和像素网格背景和少量像素色块。当前
-PDF 文件为 `files/Minkai_Wang_Resume_CN.pdf`，构建后会同步到
+为完整内容版 A4 简历，采用分栏信息结构、低饱和像素网格背景和少量像素色块。
+当前 PDF 文件为 `files/Minkai_Wang_Resume_CN.pdf`，构建后会同步到
 `docs/files/Minkai_Wang_Resume_CN.pdf`。
 
 Word 简历文件不会上传；`.gitignore` 已忽略 `*.docx` 和 Word 临时锁文件。
