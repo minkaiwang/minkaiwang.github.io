@@ -1,0 +1,278 @@
+---
+permalink: /
+author_profile: true
+stylesheets:
+  - /assets/css/home.css
+redirect_from:
+  - /about/
+  - /about.html
+---
+
+<div class="welcome-banner">你好 👋 欢迎来到我的主页！</div>
+
+<div class="top-actions">
+  <a class="language-pill" href="/en/">English</a>
+  <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download>导出 PDF 简历</a>
+</div>
+
+<h1 class="main-heading">王珉锴</h1>
+
+<p class="lead">
+  <strong>王珉锴</strong>，浙江嘉善人，退伍军人，主要围绕游戏化学习、人工智能教育应用、元宇宙与电竞教育开展研究。将于 2026.09 起在 <strong>浙江大学</strong> 教育技术学专业攻读博士学位（导师：翟雪松），并在浙江大学长三角智慧绿洲创新中心未来影像实验室、浙江大学电竞国际教育联合研发中心接受电竞教育方向联合培养。
+</p>
+
+<p>
+  他的研究关注大语言模型、虚拟代理、自适应机制与数字游戏如何重塑学习体验、学习投入、认知负荷与行为模式。相关成果发表于 <em>Journal of Computer Assisted Learning</em>、<em>Journal of Educational Computing Research</em>、<em>Entertainment Computing</em> 等期刊。
+</p>
+
+<h2 id="news">最新动态</h2>
+
+<div class="news-box">
+  <ul class="news-list">
+    <li><span class="news-date"><em>2026.07</em></span> 正在为博士生涯做准备。</li>
+  </ul>
+</div>
+
+<h2 id="experience">经历</h2>
+
+<div class="experience-container">
+  <div class="experience-card">
+    <div class="experience-logo logo-initial">ZJU</div>
+    <div class="experience-info">
+      <strong>浙江大学</strong><br>
+      <em>2026.09 - 至今</em><br>
+      教育技术学博士研究生；导师：翟雪松。<br>
+      <span>方向：人工智能教育应用、游戏化学习、智能学习环境。</span>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="experience-logo logo-initial">ESE</div>
+    <div class="experience-info">
+      <strong>浙江大学长三角智慧绿洲创新中心·未来影像实验室 / 浙江大学电竞国际教育联合研发中心</strong><br>
+      <em>2026.03 - 至今</em><br>
+      电竞教育方向联培学生；联培导师：赵瑜佩。<br>
+      <span>参与电竞教育系统、Unity/Web 开发与数字测评场景建设。</span>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="experience-logo logo-initial">ZJUT</div>
+    <div class="experience-info">
+      <strong>浙江工业大学</strong><br>
+      <em>2023.09 - 2026.06</em><br>
+      教育技术学硕士；导师：朱敬东。<br>
+      <span>研究 LLM 支持的情境游戏、虚拟代理与 STEM 学习投入。</span>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="experience-logo logo-initial">ZSRU</div>
+    <div class="experience-info">
+      <strong>浙江树人学院</strong><br>
+      <em>2019.09 - 2023.06</em><br>
+      数字媒体技术学士；导师：顾汉杰。<br>
+      <span>学习数字媒体技术，并开展校园导览教育游戏、红色旅游教育游戏等设计与开发实践。</span>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="experience-logo logo-initial">PLA</div>
+    <div class="experience-info">
+      <strong>中国人民解放军</strong><br>
+      <em>2017.09 - 2019.09</em><br>
+      战略支援部队战士。<br>
+      <span>获优秀新兵、优秀义务兵、嘉奖等荣誉。</span>
+    </div>
+  </div>
+</div>
+
+<h2 id="publications">Publications</h2>
+
+<h3 class="section-kicker">Full Publications List</h3>
+
+<div id="full-publications" class="publication-view">
+  <ul class="full-publication-list">
+    <li><span class="pub-list-badge">CSSCI</span> <span class="pub-list-title">智能时代，教育何为——2026 世界数字教育大会综述</span><br><span class="pub-list-authors">翟雪松, <strong>王珉锴</strong>, 程莉莉, 赵川 (2026).</span> <span class="pub-list-note"><em>开放教育研究</em>, 32(3), 59-66.</span> <span class="pub-list-links"><a href="https://openedu.sou.edu.cn/frontsite/series_details.aspx?id=2800" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">JCAL</span> <span class="pub-list-title">Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games</span><br><span class="pub-list-authors"><strong>Wang, M. (王珉锴)</strong>, Zhu, J., Hwang, G., Chang, S., Yang, Q., &amp; Zhang, D.</span> <span class="pub-list-note"><em>Journal of Computer Assisted Learning</em>, 41(6): e70138.</span> <span class="pub-list-links"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">JECR</span> <span class="pub-list-title">Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students' Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns</span><br><span class="pub-list-authors"><strong>Wang, M. (王珉锴)</strong>, Zhang, D., Zhu, J., &amp; Gu, H.</span> <span class="pub-list-note"><em>Journal of Educational Computing Research</em>, 63(3), 662-694.</span> <span class="pub-list-links"><a href="https://journals.sagepub.com/doi/abs/10.1177/07356331251321719" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning</span><br><span class="pub-list-authors"><strong>Wang, M. (王珉锴)</strong>, Zhu, J., Gu, H., Zhang, J., &amp; Wu, D.</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 100960.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952125000400" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Integrating artificial intelligence and gamification in rehabilitation: a scoping review</span><br><span class="pub-list-authors"><strong>Wang, M. (王珉锴)</strong>, Zhu, J., Qian, Wei., &amp; Gu, H.</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 101011.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952125000916" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Beyond pre-scripted interactions: Mapping the integration of LLMs in digital game-based learning - a scoping review</span><br><span class="pub-list-authors">Gong, Y., <strong>Wang, M. (王珉锴)</strong>, Tu, Y., Huang, C., &amp; Zhang, D. (2026).</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 101082.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952126000042" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">JECR</span> <span class="pub-list-title">Asking, playing, learning: Investigating LLM-based support in digital game-based AI education for elementary students</span><br><span class="pub-list-authors">Gong, Y., <strong>Wang, M. (王珉锴)</strong>, He, L., Xu, C., &amp; Yu, Y. (2025).</span> <span class="pub-list-note"><em>Journal of Educational Computing Research</em>, 64(2), 311-343.</span> <span class="pub-list-links"><a href="https://journals.sagepub.com/doi/abs/10.1177/07356331251396354" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Impact of a Digital Game-Based AI Chatbot on Students' Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum</span><br><span class="pub-list-authors">Xu, Y., Zhu, J., <strong>Wang, M. (王珉锴)</strong>, Qian, F., Yang, Y., &amp; Zhang, J. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6418.</span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6418" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture</span><br><span class="pub-list-authors">Zhang, J., Zhu, J., Tu, W., <strong>Wang, M. (王珉锴)</strong>, Yang, Y., Qian, F., &amp; Xu, Y. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6484.</span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6484" target="_blank" rel="noopener">[Link]</a></span></li>
+  </ul>
+</div>
+
+<h2 id="projects">项目与作品</h2>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator">
+      <img src="/images/game1.png" alt="《等一个蛋》游戏截图">
+    </div>
+    <div>
+      <strong>《等一个蛋》</strong><br>
+      <i>Steam 平台教育游戏作品。</i><br>
+      面向轻量叙事、交互体验与学习动机探索的游戏化学习作品。<br>
+      <b><i>Game Project</i></b> <a href="https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg" target="_blank" rel="noopener">[Steam]</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator">
+      <img src="/images/game2.png" alt="《小树芽出发》游戏截图">
+    </div>
+    <div>
+      <strong>《小树芽出发》</strong><br>
+      <i>ITCH 平台校园导览教育游戏。</i><br>
+      结合数字媒体设计、校园导览与角色扮演式学习交互的教育游戏项目。<br>
+      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/xiaoshuya-chufa" target="_blank" rel="noopener">[itch.io]</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator">
+      <img src="/images/game3.png" alt="《百年穿梭机》游戏截图">
+    </div>
+    <div>
+      <strong>《百年穿梭机》</strong><br>
+      <i>ITCH 平台红色旅游教育游戏。</i><br>
+      通过情境探索与角色扮演支持红色文化学习的教育游戏作品。<br>
+      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/bncsj" target="_blank" rel="noopener">[itch.io]</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator">
+      <img src="/images/esports-assessment-system.png" alt="数字竞技潜能测评系统页面截图">
+    </div>
+    <div>
+      <strong>数字竞技潜能测评系统</strong><br>
+      <i>参与设计 / 开发的网页系统。</i><br>
+      面向电竞选手能力画像与成长追踪，支持体验、测评、排名与数据化反馈等功能。<br>
+      <b><i>Web Project</i></b> <a href="https://www.esports-data.online/assessment/" target="_blank" rel="noopener">[Website]</a>
+    </div>
+  </div>
+</div>
+
+<h2 id="grants">科研项目</h2>
+
+<ol class="compact-list">
+  <li><strong>主持</strong> | 浙江工业大学“运河杯”重点项目：LLM 虚拟代理替代现实游戏在 STEAM 教育中的应用研究（2024-2025）</li>
+  <li><strong>主持</strong> | 浙江工业大学“运河杯”重点项目：大语言模型驱动的自适应科学教育情境游戏设计与实践（2024-2025）</li>
+  <li><strong>参与</strong> | 浙江省教育技术中心课题：主题科学馆——数智时代下小学实践教育（2023-2024）</li>
+  <li><strong>参与</strong> | 教育部国家级大创项目：“沉浸式红色游”数字化红色旅游应用深度开发（2022-2023）</li>
+  <li><strong>主持</strong> | 浙江省大创项目：基于角色扮演的树大校园导览游戏研发（2021-2022）</li>
+</ol>
+
+<div class="text-card">
+  <strong>其他参与课题 / 项目</strong>
+  <ul class="two-column-list">
+    <li>洞头 PBL 游戏化实践教育课程开发</li>
+    <li>浙江大学数字竞技体验 / 练习 / 测评系统</li>
+    <li>中小学人工智能教育优秀教学案例研究</li>
+    <li>吉利汽车工业科创实践教育基地</li>
+    <li>动作技能智能学习空间项目</li>
+    <li>新型综合实践教育场所培育工作</li>
+    <li>吴中区项目式学习活动理论研究与技术服务</li>
+    <li>“学科课程中的德育”课堂教学案</li>
+    <li>数智园林耕读学习空间</li>
+  </ul>
+</div>
+
+<h2 id="awards">荣誉奖项</h2>
+
+<div class="text-card">
+  <strong>学术与科研竞赛</strong>
+  <ul class="compact-list">
+    <li>“挑战杯”专项赛校赛二等奖</li>
+    <li>第十届 NCDA 全国高校数字艺术设计大赛浙江赛区三等奖</li>
+    <li>第二十届浙江省大学生多媒体作品设计竞赛二等奖</li>
+    <li>第十七届中国国际动漫节“梦梦杯”游戏创意大赛入围奖</li>
+    <li>全国大学生反走私创作大赛入围奖</li>
+  </ul>
+</div>
+
+<div class="text-card">
+  <strong>教学、指导与综合荣誉</strong>
+  <ul class="compact-list">
+    <li>2025 年世界机器人大赛杭州选拔赛 Matata 赛项主裁判</li>
+    <li>指导余杭区“奋进杯”STEAM 创新创意大赛获二、三等奖</li>
+    <li>硕士阶段：省优秀毕业生、国家奖学金、校研究生学术之星、校一等学业奖学金</li>
+    <li>本科阶段：校优秀毕业生、校优秀毕业论文、校优秀学生党员、优秀团干</li>
+    <li>部队服役：优秀新兵、优秀义务兵、战伤救助比武团体三等奖、嘉奖</li>
+  </ul>
+</div>
+
+<h2 id="services">学术服务</h2>
+
+<div class="text-card">
+  <strong>期刊审稿人 Reviewer</strong>
+  <ul class="two-column-list journal-list">
+    <li><em>Artificial Intelligence Review</em></li>
+    <li><em>npj Digital Medicine</em></li>
+    <li><em>BMC Medical Ethics</em></li>
+    <li><em>BMC Medical Education</em></li>
+    <li><em>Virtual Reality</em></li>
+    <li><em>Humanities &amp; Social Science Communication</em></li>
+    <li><em>Journal of Academic Librarianship</em></li>
+    <li><em>Cognitive Neurodynamics</em></li>
+    <li><em>Universal Access in the Information Society</em></li>
+    <li><em>Entertainment Computing</em></li>
+    <li><em>Cognitive Development</em></li>
+    <li><em>SoftwareX</em></li>
+    <li><em>Acta Psychologica</em></li>
+    <li><em>Frontiers in Psychology</em></li>
+    <li><em>International Journal of Computational Intelligence Systems</em></li>
+    <li><em>JoVE - Journal of Visualized Experiments</em></li>
+    <li><em>IEEE Access</em></li>
+    <li><em>Scientific Reports</em></li>
+    <li><em>Frontiers in Rehabilitation Sciences</em></li>
+    <li><em>Discover Sustainability</em></li>
+    <li><em>Social Sciences &amp; Humanities Open</em></li>
+    <li><em>Discover Artificial Intelligence</em></li>
+    <li><em>Discover Psychology</em></li>
+  </ul>
+</div>
+
+<div class="text-card">
+  <strong>学术社群与报告</strong>
+  <ul class="compact-list">
+    <li>微信公众号负责人：“数字游戏学习研究”、“儿康研究院”、“信息科技学习研究”</li>
+    <li>深度参与编制《浙江省数字教育发展蓝皮书》</li>
+    <li>深度参与编制《浙江省新型综合实践教育场所发展报告》</li>
+  </ul>
+</div>
+
+<h2 id="talks">学术会议</h2>
+
+<ul class="compact-list">
+  <li>全国首届人工智能赋能跨学科项目式学习专题会议（2024，厦门）</li>
+  <li>中国教育技术学术大会（2026，杭州）</li>
+  <li>濮院电竞峰会（2026，嘉兴）</li>
+</ul>
+
+<h2 id="teaching">教学经历</h2>
+
+<div class="text-card">
+  <ul class="compact-list">
+    <li><strong>2025.11</strong> | 助教 | 余杭区中小学教师人工智能素养提升高级研修班</li>
+    <li><strong>2025.04 - 11</strong> | 初中实习老师 | 嘉兴市实验初级中学（信息科技）</li>
+    <li><strong>2025.06 - 07</strong> | 研学导师 | 解码浙江科技基因研学活动</li>
+    <li><strong>2024.03 - 06</strong> | 编程教师 | 杭州市文新小学、中泰中心小学</li>
+    <li><strong>2024.03 - 05</strong> | 竞赛指导 | 杭州市多所中小学机械臂竞赛培训</li>
+    <li><strong>2023.03 - 2024.12</strong> | 兼职教师 | 杭州市翠苑第二小学及编程机构</li>
+    <li><strong>2023.02 / 2024.02</strong> | 滑雪教练 | 孩本 Camps 滑雪冬令营</li>
+    <li><strong>2020.07</strong> | 编程教师 | 嘉善实验小学</li>
+    <li><strong>2020 - 2022</strong> | 军训教官 | 浙江树人学院、嘉善第二高级中学等</li>
+    <li><strong>2018.09 - 2019.09</strong> | 新兵班长 | 战略支援部队某部</li>
+  </ul>
+</div>

@@ -1,759 +1,675 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Minkai Wang</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-</style>
-
-
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/site-logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2655609e4c4ce2e7dd4199da68fd4791.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ef9d5ae6d245ff41ccf6f2defb933fc1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
-
-
-</head>
-
-<body class="nav-fixed quarto-light">
-
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Minkai Wang</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">English</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Chinese.html"> 
-<span class="menu-text">中文</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul class="collapse">
-  <li><a href="#education" id="toc-education" class="nav-link active" data-scroll-target="#education">Education</a></li>
-  <li><a href="#academic-publications" id="toc-academic-publications" class="nav-link" data-scroll-target="#academic-publications">Academic Publications</a></li>
-  <li><a href="#engineering-software-development" id="toc-engineering-software-development" class="nav-link" data-scroll-target="#engineering-software-development">Engineering &amp; Software Development</a></li>
-  <li><a href="#research-grants" id="toc-research-grants" class="nav-link" data-scroll-target="#research-grants">Research Grants</a></li>
-  <li><a href="#academic-service" id="toc-academic-service" class="nav-link" data-scroll-target="#academic-service">Academic Service</a></li>
-  <li><a href="#honors-awards" id="toc-honors-awards" class="nav-link" data-scroll-target="#honors-awards">Honors &amp; Awards</a></li>
-  <li><a href="#teaching-experience" id="toc-teaching-experience" class="nav-link" data-scroll-target="#teaching-experience">Teaching Experience</a></li>
-  </ul>
-</nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Minkai Wang</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
 
-    
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>王珉锴 Minkai Wang</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="zh-CN">
+<meta property="og:site_name" content="王珉锴 Minkai Wang">
+<meta property="og:title" content="王珉锴 Minkai Wang">
+
+
+  <link rel="canonical" href="https://minkaiwang.github.io/">
+  <meta property="og:url" content="https://minkaiwang.github.io/">
+
+
+
+
+
+
+
   
-    
-  </div>
+
   
 
 
-</header>
 
 
-<div class="profile-hero">
-<div class="profile-hero-media">
-<div class="about-entity">
-<p><img src="images/fig.png" class="img-fluid"></p>
-</div>
-</div>
-<div class="profile-hero-body">
-<div class="about-links">
-<p><a href="mailto:wmkhappy7@gmail.com"> <i class="bi bi-envelope"></i> wmkhappy7@gmail.com </a> <a href="https://github.com/minkaiwang"> <i class="bi bi-github"></i> GitHub </a> <a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&amp;hl"> <i class="bi bi-mortarboard"></i> Google Scholar </a> <a href="https://orcid.org/0009-0003-9591-1076"> <i class="bi bi-fingerprint"></i> ORCID </a></p>
-</div>
-<p><strong>Minkai Wang</strong> is a Ph.D.&nbsp;student in the Department of Educational Technology at <strong>Zhejiang University</strong>, supervised by Prof.&nbsp;Xuesong Zhai. He is also a veteran who served in the Strategic Support Force of the Chinese People’s Liberation Army (PLA).</p>
-<div class="profile-meta">
-<p>Hometown: Jiashan, Zhejiang ｜ Date of Birth: Apr 1999 ｜ MBTI: ENFJ ｜ Certificates: Secondary-School Information Technology Teacher Qualification, CET-6, Computer C Language Level 2</p>
-</div>
-<div class="profile-interests">
-<p>His research interests lie at the intersection of <strong>Game-based Learning (GBL)</strong>, <strong>Artificial Intelligence in Education (AIED)</strong>, the <strong>Metaverse</strong>, and <strong>Esports Education</strong>. He is dedicated to exploring how emerging technologies can reshape learning experiences and cognitive development.</p>
-</div>
-<p>His academic work has been published in international authoritative journals such as <em>Journal of Computer Assisted Learning</em>, <em>Journal of Educational Computing Research</em>, and <em>Entertainment Computing</em>.</p>
-</div>
-</div>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<div class="timeline">
-<ul>
-<li><strong>Sept 2026 - Present</strong> | <strong>Zhejiang University</strong> | Ph.D.&nbsp;in Educational Technology | Supervisor: Xuesong Zhai</li>
-<li><strong>Mar 2026 - Present</strong> | <strong>Zhejiang University Yangtze River Delta Wisdom Oasis Innovation Center · Future Imaging Laboratory</strong> | Joint Training Student in Esports Education | Joint Training Supervisor: Yupei Zhao</li>
-<li><strong>Mar 2026 - Present</strong> | <strong>ZJU International Joint R&amp;D Center for Esports Education</strong> | Joint Training Student in Esports Education | Joint Training Supervisor: Yupei Zhao</li>
-<li><strong>Sept 2023 - June 2026</strong> | <strong>Zhejiang University of Technology</strong> | Master in Educational Technology | Supervisor: Jingdong Zhu</li>
-<li><strong>Sept 2019 - June 2023</strong> | <strong>Zhejiang Shuren University</strong> | Bachelor in Digital Media Technology | Supervisor: Hanjie Gu</li>
-<li><strong>Sept 2017 - Sept 2019</strong> | <strong>Chinese People’s Liberation Army (PLA)</strong> | Strategic Support Force | Soldier</li>
-</ul>
-</div>
-</section>
-<section id="academic-publications" class="level2">
-<h2 class="anchored" data-anchor-id="academic-publications">Academic Publications</h2>
-<section id="journal-papers-selected" class="level3">
-<h3 class="anchored" data-anchor-id="journal-papers-selected">Journal Papers (Selected)</h3>
-<ul>
-<li>Zhai, X., <strong>Wang, M.</strong>, Cheng, L., &amp; Zhao, C. (2026). What Should Education Be in the Intelligent Era? A Review of the 2026 World Digital Education Conference. <strong>Open Education Research</strong>. (Accepted, CSSCI)</li>
-<li><strong>Wang, M.</strong>, Zhu, J., Hwang, G., Chang, S., Yang Q., &amp; Zhang, D. Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games. <strong>Journal of Computer Assisted Learning</strong>, 41(6): e70138. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139">[Link]</a></li>
-<li><strong>Wang, M.</strong>, Zhang, D., Zhu, J., &amp; Gu, H. Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students’ Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns. <strong>Journal of Educational Computing Research</strong>, 63(3), 662-694. <a href="https://journals.sagepub.com/doi/abs/10.1177/07356331251321719">[Link]</a></li>
-<li><strong>Wang, M.</strong>, Zhu, J., Gu, H., Zhang, J, &amp; Wu, D. Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning. <strong>Entertainment Computing</strong>, 100960. <a href="https://www.sciencedirect.com/science/article/pii/S1875952125000400">[Link]</a></li>
-<li><strong>Wang, M.</strong>, Zhu, J., Qian, Wei., Gu, H. Integrating artificial intelligence and gamification in rehabilitation: a scoping review. <strong>Entertainment Computing</strong>, 101011. <a href="https://www.sciencedirect.com/science/article/pii/S1875952125000916">[Link]</a></li>
-<li>Gong, Y., <strong>Wang, M.</strong>, Tu, Y., Huang, C., &amp; Zhang, D. (2026). Beyond pre-scripted interactions: Mapping the integration of LLMs in digital game-based learning - a scoping review. <strong>Entertainment Computing</strong>, 101082. <a href="https://www.sciencedirect.com/science/article/pii/S1875952126000042">[Link]</a></li>
-<li>Gong, Y., <strong>Wang, M.</strong>, He, L., Xu, C., &amp; Yu, Y. Asking, playing, learning: Investigating LLM-based support in digital game-based AI education for elementary students. <strong>Journal of Educational Computing Research</strong>, 64(2), 311-343. (Q1 SSCI, IF = 8.5). <a href="https://journals.sagepub.com/doi/abs/10.1177/07356331251396354">[Link]</a></li>
-<li>Xu, Y., Zhu, J., <strong>Wang, M.</strong>, Qian, F., Yang, Y., &amp; Zhang, J. The Impact of a Digital Game-Based AI Chatbot on Students’ Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum. <strong>Applied Sciences</strong>, 2024, 14(15): 6418. <a href="https://www.mdpi.com/2076-3417/14/15/6418">[Link]</a></li>
-<li>Zhang, J., Zhu, J., Tu, W., <strong>Wang, M.</strong>, Yang, Y., Qian, F., &amp; Xu, Y. The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture. <strong>Applied Sciences</strong>, 2024, 14(15): 6484. <a href="https://www.mdpi.com/2076-3417/14/15/6484">[Link]</a></li>
-</ul>
-</section>
-<section id="conference-presentations" class="level3">
-<h3 class="anchored" data-anchor-id="conference-presentations">Conference Presentations</h3>
-<div class="conference-list">
-<ul>
-<li>The 1st National Symposium on AI-Empowered Interdisciplinary Project-Based Learning (2024, Xiamen)</li>
-<li>China Educational Technology Academic Conference (2026, Hangzhou)</li>
-<li>Puyuan Esports Summit (2026, Jiaxing)</li>
-</ul>
-</div>
-</section>
-<section id="reports-blue-books" class="level3">
-<h3 class="anchored" data-anchor-id="reports-blue-books">Reports &amp; Blue Books</h3>
-<ul>
-<li>Deeply participated in the compilation of the <strong>“Blue Book on Digital Education Development in Zhejiang Province”</strong></li>
-<li>Deeply participated in the compilation of the <strong>“Development Report on New Comprehensive Practical Education Venues in Zhejiang Province”</strong></li>
-</ul>
-</section>
-</section>
-<section id="engineering-software-development" class="level2">
-<h2 class="anchored" data-anchor-id="engineering-software-development">Engineering &amp; Software Development</h2>
-<section id="educational-games" class="level3">
-<h3 class="anchored" data-anchor-id="educational-games">Educational Games</h3>
-<div class="quarto-layout-panel" data-layout-ncol="3">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/game1.png" class="img-fluid figure-img" style="width:100.0%" data-group="games"></p>
-<figcaption><a href="https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg"><strong>“Waiting for an Egg”</strong> (Steam)</a></figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/game2.png" class="img-fluid figure-img" style="width:100.0%" data-group="games"></p>
-<figcaption><a href="https://charmpoint.itch.io/xiaoshuya-chufa"><strong>“Sprout’s Journey”</strong> (ITCH)</a></figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/game3.png" class="img-fluid figure-img" style="width:100.0%" data-group="games"></p>
-<figcaption><a href="https://charmpoint.itch.io/bncsj"><strong>“Centennial Shuttle”</strong> (ITCH)</a></figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="software-copyrights" class="level3">
-<h3 class="anchored" data-anchor-id="software-copyrights">Software Copyrights</h3>
-<ul>
-<li>Educational Game Software for Campus Navigation</li>
-<li>Role-Playing Based Red Tourism Educational Game</li>
-<li>Information Technology Classroom Attendance System</li>
-<li>Information Technology Classroom Interaction System</li>
-<li>Student Project Management Platform</li>
-</ul>
-</section>
-</section>
-<section id="research-grants" class="level2">
-<h2 class="anchored" data-anchor-id="research-grants">Research Grants</h2>
-<ol type="1">
-<li><strong>Host</strong> | Zhejiang University of Technology “Canal Cup” Key Project: Research on the Application of LLM Virtual Agents Replacing Reality Games in STEAM Education (2024-2025)</li>
-<li><strong>Host</strong> | Zhejiang University of Technology “Canal Cup” Key Project: Design and Practice of LLM-Driven Adaptive Science Education Contextual Games (2024-2025)</li>
-<li><strong>Participant</strong> | Zhejiang Educational Technology Center Project: Theme Science Museum — Primary School Practical Education in the Digital Intelligence Era (2023-2024)</li>
-<li><strong>Participant</strong> | Ministry of Education National Innovation and Entrepreneurship Training Program: Deep Development of “Immersive Red Tour” Digital Red Tourism Application (2022-2023)</li>
-<li><strong>Host</strong> | Zhejiang Provincial Innovation and Entrepreneurship Training Program: Research and Development of Role-Playing Based Campus Navigation Game (2021-2022)</li>
-</ol>
-<p><strong>Other Participated Projects/Programs:</strong></p>
-<ol type="1">
-<li><strong>Mar 2026 - Aug 2026 | Dongtou PBL Gamified Practice Education Curriculum Development</strong><br>
-Wenzhou Haixia Cultural Development Center; responsible for designing and developing practical activities/curricula.</li>
-<li><strong>Mar 2026 - Jun 2026 | Zhejiang University Digital Esports Experience/Practice/Assessment System</strong><br>
-ZJU International Joint R&amp;D Center for Esports Education; responsible for Unity/Web frontend and backend design and development.</li>
-<li><strong>Nov 2024 - May 2025 | Research on Excellent AI Education Teaching Cases for Primary and Secondary Schools</strong><br>
-National Institute of Education Sciences, Educational Science Publishing House, and Yuhang Institute of Education Development; responsible for designing, producing, and organizing outstanding AI education cases in Yuhang District.</li>
-<li><strong>Nov 2024 - Aug 2025 | Geely Automobile Industry Sci-Tech Innovation Practice Education Base</strong><br>
-Linhai Haoqing Automobile Industry School; responsible for project-based study tour design and premium curriculum development.</li>
-<li><strong>Dec 2024 - Jul 2025 | Intelligent Learning Space for Motor Skills</strong><br>
-Hangzhou Renmin Vocational School; responsible for instructional space design and gamified learning platform design.</li>
-<li><strong>Nov 2024 - Apr 2025 | Cultivation of New Comprehensive Practical Education Venues</strong><br>
-Zhejiang Educational Technology Center; responsible for practice-base curriculum design and application documentation.</li>
-<li><strong>Sep 2023 - Oct 2025 | Theoretical Research and Technical Service for Project-Based Learning Activities in Wuzhong District</strong><br>
-Suzhou Wuzhong District Teacher Development Center; responsible for project-based learning cloud platform and digital twin platform services.</li>
-<li><strong>Apr 2023 - Dec 2023 | “Moral Education in Subject Courses” Classroom Teaching Cases</strong><br>
-National Center for Educational Technology and Hangzhou Shangcheng District Institute of Education; responsible for filming and editing micro-lessons on moral education.</li>
-<li><strong>May 2023 - Dec 2023 | Digital-Intelligence Garden Reading-and-Farming Learning Space</strong><br>
-Hangzhou Tourism Vocational School; responsible for digital twin teaching platform development.</li>
-</ol>
-</section>
-<section id="academic-service" class="level2">
-<h2 class="anchored" data-anchor-id="academic-service">Academic Service</h2>
-<ul>
-<li><strong>Journal Reviewer</strong>:
-<ul>
-<li><em>Artificial Intelligence Review</em> (SCI)</li>
-<li><em>npj Digital Medicine</em> (SCI)</li>
-<li><em>BMC Medical Ethics</em> (SCI)</li>
-<li><em>BMC Medical Education</em> (SCI)</li>
-<li><em>Virtual Reality</em> (SCI)</li>
-<li><em>Humanities &amp; Social Science Communication</em> (SSCI)</li>
-<li><em>Journal of Academic Librarianship</em> (SSCI)</li>
-<li><em>Cognitive Neurodynamics</em> (SCI)</li>
-<li><em>Universal Access in the Information Society</em> (SCI)</li>
-<li><em>Entertainment Computing</em> (SCI)</li>
-<li><em>Cognitive Development</em> (SSCI)</li>
-<li><em>SoftwareX</em> (SCI)</li>
-<li><em>Acta Psychologica</em> (SSCI)</li>
-<li><em>Frontiers in Psychology</em> (SSCI)</li>
-<li><em>International Journal of Computational Intelligence Systems</em> (SCI)</li>
-<li><em>JoVE—Journal of Visualized Experiments</em> (SCI)</li>
-<li><em>IEEE Access</em> (SCI)</li>
-<li><em>Scientific Reports</em> (SCI)</li>
-<li><em>Frontiers in Rehabilitation Sciences</em> (ESCI)</li>
-<li><em>Discover Sustainability</em> (ESCI)</li>
-<li><em>Social Sciences &amp; Humanities Open</em> (EI)</li>
-<li><em>Discover Artificial Intelligence</em> (EI)</li>
-<li><em>Discover Psychology</em> (ESCI)</li>
-</ul></li>
-<li><strong>Academic Community</strong>:
-<ul>
-<li>Person in charge of WeChat Official Accounts: “Digital Game-based Learning Research” (数字游戏学习研究), “Child Rehabilitation Research Institute” (儿康研究院), “Information Technology Learning Research” (信息科技学习研究)</li>
-</ul></li>
-</ul>
-</section>
-<section id="honors-awards" class="level2">
-<h2 class="anchored" data-anchor-id="honors-awards">Honors &amp; Awards</h2>
-<p><strong>🏆 Academic &amp; Research Competitions</strong> - Second Prize in “Challenge Cup” Special Competition (University Level) - Third Prize in the 10th NCDA National University Digital Art &amp; Design Competition (Zhejiang Division) - Second Prize in the 20th Zhejiang Provincial University Multimedia Works Design Competition - Finalist Award in the 17th China International Cartoon &amp; Animation Festival “Dream Cup” Game Creative Competition - Finalist Award in the National University Student Anti-Smuggling Creation Competition</p>
-<p><strong>🎨 Cultural, Sports &amp; Social Activities</strong> - Third Prize (Team) in the Keqiao District Firefighting Competition - Third Prize in the Keqiao District Red Cross Original Artworks Contest</p>
-<p><strong>🍎 Teaching &amp; Mentoring Achievements</strong> - <strong>Referee</strong>: Main Referee for the Matata Category, 2025 World Robot Contest – Youth Robot Design Contest (Hangzhou Selection) - <strong>Instructor</strong>: Guided students from Wuchang Primary School, etc., to win Second/Third Prizes in the 2024 Hangzhou Yuhang District “Endeavor Cup” STEAM Innovation &amp; Creativity Competition (Intelligent Robot Contest)</p>
-<p><strong>🎖️ Academic and Comprehensive Honors &amp; Military Service</strong> - <strong>Master’s</strong>: Provincial Outstanding Graduate, National Scholarship, Candidate for University Graduate Academic Star Award, First-Class Academic Scholarship - <strong>Bachelor’s</strong>: University Outstanding Graduate, University Outstanding Undergraduate Thesis, University Outstanding Student Party Member, Outstanding Youth League Cadre - <strong>Military</strong>: Excellent Recruit, Excellent Conscript, Third Prize in Team Combat Injury Rescue Competition (Strategic Support Force Unit), Commendation</p>
-</section>
-<section id="teaching-experience" class="level2">
-<h2 class="anchored" data-anchor-id="teaching-experience">Teaching Experience</h2>
-<div class="timeline">
-<ul>
-<li><strong>Nov 2025</strong> | <strong>Teaching Assistant</strong> | Advanced Workshop on AI Literacy Improvement for Primary and Secondary School Teachers in Yuhang District (Hosted by NCET/ZJUT, etc.)</li>
-<li><strong>Apr 2025 - Nov 2025</strong> | <strong>Intern Teacher</strong> | Jiaxing Experimental Junior High School (Information Technology)</li>
-<li><strong>Jun 2025 - Jul 2025</strong> | <strong>Camp Mentor</strong> | Decoding Zhejiang Science &amp; Technology Genes Study Tour (AI General Education / Robotic Arm Programming)</li>
-<li><strong>Mar 2024 - June 2024</strong> | <strong>Programming Teacher</strong> | Hangzhou Wenxin Primary School (3D Printing), Zhongtai Center Primary School (Robot Programming)</li>
-<li><strong>Mar 2024 - May 2024</strong> | <strong>Competition Instructor</strong> | Robotic Arm Competition Training for multiple schools in Hangzhou</li>
-<li><strong>Mar 2023 - Dec 2024</strong> | <strong>Part-time Teacher</strong> | Hangzhou Cuiyuan No.2 Primary School (Scratch) &amp; Programming Institutions</li>
-<li><strong>Feb 2023 / Feb 2024</strong> | <strong>Skiing Instructor</strong> | Hai Ben Camps Ski Winter Camp (Alpine Skiing)</li>
-<li><strong>Jul 2020</strong> | <strong>Programming Teacher</strong> | Jiashan Experimental Primary School (AI &amp; Robotics Extracurricular Class)</li>
-<li><strong>2020 - 2022</strong> | <strong>Military Instructor</strong> | Zhejiang Shuren University, Jiashan No.2 Senior High School, etc.</li>
-<li><strong>Sept 2018 - Sept 2019</strong> | <strong>Squad Leader</strong> | Strategic Support Force Unit, PLA</li>
-</ul>
-</div>
 
 
-</section>
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
-    const isCodeAnnotation = (el) => {
-      for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
-          return true;
-        }
-      }
-      return false;
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "王珉锴 Minkai Wang",
+      "url" : "https://minkaiwang.github.io",
+      "sameAs" : ["https://github.com/minkaiwang","https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl","https://orcid.org/0009-0003-9591-1076"]
     }
-    const onCopySuccess = function(e) {
-      // button target
-      const button = e.trigger;
-      // don't keep focus
-      button.blur();
-      // flash "checked"
-      button.classList.add('code-copy-button-checked');
-      var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
-      let tooltip;
-      if (window.bootstrap) {
-        button.setAttribute("data-bs-toggle", "tooltip");
-        button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
-            customClass: "code-copy-button-tooltip",
-            offset: [0, -8]});
-        tooltip.show();    
-      }
-      setTimeout(function() {
-        if (tooltip) {
-          tooltip.hide();
-          button.removeAttribute("data-bs-title");
-          button.removeAttribute("data-bs-toggle");
-          button.removeAttribute("data-bs-placement");
-        }
-        button.setAttribute("title", currentTitle);
-        button.classList.remove('code-copy-button-checked');
-      }, 1000);
-      // clear code selection
-      e.clearSelection();
-    }
-    const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-      text: getTextToCopy
-    });
-    clipboard.on('success', onCopySuccess);
-    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-        text: getTextToCopy,
-        container: window.document.getElementById('quarto-embedded-source-code-modal')
-      });
-      clipboardModal.on('success', onCopySuccess);
-    }
-      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/minkaiwang\.github\.io");
-      var isInternal = (href) => {
-          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-      }
-      // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-      for (var i=0; i<links.length; i++) {
-        const link = links[i];
-        if (!isInternal(link.href)) {
-          // undo the damage that might have been done by quarto-nav.js in the case of
-          // links that we want to consider external
-          if (link.dataset.originalHref !== undefined) {
-            link.href = link.dataset.originalHref;
-          }
-        }
-      }
-    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-      const config = {
-        allowHTML: true,
-        maxWidth: 500,
-        delay: 100,
-        arrow: false,
-        appendTo: function(el) {
-            return el.parentElement;
-        },
-        interactive: true,
-        interactiveBorder: 10,
-        theme: 'quarto',
-        placement: 'bottom-start',
-      };
-      if (contentFn) {
-        config.content = contentFn;
-      }
-      if (onTriggerFn) {
-        config.onTrigger = onTriggerFn;
-      }
-      if (onUntriggerFn) {
-        config.onUntrigger = onUntriggerFn;
-      }
-      window.tippy(el, config); 
-    }
-    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-    for (var i=0; i<noterefs.length; i++) {
-      const ref = noterefs[i];
-      tippyHover(ref, function() {
-        // use id or data attribute instead here
-        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-        try { href = new URL(href).hash; } catch {}
-        const id = href.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note) {
-          return note.innerHTML;
-        } else {
-          return "";
-        }
-      });
-    }
-    const xrefs = window.document.querySelectorAll('a.quarto-xref');
-    const processXRef = (id, note) => {
-      // Strip column container classes
-      const stripColumnClz = (el) => {
-        el.classList.remove("page-full", "page-columns");
-        if (el.children) {
-          for (const child of el.children) {
-            stripColumnClz(child);
-          }
-        }
-      }
-      stripColumnClz(note)
-      if (id === null || id.startsWith('sec-')) {
-        // Special case sections, only their first couple elements
-        const container = document.createElement("div");
-        if (note.children && note.children.length > 2) {
-          container.appendChild(note.children[0].cloneNode(true));
-          for (let i = 1; i < note.children.length; i++) {
-            const child = note.children[i];
-            if (child.tagName === "P" && child.innerText === "") {
-              continue;
-            } else {
-              container.appendChild(child.cloneNode(true));
-              break;
-            }
-          }
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(container);
-          }
-          return container.innerHTML
-        } else {
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(note);
-          }
-          return note.innerHTML;
-        }
-      } else {
-        // Remove any anchor links if they are present
-        const anchorLink = note.querySelector('a.anchorjs-link');
-        if (anchorLink) {
-          anchorLink.remove();
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        if (note.classList.contains("callout")) {
-          return note.outerHTML;
-        } else {
-          return note.innerHTML;
-        }
-      }
-    }
-    for (var i=0; i<xrefs.length; i++) {
-      const xref = xrefs[i];
-      tippyHover(xref, undefined, function(instance) {
-        instance.disable();
-        let url = xref.getAttribute('href');
-        let hash = undefined; 
-        if (url.startsWith('#')) {
-          hash = url;
-        } else {
-          try { hash = new URL(url).hash; } catch {}
-        }
-        if (hash) {
-          const id = hash.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note !== null) {
-            try {
-              const html = processXRef(id, note.cloneNode(true));
-              instance.setContent(html);
-            } finally {
-              instance.enable();
-              instance.show();
-            }
-          } else {
-            // See if we can fetch this
-            fetch(url.split('#')[0])
-            .then(res => res.text())
-            .then(html => {
-              const parser = new DOMParser();
-              const htmlDoc = parser.parseFromString(html, "text/html");
-              const note = htmlDoc.getElementById(id);
-              if (note !== null) {
-                const html = processXRef(id, note);
-                instance.setContent(html);
-              } 
-            }).finally(() => {
-              instance.enable();
-              instance.show();
-            });
-          }
-        } else {
-          // See if we can fetch a full url (with no hash to target)
-          // This is a special case and we should probably do some content thinning / targeting
-          fetch(url)
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.querySelector('main.content');
-            if (note !== null) {
-              // This should only happen for chapter cross references
-              // (since there is no id in the URL)
-              // remove the first header
-              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-                note.children[0].remove();
-              }
-              const html = processXRef(null, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
-          });
-        }
-      }, function(instance) {
-      });
-    }
-        let selectedAnnoteEl;
-        const selectorForAnnotation = ( cell, annotation) => {
-          let cellAttr = 'data-code-cell="' + cell + '"';
-          let lineAttr = 'data-code-annotation="' +  annotation + '"';
-          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-          return selector;
-        }
-        const selectCodeLines = (annoteEl) => {
-          const doc = window.document;
-          const targetCell = annoteEl.getAttribute("data-target-cell");
-          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-          const lineIds = lines.map((line) => {
-            return targetCell + "-" + line;
-          })
-          let top = null;
-          let height = null;
-          let parent = null;
-          if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
-            }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
-            }
-            selectedAnnoteEl = annoteEl;
-          }
-        };
-        const unselectCodeLines = () => {
-          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-          elementsIds.forEach((elId) => {
-            const div = window.document.getElementById(elId);
-            if (div) {
-              div.remove();
-            }
-          });
-          selectedAnnoteEl = undefined;
-        };
-          // Handle positioning of the toggle
-      window.addEventListener(
-        "resize",
-        throttle(() => {
-          elRect = undefined;
-          if (selectedAnnoteEl) {
-            selectCodeLines(selectedAnnoteEl);
-          }
-        }, 10)
-      );
-      function throttle(fn, ms) {
-      let throttle = false;
-      let timer;
-        return (...args) => {
-          if(!throttle) { // first call gets through
-              fn.apply(this, args);
-              throttle = true;
-          } else { // all the others get throttled
-              if(timer) clearTimeout(timer); // cancel #2
-              timer = setTimeout(() => {
-                fn.apply(this, args);
-                timer = throttle = false;
-              }, ms);
-          }
-        };
-      }
-        // Attach click handler to the DT
-        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-        for (const annoteDlNode of annoteDls) {
-          annoteDlNode.addEventListener('click', (event) => {
-            const clickedEl = event.target;
-            if (clickedEl !== selectedAnnoteEl) {
-              unselectCodeLines();
-              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-              if (activeEl) {
-                activeEl.classList.remove('code-annotation-active');
-              }
-              selectCodeLines(clickedEl);
-              clickedEl.classList.add('code-annotation-active');
-            } else {
-              // Unselect the line
-              unselectCodeLines();
-              clickedEl.classList.remove('code-annotation-active');
-            }
-          });
-        }
-    const findCites = (el) => {
-      const parentEl = el.parentElement;
-      if (parentEl) {
-        const cites = parentEl.dataset.cites;
-        if (cites) {
-          return {
-            el,
-            cites: cites.split(' ')
-          };
-        } else {
-          return findCites(el.parentElement)
-        }
-      } else {
-        return undefined;
-      }
-    };
-    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-    for (var i=0; i<bibliorefs.length; i++) {
-      const ref = bibliorefs[i];
-      const citeInfo = findCites(ref);
-      if (citeInfo) {
-        tippyHover(citeInfo.el, function() {
-          var popup = window.document.createElement('div');
-          citeInfo.cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
-          });
-          return popup.innerHTML;
-        });
-      }
-    }
-  });
   </script>
-</div> <!-- /content -->
 
 
 
 
-</body></html>
+
+
+<!-- end SEO -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="王珉锴 Minkai Wang Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+  
+    <link rel="stylesheet" href="/assets/css/home.css">
+  
+
+
+<meta http-equiv="cleartype" content="on">
+
+    
+
+
+<!-- start custom head snippets -->
+
+<link rel="icon" href="/images/site-logo.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="/assets/css/academicons.css">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="/">王珉锴 Minkai Wang</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/#news">动态</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/#experience">经历</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/#publications">论文</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/#projects">项目</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/#awards">荣誉</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/#services">服务</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/#talks">会议</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/en/">English</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    
+
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+      
+      <img src="/images/fig.png" alt="王珉锴 Minkai Wang">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">王珉锴 Minkai Wang</h3>
+    
+    <p class="author__bio">浙江大学教育技术学博士研究生（2026.09 起），研究方向为游戏化学习、人工智能教育应用与电竞教育。</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">关注</button>
+    <ul class="author__urls social-icons">
+      <!-- Font Awesome icons / Biographic information  -->
+      
+        
+        <li><a href="https://www.google.com/maps/search/?api=1&query=%E6%B5%99%E6%B1%9F%EF%BC%8C%E4%B8%AD%E5%9B%BD" target="_blank" rel="noopener"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>浙江，中国</a></li>
+      
+      
+        
+        <li class="author__contact"><a href="https://www.google.com/search?q=%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6" target="_blank" rel="noopener"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>浙江大学</a></li>
+      
+      
+        <li><a href="https://minkaiwang.github.io"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>网站</a></li>
+      
+      
+        <li><a href="mailto:wmkhappy7@gmail.com"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>电子邮件</a></li>
+      
+      
+      
+      <!-- Font Awesome and Academicons icons / Academic websites -->
+            
+      
+        <li><a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl"><i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
+      
+      
+      
+      
+        <li><a href="https://orcid.org/0009-0003-9591-1076"><i class="ai ai-fw ai-orcid icon-pad-right" aria-hidden="true"></i>ORCID</a></li>
+      
+                              
+      
+
+      <!-- Font Awesome icons / Repositories and software development -->
+      
+            
+            
+      
+        <li><a href="https://github.com/minkaiwang"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>Github</a></li>
+      
+            
+            
+
+      <!-- Font Awesome icons / Social media -->
+      
+      
+            
+      
+                  
+                  
+      
+            
+            
+            
+      
+            
+                  
+            
+      
+            
+       
+       
+      
+              
+      
+                      
+      
+      
+           
+       
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+        
+        
+            
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <div class="welcome-banner">你好 👋 欢迎来到我的主页！</div>
+
+<div class="top-actions">
+  <a class="language-pill" href="/en/">English</a>
+  <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download="">导出 PDF 简历</a>
+</div>
+
+<h1 class="main-heading">王珉锴</h1>
+
+<p class="lead">
+  <strong>王珉锴</strong>，浙江嘉善人，退伍军人，主要围绕游戏化学习、人工智能教育应用、元宇宙与电竞教育开展研究。将于 2026.09 起在 <strong>浙江大学</strong> 教育技术学专业攻读博士学位（导师：翟雪松），并在浙江大学长三角智慧绿洲创新中心未来影像实验室、浙江大学电竞国际教育联合研发中心接受电竞教育方向联合培养。
+</p>
+
+<p>
+  他的研究关注大语言模型、虚拟代理、自适应机制与数字游戏如何重塑学习体验、学习投入、认知负荷与行为模式。相关成果发表于 <em>Journal of Computer Assisted Learning</em>、<em>Journal of Educational Computing Research</em>、<em>Entertainment Computing</em> 等期刊。
+</p>
+
+<h2 id="news">最新动态</h2>
+
+<div class="news-box">
+  <ul class="news-list">
+    <li><span class="news-date"><em>2026.07</em></span> 正在为博士生涯做准备。</li>
+  </ul>
+</div>
+
+<h2 id="experience">经历</h2>
+
+<div class="experience-container">
+  <div class="experience-card">
+    <div class="experience-logo logo-initial">ZJU</div>
+    <div class="experience-info">
+      <strong>浙江大学</strong><br />
+      <em>2026.09 - 至今</em><br />
+      教育技术学博士研究生；导师：翟雪松。<br />
+      <span>方向：人工智能教育应用、游戏化学习、智能学习环境。</span>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="experience-logo logo-initial">ESE</div>
+    <div class="experience-info">
+      <strong>浙江大学长三角智慧绿洲创新中心·未来影像实验室 / 浙江大学电竞国际教育联合研发中心</strong><br />
+      <em>2026.03 - 至今</em><br />
+      电竞教育方向联培学生；联培导师：赵瑜佩。<br />
+      <span>参与电竞教育系统、Unity/Web 开发与数字测评场景建设。</span>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="experience-logo logo-initial">ZJUT</div>
+    <div class="experience-info">
+      <strong>浙江工业大学</strong><br />
+      <em>2023.09 - 2026.06</em><br />
+      教育技术学硕士；导师：朱敬东。<br />
+      <span>研究 LLM 支持的情境游戏、虚拟代理与 STEM 学习投入。</span>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="experience-logo logo-initial">ZSRU</div>
+    <div class="experience-info">
+      <strong>浙江树人学院</strong><br />
+      <em>2019.09 - 2023.06</em><br />
+      数字媒体技术学士；导师：顾汉杰。<br />
+      <span>学习数字媒体技术，并开展校园导览教育游戏、红色旅游教育游戏等设计与开发实践。</span>
+    </div>
+  </div>
+
+  <div class="experience-card">
+    <div class="experience-logo logo-initial">PLA</div>
+    <div class="experience-info">
+      <strong>中国人民解放军</strong><br />
+      <em>2017.09 - 2019.09</em><br />
+      战略支援部队战士。<br />
+      <span>获优秀新兵、优秀义务兵、嘉奖等荣誉。</span>
+    </div>
+  </div>
+</div>
+
+<h2 id="publications">Publications</h2>
+
+<h3 class="section-kicker">Full Publications List</h3>
+
+<div id="full-publications" class="publication-view">
+  <ul class="full-publication-list">
+    <li><span class="pub-list-badge">CSSCI</span> <span class="pub-list-title">智能时代，教育何为——2026 世界数字教育大会综述</span><br /><span class="pub-list-authors">翟雪松, <strong>王珉锴</strong>, 程莉莉, 赵川 (2026).</span> <span class="pub-list-note"><em>开放教育研究</em>, 32(3), 59-66.</span> <span class="pub-list-links"><a href="https://openedu.sou.edu.cn/frontsite/series_details.aspx?id=2800" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">JCAL</span> <span class="pub-list-title">Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games</span><br /><span class="pub-list-authors"><strong>Wang, M. (王珉锴)</strong>, Zhu, J., Hwang, G., Chang, S., Yang, Q., &amp; Zhang, D.</span> <span class="pub-list-note"><em>Journal of Computer Assisted Learning</em>, 41(6): e70138.</span> <span class="pub-list-links"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">JECR</span> <span class="pub-list-title">Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students' Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns</span><br /><span class="pub-list-authors"><strong>Wang, M. (王珉锴)</strong>, Zhang, D., Zhu, J., &amp; Gu, H.</span> <span class="pub-list-note"><em>Journal of Educational Computing Research</em>, 63(3), 662-694.</span> <span class="pub-list-links"><a href="https://journals.sagepub.com/doi/abs/10.1177/07356331251321719" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning</span><br /><span class="pub-list-authors"><strong>Wang, M. (王珉锴)</strong>, Zhu, J., Gu, H., Zhang, J., &amp; Wu, D.</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 100960.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952125000400" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Integrating artificial intelligence and gamification in rehabilitation: a scoping review</span><br /><span class="pub-list-authors"><strong>Wang, M. (王珉锴)</strong>, Zhu, J., Qian, Wei., &amp; Gu, H.</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 101011.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952125000916" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Beyond pre-scripted interactions: Mapping the integration of LLMs in digital game-based learning - a scoping review</span><br /><span class="pub-list-authors">Gong, Y., <strong>Wang, M. (王珉锴)</strong>, Tu, Y., Huang, C., &amp; Zhang, D. (2026).</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 101082.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952126000042" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">JECR</span> <span class="pub-list-title">Asking, playing, learning: Investigating LLM-based support in digital game-based AI education for elementary students</span><br /><span class="pub-list-authors">Gong, Y., <strong>Wang, M. (王珉锴)</strong>, He, L., Xu, C., &amp; Yu, Y. (2025).</span> <span class="pub-list-note"><em>Journal of Educational Computing Research</em>, 64(2), 311-343.</span> <span class="pub-list-links"><a href="https://journals.sagepub.com/doi/abs/10.1177/07356331251396354" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Impact of a Digital Game-Based AI Chatbot on Students' Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum</span><br /><span class="pub-list-authors">Xu, Y., Zhu, J., <strong>Wang, M. (王珉锴)</strong>, Qian, F., Yang, Y., &amp; Zhang, J. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6418.</span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6418" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture</span><br /><span class="pub-list-authors">Zhang, J., Zhu, J., Tu, W., <strong>Wang, M. (王珉锴)</strong>, Yang, Y., Qian, F., &amp; Xu, Y. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6484.</span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6484" target="_blank" rel="noopener">[Link]</a></span></li>
+  </ul>
+</div>
+
+<h2 id="projects">项目与作品</h2>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator">
+      <img src="/images/game1.png" alt="《等一个蛋》游戏截图" />
+    </div>
+    <div>
+      <strong>《等一个蛋》</strong><br />
+      <i>Steam 平台教育游戏作品。</i><br />
+      面向轻量叙事、交互体验与学习动机探索的游戏化学习作品。<br />
+      <b><i>Game Project</i></b> <a href="https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg" target="_blank" rel="noopener">[Steam]</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator">
+      <img src="/images/game2.png" alt="《小树芽出发》游戏截图" />
+    </div>
+    <div>
+      <strong>《小树芽出发》</strong><br />
+      <i>ITCH 平台校园导览教育游戏。</i><br />
+      结合数字媒体设计、校园导览与角色扮演式学习交互的教育游戏项目。<br />
+      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/xiaoshuya-chufa" target="_blank" rel="noopener">[itch.io]</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator">
+      <img src="/images/game3.png" alt="《百年穿梭机》游戏截图" />
+    </div>
+    <div>
+      <strong>《百年穿梭机》</strong><br />
+      <i>ITCH 平台红色旅游教育游戏。</i><br />
+      通过情境探索与角色扮演支持红色文化学习的教育游戏作品。<br />
+      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/bncsj" target="_blank" rel="noopener">[itch.io]</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator">
+      <img src="/images/esports-assessment-system.png" alt="数字竞技潜能测评系统页面截图" />
+    </div>
+    <div>
+      <strong>数字竞技潜能测评系统</strong><br />
+      <i>参与设计 / 开发的网页系统。</i><br />
+      面向电竞选手能力画像与成长追踪，支持体验、测评、排名与数据化反馈等功能。<br />
+      <b><i>Web Project</i></b> <a href="https://www.esports-data.online/assessment/" target="_blank" rel="noopener">[Website]</a>
+    </div>
+  </div>
+</div>
+
+<h2 id="grants">科研项目</h2>
+
+<ol class="compact-list">
+  <li><strong>主持</strong> | 浙江工业大学“运河杯”重点项目：LLM 虚拟代理替代现实游戏在 STEAM 教育中的应用研究（2024-2025）</li>
+  <li><strong>主持</strong> | 浙江工业大学“运河杯”重点项目：大语言模型驱动的自适应科学教育情境游戏设计与实践（2024-2025）</li>
+  <li><strong>参与</strong> | 浙江省教育技术中心课题：主题科学馆——数智时代下小学实践教育（2023-2024）</li>
+  <li><strong>参与</strong> | 教育部国家级大创项目：“沉浸式红色游”数字化红色旅游应用深度开发（2022-2023）</li>
+  <li><strong>主持</strong> | 浙江省大创项目：基于角色扮演的树大校园导览游戏研发（2021-2022）</li>
+</ol>
+
+<div class="text-card">
+  <strong>其他参与课题 / 项目</strong>
+  <ul class="two-column-list">
+    <li>洞头 PBL 游戏化实践教育课程开发</li>
+    <li>浙江大学数字竞技体验 / 练习 / 测评系统</li>
+    <li>中小学人工智能教育优秀教学案例研究</li>
+    <li>吉利汽车工业科创实践教育基地</li>
+    <li>动作技能智能学习空间项目</li>
+    <li>新型综合实践教育场所培育工作</li>
+    <li>吴中区项目式学习活动理论研究与技术服务</li>
+    <li>“学科课程中的德育”课堂教学案</li>
+    <li>数智园林耕读学习空间</li>
+  </ul>
+</div>
+
+<h2 id="awards">荣誉奖项</h2>
+
+<div class="text-card">
+  <strong>学术与科研竞赛</strong>
+  <ul class="compact-list">
+    <li>“挑战杯”专项赛校赛二等奖</li>
+    <li>第十届 NCDA 全国高校数字艺术设计大赛浙江赛区三等奖</li>
+    <li>第二十届浙江省大学生多媒体作品设计竞赛二等奖</li>
+    <li>第十七届中国国际动漫节“梦梦杯”游戏创意大赛入围奖</li>
+    <li>全国大学生反走私创作大赛入围奖</li>
+  </ul>
+</div>
+
+<div class="text-card">
+  <strong>教学、指导与综合荣誉</strong>
+  <ul class="compact-list">
+    <li>2025 年世界机器人大赛杭州选拔赛 Matata 赛项主裁判</li>
+    <li>指导余杭区“奋进杯”STEAM 创新创意大赛获二、三等奖</li>
+    <li>硕士阶段：省优秀毕业生、国家奖学金、校研究生学术之星、校一等学业奖学金</li>
+    <li>本科阶段：校优秀毕业生、校优秀毕业论文、校优秀学生党员、优秀团干</li>
+    <li>部队服役：优秀新兵、优秀义务兵、战伤救助比武团体三等奖、嘉奖</li>
+  </ul>
+</div>
+
+<h2 id="services">学术服务</h2>
+
+<div class="text-card">
+  <strong>期刊审稿人 Reviewer</strong>
+  <ul class="two-column-list journal-list">
+    <li><em>Artificial Intelligence Review</em></li>
+    <li><em>npj Digital Medicine</em></li>
+    <li><em>BMC Medical Ethics</em></li>
+    <li><em>BMC Medical Education</em></li>
+    <li><em>Virtual Reality</em></li>
+    <li><em>Humanities &amp; Social Science Communication</em></li>
+    <li><em>Journal of Academic Librarianship</em></li>
+    <li><em>Cognitive Neurodynamics</em></li>
+    <li><em>Universal Access in the Information Society</em></li>
+    <li><em>Entertainment Computing</em></li>
+    <li><em>Cognitive Development</em></li>
+    <li><em>SoftwareX</em></li>
+    <li><em>Acta Psychologica</em></li>
+    <li><em>Frontiers in Psychology</em></li>
+    <li><em>International Journal of Computational Intelligence Systems</em></li>
+    <li><em>JoVE - Journal of Visualized Experiments</em></li>
+    <li><em>IEEE Access</em></li>
+    <li><em>Scientific Reports</em></li>
+    <li><em>Frontiers in Rehabilitation Sciences</em></li>
+    <li><em>Discover Sustainability</em></li>
+    <li><em>Social Sciences &amp; Humanities Open</em></li>
+    <li><em>Discover Artificial Intelligence</em></li>
+    <li><em>Discover Psychology</em></li>
+  </ul>
+</div>
+
+<div class="text-card">
+  <strong>学术社群与报告</strong>
+  <ul class="compact-list">
+    <li>微信公众号负责人：“数字游戏学习研究”、“儿康研究院”、“信息科技学习研究”</li>
+    <li>深度参与编制《浙江省数字教育发展蓝皮书》</li>
+    <li>深度参与编制《浙江省新型综合实践教育场所发展报告》</li>
+  </ul>
+</div>
+
+<h2 id="talks">学术会议</h2>
+
+<ul class="compact-list">
+  <li>全国首届人工智能赋能跨学科项目式学习专题会议（2024，厦门）</li>
+  <li>中国教育技术学术大会（2026，杭州）</li>
+  <li>濮院电竞峰会（2026，嘉兴）</li>
+</ul>
+
+<h2 id="teaching">教学经历</h2>
+
+<div class="text-card">
+  <ul class="compact-list">
+    <li><strong>2025.11</strong> | 助教 | 余杭区中小学教师人工智能素养提升高级研修班</li>
+    <li><strong>2025.04 - 11</strong> | 初中实习老师 | 嘉兴市实验初级中学（信息科技）</li>
+    <li><strong>2025.06 - 07</strong> | 研学导师 | 解码浙江科技基因研学活动</li>
+    <li><strong>2024.03 - 06</strong> | 编程教师 | 杭州市文新小学、中泰中心小学</li>
+    <li><strong>2024.03 - 05</strong> | 竞赛指导 | 杭州市多所中小学机械臂竞赛培训</li>
+    <li><strong>2023.03 - 2024.12</strong> | 兼职教师 | 杭州市翠苑第二小学及编程机构</li>
+    <li><strong>2023.02 / 2024.02</strong> | 滑雪教练 | 孩本 Camps 滑雪冬令营</li>
+    <li><strong>2020.07</strong> | 编程教师 | 嘉善实验小学</li>
+    <li><strong>2020 - 2022</strong> | 军训教官 | 浙江树人学院、嘉善第二高级中学等</li>
+    <li><strong>2018.09 - 2019.09</strong> | 新兵班长 | 战略支援部队某部</li>
+  </ul>
+</div>
+
+
+        
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+
+
+
+      </footer>
+
+      
+
+      
+
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<a href="/sitemap/">Sitemap</a>
+<!-- end custom footer snippets -->
+
+        
+
+
+
+
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注：</strong></li>
+    
+    
+      <li><a href="http://github.com/minkaiwang"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> 订阅</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2026 王珉锴. 技术支持： <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>. Template designed by <a href="https://selen-suyue.github.io" rel="nofollow">Selen-Suyue</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="/assets/js/main.min.js"></script>
+<script>
+(function() {
+  function closeAll() {
+    document.querySelectorAll('.author__urls-wrapper.is-open').forEach(function(wrapper) {
+      wrapper.classList.remove('is-open');
+    });
+  }
+
+  function init() {
+    document.querySelectorAll('.author__urls-wrapper').forEach(function(wrapper) {
+      var button = wrapper.querySelector('button');
+      var list = wrapper.querySelector('.author__urls');
+      if (!button || !list) return;
+
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        wrapper.classList.toggle('is-open');
+      });
+    });
+
+    document.addEventListener('click', function() {
+      closeAll();
+    });
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') closeAll();
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+
+
+
+
+  </body>
+</html>
+

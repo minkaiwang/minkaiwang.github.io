@@ -1,43 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://minkaiwang.github.io/Teaching.html</loc>
-    <lastmod>2026-06-21T01:53:34.171Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minkaiwang.github.io/publications.html</loc>
-    <lastmod>2026-06-21T01:51:26.069Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minkaiwang.github.io/CV.html</loc>
-    <lastmod>2026-06-21T17:24:59.252Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minkaiwang.github.io/Chinese.html</loc>
-    <lastmod>2026-06-21T17:24:46.730Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minkaiwang.github.io/blog.html</loc>
-    <lastmod>2026-06-21T01:52:08.461Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minkaiwang.github.io/about.html</loc>
-    <lastmod>2026-06-21T01:52:51.948Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minkaiwang.github.io/books.html</loc>
-    <lastmod>2026-06-21T01:52:27.493Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minkaiwang.github.io/codes.html</loc>
-    <lastmod>2026-06-21T01:51:47.160Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minkaiwang.github.io/index.html</loc>
-    <lastmod>2026-06-21T17:24:29.073Z</lastmod>
-  </url>
-  <url>
-    <loc>https://minkaiwang.github.io/readme.html</loc>
-    <lastmod>2026-06-21T01:53:22.761Z</lastmod>
-  </url>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://minkaiwang.github.io/</loc>
+</url>
+<url>
+<loc>https://minkaiwang.github.io/en/</loc>
+</url>
 </urlset>

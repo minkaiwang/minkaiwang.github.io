@@ -1,0 +1,49 @@
+main:
+  - title: "动态"
+    url: "/#news"
+
+  - title: "经历"
+    url: "/#experience"
+
+  - title: "论文"
+    url: "/#publications"
+
+  - title: "项目"
+    url: "/#projects"
+
+  - title: "荣誉"
+    url: "/#awards"
+
+  - title: "服务"
+    url: "/#services"
+
+  - title: "会议"
+    url: "/#talks"
+
+  - title: "English"
+    url: "/en/"
+
+en:
+  - title: "News"
+    url: "/en/#news"
+
+  - title: "Experience"
+    url: "/en/#experience"
+
+  - title: "Publications"
+    url: "/en/#publications"
+
+  - title: "Projects"
+    url: "/en/#projects"
+
+  - title: "Awards"
+    url: "/en/#awards"
+
+  - title: "Services"
+    url: "/en/#services"
+
+  - title: "Talks"
+    url: "/en/#talks"
+
+  - title: "中文"
+    url: "/"
