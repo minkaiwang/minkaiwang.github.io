@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-<div class="welcome-banner">你好 👋 欢迎来到我的主页！</div>
+<div class="welcome-banner">早上好，夜之城！</div>
 
 <div class="top-actions">
   <a class="language-pill" href="/en/">English</a>

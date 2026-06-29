@@ -7,7 +7,7 @@ stylesheets:
   - /assets/css/home.css
 ---
 
-<div class="welcome-banner">Hi there 👋 Welcome to my homepage!</div>
+<div class="welcome-banner">Good morning, Night City!</div>
 
 <div class="top-actions">
   <a class="language-pill" href="/">中文</a>
