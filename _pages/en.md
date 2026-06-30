@@ -247,6 +247,17 @@ stylesheets:
   <li>Puyuan Esports Summit (2026, Jiaxing)</li>
 </ul>
 
+<h2 id="easter-egg">Easter Egg</h2>
+
+<div class="meme-corner" aria-label="Easter egg images">
+  <figure class="meme-card">
+    <img src="/images/meme-strong-can-fight.png" alt="Strong and capable meme">
+  </figure>
+  <figure class="meme-card">
+    <img src="/images/meme-great-cause.png" alt="Great cause meme">
+  </figure>
+</div>
+
 <h2 id="teaching">Teaching</h2>
 
 <div class="text-card">
@@ -262,15 +273,4 @@ stylesheets:
     <li><strong>2020 - 2022</strong> | Military Instructor | Zhejiang Shuren University, Jiashan No.2 Senior High School, etc.</li>
     <li><strong>Sept 2018 - Sept 2019</strong> | Squad Leader | Strategic Support Force Unit, PLA</li>
   </ul>
-</div>
-
-<h2 id="easter-egg">Easter Egg</h2>
-
-<div class="meme-corner" aria-label="Easter egg images">
-  <figure class="meme-card">
-    <img src="/images/meme-strong-can-fight.png" alt="Strong and capable meme">
-  </figure>
-  <figure class="meme-card">
-    <img src="/images/meme-great-cause.png" alt="Great cause meme">
-  </figure>
 </div>
