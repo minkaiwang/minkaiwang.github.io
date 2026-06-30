@@ -276,3 +276,14 @@ redirect_from:
     <li><strong>2018.09 - 2019.09</strong> | 新兵班长 | 战略支援部队某部</li>
   </ul>
 </div>
+
+<h2 id="easter-egg">彩蛋</h2>
+
+<div class="meme-corner" aria-label="网页彩蛋">
+  <figure class="meme-card">
+    <img src="/images/meme-strong-can-fight.png" alt="强壮，能打">
+  </figure>
+  <figure class="meme-card">
+    <img src="/images/meme-great-cause.png" alt="我导，共图大业">
+  </figure>
+</div>
