@@ -105,6 +105,10 @@ redirect_from:
   </ul>
 </div>
 
+<figure class="meme-interlude meme-interlude--right" aria-label="论文成果后的网页彩蛋">
+  <img src="/images/meme-field-expert.png" alt="你已经是这个领域的专家了" loading="lazy" decoding="async">
+</figure>
+
 <h2 id="projects">项目与作品</h2>
 
 <div class="project-card">
@@ -212,6 +216,10 @@ redirect_from:
   </ul>
 </div>
 
+<figure class="meme-interlude meme-interlude--left" aria-label="荣誉奖项后的网页彩蛋">
+  <img src="/images/meme-empty-fame.png" alt="那些只是虚名而已，就好像浮云一样" loading="lazy" decoding="async">
+</figure>
+
 <h2 id="services">学术服务</h2>
 
 <div class="text-card">
@@ -251,6 +259,10 @@ redirect_from:
     <li>深度参与编制《浙江省新型综合实践教育场所发展报告》</li>
   </ul>
 </div>
+
+<figure class="meme-interlude meme-interlude--right" aria-label="学术服务后的网页彩蛋">
+  <img src="/images/meme-academic-backbone.png" alt="青年学术骨干集合处" loading="lazy" decoding="async">
+</figure>
 
 <h2 id="talks">学术会议</h2>
 

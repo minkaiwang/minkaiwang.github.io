@@ -104,6 +104,10 @@ stylesheets:
   </ul>
 </div>
 
+<figure class="meme-interlude meme-interlude--right" aria-label="Easter egg after the publications list">
+  <img src="/images/meme-field-expert.png" alt="You are already an expert in this field" loading="lazy" decoding="async">
+</figure>
+
 <h2 id="projects">Projects</h2>
 
 <div class="project-card">
@@ -199,6 +203,10 @@ stylesheets:
   </ul>
 </div>
 
+<figure class="meme-interlude meme-interlude--left" aria-label="Easter egg after the awards section">
+  <img src="/images/meme-empty-fame.png" alt="Those titles are merely empty fame, like passing clouds" loading="lazy" decoding="async">
+</figure>
+
 <h2 id="services">Services</h2>
 
 <div class="text-card">
@@ -238,6 +246,10 @@ stylesheets:
     <li>Deeply participated in the compilation of the <em>Development Report on New Comprehensive Practical Education Venues in Zhejiang Province</em>.</li>
   </ul>
 </div>
+
+<figure class="meme-interlude meme-interlude--right" aria-label="Easter egg after the services section">
+  <img src="/images/meme-academic-backbone.png" alt="A gathering place for young academic backbones" loading="lazy" decoding="async">
+</figure>
 
 <h2 id="talks">Talks</h2>
 
