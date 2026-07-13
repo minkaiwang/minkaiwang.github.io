@@ -105,7 +105,7 @@ redirect_from:
   </ul>
 </div>
 
-<figure class="meme-interlude meme-interlude--right" aria-label="论文成果后的网页彩蛋">
+<figure class="meme-interlude meme-interlude--right" aria-label="论文成果后的趣味图片">
   <img src="/images/meme-field-expert.png" alt="你已经是这个领域的专家了" loading="lazy" decoding="async">
 </figure>
 
@@ -167,6 +167,10 @@ redirect_from:
   </div>
 </div>
 
+<figure class="meme-interlude meme-interlude--left" aria-label="项目与作品后的趣味图片">
+  <img src="/images/meme-strong-can-fight.png" alt="强壮，能打" loading="lazy" decoding="async">
+</figure>
+
 <h2 id="grants">科研项目</h2>
 
 <ol class="compact-list">
@@ -192,6 +196,10 @@ redirect_from:
   </ul>
 </div>
 
+<figure class="meme-interlude meme-interlude--right" aria-label="科研项目后的趣味图片">
+  <img src="/images/meme-great-cause.png" alt="我导，共图大业" loading="lazy" decoding="async">
+</figure>
+
 <h2 id="awards">荣誉奖项</h2>
 
 <div class="text-card">
@@ -216,7 +224,7 @@ redirect_from:
   </ul>
 </div>
 
-<figure class="meme-interlude meme-interlude--left" aria-label="荣誉奖项后的网页彩蛋">
+<figure class="meme-interlude meme-interlude--left" aria-label="荣誉奖项后的趣味图片">
   <img src="/images/meme-empty-fame.png" alt="那些只是虚名而已，就好像浮云一样" loading="lazy" decoding="async">
 </figure>
 
@@ -260,7 +268,7 @@ redirect_from:
   </ul>
 </div>
 
-<figure class="meme-interlude meme-interlude--right" aria-label="学术服务后的网页彩蛋">
+<figure class="meme-interlude meme-interlude--right" aria-label="学术服务后的趣味图片">
   <img src="/images/meme-academic-backbone.png" alt="青年学术骨干集合处" loading="lazy" decoding="async">
 </figure>
 
@@ -271,17 +279,6 @@ redirect_from:
   <li>中国教育技术学术大会（2026，杭州）</li>
   <li>濮院电竞峰会（2026，嘉兴）</li>
 </ul>
-
-<h2 id="easter-egg">彩蛋</h2>
-
-<div class="meme-corner" aria-label="网页彩蛋">
-  <figure class="meme-card">
-    <img src="/images/meme-strong-can-fight.png" alt="强壮，能打">
-  </figure>
-  <figure class="meme-card">
-    <img src="/images/meme-great-cause.png" alt="我导，共图大业">
-  </figure>
-</div>
 
 <h2 id="teaching">教学经历</h2>
 

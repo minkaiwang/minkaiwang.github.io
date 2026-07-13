@@ -104,7 +104,7 @@ stylesheets:
   </ul>
 </div>
 
-<figure class="meme-interlude meme-interlude--right" aria-label="Easter egg after the publications list">
+<figure class="meme-interlude meme-interlude--right" aria-label="Humorous image after the publications list">
   <img src="/images/meme-field-expert.png" alt="You are already an expert in this field" loading="lazy" decoding="async">
 </figure>
 
@@ -166,6 +166,10 @@ stylesheets:
   </div>
 </div>
 
+<figure class="meme-interlude meme-interlude--left" aria-label="Humorous image after the projects section">
+  <img src="/images/meme-strong-can-fight.png" alt="Strong and capable" loading="lazy" decoding="async">
+</figure>
+
 <h2 id="grants">Research Grants</h2>
 
 <ol class="compact-list">
@@ -191,6 +195,10 @@ stylesheets:
   </ul>
 </div>
 
+<figure class="meme-interlude meme-interlude--right" aria-label="Humorous image after the research grants section">
+  <img src="/images/meme-great-cause.png" alt="Working with my supervisor toward a shared great cause" loading="lazy" decoding="async">
+</figure>
+
 <h2 id="awards">Awards</h2>
 
 <div class="text-card">
@@ -203,7 +211,7 @@ stylesheets:
   </ul>
 </div>
 
-<figure class="meme-interlude meme-interlude--left" aria-label="Easter egg after the awards section">
+<figure class="meme-interlude meme-interlude--left" aria-label="Humorous image after the awards section">
   <img src="/images/meme-empty-fame.png" alt="Those titles are merely empty fame, like passing clouds" loading="lazy" decoding="async">
 </figure>
 
@@ -247,7 +255,7 @@ stylesheets:
   </ul>
 </div>
 
-<figure class="meme-interlude meme-interlude--right" aria-label="Easter egg after the services section">
+<figure class="meme-interlude meme-interlude--right" aria-label="Humorous image after the services section">
   <img src="/images/meme-academic-backbone.png" alt="A gathering place for young academic backbones" loading="lazy" decoding="async">
 </figure>
 
@@ -258,17 +266,6 @@ stylesheets:
   <li>China Educational Technology Academic Conference (2026, Hangzhou)</li>
   <li>Puyuan Esports Summit (2026, Jiaxing)</li>
 </ul>
-
-<h2 id="easter-egg">Easter Egg</h2>
-
-<div class="meme-corner" aria-label="Easter egg images">
-  <figure class="meme-card">
-    <img src="/images/meme-strong-can-fight.png" alt="Strong and capable meme">
-  </figure>
-  <figure class="meme-card">
-    <img src="/images/meme-great-cause.png" alt="Great cause meme">
-  </figure>
-</div>
 
 <h2 id="teaching">Teaching</h2>
 
