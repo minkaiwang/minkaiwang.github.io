@@ -517,6 +517,14 @@ body {
   font-size: 0.92rem;
 }
 
+.meme-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: min(100%, 760px);
+  margin: 18px auto 30px;
+}
+
 .meme-interlude {
   position: relative;
   width: min(100%, 340px);
@@ -561,6 +569,13 @@ body {
   width: 100%;
   height: auto;
   border-radius: 5px;
+}
+
+.meme-pair .meme-interlude {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
 }
 
 div.markdown-body a,
@@ -646,6 +661,11 @@ a:hover {
     width: min(100%, 390px);
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .meme-pair {
+    grid-template-columns: 1fr;
+    width: min(100%, 390px);
   }
 
 }
