@@ -30,17 +30,17 @@
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
         {% assign location_query = author.location | url_encode %}
-        <li><a href="https://www.google.com/maps/search/?api=1&query={{ location_query }}" target="_blank" rel="noopener"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query={{ location_query }}" target="_blank" rel="noopener" title="{{ author.location }}"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</a></li>
       {% endif %}
       {% if author.employer %}
         {% assign employer_query = author.employer | url_encode %}
-        <li class="author__contact"><a href="https://www.google.com/search?q={{ employer_query }}" target="_blank" rel="noopener"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</a></li>
+        <li class="author__contact"><a href="https://www.google.com/search?q={{ employer_query }}" target="_blank" rel="noopener" title="{{ author.employer }}"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</a></li>
       {% endif %}
       {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ ui_text.website_label | default: "Website" }}</a></li>
+        <li><a href="{{ author.uri }}" title="{{ ui_text.website_label | default: 'Website' }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ ui_text.website_label | default: "Website" }}</a></li>
       {% endif %}
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ ui_text.email_label | default: "Email" }}</a></li>
+        <li><a href="mailto:{{ author.email }}" title="{{ ui_text.email_label | default: 'Email' }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ ui_text.email_label | default: "Email" }}</a></li>
       {% endif %}
       {% if author.WeChat %}
         <li class="author__wechat"><a href="{{ author.WeChat }}"><i class="fab fa-fw fa-weixin icon-pad-right" aria-hidden="true"></i>WeChat</a></li>
@@ -51,7 +51,7 @@
         <li><a href="{{ author.arxiv }}"><i class="ai ai-fw ai-arxiv icon-pad-right" aria-hidden="true"></i>arXiv</a></li>
       {% endif %}      
       {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
+        <li><a href="{{ author.googlescholar }}" title="Google Scholar"><i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
       {% endif %}
       {% if author.semantic %}
         <li><a href="{{ author.semantic }}"><i class="ai ai-fw ai-semantic-scholar icon-pad-right" aria-hidden="true"></i>Semantic Scholar</a></li>
@@ -60,7 +60,7 @@
         <li><a href="{{ author.impactstory }}"><i class="ai ai-fw ai-impactstory icon-pad-right" aria-hidden="true"></i>Impactstory</a></li>
       {% endif %}
       {% if author.orcid %}
-        <li><a href="{{ author.orcid }}"><i class="ai ai-fw ai-orcid icon-pad-right" aria-hidden="true"></i>ORCID</a></li>
+        <li><a href="{{ author.orcid }}" title="ORCID"><i class="ai ai-fw ai-orcid icon-pad-right" aria-hidden="true"></i>ORCID</a></li>
       {% endif %}
       {% if author.pubmed %}
         <li><a href="{{ author.pubmed }}"><i class="ai ai-fw ai-pubmed icon-pad-right" aria-hidden="true"></i>PubMed</a></li>
@@ -80,7 +80,7 @@
         <li><a href="https://dribbble.com/{{ author.dribbble }}"><i class="fab fa-fw fa-dribbble icon-pad-right" aria-hidden="true"></i>Dribbble</a></li>
       {% endif %}      
       {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>Github</a></li>
+        <li><a href="https://github.com/{{ author.github }}" title="GitHub"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>Github</a></li>
       {% endif %}
       {% if author.kaggle %}
         <li><a href="https://kaggle.com/{{ author.kaggle }}"><i class="fab fa-fw fa-kaggle icon-pad-right" aria-hidden="true"></i>Kaggle</a></li>

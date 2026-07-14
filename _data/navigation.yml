@@ -20,9 +20,6 @@ main:
   - title: "会议"
     url: "/#talks"
 
-  - title: "English"
-    url: "/en/"
-
 en:
   - title: "News"
     url: "/en/#news"
@@ -44,6 +41,3 @@ en:
 
   - title: "Talks"
     url: "/en/#talks"
-
-  - title: "中文"
-    url: "/"

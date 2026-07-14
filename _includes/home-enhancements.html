@@ -1,0 +1,65 @@
+{% assign home_is_english = page.locale == 'en-US' %}
+<button class="back-to-top" type="button" aria-label="{% if home_is_english %}Back to top{% else %}返回顶部{% endif %}" title="{% if home_is_english %}Back to top{% else %}返回顶部{% endif %}">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var backToTop = document.querySelector(".back-to-top");
+  var pagePath = window.location.pathname.replace(/index\.html$/, "");
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".greedy-nav a[href*='#']"));
+  var localLinks = navLinks.filter(function (link) {
+    var url = new URL(link.href, window.location.origin);
+    return url.pathname.replace(/index\.html$/, "") === pagePath && url.hash;
+  });
+  var sections = localLinks.map(function (link) {
+    return document.getElementById(new URL(link.href, window.location.origin).hash.slice(1));
+  }).filter(function (section, index, all) {
+    return section && all.indexOf(section) === index;
+  });
+
+  localLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      var url = new URL(link.href, window.location.origin);
+      var section = document.getElementById(url.hash.slice(1));
+      if (!section) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var sectionTop = section.getBoundingClientRect().top + window.scrollY - 82;
+      window.scrollTo({ top: Math.max(0, sectionTop), behavior: reduceMotion ? "auto" : "smooth" });
+      window.history.pushState(null, "", url.hash);
+
+      var hiddenLinks = link.closest(".hidden-links");
+      if (hiddenLinks) hiddenLinks.classList.add("hidden");
+    }, true);
+  });
+
+  function updatePageNavigation() {
+    var activeId = "";
+    var marker = window.scrollY + 140;
+
+    sections.forEach(function (section) {
+      if (section.offsetTop <= marker) activeId = section.id;
+    });
+
+    localLinks.forEach(function (link) {
+      var linkId = new URL(link.href, window.location.origin).hash.slice(1);
+      link.classList.toggle("is-active", linkId === activeId);
+    });
+
+    backToTop.classList.toggle("is-visible", window.scrollY > 700);
+  }
+
+  backToTop.addEventListener("click", function () {
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+
+  window.addEventListener("scroll", updatePageNavigation, { passive: true });
+  window.addEventListener("resize", updatePageNavigation);
+  updatePageNavigation();
+});
+</script>

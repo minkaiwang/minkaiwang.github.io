@@ -15,6 +15,8 @@ redirect_from:
   <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download>导出 PDF 简历</a>
 </div>
 
+{% include home-enhancements.html %}
+
 <h1 class="main-heading">王珉锴</h1>
 
 <p class="lead">

@@ -43,6 +43,10 @@ body {
   color: var(--ink);
 }
 
+.page__content > p {
+  max-width: 860px;
+}
+
 .page__content p {
   line-height: 1.75;
 }
@@ -378,6 +382,7 @@ body {
 }
 
 #full-publications {
+  max-width: 900px;
   max-height: none;
   overflow-y: visible;
   padding-right: 8px;
@@ -407,14 +412,25 @@ body {
 
 .full-publication-list {
   margin: 0;
-  padding-left: 1.25rem;
+  padding-left: 0;
+  list-style: none;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.55;
 }
 
 .full-publication-list li {
-  margin-bottom: 14px;
+  margin: 0;
+  padding: 12px 0 14px;
+  border-bottom: 1px solid rgba(143, 63, 73, 0.12);
+}
+
+.full-publication-list li:first-child {
+  padding-top: 4px;
+}
+
+.full-publication-list li:last-child {
+  border-bottom: 0;
 }
 
 .pub-list-badge {
@@ -578,6 +594,71 @@ body {
   margin: 0;
 }
 
+.greedy-nav .visible-links a.is-active::before {
+  background: var(--accent);
+  transform: scaleX(1);
+}
+
+.greedy-nav .hidden-links a.is-active {
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 19;
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  color: #ffffff;
+  background: var(--accent-dark);
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  border-radius: 8px;
+  box-shadow: 0 7px 18px rgba(32, 33, 36, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  background: var(--accent);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (min-width: 1024px) and (max-height: 780px) {
+  .sidebar {
+    scrollbar-width: thin;
+  }
+
+  .sidebar .author__avatar img {
+    max-width: 130px;
+  }
+
+  .sidebar .author__name,
+  .sidebar .author__bio {
+    margin-top: 5px;
+    margin-bottom: 7px;
+  }
+
+  .sidebar .author__urls a {
+    margin-bottom: 2px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1em;
+  }
+}
+
 div.markdown-body a,
 a {
   color: var(--accent-dark);
@@ -592,6 +673,91 @@ a:hover {
 }
 
 @media (max-width: 720px) {
+  .sidebar {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(143, 63, 73, 0.12);
+  }
+
+  .sidebar > div[itemscope] {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .sidebar .author__avatar {
+    display: block;
+    flex: 0 0 36px;
+    width: 36px;
+  }
+
+  .sidebar .author__avatar img {
+    display: block;
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+  }
+
+  .sidebar .author__content {
+    display: none;
+  }
+
+  .sidebar .author__urls-wrapper {
+    display: block;
+    margin-left: auto;
+  }
+
+  .sidebar .author__urls-wrapper button {
+    display: none;
+  }
+
+  .sidebar .author__urls {
+    position: static;
+    display: flex !important;
+    gap: 3px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .sidebar .author__urls::before,
+  .sidebar .author__urls::after {
+    display: none;
+  }
+
+  .sidebar .author__urls li {
+    margin: 0;
+  }
+
+  .sidebar .author__urls li a {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    color: var(--ink);
+    font-size: 0;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(143, 63, 73, 0.14);
+    border-radius: 6px;
+  }
+
+  .sidebar .author__urls li a i,
+  .sidebar .author__urls li a .icon {
+    width: auto;
+    height: auto;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .page__content > p,
+  #full-publications {
+    max-width: none;
+  }
+
   .main-heading {
     font-size: 1.9rem;
   }
@@ -644,7 +810,7 @@ a:hover {
   }
 
   .full-publication-list {
-    padding-left: 1rem;
+    padding-left: 0;
   }
 
   .pub-list-badge {
@@ -668,4 +834,15 @@ a:hover {
     width: min(100%, 390px);
   }
 
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition: none;
+  }
 }

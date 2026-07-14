@@ -2,6 +2,7 @@
 
 
 <!doctype html>
+
 <html lang="zh" class="no-js">
   <head>
     
@@ -150,9 +151,6 @@
             
             <li class="masthead__menu-item"><a href="/#talks">会议</a></li>
           
-            
-            <li class="masthead__menu-item"><a href="/en/">English</a></li>
-          
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
@@ -203,29 +201,29 @@
       <!-- Font Awesome icons / Biographic information  -->
       
         
-        <li><a href="https://www.google.com/maps/search/?api=1&query=%E6%B5%99%E6%B1%9F%EF%BC%8C%E4%B8%AD%E5%9B%BD" target="_blank" rel="noopener"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>浙江，中国</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=%E6%B5%99%E6%B1%9F%EF%BC%8C%E4%B8%AD%E5%9B%BD" target="_blank" rel="noopener" title="浙江，中国"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>浙江，中国</a></li>
       
       
         
-        <li class="author__contact"><a href="https://www.google.com/search?q=%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6" target="_blank" rel="noopener"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>浙江大学</a></li>
+        <li class="author__contact"><a href="https://www.google.com/search?q=%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6" target="_blank" rel="noopener" title="浙江大学"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>浙江大学</a></li>
       
       
-        <li><a href="https://minkaiwang.github.io"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>网站</a></li>
+        <li><a href="https://minkaiwang.github.io" title="网站"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>网站</a></li>
       
       
-        <li><a href="mailto:wmkhappy7@gmail.com"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>电子邮件</a></li>
+        <li><a href="mailto:wmkhappy7@gmail.com" title="电子邮件"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>电子邮件</a></li>
       
       
       
       <!-- Font Awesome and Academicons icons / Academic websites -->
             
       
-        <li><a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl"><i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
+        <li><a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl" title="Google Scholar"><i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
       
       
       
       
-        <li><a href="https://orcid.org/0009-0003-9591-1076"><i class="ai ai-fw ai-orcid icon-pad-right" aria-hidden="true"></i>ORCID</a></li>
+        <li><a href="https://orcid.org/0009-0003-9591-1076" title="ORCID"><i class="ai ai-fw ai-orcid icon-pad-right" aria-hidden="true"></i>ORCID</a></li>
       
                               
       
@@ -235,7 +233,7 @@
             
             
       
-        <li><a href="https://github.com/minkaiwang"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>Github</a></li>
+        <li><a href="https://github.com/minkaiwang" title="GitHub"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>Github</a></li>
       
             
             
@@ -299,6 +297,71 @@
   <a class="language-pill" href="/en/">English</a>
   <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download="">导出 PDF 简历</a>
 </div>
+
+<p><button class="back-to-top" type="button" aria-label="返回顶部" title="返回顶部">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button></p>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var backToTop = document.querySelector(".back-to-top");
+  var pagePath = window.location.pathname.replace(/index\.html$/, "");
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".greedy-nav a[href*='#']"));
+  var localLinks = navLinks.filter(function (link) {
+    var url = new URL(link.href, window.location.origin);
+    return url.pathname.replace(/index\.html$/, "") === pagePath && url.hash;
+  });
+  var sections = localLinks.map(function (link) {
+    return document.getElementById(new URL(link.href, window.location.origin).hash.slice(1));
+  }).filter(function (section, index, all) {
+    return section && all.indexOf(section) === index;
+  });
+
+  localLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      var url = new URL(link.href, window.location.origin);
+      var section = document.getElementById(url.hash.slice(1));
+      if (!section) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var sectionTop = section.getBoundingClientRect().top + window.scrollY - 82;
+      window.scrollTo({ top: Math.max(0, sectionTop), behavior: reduceMotion ? "auto" : "smooth" });
+      window.history.pushState(null, "", url.hash);
+
+      var hiddenLinks = link.closest(".hidden-links");
+      if (hiddenLinks) hiddenLinks.classList.add("hidden");
+    }, true);
+  });
+
+  function updatePageNavigation() {
+    var activeId = "";
+    var marker = window.scrollY + 140;
+
+    sections.forEach(function (section) {
+      if (section.offsetTop <= marker) activeId = section.id;
+    });
+
+    localLinks.forEach(function (link) {
+      var linkId = new URL(link.href, window.location.origin).hash.slice(1);
+      link.classList.toggle("is-active", linkId === activeId);
+    });
+
+    backToTop.classList.toggle("is-visible", window.scrollY > 700);
+  }
+
+  backToTop.addEventListener("click", function () {
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+
+  window.addEventListener("scroll", updatePageNavigation, { passive: true });
+  window.addEventListener("resize", updatePageNavigation);
+  updatePageNavigation();
+});
+</script>
 
 <h1 class="main-heading">王珉锴</h1>
 

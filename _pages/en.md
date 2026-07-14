@@ -14,6 +14,8 @@ stylesheets:
   <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download>Download PDF Resume</a>
 </div>
 
+{% include home-enhancements.html %}
+
 <h1 class="main-heading">Minkai Wang</h1>
 
 <p class="lead">
