@@ -11,6 +11,9 @@ main:
   - title: "项目"
     url: "/#projects"
 
+  - title: "科研"
+    url: "/#grants"
+
   - title: "荣誉"
     url: "/#awards"
 
@@ -19,6 +22,9 @@ main:
 
   - title: "会议"
     url: "/#talks"
+
+  - title: "教学"
+    url: "/#teaching"
 
 en:
   - title: "News"
@@ -33,6 +39,9 @@ en:
   - title: "Projects"
     url: "/en/#projects"
 
+  - title: "Research"
+    url: "/en/#grants"
+
   - title: "Awards"
     url: "/en/#awards"
 
@@ -41,3 +50,6 @@ en:
 
   - title: "Talks"
     url: "/en/#talks"
+
+  - title: "Teaching"
+    url: "/en/#teaching"

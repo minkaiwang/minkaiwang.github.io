@@ -3,24 +3,28 @@
 {% if page.locale == "en-US" and site.data.navigation.en %}
   {% assign nav_links = site.data.navigation.en %}
 {% endif %}
+{% assign nav_menu_label = "切换导航菜单" %}
+{% if page.locale == "en-US" %}
+  {% assign nav_menu_label = "Toggle navigation menu" %}
+{% endif %}
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button type="button" aria-label="{{ nav_menu_label }}" aria-expanded="false" aria-controls="site-nav-hidden-links"><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in nav_links %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-              {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
+          {%- for link in nav_links %}
+            {%- if link.url contains 'http' %}
+              {%- assign domain = '' %}
+            {%- else %}
+              {%- assign domain = base_path %}
+            {%- endif %}
             <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
+          {%- endfor %}
         </ul>
-        <ul class="hidden-links hidden"></ul>
+        <ul id="site-nav-hidden-links" class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>

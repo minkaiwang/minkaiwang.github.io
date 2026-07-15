@@ -10,8 +10,8 @@ stylesheets:
 <div class="welcome-banner">Good morning, Night City!</div>
 
 <div class="top-actions">
-  <a class="language-pill" href="/">中文</a>
-  <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download>Download PDF Resume</a>
+  <a class="language-pill" href="/" hreflang="zh-CN" lang="zh-CN"><i class="fas fa-language" aria-hidden="true"></i>中文</a>
+  <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download><i class="fas fa-download" aria-hidden="true"></i>Download PDF Resume</a>
 </div>
 
 {% include home-enhancements.html %}
@@ -41,8 +41,8 @@ stylesheets:
     <div class="experience-logo logo-initial">ZJU</div>
     <div class="experience-info">
       <strong>Zhejiang University</strong><br>
-      <em>Sept 2026 - Present</em><br>
-      Ph.D. student in Educational Technology; supervisor: Prof. Xuesong Zhai.<br>
+      <em>Expected Sept 2026</em><br>
+      Incoming Ph.D. student in Educational Technology; supervisor: Prof. Xuesong Zhai.<br>
       <span>Focus: AI in education, game-based learning, and intelligent learning environments.</span>
     </div>
   </div>
@@ -95,27 +95,23 @@ stylesheets:
 <div id="full-publications" class="publication-view">
   <ul class="full-publication-list">
     <li><span class="pub-list-badge">CSSCI</span> <span class="pub-list-title">What Should Education Be in the Intelligent Era? A Review of the 2026 World Digital Education Conference</span><br><span class="pub-list-authors">Zhai, X., <strong>Wang, M.</strong>, Cheng, L., &amp; Zhao, C. (2026).</span> <span class="pub-list-note"><em>Open Education Research</em>, 32(3), 59-66.</span> <span class="pub-list-links"><a href="https://openedu.sou.edu.cn/frontsite/series_details.aspx?id=2800" target="_blank" rel="noopener">[Link]</a></span></li>
-    <li><span class="pub-list-badge">JCAL</span> <span class="pub-list-title">Enhancing Student Engagement in STEM Education: A Personalized Virtual Agent Based on Large Language Models in Alternate Reality Games</span><br><span class="pub-list-authors"><strong>Wang, M.</strong>, Zhu, J., Hwang, G., Chang, S., Yang, Q., &amp; Zhang, D.</span> <span class="pub-list-note"><em>Journal of Computer Assisted Learning</em>, 41(6): e70138.</span> <span class="pub-list-links"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139" target="_blank" rel="noopener">[Link]</a></span></li>
-    <li><span class="pub-list-badge">JECR</span> <span class="pub-list-title">Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students' Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns</span><br><span class="pub-list-authors"><strong>Wang, M.</strong>, Zhang, D., Zhu, J., &amp; Gu, H.</span> <span class="pub-list-note"><em>Journal of Educational Computing Research</em>, 63(3), 662-694.</span> <span class="pub-list-links"><a href="https://journals.sagepub.com/doi/abs/10.1177/07356331251321719" target="_blank" rel="noopener">[Link]</a></span></li>
-    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Optimizing experiential learning in science education: the role of two-tier testing in digital game-based learning</span><br><span class="pub-list-authors"><strong>Wang, M.</strong>, Zhu, J., Gu, H., Zhang, J., &amp; Wu, D.</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 100960.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952125000400" target="_blank" rel="noopener">[Link]</a></span></li>
-    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Integrating artificial intelligence and gamification in rehabilitation: a scoping review</span><br><span class="pub-list-authors"><strong>Wang, M.</strong>, Zhu, J., Qian, Wei., &amp; Gu, H.</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 101011.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952125000916" target="_blank" rel="noopener">[Link]</a></span></li>
-    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Beyond pre-scripted interactions: Mapping the integration of LLMs in digital game-based learning - a scoping review</span><br><span class="pub-list-authors">Gong, Y., <strong>Wang, M.</strong>, Tu, Y., Huang, C., &amp; Zhang, D. (2026).</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 101082.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952126000042" target="_blank" rel="noopener">[Link]</a></span></li>
-    <li><span class="pub-list-badge">JECR</span> <span class="pub-list-title">Asking, playing, learning: Investigating LLM-based support in digital game-based AI education for elementary students</span><br><span class="pub-list-authors">Gong, Y., <strong>Wang, M.</strong>, He, L., Xu, C., &amp; Yu, Y. (2025).</span> <span class="pub-list-note"><em>Journal of Educational Computing Research</em>, 64(2), 311-343.</span> <span class="pub-list-links"><a href="https://journals.sagepub.com/doi/abs/10.1177/07356331251396354" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">JCAL</span> <span class="pub-list-title">Boosting Student Engagement in STEM: Integrating Large Language Model-Based Virtual Agents Into Alternate Reality Games</span><br><span class="pub-list-authors"><strong>Wang, M.</strong>, Zhu, J., Hwang, G., Chang, S., Yang, Q., &amp; Zhang, D. (2025).</span> <span class="pub-list-note"><em>Journal of Computer Assisted Learning</em>, 41(6).</span> <span class="pub-list-links"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">JECR</span> <span class="pub-list-title">Effects of Incorporating a Large Language Model-Based Adaptive Mechanism Into Contextual Games on Students' Academic Performance, Flow Experience, Cognitive Load and Behavioral Patterns</span><br><span class="pub-list-authors"><strong>Wang, M.</strong>, Zhang, D., Zhu, J., &amp; Gu, H. (2025).</span> <span class="pub-list-note"><em>Journal of Educational Computing Research</em>, 63(3), 662-694.</span> <span class="pub-list-links"><a href="https://journals.sagepub.com/doi/abs/10.1177/07356331251321719" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Optimizing experiential learning in science education: The role of two-tier testing in digital game-based learning</span><br><span class="pub-list-authors"><strong>Wang, M.</strong>, Zhu, J., Gu, H., Zhang, J., Wu, D., &amp; Wang, P. (2025).</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 54, 100960.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952125000400" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Integrating artificial intelligence and gamification in rehabilitation: A scoping review</span><br><span class="pub-list-authors"><strong>Wang, M.</strong>, Zhu, J., Qian, W., &amp; Gu, H. (2025).</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 55, 101011.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952125000916" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">EC</span> <span class="pub-list-title">Beyond pre-scripted interactions: Mapping the integration of LLMs in digital game-based learning - a scoping review</span><br><span class="pub-list-authors">Gong, Y., <strong>Wang, M.</strong>, Tu, Y., Huang, C., &amp; Zhang, D. (2026).</span> <span class="pub-list-note"><em>Entertainment Computing</em>, 56, 101082.</span> <span class="pub-list-links"><a href="https://www.sciencedirect.com/science/article/pii/S1875952126000042" target="_blank" rel="noopener">[Link]</a></span></li>
+    <li><span class="pub-list-badge">JECR</span> <span class="pub-list-title">Asking, Playing, Learning: Investigating Large Language Model-Based Scaffolding in Digital Game-Based Learning for Elementary Artificial Intelligence Education</span><br><span class="pub-list-authors">Gong, Y., <strong>Wang, M.</strong>, He, L., Xu, C., &amp; Yu, Y. (2025).</span> <span class="pub-list-note"><em>Journal of Educational Computing Research</em>, 64(2), 311-343.</span> <span class="pub-list-links"><a href="https://journals.sagepub.com/doi/abs/10.1177/07356331251396354" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Impact of a Digital Game-Based AI Chatbot on Students' Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum</span><br><span class="pub-list-authors">Xu, Y., Zhu, J., <strong>Wang, M.</strong>, Qian, F., Yang, Y., &amp; Zhang, J. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6418.</span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6418" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture</span><br><span class="pub-list-authors">Zhang, J., Zhu, J., Tu, W., <strong>Wang, M.</strong>, Yang, Y., Qian, F., &amp; Xu, Y. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6484.</span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6484" target="_blank" rel="noopener">[Link]</a></span></li>
   </ul>
 </div>
-
-<figure class="meme-interlude meme-interlude--right" aria-label="Humorous image after the publications list">
-  <img src="/images/meme-field-expert.png" alt="You are already an expert in this field" loading="lazy" decoding="async">
-</figure>
 
 <h2 id="projects">Projects</h2>
 
 <div class="project-card">
   <div class="publication-row">
     <div class="pub-media-rotator">
-      <img src="/images/game1.png" alt="Waiting for an Egg game screenshot">
+      <img src="/images/game1.png" alt="Waiting for an Egg game screenshot" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>Waiting for an Egg</strong><br>
@@ -129,7 +125,7 @@ stylesheets:
 <div class="project-card">
   <div class="publication-row">
     <div class="pub-media-rotator">
-      <img src="/images/game2.png" alt="Sprout's Journey game screenshot">
+      <img src="/images/game2.png" alt="Sprout's Journey game screenshot" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>Sprout's Journey</strong><br>
@@ -143,7 +139,7 @@ stylesheets:
 <div class="project-card">
   <div class="publication-row">
     <div class="pub-media-rotator">
-      <img src="/images/game3.png" alt="Centennial Shuttle game screenshot">
+      <img src="/images/game3.png" alt="Centennial Shuttle game screenshot" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>Centennial Shuttle</strong><br>
@@ -157,7 +153,7 @@ stylesheets:
 <div class="project-card">
   <div class="publication-row">
     <div class="pub-media-rotator">
-      <img src="/images/esports-assessment-system.png" alt="Digital esports potential assessment system screenshot">
+      <img src="/images/esports-assessment-system.png" alt="Digital esports potential assessment system screenshot" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>Digital Esports Potential Assessment System</strong><br>
@@ -170,10 +166,10 @@ stylesheets:
 
 <div class="meme-pair" aria-label="Two humorous images after the projects section">
   <figure class="meme-interlude meme-interlude--left">
-    <img src="/images/meme-strong-can-fight.png" alt="Strong and capable" loading="lazy" decoding="async">
+    <img src="/images/meme-strong-can-fight.png" alt="Strong and capable" width="516" height="474" loading="lazy" decoding="async">
   </figure>
   <figure class="meme-interlude meme-interlude--right">
-    <img src="/images/meme-great-cause.png" alt="Working with my supervisor toward a shared great cause" loading="lazy" decoding="async">
+    <img src="/images/meme-great-cause.png" alt="Working with my supervisor toward a shared great cause" width="395" height="351" loading="lazy" decoding="async">
   </figure>
 </div>
 
@@ -216,10 +212,10 @@ stylesheets:
 
 <div class="meme-pair" aria-label="Two humorous images after the awards section">
   <figure class="meme-interlude meme-interlude--left">
-    <img src="/images/meme-empty-fame.png" alt="Those titles are merely empty fame, like passing clouds" loading="lazy" decoding="async">
+    <img src="/images/meme-empty-fame.png" alt="Those titles are merely empty fame, like passing clouds" width="597" height="489" loading="lazy" decoding="async">
   </figure>
   <figure class="meme-interlude meme-interlude--right">
-    <img src="/images/meme-academic-backbone.png" alt="A gathering place for young academic backbones" loading="lazy" decoding="async">
+    <img src="/images/meme-academic-backbone.png" alt="A gathering place for young academic backbones" width="1137" height="1113" loading="lazy" decoding="async">
   </figure>
 </div>
 

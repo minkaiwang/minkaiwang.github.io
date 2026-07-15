@@ -6,6 +6,8 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var backToTop = document.querySelector(".back-to-top");
+  var navMenuButton = document.querySelector(".greedy-nav > button");
+  var hiddenNavLinks = document.querySelector(".greedy-nav > .hidden-links");
   var pagePath = window.location.pathname.replace(/index\.html$/, "");
   var navLinks = Array.prototype.slice.call(document.querySelectorAll(".greedy-nav a[href*='#']"));
   var localLinks = navLinks.filter(function (link) {
@@ -17,6 +19,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }).filter(function (section, index, all) {
     return section && all.indexOf(section) === index;
   });
+  var publicationLinkPrefix = "{% if home_is_english %}Open publication: {% else %}查看论文：{% endif %}";
+
+  document.querySelectorAll(".full-publication-list li").forEach(function (item) {
+    var title = item.querySelector(".pub-list-title");
+    var link = item.querySelector(".pub-list-links a");
+    if (title && link) link.setAttribute("aria-label", publicationLinkPrefix + title.textContent.trim());
+  });
+
+  if (navMenuButton && hiddenNavLinks) {
+    navMenuButton.addEventListener("click", function () {
+      window.setTimeout(function () {
+        navMenuButton.setAttribute("aria-expanded", String(!hiddenNavLinks.classList.contains("hidden")));
+      }, 0);
+    });
+  }
 
   localLinks.forEach(function (link) {
     link.addEventListener("click", function (event) {
@@ -33,17 +50,25 @@ document.addEventListener("DOMContentLoaded", function () {
       window.history.pushState(null, "", url.hash);
 
       var hiddenLinks = link.closest(".hidden-links");
-      if (hiddenLinks) hiddenLinks.classList.add("hidden");
+      if (hiddenLinks) {
+        hiddenLinks.classList.add("hidden");
+        if (navMenuButton) navMenuButton.setAttribute("aria-expanded", "false");
+      }
     }, true);
   });
 
   function updatePageNavigation() {
     var activeId = "";
-    var marker = window.scrollY + 140;
+    var markerOffset = Math.max(140, Math.min(360, window.innerHeight * 0.42));
+    var marker = window.scrollY + markerOffset;
 
     sections.forEach(function (section) {
       if (section.offsetTop <= marker) activeId = section.id;
     });
+
+    if (sections.length && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+      activeId = sections[sections.length - 1].id;
+    }
 
     localLinks.forEach(function (link) {
       var linkId = new URL(link.href, window.location.origin).hash.slice(1);

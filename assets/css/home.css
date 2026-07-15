@@ -116,6 +116,7 @@ body {
 .resume-download {
   display: inline-flex;
   align-items: center;
+  gap: 6px;
   min-height: 32px;
   padding: 4px 12px;
   border: 1px solid rgba(185, 95, 97, 0.28);
