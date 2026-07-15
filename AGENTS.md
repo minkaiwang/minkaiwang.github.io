@@ -17,9 +17,10 @@
 - `_pages/resume.html`：PDF 简历打印版页面，访问路径为 `/resume/`，用于生成完整内容版 A4 PDF 简历；当前为分栏信息结构，带轻量像素网格背景和少量像素色块。
 - `_data/navigation.yml`：顶部导航链接，包含中文默认导航和英文页导航；当前不在导航栏放 CV。
 - `assets/css/home.css`：主页自定义样式，基于 WowPage 模板调整；包含首页轻像素背景、欢迎语横幅、卡片与响应式样式。
+- `_includes/seo.html`、`_includes/head/custom.html`：主页 SEO、Open Graph、Twitter Card、Person 结构化数据和中英文 `hreflang` 配置。
 - `files/Minkai_Wang_CV.pdf`：历史 PDF 文件仍保留在 `files/`，当前不作为导航入口，也不进入 sitemap。
 - `files/Minkai_Wang_Resume_CN.pdf`：网页“导出 PDF 简历”按钮指向的当前中文 PDF 简历。
-- `images/`：源图片目录。当前包含头像、游戏作品图和站点图标。
+- `images/`：源图片目录。当前包含头像、游戏作品图、站点图标和 `social-card.png` 社交分享封面。主页四张趣味图片实际引用 WebP，PNG 原件保留用于回退和归档。
 - `docs/`：Jekyll 构建输出目录，供 GitHub Pages 发布使用。一般不要手改其中 HTML，应修改源文件后重新构建。
 - `archive/quarto-before-wowpage-20260629/`：迁移前 Quarto 版本备份。
 - `index.qmd`、`Chinese.qmd`、`publications.qmd`、`codes.qmd`、`Teaching.md`、`CV.md`：旧 Quarto 版本源文件/材料，后续改履历时可作为补充参照，但 Jekyll 构建时已排除。
@@ -65,6 +66,8 @@ bundle exec jekyll build
   - PDF 简历下载按钮是否能打开 `files/Minkai_Wang_Resume_CN.pdf`；
   - Publications 是否只展示 Full Publications List，不恢复 Core Publications 切换；
   - 项目图片是否显示；
+  - 四张趣味图片是否请求 WebP、无破图和明显布局位移；
+  - 中英文页面是否生成绝对地址的 `og:image`、`twitter:image` 与正确的 `hreflang`；
   - 桌面和移动端是否没有明显拥挤、遮挡或文本溢出。
 
 ## Git 与交付

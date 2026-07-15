@@ -3,6 +3,7 @@ permalink: /en/
 author_profile: true
 author: minkai-en
 locale: en-US
+description: "Minkai Wang's academic homepage, featuring research on game-based learning, AI in education, digital games, and esports education."
 stylesheets:
   - /assets/css/home.css
 ---
@@ -166,10 +167,10 @@ stylesheets:
 
 <div class="meme-pair" aria-label="Two humorous images after the projects section">
   <figure class="meme-interlude meme-interlude--left">
-    <img src="/images/meme-strong-can-fight.png" alt="Strong and capable" width="516" height="474" loading="lazy" decoding="async">
+    <img src="/images/meme-strong-can-fight.webp" alt="Strong and capable" width="516" height="474" loading="lazy" decoding="async">
   </figure>
   <figure class="meme-interlude meme-interlude--right">
-    <img src="/images/meme-great-cause.png" alt="Working with my supervisor toward a shared great cause" width="395" height="351" loading="lazy" decoding="async">
+    <img src="/images/meme-great-cause.webp" alt="Working with my supervisor toward a shared great cause" width="395" height="351" loading="lazy" decoding="async">
   </figure>
 </div>
 
@@ -212,10 +213,10 @@ stylesheets:
 
 <div class="meme-pair" aria-label="Two humorous images after the awards section">
   <figure class="meme-interlude meme-interlude--left">
-    <img src="/images/meme-empty-fame.png" alt="Those titles are merely empty fame, like passing clouds" width="597" height="489" loading="lazy" decoding="async">
+    <img src="/images/meme-empty-fame.webp" alt="Those titles are merely empty fame, like passing clouds" width="597" height="489" loading="lazy" decoding="async">
   </figure>
   <figure class="meme-interlude meme-interlude--right">
-    <img src="/images/meme-academic-backbone.png" alt="A gathering place for young academic backbones" width="1137" height="1113" loading="lazy" decoding="async">
+    <img src="/images/meme-academic-backbone.webp" alt="A gathering place for young academic backbones" width="1137" height="1113" loading="lazy" decoding="async">
   </figure>
 </div>
 

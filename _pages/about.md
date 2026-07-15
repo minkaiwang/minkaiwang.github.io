@@ -1,6 +1,7 @@
 ---
 permalink: /
 author_profile: true
+description: "王珉锴的个人学术主页，聚焦游戏化学习、人工智能教育应用、数字游戏与电竞教育。"
 stylesheets:
   - /assets/css/home.css
 redirect_from:
@@ -167,10 +168,10 @@ redirect_from:
 
 <div class="meme-pair" aria-label="项目与作品后的两张趣味图片">
   <figure class="meme-interlude meme-interlude--left">
-    <img src="/images/meme-strong-can-fight.png" alt="强壮，能打" width="516" height="474" loading="lazy" decoding="async">
+    <img src="/images/meme-strong-can-fight.webp" alt="强壮，能打" width="516" height="474" loading="lazy" decoding="async">
   </figure>
   <figure class="meme-interlude meme-interlude--right">
-    <img src="/images/meme-great-cause.png" alt="我导，共图大业" width="395" height="351" loading="lazy" decoding="async">
+    <img src="/images/meme-great-cause.webp" alt="我导，共图大业" width="395" height="351" loading="lazy" decoding="async">
   </figure>
 </div>
 
@@ -225,10 +226,10 @@ redirect_from:
 
 <div class="meme-pair" aria-label="荣誉奖项后的两张趣味图片">
   <figure class="meme-interlude meme-interlude--left">
-    <img src="/images/meme-empty-fame.png" alt="那些只是虚名而已，就好像浮云一样" width="597" height="489" loading="lazy" decoding="async">
+    <img src="/images/meme-empty-fame.webp" alt="那些只是虚名而已，就好像浮云一样" width="597" height="489" loading="lazy" decoding="async">
   </figure>
   <figure class="meme-interlude meme-interlude--right">
-    <img src="/images/meme-academic-backbone.png" alt="青年学术骨干集合处" width="1137" height="1113" loading="lazy" decoding="async">
+    <img src="/images/meme-academic-backbone.webp" alt="青年学术骨干集合处" width="1137" height="1113" loading="lazy" decoding="async">
   </figure>
 </div>
 
