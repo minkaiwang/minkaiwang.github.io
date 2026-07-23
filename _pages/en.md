@@ -20,7 +20,7 @@ stylesheets:
 <h1 class="main-heading">Minkai Wang</h1>
 
 <p class="lead">
-  <strong>Minkai Wang (王珉锴)</strong> works at the intersection of game-based learning, artificial intelligence in education, metaverse learning environments, and esports education. He will begin his Ph.D. study in Educational Technology at <strong>Zhejiang University</strong> in September 2026, supervised by Prof. Xuesong Zhai, and is jointly trained at the Future Imaging Laboratory and the ZJU International Joint R&amp;D Center for Esports Education.
+  <strong>Minkai Wang (王珉锴)</strong> works at the intersection of game-based learning, artificial intelligence in education, metaverse learning environments, and esports education. He will begin his Ph.D. study in Educational Technology at <strong>Zhejiang University</strong> in September 2026, supervised by Prof. Xuesong Zhai. He was jointly trained at the Future Imaging Laboratory from March to July 2026 and continues his joint training at the ZJU International Joint R&amp;D Center for Esports Education.
 </p>
 
 <p>
@@ -49,9 +49,19 @@ stylesheets:
   </div>
 
   <div class="experience-card">
+    <div class="experience-logo logo-initial">FIL</div>
+    <div class="experience-info">
+      <strong>Zhejiang University Yangtze River Delta Smart Oasis Innovation Center · Future Imaging Laboratory</strong><br>
+      <em>Mar 2026 - Jul 2026</em><br>
+      Joint training student in esports education; joint training supervisor: Yupei Zhao.<br>
+      <span>Work on esports education systems, Unity/Web development, and digital assessment scenarios.</span>
+    </div>
+  </div>
+
+  <div class="experience-card">
     <div class="experience-logo logo-initial">ESE</div>
     <div class="experience-info">
-      <strong>ZJU Future Imaging Laboratory &amp; International Joint R&amp;D Center for Esports Education</strong><br>
+      <strong>ZJU International Joint R&amp;D Center for Esports Education</strong><br>
       <em>Mar 2026 - Present</em><br>
       Joint training student in esports education; joint training supervisor: Yupei Zhao.<br>
       <span>Work on esports education systems, Unity/Web development, and digital assessment scenarios.</span>
@@ -226,6 +236,8 @@ stylesheets:
   <strong>Journal Reviewer</strong>
   <ul class="two-column-list journal-list">
     <li><em>Artificial Intelligence Review</em></li>
+    <li><em>International Journal of Human–Computer Interaction</em></li>
+    <li><em>Computers in Human Behavior: Artificial Humans</em></li>
     <li><em>npj Digital Medicine</em></li>
     <li><em>BMC Medical Ethics</em></li>
     <li><em>BMC Medical Education</em></li>
