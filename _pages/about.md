@@ -173,6 +173,37 @@ redirect_from:
   </div>
 </div>
 
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator project-media--pixel">
+      <img src="https://raw.githubusercontent.com/minkaiwang/AemeathDeskPet/main/resc/GIF/idle.gif" alt="爱弥斯学术桌面助手的像素桌宠动画" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+    </div>
+    <div>
+      <strong>爱弥斯（Aemeath）学术桌面助手</strong><br>
+      <i>Windows 桌宠与本地优先科研工作台整合项目。</i><br>
+      整合、改编与维护 AI 桌宠、聊天 / 托盘交互及论文、项目、任务进度管理，形成一套桌面科研工作流。<br>
+      <b><i>Open-source Integration</i></b> <a href="https://github.com/minkaiwang/AemeathDeskPet" target="_blank" rel="noopener">[GitHub]</a>
+      <small class="project-credit">桌宠基线来自 FlyingSnowVelvet-Aemeath 项目谱系，工作台参考 AugustUp/phd_master_system；完整署名及素材许可见仓库。</small>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator project-media--wedding" data-interval="4500">
+      <img src="/images/project-wedding-seating.png" alt="WeddingSeats 婚礼排座工作台界面" loading="lazy" decoding="async">
+      <img src="/images/project-wedding-lottery.png" alt="WeddingSeats 婚礼抽奖界面" loading="lazy" decoding="async">
+    </div>
+    <div>
+      <strong>WeddingSeats 婚礼排座与抽奖工具</strong><br>
+      <i>婚礼排座、名单导出与现场抽奖联动项目。</i><br>
+      在开源排座与抽奖项目基础上完成整合和现场定制，支持拖拽排桌、Excel 导出、一键导入、实时同步及可选云端备份。<br>
+      <b><i>Open-source Integration</i></b> <a href="https://github.com/minkaiwang/wedding-seating-lottery" target="_blank" rel="noopener">[GitHub]</a>
+      <small class="project-credit">排座基于 Ajdin Catic / wedding-seats，抽奖基于 LOG1997 / log-lottery；完整署名见仓库。</small>
+    </div>
+  </div>
+</div>
+
 <div class="meme-pair" aria-label="项目与作品后的两张趣味图片">
   <figure class="meme-interlude meme-interlude--left">
     <img src="/images/meme-strong-can-fight.webp" alt="强壮，能打" width="516" height="474" loading="lazy" decoding="async">

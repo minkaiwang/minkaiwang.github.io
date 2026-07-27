@@ -172,6 +172,37 @@ stylesheets:
   </div>
 </div>
 
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator project-media--pixel">
+      <img src="https://raw.githubusercontent.com/minkaiwang/AemeathDeskPet/main/resc/GIF/idle.gif" alt="Pixel desk pet animation from the Aemeath academic desktop assistant" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+    </div>
+    <div>
+      <strong>Aemeath Academic Desktop Assistant</strong><br>
+      <i>A Windows desktop pet integrated with a local-first research workbench.</i><br>
+      An integration, adaptation, and maintenance project combining an AI desk pet, chat / tray interactions, and paper, project, and task tracking in one desktop workflow.<br>
+      <b><i>Open-source Integration</i></b> <a href="https://github.com/minkaiwang/AemeathDeskPet" target="_blank" rel="noopener">[GitHub]</a>
+      <small class="project-credit">The desk-pet baseline follows the FlyingSnowVelvet-Aemeath lineage, and the workbench draws on AugustUp/phd_master_system; see the repository for full credits and asset terms.</small>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator project-media--wedding" data-interval="4500">
+      <img src="/images/project-wedding-seating.png" alt="WeddingSeats seating workspace" loading="lazy" decoding="async">
+      <img src="/images/project-wedding-lottery.png" alt="WeddingSeats live lottery interface" loading="lazy" decoding="async">
+    </div>
+    <div>
+      <strong>WeddingSeats: Seating &amp; Lottery Integration</strong><br>
+      <i>A connected workflow for wedding seating, guest export, and live lottery.</i><br>
+      An integration and event customization project supporting drag-and-drop seating, Excel export, one-click import, live list synchronization, and optional cloud backup.<br>
+      <b><i>Open-source Integration</i></b> <a href="https://github.com/minkaiwang/wedding-seating-lottery" target="_blank" rel="noopener">[GitHub]</a>
+      <small class="project-credit">Seating is based on Ajdin Catic / wedding-seats and lottery on LOG1997 / log-lottery; see the repository for full credits.</small>
+    </div>
+  </div>
+</div>
+
 <div class="meme-pair" aria-label="Two humorous images after the projects section">
   <figure class="meme-interlude meme-interlude--left">
     <img src="/images/meme-strong-can-fight.webp" alt="Strong and capable" width="516" height="474" loading="lazy" decoding="async">

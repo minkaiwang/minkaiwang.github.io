@@ -354,6 +354,27 @@ body {
   margin: 0 auto;
 }
 
+.project-media--pixel {
+  background: #5b5670;
+}
+
+.project-media--pixel img {
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.project-media--wedding img {
+  object-position: center top;
+}
+
+.project-credit {
+  display: block;
+  margin-top: 5px;
+  color: color-mix(in srgb, var(--muted) 82%, var(--accent-dark));
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
 .pub-button {
   margin: 0 8px 12px 0;
   padding: 8px 16px;
@@ -869,6 +890,10 @@ a:hover {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover;
+  }
+
+  .project-card .project-media--pixel > img {
+    object-fit: contain;
   }
 
   .full-publication-list {
