@@ -25,7 +25,7 @@ redirect_from:
 </p>
 
 <p>
-  他的研究关注大语言模型、虚拟代理、自适应机制与数字游戏如何重塑学习体验、学习投入、认知负荷与行为模式。相关成果发表于 <em>Journal of Computer Assisted Learning</em>、<em>Journal of Educational Computing Research</em>、<em>Entertainment Computing</em> 等期刊。
+  他的研究关注大语言模型、虚拟代理、自适应机制与数字游戏如何重塑学习体验、学习投入、认知负荷与行为模式。相关成果发表于 <em>Journal of Computer Assisted Learning</em>、<em>Journal of Educational Computing Research</em>、<em>Entertainment Computing</em> 等期刊，另有共同第一作者论文获 <em>npj Digital Medicine</em> 接收。
 </p>
 
 <h2 id="news">最新动态</h2>
@@ -102,6 +102,7 @@ redirect_from:
 
 <div id="full-publications" class="publication-view">
   <ul class="full-publication-list">
+    <li><span class="pub-list-badge">npj DM</span> <span class="pub-list-badge pub-list-badge--esi">Accepted</span> <span class="pub-list-title">Intervention fidelity and competency translation of serious games in pharmacy education: a scoping umbrella review</span><br><span class="pub-list-authors">Yu, Y.<sup>†</sup>, <strong>Wang, M. (王珉锴)<sup>†</sup></strong>, Gong, Y., Zhang, D., Wu, F., &amp; Gu, H. (2026).</span> <span class="pub-list-note"><em>npj Digital Medicine</em>. Accepted for publication. <span class="pub-list-metric">（<sup>†</sup>共同第一作者；IF = 18.0）</span></span></li>
     <li><span class="pub-list-badge">CSSCI</span> <span class="pub-list-title">智能时代，教育何为——2026 世界数字教育大会综述</span><br><span class="pub-list-authors">翟雪松, <strong>王珉锴</strong>, 程莉莉, 赵川 (2026).</span> <span class="pub-list-note"><em>开放教育研究</em>, 32(3), 59-66. <span class="pub-list-metric">（CSSCI，复合 IF = 11.401）</span></span> <span class="pub-list-links"><a href="https://openedu.sou.edu.cn/frontsite/series_details.aspx?id=2800" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">JECR</span> <span class="pub-list-title">Generative Scaffolding in Pre-Trip Games: Effects of a GenAI-Chatbot on Inquiry-Based Learning</span><br><span class="pub-list-authors">Chen, Q., Gong, Y., <strong>Wang, M. (王珉锴)</strong>, Lin, J., Gu, H., Peng, H., &amp; Chi, H. (2026).</span> <span class="pub-list-note"><em>Journal of Educational Computing Research</em>. Advance online publication. <span class="pub-list-metric">（JCR Q1，IF = 8.5）</span></span> <span class="pub-list-links"><a href="https://doi.org/10.1177/07356331261474369" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">JCAL</span> <span class="pub-list-title">Boosting Student Engagement in STEM: Integrating Large Language Model-Based Virtual Agents Into Alternate Reality Games</span><br><span class="pub-list-authors"><strong>Wang, M. (王珉锴)</strong>, Zhu, J., Hwang, G., Chang, S., Yang, Q., &amp; Zhang, D. (2025).</span> <span class="pub-list-note"><em>Journal of Computer Assisted Learning</em>, 41(6). <span class="pub-list-metric">（JCR Q1，IF = 4.6）</span></span> <span class="pub-list-links"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139" target="_blank" rel="noopener">[Link]</a></span></li>
@@ -113,7 +114,7 @@ redirect_from:
     <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Impact of a Digital Game-Based AI Chatbot on Students' Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum</span><br><span class="pub-list-authors">Xu, Y., Zhu, J., <strong>Wang, M. (王珉锴)</strong>, Qian, F., Yang, Y., &amp; Zhang, J. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6418. <span class="pub-list-metric">（JCR Q2，IF = 2.9）</span></span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6418" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture</span><br><span class="pub-list-authors">Zhang, J., Zhu, J., Tu, W., <strong>Wang, M. (王珉锴)</strong>, Yang, Y., Qian, F., &amp; Xu, Y. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6484. <span class="pub-list-metric">（JCR Q2，IF = 2.9）</span></span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6484" target="_blank" rel="noopener">[Link]</a></span></li>
   </ul>
-  <p class="metric-note">期刊指标按 2026.07 可核实信息标注；IF 为期刊层面指标。ESI 高被引状态依据 Web of Science 检索结果，名单会随 ESI 更新而变化。</p>
+  <p class="metric-note">期刊指标依据各条目最近一次核实信息标注；IF 为期刊层面指标。ESI 高被引状态依据 Web of Science 检索结果，名单会随 ESI 更新而变化。</p>
 </div>
 
 <h2 id="projects">项目与作品</h2>
@@ -305,8 +306,9 @@ redirect_from:
 </div>
 
 <div class="text-card">
-  <strong>学术社群与报告</strong>
+  <strong>专业与科研服务</strong>
   <ul class="compact-list">
+    <li><strong>2026</strong>｜参与第 20 届亚洲运动会（2026/爱知·名古屋）电子竞技国家集训队科研保障</li>
     <li>微信公众号负责人：“数字游戏学习研究”</li>
     <li>深度参与编制《浙江省数字教育发展蓝皮书》</li>
     <li>深度参与编制《浙江省新型综合实践教育场所发展报告》</li>
