@@ -4,6 +4,8 @@
   function closeAll() {
     document.querySelectorAll('.author__urls-wrapper.is-open').forEach(function(wrapper) {
       wrapper.classList.remove('is-open');
+      var button = wrapper.querySelector('.author__urls-toggle');
+      if (button) button.setAttribute('aria-expanded', 'false');
     });
   }
 
@@ -17,6 +19,7 @@
         event.preventDefault();
         event.stopPropagation();
         wrapper.classList.toggle('is-open');
+        button.setAttribute('aria-expanded', String(wrapper.classList.contains('is-open')));
       });
     });
 

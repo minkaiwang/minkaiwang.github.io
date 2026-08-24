@@ -11,8 +11,37 @@ var $vlinks = $('#site-nav .visible-links');
 var $hlinks = $('#site-nav .hidden-links');
 
 var breaks = [];
+var mobileNavQuery = window.matchMedia('(max-width: 720px)');
+var wasMobileNav = false;
+
+function useMobileNav() {
+  while ($vlinks.children('*:not(.masthead__menu-item--lg)').length) {
+    $vlinks.children('*:not(.masthead__menu-item--lg)').last().prependTo($hlinks);
+  }
+
+  breaks = [];
+  $btn.removeClass('hidden').attr('count', $hlinks.children().length);
+  wasMobileNav = true;
+}
+
+function resetMobileNav() {
+  if (!wasMobileNav) return;
+
+  $hlinks.children().appendTo($vlinks);
+  $hlinks.addClass('hidden');
+  $btn.addClass('hidden').removeClass('close').attr('aria-expanded', 'false');
+  breaks = [];
+  wasMobileNav = false;
+}
 
 function updateNav() {
+
+  if (mobileNavQuery.matches) {
+    useMobileNav();
+    return;
+  }
+
+  resetMobileNav();
 
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 

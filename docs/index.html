@@ -192,6 +192,8 @@
 
 
 
+
+
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
@@ -208,8 +210,10 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">关注</button>
-    <ul class="author__urls social-icons">
+    <button class="btn btn--inverse author__urls-toggle" type="button" aria-expanded="false" aria-controls="author-contact-links">
+      <i class="fas fa-address-card" aria-hidden="true"></i><span>联系方式</span>
+    </button>
+    <ul id="author-contact-links" class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       
         
@@ -682,6 +686,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <li><em>Scientific Reports</em></li>
     <li><em>Frontiers in Rehabilitation Sciences</em></li>
     <li><em>Computers in Human Behavior: Artificial Humans</em></li>
+    <li><em>Computers &amp; Education: X Reality</em></li>
     <li><em>Discover Sustainability</em></li>
     <li><em>Social Sciences &amp; Humanities Open</em></li>
     <li><em>Discover Artificial Intelligence</em></li>
@@ -822,6 +827,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function closeAll() {
     document.querySelectorAll('.author__urls-wrapper.is-open').forEach(function(wrapper) {
       wrapper.classList.remove('is-open');
+      var button = wrapper.querySelector('.author__urls-toggle');
+      if (button) button.setAttribute('aria-expanded', 'false');
     });
   }
 
@@ -835,6 +842,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         event.stopPropagation();
         wrapper.classList.toggle('is-open');
+        button.setAttribute('aria-expanded', String(wrapper.classList.contains('is-open')));
       });
     });
 
@@ -854,6 +862,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 })();
 </script>
+
 
 
 

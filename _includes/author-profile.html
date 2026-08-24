@@ -6,6 +6,8 @@
 {% assign text_locale = page.locale | default: site.locale %}
 {% assign ui_text = site.data.ui-text[text_locale] %}
 {% unless ui_text %}{% assign ui_text = site.data.ui-text[site.locale] %}{% endunless %}
+{% assign contact_label = "联系方式" %}
+{% if text_locale == "en-US" %}{% assign contact_label = "Contact" %}{% endif %}
 
 <div itemscope itemtype="http://schema.org/Person">
 
@@ -25,8 +27,10 @@
   </div>
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">{{ ui_text.follow_label | default: "Follow:" | replace: ":", "" | replace: "：", "" }}</button>
-    <ul class="author__urls social-icons">
+    <button class="btn btn--inverse author__urls-toggle" type="button" aria-expanded="false" aria-controls="author-contact-links">
+      <i class="fas fa-address-card" aria-hidden="true"></i><span>{{ contact_label }}</span>
+    </button>
+    <ul id="author-contact-links" class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}
         {% assign location_query = author.location | url_encode %}

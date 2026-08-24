@@ -287,6 +287,7 @@ stylesheets:
     <li><em>Scientific Reports</em></li>
     <li><em>Frontiers in Rehabilitation Sciences</em></li>
     <li><em>Computers in Human Behavior: Artificial Humans</em></li>
+    <li><em>Computers &amp; Education: X Reality</em></li>
     <li><em>Discover Sustainability</em></li>
     <li><em>Social Sciences &amp; Humanities Open</em></li>
     <li><em>Discover Artificial Intelligence</em></li>
