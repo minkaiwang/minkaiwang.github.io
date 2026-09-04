@@ -6,17 +6,17 @@
 
 - 本项目是王珉锴（Minkai Wang）的个人学术简历网站，当前已迁移为基于 WowPage/AcademicPages 风格的 Jekyll 站点，并通过 GitHub Pages 发布。
 - 站点地址为 `https://minkaiwang.github.io`，仓库为 `minkaiwang.github.io`。
-- 当前定位是“个人学术主页 + 简历 + 学术成果展示 + 教育游戏/项目展示”，内容涉及教育技术学、游戏化学习、AI 教育应用、元宇宙、电竞教育等方向。
-- 当前站点采用 WowPage 的左侧作者档案栏 + 右侧单页锚点内容流结构，主要样式集中在 `assets/css/home.css`。主页背景为低调像素网格风格，欢迎语当前使用“早上好，夜之城！”/“Good morning, Night City!”。
+- 当前定位是“个人学术主页 + 简历 + 学术成果展示 + 教育游戏/项目展示”，内容涉及教育技术学、游戏化学习、AI 教育应用、电竞教育等方向。
+- 当前站点采用 WowPage 的左侧作者档案栏 + 右侧单页锚点内容流结构，主要样式集中在 `assets/css/home.css`。主页采用白底、暖色链接、细分隔线和浅色重点标记，欢迎语当前使用“早上好，夜之城！”/“Good morning, Night City!”。
 
 ## 关键文件
 
 - `_config.yml`：Jekyll 网站配置、作者侧栏信息、构建输出目录和排除规则。当前 `destination` 为 `docs`，以兼容原 GitHub Pages 发布目录。
 - `_pages/about.md`：中文默认首页和主要简历内容，包含最新动态、经历、Publications、项目、荣誉、服务、会议、教学经历等单页锚点分区。
 - `_pages/en.md`：英文版本页面，访问路径为 `/en/`，正文和侧栏作者资料使用英文口径。
-- `_pages/resume.html`：PDF 简历打印版页面，访问路径为 `/resume/`，用于生成完整内容版 A4 PDF 简历；当前为分栏信息结构，带轻量像素网格背景和少量像素色块。
+- `_pages/resume.html`：PDF 简历打印版页面，访问路径为 `/resume/`，用于生成完整内容版 A4 PDF 简历；当前为白底分栏信息结构，并以暖色细线和浅色标记突出重点。
 - `_data/navigation.yml`：顶部导航链接，包含中文默认导航和英文页导航；当前不在导航栏放 CV。
-- `assets/css/home.css`：主页自定义样式，基于 WowPage 模板调整；包含首页轻像素背景、欢迎语横幅、卡片与响应式样式。
+- `assets/css/home.css`：主页自定义样式，基于 WowPage 模板调整；包含白底学术主页视觉、欢迎语、内容层级、卡片与响应式样式。
 - `_includes/seo.html`、`_includes/head/custom.html`：主页 SEO、Open Graph、Twitter Card、Person 结构化数据和中英文 `hreflang` 配置。
 - `files/Minkai_Wang_CV.pdf`：历史 PDF 文件仍保留在 `files/`，当前不作为导航入口，也不进入 sitemap。
 - `files/Minkai_Wang_Resume_CN.pdf`：网页“导出 PDF 简历”按钮指向的当前中文 PDF 简历。

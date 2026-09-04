@@ -21,18 +21,18 @@ redirect_from:
 <h1 class="main-heading">王珉锴</h1>
 
 <p class="lead">
-  <strong>王珉锴</strong>，浙江嘉善人，退伍军人，<strong>浙江大学教育技术学博士研究生</strong>（2026.09 入学，导师：翟雪松），主要围绕游戏化学习、人工智能教育应用、元宇宙与电竞教育开展研究。曾于浙江大学长三角智慧绿洲创新中心·未来影像实验室接受电竞教育方向联合培养，目前在浙江大学电竞国际教育联合研发中心继续开展相关联培。
+  <strong>王珉锴</strong>，浙江嘉善人，<strong>浙江大学教育技术学博士研究生</strong>，主要围绕游戏化学习、人工智能教育应用与电竞教育开展研究。曾于浙江大学长三角智慧绿洲创新中心·未来影像实验室接受电竞教育方向联合培养，目前在浙江大学电竞国际教育联合研发中心继续开展相关联培。
 </p>
 
 <p>
-  他的研究关注大语言模型、虚拟代理、自适应机制与数字游戏如何重塑学习体验、学习投入、认知负荷与行为模式。相关成果发表于 <em>Journal of Computer Assisted Learning</em>、<em>Journal of Educational Computing Research</em>、<em>Entertainment Computing</em> 等期刊，另有共同第一作者论文获 <em>npj Digital Medicine</em> 接收。
+  他的研究关注大语言模型、虚拟代理、自适应机制与数字游戏如何重塑学习体验、学习投入、认知负荷与行为模式。相关成果发表于 <em>Journal of Computer Assisted Learning</em>、<em>Journal of Educational Computing Research</em>、<em>Entertainment Computing</em> 等期刊。
 </p>
 
 <h2 id="news">最新动态</h2>
 
 <div class="news-box">
   <ul class="news-list">
-    <li><span class="news-date"><em>2026.07</em></span> 正在为博士生涯做准备。</li>
+    <li><span class="news-date"><em>2026.08</em></span> 正在梳理总结硕士期间成果~并奔赴广阔的研究小宇宙！</li>
   </ul>
 </div>
 
@@ -60,14 +60,6 @@ redirect_from:
     <div class="experience-info">
       <strong>浙江大学电竞国际教育联合研发中心</strong>
       <span class="experience-role">电竞教育联培学生｜导师：赵瑜佩</span>
-    </div>
-  </article>
-
-  <article class="experience-card">
-    <div class="experience-date">2026.01 - 2028.12</div>
-    <div class="experience-info">
-      <strong>浙江-荷兰口腔疾病数字化诊疗联合实验室</strong>
-      <span class="experience-role">外聘专家（聘期三年）</span>
     </div>
   </article>
 
