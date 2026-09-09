@@ -397,6 +397,15 @@ body {
   margin: 0 auto;
 }
 
+.project-media--steam {
+  height: 112px;
+  background: var(--surface-soft);
+}
+
+.project-media--steam img {
+  object-fit: contain;
+}
+
 .project-media--pixel {
   background: #5b5670;
 }
@@ -1075,6 +1084,14 @@ a:hover {
   }
 
   .project-card .project-media--pixel > img {
+    object-fit: contain;
+  }
+
+  .project-card .project-media--steam {
+    aspect-ratio: 92 / 43;
+  }
+
+  .project-card .project-media--steam > img {
     object-fit: contain;
   }
 

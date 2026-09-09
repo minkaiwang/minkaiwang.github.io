@@ -93,7 +93,7 @@ stylesheets:
 
 <div id="full-publications" class="publication-view">
   <ul class="full-publication-list">
-    <li><span class="pub-list-badge">npj DM</span> <span class="pub-list-badge pub-list-badge--esi">Accepted</span> <span class="pub-list-title">Intervention fidelity and competency translation of serious games in pharmacy education: a scoping umbrella review</span><br><span class="pub-list-authors">Yu, Y.<sup>†</sup>, <strong>Wang, M.<sup>†</sup></strong>, Gong, Y., Zhang, D., Wu, F., &amp; Gu, H. (2026).</span> <span class="pub-list-note"><em>npj Digital Medicine</em>. Accepted for publication. <span class="pub-list-metric">(<sup>†</sup>Co-first author; IF = 18.0)</span></span></li>
+    <li><span class="pub-list-badge">npj DM</span> <span class="pub-list-badge pub-list-badge--esi">Published</span> <span class="pub-list-title">Intervention fidelity and competency translation of serious games in pharmacy education: a scoping umbrella review</span><br><span class="pub-list-authors">Yu, Y.<sup>†</sup>, <strong>Wang, M.<sup>†</sup></strong>, Gong, Y., Zhang, D., Wu, F., &amp; Gu, H. (2026).</span> <span class="pub-list-note"><em>npj Digital Medicine</em>. Published online 8 September 2026. <span class="pub-list-metric">(<sup>†</sup>Co-first author; IF = 18.0)</span></span> <span class="pub-list-links"><a href="https://doi.org/10.1038/s41746-026-03182-4" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">CSSCI</span> <span class="pub-list-title">What Should Education Be in the Intelligent Era? A Review of the 2026 World Digital Education Conference</span><br><span class="pub-list-authors">Zhai, X., <strong>Wang, M.</strong>, Cheng, L., &amp; Zhao, C. (2026).</span> <span class="pub-list-note"><em>Open Education Research</em>, 32(3), 59-66. <span class="pub-list-metric">(CSSCI, Composite IF = 11.401)</span></span> <span class="pub-list-links"><a href="https://openedu.sou.edu.cn/frontsite/series_details.aspx?id=2800" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">JECR</span> <span class="pub-list-title">Generative Scaffolding in Pre-Trip Games: Effects of a GenAI-Chatbot on Inquiry-Based Learning</span><br><span class="pub-list-authors">Chen, Q., Gong, Y., <strong>Wang, M.</strong>, Lin, J., Gu, H., Peng, H., &amp; Chi, H. (2026).</span> <span class="pub-list-note"><em>Journal of Educational Computing Research</em>. Advance online publication. <span class="pub-list-metric">(JCR Q1, IF = 8.5)</span></span> <span class="pub-list-links"><a href="https://doi.org/10.1177/07356331261474369" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">JCAL</span> <span class="pub-list-title">Boosting Student Engagement in STEM: Integrating Large Language Model-Based Virtual Agents Into Alternate Reality Games</span><br><span class="pub-list-authors"><strong>Wang, M.</strong>, Zhu, J., Hwang, G., Chang, S., Yang, Q., &amp; Zhang, D. (2025).</span> <span class="pub-list-note"><em>Journal of Computer Assisted Learning</em>, 41(6). <span class="pub-list-metric">(JCR Q1, IF = 4.6)</span></span> <span class="pub-list-links"><a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70139" target="_blank" rel="noopener">[Link]</a></span></li>
@@ -112,14 +112,14 @@ stylesheets:
 
 <div class="project-card">
   <div class="publication-row">
-    <div class="pub-media-rotator">
-      <img src="/images/game1.png" alt="Waiting for an Egg game screenshot" loading="lazy" decoding="async">
+    <div class="pub-media-rotator project-media--steam">
+      <img src="/images/game1.png" alt="Waiting for an Egg Steam key art" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>Waiting for an Egg</strong><br>
-      <i>Educational game released on Steam.</i><br>
-      A game-based learning work exploring lightweight narrative, interaction, and learning motivation through playful design.<br>
-      <b><i>Game Project</i></b> <a href="https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg" target="_blank" rel="noopener">[Steam]</a>
+      <i>Pixel-art idle desktop companion released on Steam on 27 May 2026.</i><br>
+      Built around focus and patience: raise eight chicken breeds, wait through review cycles, collect five tiers of Inspiration Eggs, and use a focus timer, saved notes, and an adjustable desktop window.<br>
+      <b><i>Game Project</i></b> <a href="https://store.steampowered.com/app/4145110/__Waiting_for_an_Egg/" target="_blank" rel="noopener">[Steam]</a>
     </div>
   </div>
 </div>
