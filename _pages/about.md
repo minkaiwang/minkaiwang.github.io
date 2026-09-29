@@ -21,7 +21,7 @@ redirect_from:
 <h1 class="main-heading">王珉锴</h1>
 
 <p class="lead">
-  <strong>王珉锴</strong>，浙江嘉善人，<strong>浙江大学教育技术学博士研究生</strong>，主要围绕游戏化学习、人工智能教育应用与电竞教育开展研究。曾于浙江大学长三角智慧绿洲创新中心·未来影像实验室接受电竞教育方向联合培养，目前在浙江大学电竞国际教育联合研发中心继续开展相关联培。
+  <strong>王珉锴</strong>，浙江嘉善人，<strong>浙江大学教育技术学博士研究生</strong>，主要围绕游戏化学习、人工智能教育应用与电竞教育开展研究。硕士期间曾于浙江大学长三角智慧绿洲创新中心·未来影像实验室接受电竞教育方向联合培养。现任浙江大学长三角智慧绿洲—网龙电竞国际教育联合研发中心<strong>研发工程师</strong>，并受聘为浙江-荷兰口腔疾病数字化诊疗联合实验室<strong>外聘专家</strong>。
 </p>
 
 <p>
@@ -32,7 +32,7 @@ redirect_from:
 
 <div class="news-box">
   <ul class="news-list">
-    <li><span class="news-date"><em>2026.08</em></span> 正在梳理总结硕士期间成果~并奔赴广阔的研究小宇宙！</li>
+    <li><span class="news-date"><em>2026.08</em></span> 忙于科研和上课，无法自拔中~</li>
   </ul>
 </div>
 
@@ -56,10 +56,18 @@ redirect_from:
   </article>
 
   <article class="experience-card">
-    <div class="experience-date">2026.03 - 至今</div>
+    <div class="experience-date">现任</div>
     <div class="experience-info">
-      <strong>浙江大学电竞国际教育联合研发中心</strong>
-      <span class="experience-role">电竞教育联培学生｜导师：赵瑜佩</span>
+      <strong>浙江大学长三角智慧绿洲—网龙电竞国际教育联合研发中心</strong>
+      <span class="experience-role">研发工程师</span>
+    </div>
+  </article>
+
+  <article class="experience-card">
+    <div class="experience-date">2026.01 - 2028.12</div>
+    <div class="experience-info">
+      <strong>浙江-荷兰口腔疾病数字化诊疗联合实验室</strong>
+      <span class="experience-role">外聘专家｜聘期三年</span>
     </div>
   </article>
 
