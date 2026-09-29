@@ -31,7 +31,8 @@ stylesheets:
 
 <div class="news-box">
   <ul class="news-list">
-    <li><span class="news-date"><em>Aug 2026</em></span> Fully immersed in research and classes, with no escape in sight~</li>
+    <li><span class="news-date"><em>Sept 2026</em></span> Fully immersed in research and classes, with no escape in sight~</li>
+    <li><span class="news-date"><em>Aug 2026</em></span> Reviewing and consolidating the work from my master's studies, then setting off into the wider universe of research!</li>
   </ul>
 </div>
 
