@@ -531,6 +531,12 @@ body {
   color: #735006;
 }
 
+.pub-list-badge--pub {
+  border-color: rgba(53, 131, 108, 0.42);
+  background: rgba(53, 131, 108, 0.14);
+  color: #23685a;
+}
+
 .full-publication-list .pub-list-title {
   color: var(--accent-dark);
   font-size: 15px;

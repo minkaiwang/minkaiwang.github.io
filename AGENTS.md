@@ -60,6 +60,8 @@ bundle exec jekyll build
 ```
 
 - 修改 `_pages/about.md`、`_config.yml`、`_data/navigation.yml`、`assets/css/home.css`、图片或 PDF 后，原则上运行 `bundle exec jekyll build`，确认 `docs/` 同步更新。
+- 重新生成 PDF 简历（打印 `/resume/` 页面）后，必须再跑一次 `bundle exec jekyll build`，否则 `docs/files/` 里的发布副本不会更新（线上下载的仍是旧 PDF）。
+- 不要把 `jekyll serve` 期间生成的 `docs/` 直接提交：serve 模式会把 `site.url` 覆盖为 `http://localhost:4000`，烤进 canonical、`og:url`、sitemap 等产物。发布前用 `bundle exec jekyll build` 重新生成并检查无 `localhost` 残留。
 - 渲染后重点检查：
   - 首页是否能打开；
   - 顶部锚点导航是否能跳转；
