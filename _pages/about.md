@@ -1,7 +1,8 @@
 ---
 permalink: /
 author_profile: true
-description: "王珉锴的个人学术主页，聚焦游戏化学习、人工智能教育应用、数字游戏与电竞教育。"
+seo_title: "王珉锴 Minkai Wang · 个人简历 CV"
+description: "王珉锴的个人学术主页与简历（CV），聚焦游戏化学习、人工智能教育应用、数字游戏与电竞教育。"
 stylesheets:
   - /assets/css/home.css
 redirect_from:

@@ -3,7 +3,8 @@ permalink: /en/
 author_profile: true
 author: minkai-en
 locale: en-US
-description: "Minkai Wang's academic homepage, featuring research on game-based learning, AI in education, digital games, and esports education."
+seo_title: "Minkai Wang · Academic Homepage & CV"
+description: "Minkai Wang's academic homepage and CV, featuring research on game-based learning, AI in education, digital games, and esports education."
 stylesheets:
   - /assets/css/home.css
 ---

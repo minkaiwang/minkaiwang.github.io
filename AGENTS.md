@@ -18,6 +18,7 @@
 - `_data/navigation.yml`：顶部导航链接，包含中文默认导航和英文页导航；当前不在导航栏放 CV。
 - `assets/css/home.css`：主页自定义样式，基于 WowPage 模板调整；包含白底学术主页视觉、欢迎语、内容层级、卡片与响应式样式。
 - `_includes/seo.html`、`_includes/head/custom.html`：主页 SEO、Open Graph、Twitter Card、Person 结构化数据和中英文 `hreflang` 配置。
+- 标题口径：`site.title` 固定为「王珉锴 Minkai Wang」，供 masthead 品牌、`og:site_name` 和子页面标题后缀使用；搜索/分享标题用页面 front matter 的 `seo_title` 整条覆盖（中文首页「王珉锴 Minkai Wang · 个人简历 CV」，英文页「Minkai Wang · Academic Homepage & CV」），分隔符统一用 `·`。`_includes/seo.html` 对 `seo_title` 不走 `markdownify`（`|` 会被解析成表格吃掉）。
 - `files/Minkai_Wang_CV.pdf`：历史 PDF 文件仍保留在 `files/`，当前不作为导航入口，也不进入 sitemap。
 - `files/Minkai_Wang_Resume_CN.pdf`：网页“导出 PDF 简历”按钮指向的当前中文 PDF 简历。
 - `images/`：源图片目录。当前包含头像、游戏作品图、站点图标和 `social-card.png` 社交分享封面。主页四张趣味图片实际引用 WebP，PNG 原件保留用于回退和归档。
