@@ -3,8 +3,15 @@
 
 <!doctype html>
 
-<html lang="zh" class="no-js">
-  <head>
+<html lang="zh" class="no-js" data-theme="day">
+  <head><script>
+(function () {
+  var theme = 'day';
+  try { if (localStorage.getItem('homepage-theme') === 'night') theme = 'night'; } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+})();
+</script>
+
     
 
 
@@ -107,9 +114,9 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
 
-  
     <link rel="stylesheet" href="/assets/css/home.css?v=20261103c2">
-  
+    <link rel="stylesheet" href="/assets/css/night-city.css?v=20261103f2">
+    <link rel="stylesheet" href="/assets/css/day-city.css?v=20261103g4">
 
 
 <meta http-equiv="cleartype" content="on">
@@ -120,13 +127,13 @@
 <!-- start custom head snippets -->
 
 <link rel="icon" href="/images/site-logo.png">
-<meta name="theme-color" content="#edf5f2">
+<meta name="theme-color" content="#f5f8f7">
 <link rel="stylesheet" href="/assets/css/academicons.css">
 
 
-  <link rel="preload" as="image" href="/images/research-night-city-v2.webp" media="(min-width: 641px)">
-  <link rel="preload" as="image" href="/images/research-night-city-v2-mobile.webp" media="(max-width: 640px)">
-  <link rel="preload" as="font" href="/assets/fonts/research-grotesk-latin.ttf" type="font/ttf" crossorigin>
+  <link rel="preload" as="image" href="/images/night-city-parade.webp" media="(min-width: 641px)">
+  <link rel="preload" as="image" href="/images/night-city-parade-mobile.webp" media="(max-width: 640px)">
+  <link rel="preload" as="font" href="/assets/fonts/night-display.ttf" type="font/ttf" crossorigin>
   <link rel="alternate" hreflang="zh-CN" href="https://minkaiwang.github.io/">
   <link rel="alternate" hreflang="en" href="https://minkaiwang.github.io/en/">
   <link rel="alternate" hreflang="x-default" href="https://minkaiwang.github.io/">
@@ -146,7 +153,7 @@
 
 <div class="masthead">
   <nav class="research-nav" aria-label="主导航">
-    <a class="research-nav__brand" href="/"><i class="fas fa-gamepad" aria-hidden="true"></i><span>王珉锴 Minkai Wang</span></a>
+    <a class="research-nav__brand" href="/"><i class="fas fa-gamepad" aria-hidden="true"></i><span>王珉锴 <span class="brand-latin">Minkai Wang</span></span></a>
     <button class="research-nav__toggle" type="button" aria-label="切换导航菜单" aria-expanded="false" aria-controls="research-menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
     <ul id="research-menu" class="research-nav__links">
       <li><a href="/#news">动态</a></li>
@@ -159,6 +166,26 @@
       <li><a href="/#talks">会议</a></li>
       <li><a href="/#teaching">教学</a></li>
     </ul>
+
+<div class="site-controls" role="group" aria-label="配色与音乐">
+  <button class="theme-toggle" type="button" aria-pressed="false" aria-label="切换为夜间配色" title="切换为夜间配色"><i class="fas fa-moon" aria-hidden="true"></i></button>
+  <div class="music-widget" data-state="idle">
+    <button class="music-toggle" type="button" aria-label="播放背景音乐 V" title="播放背景音乐 V"><i class="fas fa-music" aria-hidden="true"></i></button>
+    <details class="music-settings">
+      <summary aria-label="音乐音量设置" title="音乐音量设置"><i class="fas fa-sliders" aria-hidden="true"></i></summary>
+      <div class="music-panel">
+        <div class="music-panel__track"><i class="fas fa-music" aria-hidden="true"></i><strong>V</strong><span class="music-clock" aria-hidden="true">0:00 / 2:34</span></div>
+        <div class="music-volume-row">
+          <button class="music-mute" type="button" aria-pressed="false" aria-label="静音背景音乐" title="静音背景音乐"><i class="fas fa-volume-low" aria-hidden="true"></i></button>
+          <input id="music-volume" type="range" min="0" max="100" value="25" aria-label="背景音乐音量">
+          <output class="music-volume-value" for="music-volume">25%</output>
+        </div>
+      </div>
+    </details>
+    <audio id="background-music" src="/assets/audio/V.mp3" loop preload="metadata"></audio>
+  </div>
+</div>
+
   </nav>
 </div>
 
@@ -222,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var researchNav = link.closest('.research-nav');
       if (researchNav) {
         researchNav.classList.remove('is-open');
-        researchNav.querySelector('button').setAttribute('aria-expanded', 'false');
+        researchNav.querySelector('.research-nav__toggle').setAttribute('aria-expanded', 'false');
       }
 
       var hiddenLinks = link.closest(".hidden-links");
@@ -269,11 +296,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <header class="research-hero">
   <picture class="research-hero__landscape" aria-hidden="true">
-    <source media="(max-width: 640px)" srcset="/images/research-night-city-v2-mobile.webp" />
-    <img src="/images/research-night-city-v2.webp" alt="" width="1536" height="1024" fetchpriority="high" decoding="async" />
+    <source media="(max-width: 640px)" srcset="/images/night-city-parade-mobile.webp" />
+    <img src="/images/night-city-parade.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" />
   </picture>
+  <div class="scene-scan" aria-hidden="true"></div>
+  <div class="scene-atmosphere" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
   <div class="research-hero__copy">
-    <h1 class="main-heading">王珉锴</h1>
+    <h1 class="main-heading">王珉锴<span class="hero-glitch" aria-hidden="true" data-copy="王珉锴"></span></h1>
     <p class="research-hero__name" aria-hidden="true">Minkai Wang</p>
     <div class="welcome-banner">早上好，夜之城！</div>
     <div class="top-actions">
@@ -282,6 +311,8 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </div>
   <a class="research-hero__next" href="#profile" aria-label="了解王珉锴" title="了解王珉锴"><i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+  <a class="scene-original-link" href="/images/night-city-parade.webp" target="_blank" rel="noopener" aria-label="查看完整背景图" title="查看完整背景图"><i class="fas fa-expand" aria-hidden="true"></i></a>
+  <button class="scene-effects-toggle" type="button" aria-pressed="true" aria-label="暂停场景动效" title="暂停场景动效" data-on="暂停场景动效" data-off="开启场景动效" data-system="系统已启用减少动态效果"><i class="fas fa-pause" aria-hidden="true"></i></button>
 </header>
 
 <section id="profile" class="home-profile" aria-label="个人资料与联系方式">
@@ -543,7 +574,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="project-card">
   <div class="publication-row">
     <div class="pub-media-rotator">
-      <img src="/images/esports-assessment-system.png" alt="数字竞技潜能测评系统页面截图" loading="lazy" decoding="async" />
+      <img src="/images/esports-assessment-system-20261103.webp" alt="数字竞技潜能测评系统页面截图" loading="lazy" decoding="async" />
     </div>
     <div>
       <strong>数字竞技潜能测评系统</strong><br />
@@ -758,7 +789,9 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
 </section>
-<script src="/assets/js/research-home.js" defer=""></script>
+<script src="/assets/js/research-home.js?v=20261103g" defer=""></script>
+
+<script src="/assets/js/research-controls.js?v=20261103g2" defer=""></script>
 
 </div>
     </div>

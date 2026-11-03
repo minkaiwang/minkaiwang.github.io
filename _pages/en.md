@@ -8,6 +8,8 @@ seo_title: "Minkai Wang · Academic Homepage & CV"
 description: "Minkai Wang's academic homepage and CV, featuring research on game-based learning, AI in education, digital games, and esports education."
 stylesheets:
   - /assets/css/home.css?v=20261103c2
+  - /assets/css/night-city.css?v=20261103f2
+  - /assets/css/day-city.css?v=20261103g4
 ---
 
 {% include home-enhancements.html %}
@@ -168,7 +170,7 @@ stylesheets:
 <div class="project-card">
   <div class="publication-row">
     <div class="pub-media-rotator">
-      <img src="/images/esports-assessment-system.png" alt="Digital esports potential assessment system screenshot" loading="lazy" decoding="async">
+      <img src="/images/esports-assessment-system-20261103.webp" alt="Digital esports potential assessment system screenshot" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>Digital Esports Potential Assessment System</strong><br>
@@ -373,4 +375,5 @@ stylesheets:
   </div>
 </div>
 </section>
-<script src="/assets/js/research-home.js" defer></script>
+<script src="/assets/js/research-home.js?v=20261103g" defer></script>
+<script src="/assets/js/research-controls.js?v=20261103g2" defer></script>

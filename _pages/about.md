@@ -6,6 +6,8 @@ seo_title: "王珉锴 Minkai Wang · 个人简历 CV"
 description: "王珉锴的个人学术主页与简历（CV），聚焦游戏化学习、人工智能教育应用、数字游戏与电竞教育。"
 stylesheets:
   - /assets/css/home.css?v=20261103c2
+  - /assets/css/night-city.css?v=20261103f2
+  - /assets/css/day-city.css?v=20261103g4
 redirect_from:
   - /about/
   - /about.html
@@ -169,7 +171,7 @@ redirect_from:
 <div class="project-card">
   <div class="publication-row">
     <div class="pub-media-rotator">
-      <img src="/images/esports-assessment-system.png" alt="数字竞技潜能测评系统页面截图" loading="lazy" decoding="async">
+      <img src="/images/esports-assessment-system-20261103.webp" alt="数字竞技潜能测评系统页面截图" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>数字竞技潜能测评系统</strong><br>
@@ -384,4 +386,5 @@ redirect_from:
   </div>
 </div>
 </section>
-<script src="/assets/js/research-home.js" defer></script>
+<script src="/assets/js/research-home.js?v=20261103g" defer></script>
+<script src="/assets/js/research-controls.js?v=20261103g2" defer></script>

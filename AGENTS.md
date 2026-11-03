@@ -7,7 +7,7 @@
 - 本项目是王珉锴（Minkai Wang）的个人学术简历网站，当前已迁移为基于 WowPage/AcademicPages 风格的 Jekyll 站点，并通过 GitHub Pages 发布。
 - 站点地址为 `https://minkaiwang.github.io`，仓库为 `minkaiwang.github.io`。
 - 当前定位是“个人学术主页 + 简历 + 学术成果展示 + 教育游戏/项目展示”，内容涉及教育技术学、游戏化学习、AI 教育应用、电竞教育等方向。
-- 当前主页采用用户选定的游戏研究方向：清新配色、原创赛博朋克城市首屏、作者资料横栏与完整单页锚点内容流。主要样式集中在 `assets/css/home.css`，欢迎语保留“早上好，夜之城！”/“Good morning, Night City!”。发布状态以 `STATUS.md` 为准。
+- 当前主页沿用游戏研究方向、作者资料横栏与完整单页锚点内容流。本地版本使用游戏原图、默认浅色和可切换的 A 夜间配色；导航提供配色与 V 背景音乐控制，细节见 `DESIGN.md`。`assets/css/home.css` 提供布局，`night-city.css` / `day-city.css` 提供主题。欢迎语保留“早上好，夜之城！”/“Good morning, Night City!”。本地与线上版本边界以 `STATUS.md` 为准。
 
 ## 关键文件
 
@@ -19,6 +19,7 @@
 - `assets/css/home.css`：主页自定义样式，基于 WowPage 模板调整；包含白底学术主页视觉、欢迎语、内容层级、卡片与响应式样式。
 - `_layouts/research.html`、`_includes/research-hero.html`、`_includes/research-masthead.html`：中英文主页布局、原创场景首屏与响应式导航；其他页面继续沿用原有布局。
 - `assets/js/research-home.js`：主页菜单与轻量场景视差；必须尊重减少动态效果设置。
+- `_includes/research-controls.html`、`_includes/research-preferences.html`、`assets/js/research-controls.js`：昼夜启动与导航音乐控件；首访浅色，尊重用户记住的选择；有声自动播放以浏览器许可为边界，不能写成无条件强制成功。
 - `_includes/seo.html`、`_includes/head/custom.html`：主页 SEO、Open Graph、Twitter Card、Person 结构化数据和中英文 `hreflang` 配置。
 - 标题口径：`site.title` 固定为「王珉锴 Minkai Wang」，供 masthead 品牌、`og:site_name` 和子页面标题后缀使用；搜索/分享标题用页面 front matter 的 `seo_title` 整条覆盖（中文首页「王珉锴 Minkai Wang · 个人简历 CV」，英文页「Minkai Wang · Academic Homepage & CV」），分隔符统一用 `·`。`_includes/seo.html` 对 `seo_title` 不走 `markdownify`（`|` 会被解析成表格吃掉）。
 - `files/Minkai_Wang_CV.pdf`：历史 PDF 文件仍保留在 `files/`，当前不作为导航入口，也不进入 sitemap。

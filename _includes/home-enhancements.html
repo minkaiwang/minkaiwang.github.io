@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var researchNav = link.closest('.research-nav');
       if (researchNav) {
         researchNav.classList.remove('is-open');
-        researchNav.querySelector('button').setAttribute('aria-expanded', 'false');
+        researchNav.querySelector('.research-nav__toggle').setAttribute('aria-expanded', 'false');
       }
 
       var hiddenLinks = link.closest(".hidden-links");

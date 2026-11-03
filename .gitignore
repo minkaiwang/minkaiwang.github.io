@@ -11,10 +11,13 @@ _site/
 Gemfile.lock
 node_modules/
 output/
+.playwright-cli/
 images/research-archipelago*
 images/research-night-city-v1.png
 images/research-night-city.webp
 images/research-night-city-mobile.webp
+images/night-city-journey*
+images/night-city-parade-wide.webp
 assets/fonts/research-serif-*.ttf
 assets/fonts/DM-Serif-Display-OFL.txt
 assets/fonts/Noto-Serif-SC-OFL.txt

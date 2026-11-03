@@ -1,0 +1,20 @@
+{% assign controls_english = false %}
+{% if page.locale == 'en-US' %}{% assign controls_english = true %}{% endif %}
+<div class="site-controls" role="group" aria-label="{% if controls_english %}Appearance and music{% else %}配色与音乐{% endif %}">
+  <button class="theme-toggle" type="button" aria-pressed="false" aria-label="{% if controls_english %}Switch to night theme{% else %}切换为夜间配色{% endif %}" title="{% if controls_english %}Switch to night theme{% else %}切换为夜间配色{% endif %}"><i class="fas fa-moon" aria-hidden="true"></i></button>
+  <div class="music-widget" data-state="idle">
+    <button class="music-toggle" type="button" aria-label="{% if controls_english %}Play background music V{% else %}播放背景音乐 V{% endif %}" title="{% if controls_english %}Play background music V{% else %}播放背景音乐 V{% endif %}"><i class="fas fa-music" aria-hidden="true"></i></button>
+    <details class="music-settings">
+      <summary aria-label="{% if controls_english %}Music volume settings{% else %}音乐音量设置{% endif %}" title="{% if controls_english %}Music volume settings{% else %}音乐音量设置{% endif %}"><i class="fas fa-sliders" aria-hidden="true"></i></summary>
+      <div class="music-panel">
+        <div class="music-panel__track"><i class="fas fa-music" aria-hidden="true"></i><strong>V</strong><span class="music-clock" aria-hidden="true">0:00 / 2:34</span></div>
+        <div class="music-volume-row">
+          <button class="music-mute" type="button" aria-pressed="false" aria-label="{% if controls_english %}Mute background music{% else %}静音背景音乐{% endif %}" title="{% if controls_english %}Mute background music{% else %}静音背景音乐{% endif %}"><i class="fas fa-volume-low" aria-hidden="true"></i></button>
+          <input id="music-volume" type="range" min="0" max="100" value="25" aria-label="{% if controls_english %}Music volume{% else %}背景音乐音量{% endif %}">
+          <output class="music-volume-value" for="music-volume">25%</output>
+        </div>
+      </div>
+    </details>
+    <audio id="background-music" src="{{ base_path }}/assets/audio/V.mp3" loop preload="metadata"></audio>
+  </div>
+</div>

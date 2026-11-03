@@ -1,0 +1,7 @@
+<script>
+(function () {
+  var theme = 'day';
+  try { if (localStorage.getItem('homepage-theme') === 'night') theme = 'night'; } catch (_) {}
+  document.documentElement.dataset.theme = theme;
+})();
+</script>
