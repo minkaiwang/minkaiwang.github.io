@@ -1,25 +1,19 @@
 ---
 permalink: /en/
+layout: research
 author_profile: true
 author: minkai-en
 locale: en-US
 seo_title: "Minkai Wang · Academic Homepage & CV"
 description: "Minkai Wang's academic homepage and CV, featuring research on game-based learning, AI in education, digital games, and esports education."
 stylesheets:
-  - /assets/css/home.css
+  - /assets/css/home.css?v=20261103c2
 ---
 
-<div class="welcome-banner">Good morning, Night City!</div>
-
-<div class="top-actions">
-  <a class="language-pill" href="/" hreflang="zh-CN" lang="zh-CN"><i class="fas fa-language" aria-hidden="true"></i>中文</a>
-  <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download><i class="fas fa-download" aria-hidden="true"></i>Download PDF Resume</a>
-</div>
-
 {% include home-enhancements.html %}
+{% include research-hero.html %}
 
-<h1 class="main-heading">Minkai Wang</h1>
-
+<section class="home-intro">
 <p class="lead">
   <strong>Minkai Wang (王珉锴)</strong> is a <strong>Ph.D. student in Educational Technology at Zhejiang University</strong>. His research spans game-based learning, artificial intelligence in education, and esports education. During his master's studies, he undertook joint training in esports education at the Future Imaging Laboratory, Zhejiang University Yangtze River Delta Smart Oasis Innovation Center. He currently serves as an <strong>R&amp;D Engineer</strong> at the Zhejiang University Yangtze River Delta Smart Oasis–NetDragon International Joint R&amp;D Center for Esports Education and as an <strong>External Expert</strong> at the Zhejiang-Netherlands Joint Laboratory on Digital Diagnosis and Treatment of Oral Diseases, Hangzhou.
 </p>
@@ -28,6 +22,8 @@ stylesheets:
   His research examines how large language models, virtual agents, adaptive mechanisms, and digital games can reshape learning experience, engagement, cognitive load, and behavioral patterns. His academic work has appeared in <em>Journal of Computer Assisted Learning</em>, <em>Journal of Educational Computing Research</em>, and <em>Entertainment Computing</em>.
 </p>
 
+</section>
+<section class="home-section home-section--news" aria-labelledby="news">
 <h2 id="news">News</h2>
 
 <div class="news-box">
@@ -37,6 +33,8 @@ stylesheets:
   </ul>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="experience">
 <h2 id="experience">Experience</h2>
 
 <div class="experience-container">
@@ -97,6 +95,8 @@ stylesheets:
   </article>
 </div>
 
+</section>
+<section class="home-section" aria-labelledby="publications">
 <h2 id="publications">Publications</h2>
 
 <h3 class="section-kicker">Full Publications List</h3>
@@ -118,7 +118,10 @@ stylesheets:
   <p class="metric-note">Journal metrics reflect the most recently verified information for each entry; impact factors are journal-level indicators. The ESI Highly Cited status follows the supplied Web of Science record and may change with ESI updates.</p>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="projects">
 <h2 id="projects">Projects</h2>
+<div class="project-grid">
 
 <div class="project-card">
   <div class="publication-row">
@@ -207,6 +210,7 @@ stylesheets:
   </div>
 </div>
 
+</div>
 <div class="meme-pair" aria-label="Two humorous images after the projects section">
   <figure class="meme-interlude meme-interlude--left">
     <img src="/images/meme-strong-can-fight.webp" alt="Strong and capable" width="516" height="474" loading="lazy" decoding="async">
@@ -216,6 +220,8 @@ stylesheets:
   </figure>
 </div>
 
+</section>
+<section class="home-section" aria-labelledby="grants">
 <h2 id="grants">Research Grants</h2>
 
 <ol class="compact-list">
@@ -241,6 +247,8 @@ stylesheets:
   </ul>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="awards">
 <h2 id="awards">Awards</h2>
 
 <div class="text-card">
@@ -262,6 +270,8 @@ stylesheets:
   </figure>
 </div>
 
+</section>
+<section class="home-section" aria-labelledby="services">
 <h2 id="services">Services</h2>
 
 <div class="text-card">
@@ -308,6 +318,8 @@ stylesheets:
   </ul>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="talks">
 <h2 id="talks">Talks</h2>
 
 <ul class="compact-list">
@@ -316,6 +328,8 @@ stylesheets:
   <li>Puyuan Esports Summit (2026, Jiaxing)</li>
 </ul>
 
+</section>
+<section class="home-section" aria-labelledby="teaching">
 <h2 id="teaching">Teaching</h2>
 
 <div class="text-card">
@@ -358,3 +372,5 @@ stylesheets:
     </section>
   </div>
 </div>
+</section>
+<script src="/assets/js/research-home.js" defer></script>

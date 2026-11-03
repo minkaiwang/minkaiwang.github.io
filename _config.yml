@@ -99,6 +99,21 @@ exclude:
   - README
   - Rakefile
   - AGENTS.md
+  - STATUS.md
+  - PRODUCT.md
+  - DESIGN.md
+  - output
+  - images/research-archipelago-v1.png
+  - images/research-night-city-v1.png
+  - images/research-night-city-v2.png
+  - images/research-archipelago.webp
+  - images/research-archipelago-mobile.webp
+  - images/research-night-city.webp
+  - images/research-night-city-mobile.webp
+  - assets/fonts/research-serif-latin.ttf
+  - assets/fonts/research-serif-chinese.ttf
+  - assets/fonts/DM-Serif-Display-OFL.txt
+  - assets/fonts/Noto-Serif-SC-OFL.txt
   - CV.md
   - CV.pdf
   - Teaching.md

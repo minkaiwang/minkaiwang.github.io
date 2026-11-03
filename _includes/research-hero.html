@@ -1,0 +1,27 @@
+{% assign home_is_english = false %}
+{% if page.locale == 'en-US' %}{% assign home_is_english = true %}{% endif %}
+<header class="research-hero">
+  <picture class="research-hero__landscape" aria-hidden="true">
+    <source media="(max-width: 640px)" srcset="{{ base_path }}/images/research-night-city-v2-mobile.webp">
+    <img src="{{ base_path }}/images/research-night-city-v2.webp" alt="" width="1536" height="1024" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="research-hero__copy">
+    <h1 class="main-heading">{% if home_is_english %}Minkai Wang{% else %}王珉锴{% endif %}</h1>
+    <p class="research-hero__name" aria-hidden="true">{% if home_is_english %}王珉锴{% else %}Minkai Wang{% endif %}</p>
+    <div class="welcome-banner">{% if home_is_english %}Good morning, Night City!{% else %}早上好，夜之城！{% endif %}</div>
+    <div class="top-actions">
+      {%- if home_is_english %}
+      <a class="language-pill" href="/" hreflang="zh-CN" lang="zh-CN"><i class="fas fa-language" aria-hidden="true"></i>中文</a>
+      <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download><i class="fas fa-download" aria-hidden="true"></i>Download PDF Resume</a>
+      {%- else %}
+      <a class="language-pill" href="/en/" hreflang="en" lang="en"><i class="fas fa-language" aria-hidden="true"></i>English</a>
+      <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download><i class="fas fa-download" aria-hidden="true"></i>导出 PDF 简历</a>
+      {%- endif %}
+    </div>
+  </div>
+  <a class="research-hero__next" href="#profile" aria-label="{% if home_is_english %}About Minkai Wang{% else %}了解王珉锴{% endif %}" title="{% if home_is_english %}About Minkai Wang{% else %}了解王珉锴{% endif %}"><i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+</header>
+
+<section id="profile" class="home-profile" aria-label="{% if home_is_english %}Profile and contact{% else %}个人资料与联系方式{% endif %}">
+  {% include author-profile.html %}
+</section>

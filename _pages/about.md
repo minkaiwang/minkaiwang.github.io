@@ -1,26 +1,20 @@
 ---
 permalink: /
+layout: research
 author_profile: true
 seo_title: "王珉锴 Minkai Wang · 个人简历 CV"
 description: "王珉锴的个人学术主页与简历（CV），聚焦游戏化学习、人工智能教育应用、数字游戏与电竞教育。"
 stylesheets:
-  - /assets/css/home.css
+  - /assets/css/home.css?v=20261103c2
 redirect_from:
   - /about/
   - /about.html
 ---
 
-<div class="welcome-banner">早上好，夜之城！</div>
-
-<div class="top-actions">
-  <a class="language-pill" href="/en/" hreflang="en" lang="en"><i class="fas fa-language" aria-hidden="true"></i>English</a>
-  <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download><i class="fas fa-download" aria-hidden="true"></i>导出 PDF 简历</a>
-</div>
-
 {% include home-enhancements.html %}
+{% include research-hero.html %}
 
-<h1 class="main-heading">王珉锴</h1>
-
+<section class="home-intro">
 <p class="lead">
   <strong>王珉锴</strong>，浙江嘉善人，<strong>浙江大学教育技术学博士研究生</strong>，主要围绕游戏化学习、人工智能教育应用与电竞教育开展研究。硕士期间曾于浙江大学长三角智慧绿洲创新中心·未来影像实验室接受电竞教育方向联合培养。现任浙江大学长三角智慧绿洲—网龙电竞国际教育联合研发中心<strong>研发工程师</strong>，并受聘为浙江-荷兰口腔疾病数字化诊疗联合实验室<strong>外聘专家</strong>。
 </p>
@@ -29,6 +23,8 @@ redirect_from:
   他的研究关注大语言模型、虚拟代理、自适应机制与数字游戏如何重塑学习体验、学习投入、认知负荷与行为模式。相关成果发表于 <em>Journal of Computer Assisted Learning</em>、<em>Journal of Educational Computing Research</em>、<em>Entertainment Computing</em> 等期刊。
 </p>
 
+</section>
+<section class="home-section home-section--news" aria-labelledby="news">
 <h2 id="news">最新动态</h2>
 
 <div class="news-box">
@@ -38,6 +34,8 @@ redirect_from:
   </ul>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="experience">
 <h2 id="experience">经历</h2>
 
 <div class="experience-container">
@@ -98,6 +96,8 @@ redirect_from:
   </article>
 </div>
 
+</section>
+<section class="home-section" aria-labelledby="publications">
 <h2 id="publications">论文成果</h2>
 
 <h3 class="section-kicker">完整论文列表</h3>
@@ -119,7 +119,10 @@ redirect_from:
   <p class="metric-note">期刊指标依据各条目最近一次核实信息标注；IF 为期刊层面指标。ESI 高被引状态依据 Web of Science 检索结果，名单会随 ESI 更新而变化。</p>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="projects">
 <h2 id="projects">项目与作品</h2>
+<div class="project-grid">
 
 <div class="project-card">
   <div class="publication-row">
@@ -208,6 +211,7 @@ redirect_from:
   </div>
 </div>
 
+</div>
 <div class="meme-pair" aria-label="项目与作品后的两张趣味图片">
   <figure class="meme-interlude meme-interlude--left">
     <img src="/images/meme-strong-can-fight.webp" alt="强壮，能打" width="516" height="474" loading="lazy" decoding="async">
@@ -217,6 +221,8 @@ redirect_from:
   </figure>
 </div>
 
+</section>
+<section class="home-section" aria-labelledby="grants">
 <h2 id="grants">科研项目</h2>
 
 <ol class="compact-list">
@@ -242,6 +248,8 @@ redirect_from:
   </ul>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="awards">
 <h2 id="awards">荣誉奖项</h2>
 
 <div class="text-card">
@@ -273,6 +281,8 @@ redirect_from:
   </figure>
 </div>
 
+</section>
+<section class="home-section" aria-labelledby="services">
 <h2 id="services">学术服务</h2>
 
 <div class="text-card">
@@ -319,6 +329,8 @@ redirect_from:
   </ul>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="talks">
 <h2 id="talks">学术会议</h2>
 
 <ul class="compact-list">
@@ -327,6 +339,8 @@ redirect_from:
   <li>濮院电竞峰会（2026，嘉兴）</li>
 </ul>
 
+</section>
+<section class="home-section" aria-labelledby="teaching">
 <h2 id="teaching">教学经历</h2>
 
 <div class="text-card">
@@ -369,3 +383,5 @@ redirect_from:
     </section>
   </div>
 </div>
+</section>
+<script src="/assets/js/research-home.js" defer></script>

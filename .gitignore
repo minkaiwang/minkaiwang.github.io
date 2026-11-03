@@ -10,6 +10,14 @@
 _site/
 Gemfile.lock
 node_modules/
+output/
+images/research-archipelago*
+images/research-night-city-v1.png
+images/research-night-city.webp
+images/research-night-city-mobile.webp
+assets/fonts/research-serif-*.ttf
+assets/fonts/DM-Serif-Display-OFL.txt
+assets/fonts/Noto-Serif-SC-OFL.txt
 archive/
 
 /.quarto/

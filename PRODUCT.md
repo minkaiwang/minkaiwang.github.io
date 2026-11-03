@@ -1,0 +1,30 @@
+# Product
+
+<!-- impeccable:product-schema 1 -->
+
+## Platform
+
+web
+
+## Stack
+
+现有 Jekyll + AcademicPages 站点；GitHub Pages 使用 `docs/` 发布产物。中文首页 `/`，英文首页 `/en/`，打印简历 `/resume/`。
+
+## Product Purpose
+
+展示王珉锴的学术履历、论文、教育游戏、开源作品及科研与教学经历。支持直接定位内容、切换语言和下载 PDF 简历。
+
+## Capabilities and Constraints
+
+- 2026-11-02 用户选择方案 B：Oura 的精致排版与游戏空间的视觉表达。
+- 2026-11-03 用户认可清新配色，要求场景改为赛博朋克城市、细化 UI 和字体，并明确授权完成后推送；随后要求纠正室内电脑露天摆放的细节。
+- 用户要求保留当前全部文字和图片，包含完整论文列表、所有项目截图、头像与四张趣味图片。
+- 文字事实、引用、作者顺序、日期、链接及中英文内容沿用当前源文件。
+- 更新仅限 GitHub Pages 版本；Qoder Sites 为独立项目。
+- PDF 使用独立打印布局，不继承网页场景背景。
+- 默认中文，支持桌面和手机访问；交互支持键盘和减少动态效果设置。
+- 发布动作遵循用户授权，不自动推送。
+
+## Evidence on Hand
+
+`_pages/about.md`、`_pages/en.md`、`_data/authors.yml`、`_config.yml` 及 `images/` 为当前内容与素材来源。生成的场景仅用于视觉表达，不作为个人项目成果图片。

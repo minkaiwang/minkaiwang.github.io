@@ -108,7 +108,7 @@
 <link rel="stylesheet" href="/assets/css/main.css">
 
   
-    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20261103c2">
   
 
 
@@ -120,10 +120,13 @@
 <!-- start custom head snippets -->
 
 <link rel="icon" href="/images/site-logo.png">
-<meta name="theme-color" content="#fffaf1">
+<meta name="theme-color" content="#edf5f2">
 <link rel="stylesheet" href="/assets/css/academicons.css">
 
 
+  <link rel="preload" as="image" href="/images/research-night-city-v2.webp" media="(min-width: 641px)">
+  <link rel="preload" as="image" href="/images/research-night-city-v2-mobile.webp" media="(max-width: 640px)">
+  <link rel="preload" as="font" href="/assets/fonts/research-grotesk-latin.ttf" type="font/ttf" crossorigin>
   <link rel="alternate" hreflang="zh-CN" href="https://minkaiwang.github.io/">
   <link rel="alternate" hreflang="en" href="https://minkaiwang.github.io/en/">
   <link rel="alternate" hreflang="x-default" href="https://minkaiwang.github.io/">
@@ -141,63 +144,163 @@
     
 
 
-
-
-
-
 <div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav-hidden-links"><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="/">王珉锴 Minkai Wang</a></li>
-            <li class="masthead__menu-item"><a href="/en/#news">News</a></li>
-            <li class="masthead__menu-item"><a href="/en/#experience">Experience</a></li>
-            <li class="masthead__menu-item"><a href="/en/#publications">Publications</a></li>
-            <li class="masthead__menu-item"><a href="/en/#projects">Projects</a></li>
-            <li class="masthead__menu-item"><a href="/en/#grants">Research</a></li>
-            <li class="masthead__menu-item"><a href="/en/#awards">Awards</a></li>
-            <li class="masthead__menu-item"><a href="/en/#services">Services</a></li>
-            <li class="masthead__menu-item"><a href="/en/#talks">Talks</a></li>
-            <li class="masthead__menu-item"><a href="/en/#teaching">Teaching</a></li>
-        </ul>
-        <ul id="site-nav-hidden-links" class="hidden-links hidden"></ul>
-      </nav>
-    </div>
-  </div>
+  <nav class="research-nav" aria-label="Main navigation">
+    <a class="research-nav__brand" href="/"><i class="fas fa-gamepad" aria-hidden="true"></i><span>王珉锴 Minkai Wang</span></a>
+    <button class="research-nav__toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="research-menu"><i class="fas fa-bars" aria-hidden="true"></i></button>
+    <ul id="research-menu" class="research-nav__links">
+      <li><a href="/en/#news">News</a></li>
+      <li><a href="/en/#experience">Experience</a></li>
+      <li><a href="/en/#publications">Publications</a></li>
+      <li><a href="/en/#projects">Projects</a></li>
+      <li><a href="/en/#grants">Research</a></li>
+      <li><a href="/en/#awards">Awards</a></li>
+      <li><a href="/en/#services">Services</a></li>
+      <li><a href="/en/#talks">Talks</a></li>
+      <li><a href="/en/#teaching">Teaching</a></li>
+    </ul>
+  </nav>
 </div>
 
 
-    
+    <main id="main" class="research-home">
+  <article class="page">
+    <div class="page__inner-wrap">
+      <div class="page__content" itemprop="text">
+<div class="home-tools"><button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button></div>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var backToTop = document.querySelector(".back-to-top");
+  var navMenuButton = document.querySelector(".greedy-nav > button");
+  var hiddenNavLinks = document.querySelector(".greedy-nav > .hidden-links");
+  var pagePath = window.location.pathname.replace(/index\.html$/, "");
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".greedy-nav a[href*='#'], .research-nav a[href*='#']"));
+  var localLinks = navLinks.filter(function (link) {
+    var url = new URL(link.href, window.location.origin);
+    return url.pathname.replace(/index\.html$/, "") === pagePath && url.hash;
+  });
+  var sections = localLinks.map(function (link) {
+    return document.getElementById(new URL(link.href, window.location.origin).hash.slice(1));
+  }).filter(function (section, index, all) {
+    return section && all.indexOf(section) === index;
+  });
+  var publicationLinkPrefix = "Open publication: ";
 
+  document.querySelectorAll(".full-publication-list li").forEach(function (item) {
+    var title = item.querySelector(".pub-list-title");
+    var link = item.querySelector(".pub-list-links a");
+    if (title && link) link.setAttribute("aria-label", publicationLinkPrefix + title.textContent.trim());
+  });
 
+  if (navMenuButton && hiddenNavLinks) {
+    navMenuButton.addEventListener("click", function () {
+      window.setTimeout(function () {
+        navMenuButton.setAttribute("aria-expanded", String(!hiddenNavLinks.classList.contains("hidden")));
+      }, 0);
+    });
+  }
 
+  localLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      var url = new URL(link.href, window.location.origin);
+      var section = document.getElementById(url.hash.slice(1));
+      if (!section) return;
 
+      event.preventDefault();
+      event.stopImmediatePropagation();
 
-<div id="main" role="main">
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var sectionTop = section.getBoundingClientRect().top + window.scrollY - 82;
+      window.scrollTo({ top: Math.max(0, sectionTop), behavior: reduceMotion ? "auto" : "smooth" });
+      window.history.pushState(null, "", url.hash);
+      section.tabIndex = -1;
+      section.focus({ preventScroll: true });
+
+      var researchNav = link.closest('.research-nav');
+      if (researchNav) {
+        researchNav.classList.remove('is-open');
+        researchNav.querySelector('button').setAttribute('aria-expanded', 'false');
+      }
+
+      var hiddenLinks = link.closest(".hidden-links");
+      if (hiddenLinks) {
+        hiddenLinks.classList.add("hidden");
+        if (navMenuButton) navMenuButton.setAttribute("aria-expanded", "false");
+      }
+    }, true);
+  });
+
+  function updatePageNavigation() {
+    var activeId = "";
+    var markerOffset = Math.max(140, Math.min(360, window.innerHeight * 0.42));
+    var marker = window.scrollY + markerOffset;
+
+    sections.forEach(function (section) {
+      if (section.getBoundingClientRect().top + window.scrollY <= marker) activeId = section.id;
+    });
+
+    if (sections.length && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+      activeId = sections[sections.length - 1].id;
+    }
+
+    localLinks.forEach(function (link) {
+      var linkId = new URL(link.href, window.location.origin).hash.slice(1);
+      link.classList.toggle("is-active", linkId === activeId);
+    });
+
+    backToTop.classList.toggle("is-visible", window.scrollY > 700);
+  }
+
+  backToTop.addEventListener("click", function () {
+    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+
+  window.addEventListener("scroll", updatePageNavigation, { passive: true });
+  window.addEventListener("resize", updatePageNavigation);
+  updatePageNavigation();
+});
+</script>
+
+<script src="/assets/js/pub_media_rotator.js?v=20261102b2" defer=""></script>
+
+<header class="research-hero">
+  <picture class="research-hero__landscape" aria-hidden="true">
+    <source media="(max-width: 640px)" srcset="/images/research-night-city-v2-mobile.webp" />
+    <img src="/images/research-night-city-v2.webp" alt="" width="1536" height="1024" fetchpriority="high" decoding="async" />
+  </picture>
+  <div class="research-hero__copy">
+    <h1 class="main-heading">Minkai Wang</h1>
+    <p class="research-hero__name" aria-hidden="true">王珉锴</p>
+    <div class="welcome-banner">Good morning, Night City!</div>
+    <div class="top-actions">
+      <a class="language-pill" href="/" hreflang="zh-CN" lang="zh-CN"><i class="fas fa-language" aria-hidden="true"></i>中文</a>
+      <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download=""><i class="fas fa-download" aria-hidden="true"></i>Download PDF Resume</a>
+    </div>
+  </div>
+  <a class="research-hero__next" href="#profile" aria-label="About Minkai Wang" title="About Minkai Wang"><i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+</header>
+
+<section id="profile" class="home-profile" aria-label="Profile and contact">
   
 
 
 
-  <div class="sidebar sticky">
-  
 
 
 
 
 
 
-
-
-
-<div itemscope itemtype="http://schema.org/Person">
+<div itemscope="" itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
     
       
-      <img src="/images/fig.png" alt="Minkai Wang">
+      <img src="/images/fig.png" alt="Minkai Wang" />
     
   </div>
 
@@ -215,7 +318,7 @@
       <!-- Font Awesome icons / Biographic information  -->
       
         
-        <li><a href="https://www.google.com/maps/search/?api=1&query=Zhejiang%2C+China" target="_blank" rel="noopener" title="Zhejiang, China"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>Zhejiang, China</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Zhejiang%2C+China" target="_blank" rel="noopener" title="Zhejiang, China"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>Zhejiang, China</a></li>
       
       
         
@@ -232,7 +335,7 @@
       <!-- Font Awesome and Academicons icons / Academic websites -->
             
       
-        <li><a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&hl" title="Google Scholar"><i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
+        <li><a href="https://scholar.google.com/citations?user=_X67FBoAAAAJ&amp;hl" title="Google Scholar"><i class="fas fa-fw fa-graduation-cap icon-pad-right" aria-hidden="true"></i>Google Scholar</a></li>
       
       
       
@@ -283,129 +386,9 @@
   </div>
 </div>
 
-  
-  </div>
+</section>
 
-
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    
-    
-    
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          
-          
-        
-        
-            
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        <div class="welcome-banner">Good morning, Night City!</div>
-
-<div class="top-actions">
-  <a class="language-pill" href="/" hreflang="zh-CN" lang="zh-CN"><i class="fas fa-language" aria-hidden="true"></i>中文</a>
-  <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download=""><i class="fas fa-download" aria-hidden="true"></i>Download PDF Resume</a>
-</div>
-
-<p><button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
-  <i class="fas fa-arrow-up" aria-hidden="true"></i>
-</button></p>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  var backToTop = document.querySelector(".back-to-top");
-  var navMenuButton = document.querySelector(".greedy-nav > button");
-  var hiddenNavLinks = document.querySelector(".greedy-nav > .hidden-links");
-  var pagePath = window.location.pathname.replace(/index\.html$/, "");
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".greedy-nav a[href*='#']"));
-  var localLinks = navLinks.filter(function (link) {
-    var url = new URL(link.href, window.location.origin);
-    return url.pathname.replace(/index\.html$/, "") === pagePath && url.hash;
-  });
-  var sections = localLinks.map(function (link) {
-    return document.getElementById(new URL(link.href, window.location.origin).hash.slice(1));
-  }).filter(function (section, index, all) {
-    return section && all.indexOf(section) === index;
-  });
-  var publicationLinkPrefix = "Open publication: ";
-
-  document.querySelectorAll(".full-publication-list li").forEach(function (item) {
-    var title = item.querySelector(".pub-list-title");
-    var link = item.querySelector(".pub-list-links a");
-    if (title && link) link.setAttribute("aria-label", publicationLinkPrefix + title.textContent.trim());
-  });
-
-  if (navMenuButton && hiddenNavLinks) {
-    navMenuButton.addEventListener("click", function () {
-      window.setTimeout(function () {
-        navMenuButton.setAttribute("aria-expanded", String(!hiddenNavLinks.classList.contains("hidden")));
-      }, 0);
-    });
-  }
-
-  localLinks.forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      var url = new URL(link.href, window.location.origin);
-      var section = document.getElementById(url.hash.slice(1));
-      if (!section) return;
-
-      event.preventDefault();
-      event.stopImmediatePropagation();
-
-      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      var sectionTop = section.getBoundingClientRect().top + window.scrollY - 82;
-      window.scrollTo({ top: Math.max(0, sectionTop), behavior: reduceMotion ? "auto" : "smooth" });
-      window.history.pushState(null, "", url.hash);
-
-      var hiddenLinks = link.closest(".hidden-links");
-      if (hiddenLinks) {
-        hiddenLinks.classList.add("hidden");
-        if (navMenuButton) navMenuButton.setAttribute("aria-expanded", "false");
-      }
-    }, true);
-  });
-
-  function updatePageNavigation() {
-    var activeId = "";
-    var markerOffset = Math.max(140, Math.min(360, window.innerHeight * 0.42));
-    var marker = window.scrollY + markerOffset;
-
-    sections.forEach(function (section) {
-      if (section.offsetTop <= marker) activeId = section.id;
-    });
-
-    if (sections.length && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
-      activeId = sections[sections.length - 1].id;
-    }
-
-    localLinks.forEach(function (link) {
-      var linkId = new URL(link.href, window.location.origin).hash.slice(1);
-      link.classList.toggle("is-active", linkId === activeId);
-    });
-
-    backToTop.classList.toggle("is-visible", window.scrollY > 700);
-  }
-
-  backToTop.addEventListener("click", function () {
-    var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
-  });
-
-  window.addEventListener("scroll", updatePageNavigation, { passive: true });
-  window.addEventListener("resize", updatePageNavigation);
-  updatePageNavigation();
-});
-</script>
-
-<script src="/assets/js/pub_media_rotator.js" defer=""></script>
-
-<h1 class="main-heading">Minkai Wang</h1>
-
+<section class="home-intro">
 <p class="lead">
   <strong>Minkai Wang (王珉锴)</strong> is a <strong>Ph.D. student in Educational Technology at Zhejiang University</strong>. His research spans game-based learning, artificial intelligence in education, and esports education. During his master's studies, he undertook joint training in esports education at the Future Imaging Laboratory, Zhejiang University Yangtze River Delta Smart Oasis Innovation Center. He currently serves as an <strong>R&amp;D Engineer</strong> at the Zhejiang University Yangtze River Delta Smart Oasis–NetDragon International Joint R&amp;D Center for Esports Education and as an <strong>External Expert</strong> at the Zhejiang-Netherlands Joint Laboratory on Digital Diagnosis and Treatment of Oral Diseases, Hangzhou.
 </p>
@@ -414,6 +397,8 @@ document.addEventListener("DOMContentLoaded", function () {
   His research examines how large language models, virtual agents, adaptive mechanisms, and digital games can reshape learning experience, engagement, cognitive load, and behavioral patterns. His academic work has appeared in <em>Journal of Computer Assisted Learning</em>, <em>Journal of Educational Computing Research</em>, and <em>Entertainment Computing</em>.
 </p>
 
+</section>
+<section class="home-section home-section--news" aria-labelledby="news">
 <h2 id="news">News</h2>
 
 <div class="news-box">
@@ -423,6 +408,8 @@ document.addEventListener("DOMContentLoaded", function () {
   </ul>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="experience">
 <h2 id="experience">Experience</h2>
 
 <div class="experience-container">
@@ -483,6 +470,8 @@ document.addEventListener("DOMContentLoaded", function () {
   </article>
 </div>
 
+</section>
+<section class="home-section" aria-labelledby="publications">
 <h2 id="publications">Publications</h2>
 
 <h3 class="section-kicker">Full Publications List</h3>
@@ -504,7 +493,10 @@ document.addEventListener("DOMContentLoaded", function () {
   <p class="metric-note">Journal metrics reflect the most recently verified information for each entry; impact factors are journal-level indicators. The ESI Highly Cited status follows the supplied Web of Science record and may change with ESI updates.</p>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="projects">
 <h2 id="projects">Projects</h2>
+<div class="project-grid">
 
 <div class="project-card">
   <div class="publication-row">
@@ -593,6 +585,7 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
 
+</div>
 <div class="meme-pair" aria-label="Two humorous images after the projects section">
   <figure class="meme-interlude meme-interlude--left">
     <img src="/images/meme-strong-can-fight.webp" alt="Strong and capable" width="516" height="474" loading="lazy" decoding="async" />
@@ -602,6 +595,8 @@ document.addEventListener("DOMContentLoaded", function () {
   </figure>
 </div>
 
+</section>
+<section class="home-section" aria-labelledby="grants">
 <h2 id="grants">Research Grants</h2>
 
 <ol class="compact-list">
@@ -627,6 +622,8 @@ document.addEventListener("DOMContentLoaded", function () {
   </ul>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="awards">
 <h2 id="awards">Awards</h2>
 
 <div class="text-card">
@@ -648,6 +645,8 @@ document.addEventListener("DOMContentLoaded", function () {
   </figure>
 </div>
 
+</section>
+<section class="home-section" aria-labelledby="services">
 <h2 id="services">Services</h2>
 
 <div class="text-card">
@@ -694,6 +693,8 @@ document.addEventListener("DOMContentLoaded", function () {
   </ul>
 </div>
 
+</section>
+<section class="home-section home-section--tint" aria-labelledby="talks">
 <h2 id="talks">Talks</h2>
 
 <ul class="compact-list">
@@ -702,6 +703,8 @@ document.addEventListener("DOMContentLoaded", function () {
   <li>Puyuan Esports Summit (2026, Jiaxing)</li>
 </ul>
 
+</section>
+<section class="home-section" aria-labelledby="teaching">
 <h2 id="teaching">Teaching</h2>
 
 <div class="text-card">
@@ -744,37 +747,13 @@ document.addEventListener("DOMContentLoaded", function () {
     </section>
   </div>
 </div>
+</section>
+<script src="/assets/js/research-home.js" defer=""></script>
 
-
-        
-
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-
-
-
-      </footer>
-
-      
-
-      
-
-
-
-    </div>
-
-    
-  </article>
-
-  
-  
 </div>
+    </div>
+  </article>
+</main>
 
 
     <div class="page__footer">

@@ -3,10 +3,13 @@
 <!-- start custom head snippets -->
 
 <link rel="icon" href="{{ base_path }}/images/site-logo.png">
-<meta name="theme-color" content="#fffaf1">
+<meta name="theme-color" content="{% if page.layout == 'research' %}#edf5f2{% else %}#fffaf1{% endif %}">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css">
 
 {% if page.permalink == "/" or page.permalink == "/en/" %}
+  <link rel="preload" as="image" href="{{ base_path }}/images/research-night-city-v2.webp" media="(min-width: 641px)">
+  <link rel="preload" as="image" href="{{ base_path }}/images/research-night-city-v2-mobile.webp" media="(max-width: 640px)">
+  <link rel="preload" as="font" href="{{ base_path }}/assets/fonts/research-grotesk-latin.ttf" type="font/ttf" crossorigin>
   <link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/">
   <link rel="alternate" hreflang="en" href="{{ site.url }}/en/">
   <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">

@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let idx = 0;
     let timerId = null;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let paused = reduceMotion.matches;
 
     const clearTimer = () => {
       if (!timerId) return;
@@ -53,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scheduleNext = () => {
       clearTimer();
+      if (paused || document.hidden) return;
 
       const current = items[idx];
       if (!current) return;
@@ -108,6 +111,47 @@ document.addEventListener('DOMContentLoaded', () => {
       if (source) source.addEventListener('error', fallbackToImage, { once: true });
     });
 
+    const english = document.documentElement.lang === 'en';
+    const controls = document.createElement('div');
+    controls.className = 'media-controls';
+    function control(label, icon, handler) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.title = label;
+      button.setAttribute('aria-label', label);
+      const glyph = document.createElement('i');
+      glyph.className = 'fas fa-' + icon;
+      glyph.setAttribute('aria-hidden', 'true');
+      button.appendChild(glyph);
+      button.addEventListener('click', handler);
+      controls.appendChild(button);
+      return button;
+    }
+    control(english ? 'Previous image' : '上一张图片', 'chevron-left', () => {
+      idx = (idx - 1 + items.length) % items.length;
+      show(idx);
+      scheduleNext();
+    });
+    const pauseButton = control('', 'pause', () => {
+      paused = !paused;
+      updatePause();
+      scheduleNext();
+    });
+    function updatePause() {
+      const label = paused ? (english ? 'Play slideshow' : '播放轮播') : (english ? 'Pause slideshow' : '暂停轮播');
+      pauseButton.title = label;
+      pauseButton.setAttribute('aria-label', label);
+      pauseButton.querySelector('i').className = 'fas fa-' + (paused ? 'play' : 'pause');
+    }
+    control(english ? 'Next image' : '下一张图片', 'chevron-right', advance);
+    rotator.appendChild(controls);
+    reduceMotion.addEventListener('change', () => {
+      paused = reduceMotion.matches;
+      updatePause();
+      scheduleNext();
+    });
+    document.addEventListener('visibilitychange', scheduleNext);
+    updatePause();
     show(idx);
     scheduleNext();
   });
