@@ -7,10 +7,10 @@ locale: en-US
 seo_title: "Minkai Wang · Academic Homepage & CV"
 description: "Minkai Wang's academic homepage and CV, featuring research on game-based learning, AI in education, digital games, and esports education."
 stylesheets:
-  - /assets/css/home.css?v=20261103c2
+  - /assets/css/home.css?v=20261107a
   - /assets/css/night-city.css?v=20261103f2
   - /assets/css/day-city.css?v=20261103g4
-  - /assets/css/research-motion.css?v=20261107b
+  - /assets/css/research-motion.css?v=20261107d
 ---
 
 {% include home-enhancements.html %}
@@ -26,6 +26,7 @@ stylesheets:
 </p>
 
 </section>
+{% include research-interlude.html %}
 <section class="home-section home-section--news" aria-labelledby="news">
 <h2 id="news">News</h2>
 
@@ -126,7 +127,7 @@ stylesheets:
 <h2 id="projects">Projects</h2>
 <div class="project-grid">
 
-<div class="project-card project-card--featured" id="sanguo-sandtable">
+<div class="project-card" id="sanguo-sandtable">
   <div class="publication-row">
     <div class="pub-media-rotator" data-interval="4500">
       <img src="/images/project-sanguo-overview.webp" alt="Three Kingdoms Sandtable: Guandu scenario map with stationed character cards" width="1440" height="900" loading="lazy" decoding="async">
@@ -134,8 +135,8 @@ stylesheets:
     </div>
     <div>
       <strong>Three Kingdoms Sandtable</strong><br>
-      <i>An offline, single-player Three Kingdoms sandbox built with Godot.</i><br>
-      Arrange and group 90 characters across six starting scenarios, then record your own Three Kingdoms story with named snapshots, chronicles, and automatic saves.<br>
+      <i>An offline, single-player Godot sandbox inspired by childhood games with Three Kingdoms character cards.</i><br>
+      Arrange 90 characters across six starting scenarios, decide their movements, factions, and battle outcomes, and preserve your own Three Kingdoms story through named snapshots and chronicles.<br>
       <b><i>Open-source Game</i></b> <a href="https://github.com/minkaiwang/sanguo-sandtable" target="_blank" rel="noopener">[GitHub]</a> <a href="https://github.com/minkaiwang/sanguo-sandtable/releases" target="_blank" rel="noopener">[Windows]</a>
       <small class="project-credit">Code licensed under MIT; see the repository for historical-source and asset credits.</small>
     </div>
@@ -144,8 +145,10 @@ stylesheets:
 
 <div class="project-card">
   <div class="publication-row">
-    <div class="pub-media-rotator project-media--steam">
-      <img src="/images/game1.png" alt="Waiting for an Egg Steam key art" loading="lazy" decoding="async">
+    <div class="pub-media-rotator project-media--steam" data-interval="4500">
+      <img src="/images/project-egg-garden.webp" alt="Waiting for an Egg: gameplay and focus timer" width="1600" height="900" loading="lazy" decoding="async">
+      <img src="/images/project-egg-inspiration.webp" alt="Waiting for an Egg: Inspiration Egg collection and achievements" width="1600" height="900" loading="lazy" decoding="async">
+      <img src="/images/game1.png" alt="Waiting for an Egg Steam key art" width="460" height="215" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>Waiting for an Egg</strong><br>
@@ -159,13 +162,15 @@ stylesheets:
 <div class="project-card">
   <div class="publication-row">
     <div class="pub-media-rotator">
-      <img src="/images/game2.png" alt="Sprout's Journey game screenshot" loading="lazy" decoding="async">
+      <img src="/images/project-sprout-station.webp" alt="Sprout's Journey: train station gameplay at the start of the freshman journey" width="1536" height="720" loading="lazy" decoding="async">
+      <img src="/images/project-sprout-title.webp" alt="Sprout's Journey: title screen and main menu" width="1536" height="720" loading="lazy" decoding="async">
+      <img src="/images/game2.png" alt="Sprout's Journey cover art" width="315" height="250" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>Sprout's Journey</strong><br>
       <i>Campus navigation educational game released on itch.io.</i><br>
       A campus navigation and role-based learning project combining digital media design and educational interaction.<br>
-      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/xiaoshuya-chufa" target="_blank" rel="noopener">[itch.io]</a>
+      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/xiaoshuya-chufa" target="_blank" rel="noopener">[itch.io]</a> <a href="https://weixin.qq.com/sph/ATvJNCy68L" target="_blank" rel="noopener">[Video]</a>
     </div>
   </div>
 </div>
@@ -173,21 +178,26 @@ stylesheets:
 <div class="project-card">
   <div class="publication-row">
     <div class="pub-media-rotator">
-      <img src="/images/game3.png" alt="Centennial Shuttle game screenshot" loading="lazy" decoding="async">
+      <img src="/images/project-shuttle-story.webp" alt="Centennial Shuttle: story dialogue at the Xiajiang Village guesthouse" width="1536" height="720" loading="lazy" decoding="async">
+      <img src="/images/project-shuttle-title.webp" alt="Centennial Shuttle: title screen and main menu" width="1536" height="720" loading="lazy" decoding="async">
+      <img src="/images/game3.png" alt="Centennial Shuttle cover art" width="315" height="250" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>Centennial Shuttle</strong><br>
       <i>Red tourism educational game released on itch.io.</i><br>
       A role-playing educational game that supports red culture learning through scenario-based exploration.<br>
-      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/bncsj" target="_blank" rel="noopener">[itch.io]</a>
+      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/bncsj" target="_blank" rel="noopener">[itch.io]</a> <a href="https://weixin.qq.com/sph/AMLBDMhxYC" target="_blank" rel="noopener">[Video]</a>
     </div>
   </div>
 </div>
 
 <div class="project-card">
   <div class="publication-row">
-    <div class="pub-media-rotator">
+    <div class="pub-media-rotator" data-interval="4500">
       <img src="/images/esports-assessment-system-20261103.webp" alt="Digital esports potential assessment system screenshot" loading="lazy" decoding="async">
+      <img src="/images/project-assessment-experience.webp" alt="Digital esports experience catalog and aim-training task preview" width="1440" height="960" loading="lazy" decoding="async">
+      <img src="/images/project-assessment-cbti.webp" alt="CBTI personality atlas: entry page for the recreational experience" width="1440" height="768" loading="lazy" decoding="async">
+      <img src="/images/project-assessment-dimensions.webp" alt="Professional assessment framework: physiological, psychological, and cognitive dimensions" width="1296" height="699" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>Digital Esports Potential Assessment System</strong><br>
@@ -200,7 +210,9 @@ stylesheets:
 
 <div class="project-card">
   <div class="publication-row">
-    <div class="pub-media-rotator project-media--pixel">
+    <div class="pub-media-rotator project-media--pixel" data-interval="4500">
+      <img src="/images/project-aemeath-thesis.webp" alt="Aemeath research workbench: thesis progress, milestones, and chapter management" width="1440" height="1000" loading="lazy" decoding="async">
+      <img src="/images/project-aemeath-appearance.webp" alt="Aemeath research workbench: theme selection and custom colors" width="1440" height="1000" loading="lazy" decoding="async">
       <img src="https://raw.githubusercontent.com/minkaiwang/AemeathDeskPet/main/resc/GIF/idle.gif" alt="Pixel desk pet animation from the Aemeath academic desktop assistant" loading="lazy" decoding="async" referrerpolicy="no-referrer">
     </div>
     <div>
@@ -230,15 +242,6 @@ stylesheets:
 </div>
 
 </div>
-<div class="meme-pair" aria-label="Two humorous images after the projects section">
-  <figure class="meme-interlude meme-interlude--left">
-    <img src="/images/meme-strong-can-fight.webp" alt="Strong and capable" width="516" height="474" loading="lazy" decoding="async">
-  </figure>
-  <figure class="meme-interlude meme-interlude--right">
-    <img src="/images/meme-great-cause.webp" alt="Working with my supervisor toward a shared great cause" width="395" height="351" loading="lazy" decoding="async">
-  </figure>
-</div>
-
 </section>
 <section class="home-section" aria-labelledby="grants">
 <h2 id="grants">Research Grants</h2>
@@ -280,18 +283,9 @@ stylesheets:
   </ul>
 </div>
 
-<div class="meme-pair" aria-label="Two humorous images after the awards section">
-  <figure class="meme-interlude meme-interlude--left">
-    <img src="/images/meme-empty-fame.webp" alt="Those titles are merely empty fame, like passing clouds" width="597" height="489" loading="lazy" decoding="async">
-  </figure>
-  <figure class="meme-interlude meme-interlude--right">
-    <img src="/images/meme-academic-backbone.webp" alt="A gathering place for young academic backbones" width="1137" height="1113" loading="lazy" decoding="async">
-  </figure>
-</div>
-
 </section>
 <section class="home-section" aria-labelledby="services">
-<h2 id="services">Services</h2>
+<h2 id="services">Professional Service &amp; Engagement</h2>
 
 <div class="text-card">
   <strong>Journal Reviewer</strong>
@@ -327,25 +321,25 @@ stylesheets:
 </div>
 
 <div class="text-card">
-  <strong>Professional and Research Service</strong>
+  <strong>Other Professional Service</strong>
   <ul class="compact-list">
-    <li><strong>2026</strong> | Research support contributor, National Esports Training Team for the 20th Asian Games Aichi-Nagoya 2026.</li>
-    <li><strong>2026</strong> | Training support contributor, AI Literacy Co-creation Camp for Global South Countries.</li>
     <li>Person in charge of the WeChat Official Account "Digital Game-based Learning Research".</li>
     <li>Deeply participated in the compilation of the <em>Blue Book on Digital Education Development in Zhejiang Province</em>.</li>
     <li>Deeply participated in the compilation of the <em>Development Report on New Comprehensive Practical Education Venues in Zhejiang Province</em>.</li>
   </ul>
 </div>
 
-</section>
-<section class="home-section home-section--tint" aria-labelledby="talks">
-<h2 id="talks">Talks</h2>
-
-<ul class="compact-list">
-  <li>The 1st National Symposium on AI-Empowered Interdisciplinary Project-Based Learning (2024, Xiamen)</li>
-  <li>China Educational Technology Academic Conference (2026, Hangzhou)</li>
-  <li>Puyuan Esports Summit (2026, Jiaxing)</li>
-</ul>
+<div class="text-card">
+  <strong id="talks">Conference and Event Participation</strong>
+  <ul class="compact-list">
+    <li>The 1st National Symposium on AI-Empowered Interdisciplinary Project-Based Learning (2024, Xiamen) <span class="activity-role">| Attendee</span></li>
+    <li>China Educational Technology Academic Conference (2026, Hangzhou) <span class="activity-role">| Conference support</span></li>
+    <li>Puyuan Esports Summit (2026, Jiaxing) <span class="activity-role">| Attendee</span></li>
+    <li>Asian Young Leaders Salon on "Technology + Esports" (2026, Hangzhou) <span class="activity-role">| Attendee</span></li>
+    <li>National Esports Training Team for the 20th Asian Games (2026, Aichi-Nagoya), training in Kunming (2026) <span class="activity-role">| Research support</span></li>
+    <li>AI Literacy Co-creation Camp for Global South Countries (2026, Hangzhou) <span class="activity-role">| Training support</span></li>
+  </ul>
+</div>
 
 </section>
 <section class="home-section" aria-labelledby="teaching">
@@ -392,6 +386,6 @@ stylesheets:
   </div>
 </div>
 </section>
-<script src="/assets/js/research-home.js?v=20261107b" defer></script>
+<script src="/assets/js/research-home.js?v=20261107c" defer></script>
 <script src="/assets/js/research-controls.js?v=20261106a" defer></script>
 <script src="/assets/js/research-gallery.js?v=20261106a" defer></script>

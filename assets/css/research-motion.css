@@ -5,12 +5,13 @@ html {
   scrollbar-gutter: stable;
   scrollbar-width: auto;
   scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+  overflow-x: clip;
 }
 html[data-theme="day"] { --scroll-thumb: #3c7280; --scroll-track: #dce6e7; --scroll-hover: #2f626d; }
 @media (hover: hover) and (pointer: fine) {
   @supports selector(::-webkit-scrollbar) {
     html { scrollbar-color: auto; }
-    html::-webkit-scrollbar { width: 20px; height: 20px; }
+    html::-webkit-scrollbar { width: 20px; height: 0; }
     html::-webkit-scrollbar-track { background: var(--scroll-track); border-left: 1px solid var(--line); }
     html::-webkit-scrollbar-thumb { min-height: 64px; background: var(--scroll-thumb); border: 3px solid var(--scroll-track); border-radius: 10px; }
     html::-webkit-scrollbar-thumb:hover, html::-webkit-scrollbar-thumb:active { background: var(--scroll-hover); }
@@ -19,6 +20,11 @@ html[data-theme="day"] { --scroll-thumb: #3c7280; --scroll-track: #dce6e7; --scr
   }
 }
 .masthead::after { height: 3px; bottom: -2px; }
+#talks { scroll-margin-top: 104px; }
+.activity-role { white-space: nowrap; }
+@media (max-width: 640px) {
+  html[lang="en"] #services { font-size: 28px; line-height: 1.3; }
+}
 html.theme-changing,
 .theme-changing body,
 .theme-changing .masthead,
@@ -34,6 +40,9 @@ html.theme-changing,
 @keyframes theme-turn { from { transform: rotate(-45deg); } to { transform: rotate(0); } }
 
 .scene-particles { position: fixed; z-index: 10; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+html[data-effects-quality="light"] .research-hero__landscape { transform: none; transition: none; will-change: auto; }
+html[data-effects-quality="light"] .scene-atmosphere span,
+html[data-effects-quality="light"] .scene-scan::after { animation: none; opacity: 0; }
 .scene-suspended .scene-scan::after,
 .scene-suspended .scene-atmosphere span { animation-play-state: paused; }
 html[data-motion="paused"] .scene-particles, html[data-motion="reduced"] .scene-particles { display: none; }
@@ -83,12 +92,6 @@ html[data-motion="paused"] .scene-particles, html[data-motion="reduced"] .scene-
 }
 @keyframes arrival-button { from { filter: brightness(1.18); } to { filter: brightness(1); } }
 
-.project-card--featured { grid-column: 1 / -1; }
-.project-card--featured .pub-media-rotator { height: auto; aspect-ratio: 16 / 10; }
-@media (min-width: 961px) {
-  .project-card--featured .publication-row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); align-items: center; }
-  .project-card--featured .publication-row > div:last-child { border-top: 0; border-left: 1px solid var(--line); }
-}
 .project-card:hover .pub-media-rotator { outline: none; }
 .project-preview {
   position: absolute;
@@ -195,6 +198,7 @@ html.image-viewer-open { overflow: hidden; }
 
 @media (hover: none), (pointer: coarse) {
   .project-preview > i { opacity: 1; }
+  .media-controls button { width: 44px; height: 44px; }
 }
 @media (max-width: 640px) {
   .scene-effects-toggle.is-floating { right: 15px; bottom: 73px; }

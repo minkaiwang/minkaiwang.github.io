@@ -17,11 +17,8 @@ main:
   - title: "荣誉"
     url: "/#awards"
 
-  - title: "服务"
+  - title: "服务与交流"
     url: "/#services"
-
-  - title: "会议"
-    url: "/#talks"
 
   - title: "教学"
     url: "/#teaching"
@@ -47,9 +44,6 @@ en:
 
   - title: "Services"
     url: "/en/#services"
-
-  - title: "Talks"
-    url: "/en/#talks"
 
   - title: "Teaching"
     url: "/en/#teaching"

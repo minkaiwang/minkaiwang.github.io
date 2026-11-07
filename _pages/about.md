@@ -5,10 +5,10 @@ author_profile: true
 seo_title: "王珉锴 Minkai Wang · 个人简历 CV"
 description: "王珉锴的个人学术主页与简历（CV），聚焦游戏化学习、人工智能教育应用、数字游戏与电竞教育。"
 stylesheets:
-  - /assets/css/home.css?v=20261103c2
+  - /assets/css/home.css?v=20261107a
   - /assets/css/night-city.css?v=20261103f2
   - /assets/css/day-city.css?v=20261103g4
-  - /assets/css/research-motion.css?v=20261107b
+  - /assets/css/research-motion.css?v=20261107d
 redirect_from:
   - /about/
   - /about.html
@@ -27,6 +27,7 @@ redirect_from:
 </p>
 
 </section>
+{% include research-interlude.html %}
 <section class="home-section home-section--news" aria-labelledby="news">
 <h2 id="news">最新动态</h2>
 
@@ -127,7 +128,7 @@ redirect_from:
 <h2 id="projects">项目与作品</h2>
 <div class="project-grid">
 
-<div class="project-card project-card--featured" id="sanguo-sandtable">
+<div class="project-card" id="sanguo-sandtable">
   <div class="publication-row">
     <div class="pub-media-rotator" data-interval="4500">
       <img src="/images/project-sanguo-overview.webp" alt="《三国推演志》官渡开局的沙盘地图与驻城人物卡" width="1440" height="900" loading="lazy" decoding="async">
@@ -135,8 +136,8 @@ redirect_from:
     </div>
     <div>
       <strong>《三国推演志》</strong><br>
-      <i>基于 Godot 的离线单机三国沙盘。</i><br>
-      提供 90 位人物和 6 个开局，可自由拖放与编组，并通过命名快照、纪事和自动保存记录自己的三国推演。<br>
+      <i>基于 Godot 的离线单机三国沙盘，源于童年摆三国人物卡、排兵布阵的游戏。</i><br>
+      提供 90 位人物和 6 个开局，由玩家自行决定人物去向、阵营与战斗结局，用命名快照和纪事保留自己的三国故事。<br>
       <b><i>Open-source Game</i></b> <a href="https://github.com/minkaiwang/sanguo-sandtable" target="_blank" rel="noopener">[GitHub]</a> <a href="https://github.com/minkaiwang/sanguo-sandtable/releases" target="_blank" rel="noopener">[Windows]</a>
       <small class="project-credit">代码采用 MIT 许可；史料与素材署名见仓库。</small>
     </div>
@@ -145,8 +146,10 @@ redirect_from:
 
 <div class="project-card">
   <div class="publication-row">
-    <div class="pub-media-rotator project-media--steam">
-      <img src="/images/game1.png" alt="《等一个蛋》Steam 商店主视觉" loading="lazy" decoding="async">
+    <div class="pub-media-rotator project-media--steam" data-interval="4500">
+      <img src="/images/project-egg-garden.webp" alt="《等一个蛋》养成场景与番茄钟实机画面" width="1600" height="900" loading="lazy" decoding="async">
+      <img src="/images/project-egg-inspiration.webp" alt="《等一个蛋》灵感蛋收集与成就界面" width="1600" height="900" loading="lazy" decoding="async">
+      <img src="/images/game1.png" alt="《等一个蛋》Steam 商店主视觉" width="460" height="215" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>《等一个蛋》</strong><br>
@@ -160,13 +163,15 @@ redirect_from:
 <div class="project-card">
   <div class="publication-row">
     <div class="pub-media-rotator">
-      <img src="/images/game2.png" alt="《小树芽出发》游戏截图" loading="lazy" decoding="async">
+      <img src="/images/project-sprout-station.webp" alt="《小树芽出发》新生旅程中的车站实机画面" width="1536" height="720" loading="lazy" decoding="async">
+      <img src="/images/project-sprout-title.webp" alt="《小树芽出发》游戏标题与主菜单" width="1536" height="720" loading="lazy" decoding="async">
+      <img src="/images/game2.png" alt="《小树芽出发》游戏封面" width="315" height="250" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>《小树芽出发》</strong><br>
       <i>ITCH 平台校园导览教育游戏。</i><br>
       结合数字媒体设计、校园导览与角色扮演式学习交互的教育游戏项目。<br>
-      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/xiaoshuya-chufa" target="_blank" rel="noopener">[itch.io]</a>
+      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/xiaoshuya-chufa" target="_blank" rel="noopener">[itch.io]</a> <a href="https://weixin.qq.com/sph/ATvJNCy68L" target="_blank" rel="noopener">[视频演示]</a>
     </div>
   </div>
 </div>
@@ -174,21 +179,26 @@ redirect_from:
 <div class="project-card">
   <div class="publication-row">
     <div class="pub-media-rotator">
-      <img src="/images/game3.png" alt="《百年穿梭机》游戏截图" loading="lazy" decoding="async">
+      <img src="/images/project-shuttle-story.webp" alt="《百年穿梭机》下姜村招待所剧情对话实机画面" width="1536" height="720" loading="lazy" decoding="async">
+      <img src="/images/project-shuttle-title.webp" alt="《百年穿梭机》游戏标题与主菜单" width="1536" height="720" loading="lazy" decoding="async">
+      <img src="/images/game3.png" alt="《百年穿梭机》游戏封面" width="315" height="250" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>《百年穿梭机》</strong><br>
       <i>ITCH 平台红色旅游教育游戏。</i><br>
       通过情境探索与角色扮演支持红色文化学习的教育游戏作品。<br>
-      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/bncsj" target="_blank" rel="noopener">[itch.io]</a>
+      <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/bncsj" target="_blank" rel="noopener">[itch.io]</a> <a href="https://weixin.qq.com/sph/AMLBDMhxYC" target="_blank" rel="noopener">[视频演示]</a>
     </div>
   </div>
 </div>
 
 <div class="project-card">
   <div class="publication-row">
-    <div class="pub-media-rotator">
+    <div class="pub-media-rotator" data-interval="4500">
       <img src="/images/esports-assessment-system-20261103.webp" alt="数字竞技潜能测评系统页面截图" loading="lazy" decoding="async">
+      <img src="/images/project-assessment-experience.webp" alt="数字竞技能力体验项目目录与瞄准训练任务预演" width="1440" height="960" loading="lazy" decoding="async">
+      <img src="/images/project-assessment-cbti.webp" alt="CBTI 赛博竞技人格图鉴的趣味体验入口" width="1440" height="768" loading="lazy" decoding="async">
+      <img src="/images/project-assessment-dimensions.webp" alt="专业测评服务中的生理、心理与认知三维测评体系" width="1296" height="699" loading="lazy" decoding="async">
     </div>
     <div>
       <strong>数字竞技潜能测评系统</strong><br>
@@ -201,7 +211,9 @@ redirect_from:
 
 <div class="project-card">
   <div class="publication-row">
-    <div class="pub-media-rotator project-media--pixel">
+    <div class="pub-media-rotator project-media--pixel" data-interval="4500">
+      <img src="/images/project-aemeath-thesis.webp" alt="爱弥斯科研工作台的论文进度、里程碑与章节管理界面" width="1440" height="1000" loading="lazy" decoding="async">
+      <img src="/images/project-aemeath-appearance.webp" alt="爱弥斯科研工作台的主题选择与自定义配色界面" width="1440" height="1000" loading="lazy" decoding="async">
       <img src="https://raw.githubusercontent.com/minkaiwang/AemeathDeskPet/main/resc/GIF/idle.gif" alt="爱弥斯学术桌面助手的像素桌宠动画" loading="lazy" decoding="async" referrerpolicy="no-referrer">
     </div>
     <div>
@@ -231,15 +243,6 @@ redirect_from:
 </div>
 
 </div>
-<div class="meme-pair" aria-label="项目与作品后的两张趣味图片">
-  <figure class="meme-interlude meme-interlude--left">
-    <img src="/images/meme-strong-can-fight.webp" alt="强壮，能打" width="516" height="474" loading="lazy" decoding="async">
-  </figure>
-  <figure class="meme-interlude meme-interlude--right">
-    <img src="/images/meme-great-cause.webp" alt="我导，共图大业" width="395" height="351" loading="lazy" decoding="async">
-  </figure>
-</div>
-
 </section>
 <section class="home-section" aria-labelledby="grants">
 <h2 id="grants">科研项目</h2>
@@ -291,18 +294,9 @@ redirect_from:
   </ul>
 </div>
 
-<div class="meme-pair" aria-label="荣誉奖项后的两张趣味图片">
-  <figure class="meme-interlude meme-interlude--left">
-    <img src="/images/meme-empty-fame.webp" alt="那些只是虚名而已，就好像浮云一样" width="597" height="489" loading="lazy" decoding="async">
-  </figure>
-  <figure class="meme-interlude meme-interlude--right">
-    <img src="/images/meme-academic-backbone.webp" alt="青年学术骨干集合处" width="1137" height="1113" loading="lazy" decoding="async">
-  </figure>
-</div>
-
 </section>
 <section class="home-section" aria-labelledby="services">
-<h2 id="services">学术服务</h2>
+<h2 id="services">专业服务与交流</h2>
 
 <div class="text-card">
   <strong>期刊审稿人 Reviewer</strong>
@@ -338,25 +332,25 @@ redirect_from:
 </div>
 
 <div class="text-card">
-  <strong>专业与科研服务</strong>
+  <strong>其他专业服务</strong>
   <ul class="compact-list">
-    <li><strong>2026</strong>｜参与第 20 届亚洲运动会（2026/爱知·名古屋）电子竞技国家集训队科研保障</li>
-    <li><strong>2026</strong>｜参与全球南方国家AI素养提升共创营培训保障</li>
     <li>微信公众号负责人：“数字游戏学习研究”</li>
     <li>深度参与编制《浙江省数字教育发展蓝皮书》</li>
     <li>深度参与编制《浙江省新型综合实践教育场所发展报告》</li>
   </ul>
 </div>
 
-</section>
-<section class="home-section home-section--tint" aria-labelledby="talks">
-<h2 id="talks">学术会议</h2>
-
-<ul class="compact-list">
-  <li>全国首届人工智能赋能跨学科项目式学习专题会议（2024，厦门）</li>
-  <li>中国教育技术学术大会（2026，杭州）</li>
-  <li>濮院电竞峰会（2026，嘉兴）</li>
-</ul>
+<div class="text-card">
+  <strong id="talks">会议与活动参与</strong>
+  <ul class="compact-list">
+    <li>全国首届人工智能赋能跨学科项目式学习专题会议（2024，厦门）<span class="activity-role">｜参会</span></li>
+    <li>中国教育技术学术大会（2026，杭州）<span class="activity-role">｜会议保障</span></li>
+    <li>濮院电竞峰会（2026，嘉兴）<span class="activity-role">｜参会</span></li>
+    <li>“科技+电竞”亚洲青年领袖沙龙（2026，杭州）<span class="activity-role">｜参会</span></li>
+    <li>第20届亚洲运动会（2026/爱知·名古屋）电子竞技国家集训队（2026，昆明）<span class="activity-role">｜科研保障</span></li>
+    <li>全球南方国家AI素养提升共创营（2026，杭州）<span class="activity-role">｜培训保障</span></li>
+  </ul>
+</div>
 
 </section>
 <section class="home-section" aria-labelledby="teaching">
@@ -403,6 +397,6 @@ redirect_from:
   </div>
 </div>
 </section>
-<script src="/assets/js/research-home.js?v=20261107b" defer></script>
+<script src="/assets/js/research-home.js?v=20261107c" defer></script>
 <script src="/assets/js/research-controls.js?v=20261106a" defer></script>
 <script src="/assets/js/research-gallery.js?v=20261106a" defer></script>

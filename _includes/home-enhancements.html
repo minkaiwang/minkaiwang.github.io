@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }).filter(function (section, index, all) {
     return section && all.indexOf(section) === index;
   });
+  var sectionPositions = [];
+  var navigationFrame = 0;
+  var navigationNeedsMeasure = true;
+  var previousActiveId = null;
   var publicationLinkPrefix = "{% if home_is_english %}Open publication: {% else %}查看论文：{% endif %}";
 
   document.querySelectorAll(".full-publication-list li").forEach(function (item) {
@@ -67,22 +71,30 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function updatePageNavigation() {
+    navigationFrame = 0;
+    if (navigationNeedsMeasure) {
+      sectionPositions = sections.map(function (section) { return section.getBoundingClientRect().top + window.scrollY; });
+      navigationNeedsMeasure = false;
+    }
     var activeId = "";
     var markerOffset = Math.max(140, Math.min(360, window.innerHeight * 0.42));
     var marker = window.scrollY + markerOffset;
 
-    sections.forEach(function (section) {
-      if (section.getBoundingClientRect().top + window.scrollY <= marker) activeId = section.id;
+    sections.forEach(function (section, index) {
+      if (sectionPositions[index] <= marker) activeId = section.id;
     });
 
     if (sections.length && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
       activeId = sections[sections.length - 1].id;
     }
 
-    localLinks.forEach(function (link) {
-      var linkId = new URL(link.href, window.location.origin).hash.slice(1);
-      link.classList.toggle("is-active", linkId === activeId);
-    });
+    if (activeId !== previousActiveId) {
+      localLinks.forEach(function (link) {
+        var linkId = new URL(link.href, window.location.origin).hash.slice(1);
+        link.classList.toggle("is-active", linkId === activeId);
+      });
+      previousActiveId = activeId;
+    }
 
     backToTop.classList.toggle("is-visible", window.scrollY > 700);
   }
@@ -92,9 +104,19 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
   });
 
-  window.addEventListener("scroll", updatePageNavigation, { passive: true });
-  window.addEventListener("resize", updatePageNavigation);
+  function scheduleNavigation() {
+    if (!navigationFrame) navigationFrame = requestAnimationFrame(updatePageNavigation);
+  }
+  function measureNavigation() {
+    navigationNeedsMeasure = true;
+    scheduleNavigation();
+  }
+  window.addEventListener("scroll", scheduleNavigation, { passive: true });
+  window.addEventListener("resize", measureNavigation);
+  window.addEventListener("load", measureNavigation, { once: true });
+  if (document.fonts) document.fonts.ready.then(measureNavigation);
+  new ResizeObserver(measureNavigation).observe(document.body);
   updatePageNavigation();
 });
 </script>
-<script src="/assets/js/pub_media_rotator.js?v=20261106a" defer></script>
+<script src="/assets/js/pub_media_rotator.js?v=20261107a" defer></script>

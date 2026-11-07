@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!hero) return;
 
   const navigation = document.querySelector('.research-nav');
+  const masthead = navigation.closest('.masthead');
   const toggle = navigation.querySelector('.research-nav__toggle');
   function closeNavigation() {
     navigation.classList.remove('is-open');
@@ -39,15 +40,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const canvas = document.querySelector('.scene-particles');
   const context = canvas && canvas.getContext('2d');
   let particleFrame = 0;
+  let particleTimer = 0;
   let particlesActive = false;
   let lastPaint = 0;
-  let lastTrail = 0;
+  let lastPointer = -Infinity;
+  let lastSpark = 0;
+  let trailGroup = 0;
+  let slowPaints = 0;
+  let lightEffects = !finePointer.matches || navigator.hardwareConcurrency <= 4 || navigator.deviceMemory <= 4 || Boolean(navigator.connection && navigator.connection.saveData);
+  let progressDirty = true;
   let width = 0;
   let height = 0;
   let particles = [];
   let trail = [];
   let sparks = [];
   let exclusion = [];
+  let exclusionPath = null;
   let contentMasks = [];
   let maskScroll = NaN;
   let heroTop = 0;
@@ -72,6 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const rect = element.getBoundingClientRect();
       if (rect.width && rect.height) exclusion.push({ left: rect.left - 3, right: rect.right + 3, top: rect.top - 3, bottom: rect.bottom + 3 });
     });
+    exclusionPath = new Path2D();
+    exclusion.forEach(function (rect) { exclusionPath.rect(rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top); });
   }
   function cacheContentMasks() {
     const scroll = window.scrollY;
@@ -101,17 +111,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     updateExclusion(true);
   }
-  function sizeParticles() {
+  function sizeParticles(reflow) {
     if (!context) return;
+    const previousWidth = width;
     width = document.documentElement.clientWidth;
     height = window.innerHeight;
-    const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
+    const ratio = Math.min(window.devicePixelRatio || 1, lightEffects ? 1 : 1.25);
     canvas.width = Math.round(width * ratio);
     canvas.height = Math.round(height * ratio);
     context.setTransform(ratio, 0, 0, ratio, 0, 0);
-    cacheContentMasks();
+    if (reflow || previousWidth !== width || hero.getBoundingClientRect().height !== heroHeight) cacheContentMasks();
+    else updateExclusion(true);
     const mobile = width <= 640;
-    particles = Array.from({ length: mobile ? 24 : 54 }, function (_, i) {
+    root.dataset.effectsQuality = lightEffects ? 'light' : 'full';
+    particles = Array.from({ length: lightEffects ? (mobile ? 14 : 24) : 54 }, function (_, i) {
       const depth = i % 3;
       return { x: width * (.06 + Math.random() * .9),
         y: 24 + Math.random() * Math.max(1, height - 90),
@@ -121,66 +134,85 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     trail = [];
     sparks = [];
+    slowPaints = 0;
+  }
+  function scheduleParticles(wake) {
+    if (!particlesActive || particleFrame || (particleTimer && !wake)) return;
+    clearTimeout(particleTimer);
+    const now = performance.now();
+    const moving = now - lastPointer < 700;
+    const interval = lightEffects ? (moving ? 50 : 100) : (moving ? 1000 / 30 : 1000 / 15);
+    // Sleep between paints instead of waking on every refresh of a fast display.
+    const delay = Math.max(0, interval - (now - lastPaint));
+    particleTimer = window.setTimeout(function () {
+      particleTimer = 0;
+      particleFrame = requestAnimationFrame(drawParticles);
+    }, delay);
   }
   function drawParticles(now) {
     particleFrame = 0;
     if (!particlesActive) return;
-    if (now - lastPaint >= 32) {
-      const elapsed = Math.min((now - lastPaint) / 1000, .06);
-      lastPaint = now;
-      updateExclusion();
-      context.clearRect(0, 0, width, height);
-      const day = root.dataset.theme !== 'night';
-      particles.forEach(function (particle) {
-        particle.y -= particle.speed * elapsed;
-        if (particle.y < 16) particle.y = height - 30;
-        const x = particle.x + Math.sin(now / 3800 + particle.phase) * particle.drift;
-        if (blocked(x, particle.y)) return;
-        const scene = onScene(particle.y);
-        const intensity = scene ? (day ? .9 : 1) : .65;
-        const light = day && !scene;
-        const alpha = (.28 + particle.depth * .12 + .16 * Math.sin(now / 2600 + particle.phase)) * intensity;
-        context.fillStyle = particle.gold ? (light ? '#8b6b35' : '#d4b77b') : (light ? '#3c7280' : '#b3d8dc');
-        context.globalAlpha = alpha * .16;
-        context.fillRect(x - 2, particle.y - 2, particle.size + 4, particle.size + 4);
-        context.globalAlpha = alpha;
-        context.fillRect(x, particle.y, particle.shard ? 1.2 : particle.size, particle.shard ? particle.size * 3 : particle.size);
-      });
-      trail = trail.filter(function (point) { return now - point.time < 700; });
-      context.lineCap = 'round';
-      for (let i = 1; i < trail.length; i++) {
-        const previous = trail[i - 1];
-        const current = trail[i];
-        if (Math.hypot(current.x - previous.x, current.y - previous.y) > 140) continue;
-        const light = day && !onScene(current.y);
-        const alpha = .85 * Math.pow(1 - (now - previous.time) / 700, 1.4);
-        context.beginPath();
-        context.moveTo(previous.x, previous.y);
-        context.lineTo(current.x, current.y);
-        context.strokeStyle = '#91bec3';
-        context.lineWidth = 6;
-        context.globalAlpha = alpha * .2;
-        context.stroke();
-        context.strokeStyle = light ? '#2f626d' : '#e1e6e5';
-        context.lineWidth = 1.6;
-        context.globalAlpha = alpha;
-        context.stroke();
-      }
-      sparks = sparks.filter(function (spark) { return now - spark.time < spark.life; });
-      sparks.forEach(function (spark) {
-        spark.x += spark.vx * elapsed;
-        spark.y += spark.vy * elapsed;
-        const life = 1 - (now - spark.time) / spark.life;
-        const light = day && !onScene(spark.y);
-        context.globalAlpha = life * .75;
-        context.fillStyle = spark.gold ? (light ? '#8b6b35' : '#d4b77b') : (light ? '#3c7280' : '#b3d8dc');
-        context.fillRect(spark.x, spark.y, spark.size * life, spark.size * life);
-      });
-      // Clear whole protected regions, including any trail segment crossing their edges.
-      exclusion.forEach(function (rect) { context.clearRect(rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top); });
-      context.globalAlpha = 1;
+    const started = performance.now();
+    const elapsed = Math.min((now - lastPaint) / 1000, .15);
+    lastPaint = now;
+    updateExclusion();
+    context.clearRect(0, 0, width, height);
+    const day = root.dataset.theme !== 'night';
+    particles.forEach(function (particle) {
+      particle.y -= particle.speed * elapsed;
+      if (particle.y < 16) particle.y = height - 30;
+      const x = particle.x + Math.sin(now / 3800 + particle.phase) * particle.drift;
+      const scene = onScene(particle.y);
+      const intensity = scene ? (day ? .9 : 1) : .65;
+      const light = day && !scene;
+      const alpha = (.28 + particle.depth * .12 + .16 * Math.sin(now / 2600 + particle.phase)) * intensity;
+      context.fillStyle = particle.gold ? (light ? '#8b6b35' : '#d4b77b') : (light ? '#3c7280' : '#b3d8dc');
+      context.globalAlpha = alpha * .16;
+      context.fillRect(x - 2, particle.y - 2, particle.size + 4, particle.size + 4);
+      context.globalAlpha = alpha;
+      context.fillRect(x, particle.y, particle.shard ? 1.2 : particle.size, particle.shard ? particle.size * 3 : particle.size);
+    });
+    trail = trail.filter(function (point) { return now - point.time < 700; });
+    context.lineCap = 'round';
+    for (let i = 1; i < trail.length; i++) {
+      const previous = trail[i - 1];
+      const current = trail[i];
+      if (current.group !== previous.group) continue;
+      const light = day && !onScene(current.y);
+      const alpha = .85 * Math.pow(1 - (now - previous.time) / 700, 1.4);
+      context.beginPath();
+      context.moveTo(previous.x, previous.y);
+      context.lineTo(current.x, current.y);
+      context.strokeStyle = '#91bec3';
+      context.lineWidth = 6;
+      context.globalAlpha = alpha * .2;
+      context.stroke();
+      context.strokeStyle = light ? '#2f626d' : '#e1e6e5';
+      context.lineWidth = 1.6;
+      context.globalAlpha = alpha;
+      context.stroke();
     }
-    particleFrame = requestAnimationFrame(drawParticles);
+    sparks = sparks.filter(function (spark) { return now - spark.time < spark.life; });
+    sparks.forEach(function (spark) {
+      spark.x += spark.vx * elapsed;
+      spark.y += spark.vy * elapsed;
+      const life = 1 - (now - spark.time) / spark.life;
+      const light = day && !onScene(spark.y);
+      context.globalAlpha = life * .75;
+      context.fillStyle = spark.gold ? (light ? '#8b6b35' : '#d4b77b') : (light ? '#3c7280' : '#b3d8dc');
+      context.fillRect(spark.x, spark.y, spark.size * life, spark.size * life);
+    });
+    // One union mask keeps overlapping text and controls fully clear.
+    context.globalAlpha = 1;
+    context.globalCompositeOperation = 'destination-out';
+    context.fill(exclusionPath);
+    context.globalCompositeOperation = 'source-over';
+    slowPaints = performance.now() - started > 8 ? slowPaints + 1 : Math.max(0, slowPaints - 1);
+    if (!lightEffects && slowPaints >= 12 && !trail.length && !sparks.length) {
+      lightEffects = true;
+      sizeParticles();
+    }
+    scheduleParticles(false);
   }
   function moveControl(button, parent) {
     if (!button || !parent || button.parentElement === parent) return;
@@ -208,10 +240,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!context) return;
     particlesActive = active;
     canvas.dataset.state = active ? 'running' : 'paused';
-    if (active && !particleFrame) {
-      lastPaint = performance.now();
-      particleFrame = requestAnimationFrame(drawParticles);
+    if (active) {
+      scheduleParticles(false);
     } else if (!active) {
+      clearTimeout(particleTimer);
+      particleTimer = 0;
       cancelAnimationFrame(particleFrame);
       particleFrame = 0;
       trail = [];
@@ -223,10 +256,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function render() {
     frame = 0;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    document.documentElement.style.setProperty('--reading-progress', (maxScroll > 0 ? Math.min(100, window.scrollY / maxScroll * 100) : 0).toFixed(2) + '%');
+    if (progressDirty) {
+      const maxScroll = root.scrollHeight - window.innerHeight;
+      masthead.style.setProperty('--reading-progress', (maxScroll > 0 ? Math.min(100, window.scrollY / maxScroll * 100) : 0).toFixed(2) + '%');
+      progressDirty = false;
+    }
     if (!motionActive() || !heroVisible) return;
-    const progress = Math.min(1, Math.max(0, window.scrollY / hero.offsetHeight));
+    const progress = Math.min(1, Math.max(0, window.scrollY / heroHeight));
     hero.style.setProperty('--scene-x', pointerX.toFixed(2) + 'px');
     hero.style.setProperty('--scene-y', (pointerY + progress * 28).toFixed(2) + 'px');
   }
@@ -257,7 +293,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function glitch() {
-    if (!motionActive() || !finePointer.matches || glitchTimer || hero.classList.contains('scene-entering')) return;
+    if (!motionActive() || lightEffects || !finePointer.matches || glitchTimer || hero.classList.contains('scene-entering')) return;
     hero.classList.add('is-glitching');
     glitchTimer = window.setTimeout(function () {
       hero.classList.remove('is-glitching');
@@ -274,36 +310,43 @@ document.addEventListener('DOMContentLoaded', function () {
   hero.querySelector('h1').addEventListener('pointerenter', glitch);
 
   document.addEventListener('pointermove', function (event) {
-    if (!finePointer.matches || !motionActive()) return;
-    if (heroVisible && event.target.closest('.research-hero')) {
-      const bounds = hero.getBoundingClientRect();
-      pointerX = ((event.clientX - bounds.left) / bounds.width - 0.5) * 12;
-      pointerY = ((event.clientY - bounds.top) / bounds.height - 0.5) * 8;
+    if (!finePointer.matches || event.pointerType === 'touch' || !motionActive()) return;
+    if (!lightEffects && heroVisible && event.target.closest('.research-hero')) {
+      pointerX = (event.clientX / width - 0.5) * 12;
+      pointerY = ((event.clientY + window.scrollY - heroTop) / heroHeight - 0.5) * 8;
       requestRender();
     }
     updateExclusion();
-    const x = event.clientX;
-    const y = event.clientY;
     const now = performance.now();
-    if (blocked(x, y)) { trail = []; sparks = []; }
-    else if (now - lastTrail > 16) {
+    if (now - lastPointer > 700) trailGroup++;
+    lastPointer = now;
+    const coalesced = event.getCoalescedEvents ? event.getCoalescedEvents() : [];
+    const samples = coalesced.length ? coalesced : [event];
+    for (let i = Math.max(0, samples.length - 8); i < samples.length; i++) {
+      const x = samples[i].clientX;
+      const y = samples[i].clientY;
       const previous = trail[trail.length - 1];
       if (previous) {
         const dx = x - previous.x;
         const dy = y - previous.y;
         const distance = Math.hypot(dx, dy);
-        if (distance > 3 && distance < 140) {
-          sparks.push({ x: x, y: y, vx: -dx * 1.2 + (Math.random() - .5) * 24,
-            vy: -dy * 1.2 + (Math.random() - .5) * 24, time: now, life: 420 + Math.random() * 220,
+        if (distance < 1.5 && previous.group === trailGroup) continue;
+        if (previous.group === trailGroup && distance > 3 && now - lastSpark > (lightEffects ? 40 : 22) && !blocked(x, y)) {
+          const speed = Math.min(distance * 1.2, 80) / distance;
+          sparks.push({ x: x, y: y, vx: -dx * speed + (Math.random() - .5) * 24,
+            vy: -dy * speed + (Math.random() - .5) * 24, time: now, life: 420 + Math.random() * 220,
             size: 1.6 + Math.random() * 1.5, gold: trail.length % 4 === 0 });
-          if (sparks.length > 36) sparks.shift();
+          if (sparks.length > (lightEffects ? 16 : 36)) sparks.shift();
+          lastSpark = now;
         }
       }
-      trail.push({ x: x, y: y, time: now });
-      if (trail.length > 32) trail.shift();
-      lastTrail = now;
+      trail.push({ x: x, y: y, time: now - Math.max(0, event.timeStamp - samples[i].timeStamp), group: trailGroup });
+      if (trail.length > (lightEffects ? 48 : 96)) trail.shift();
     }
+    scheduleParticles(true);
   }, { passive: true });
+  document.addEventListener('pointerleave', function () { trailGroup++; });
+  window.addEventListener('blur', function () { trailGroup++; });
 
   hero.addEventListener('pointerleave', function () {
     pointerX = pointerY = 0;
@@ -327,18 +370,20 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('pageshow', syncActivity);
   window.addEventListener('pagehide', function () {
     particlesActive = false;
+    clearTimeout(particleTimer);
+    particleTimer = 0;
     cancelAnimationFrame(particleFrame);
     particleFrame = 0;
   });
 
   window.addEventListener('scroll', function () {
-    trail = [];
-    sparks = [];
+    trailGroup++;
+    progressDirty = true;
     requestRender();
   }, { passive: true });
-  window.addEventListener('resize', function () { sizeParticles(); syncActivity(); requestRender(); });
+  window.addEventListener('resize', function () { progressDirty = true; sizeParticles(); syncActivity(); requestRender(); });
   sizeParticles();
-  if (document.fonts) document.fonts.ready.then(sizeParticles);
+  if (document.fonts) document.fonts.ready.then(function () { sizeParticles(true); });
   updateEffects();
 
   function arrive() {

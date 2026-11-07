@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const current = items[idx];
       if (!current) return;
+      const next = items[(idx + 1) % items.length];
+      if (next.tagName === 'IMG') next.loading = 'eager';
 
       if (current.tagName === 'VIDEO') {
         current.addEventListener(

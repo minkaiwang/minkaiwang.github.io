@@ -18,6 +18,7 @@
 - `_data/navigation.yml`：顶部导航链接，包含中文默认导航和英文页导航；当前不在导航栏放 CV。
 - `assets/css/home.css`：主页自定义样式，基于 WowPage 模板调整；包含白底学术主页视觉、欢迎语、内容层级、卡片与响应式样式。
 - `_layouts/research.html`、`_includes/research-hero.html`、`_includes/research-masthead.html`：中英文主页布局、原创场景首屏与响应式导航；其他页面继续沿用原有布局。
+- `_includes/research-interlude.html`：中英文共用的四张趣味图片，统一放在最新动态上方；桌面四列、中小屏两列，保留完整图片和各自替代文本。
 - `assets/js/research-home.js`：主页菜单、首屏视差、全页粒子与鼠标轨迹；文字和交互区域保留遮罩，必须尊重减少动态效果设置。
 - `assets/css/research-motion.css`、`assets/js/research-gallery.js`、`_includes/research-gallery.html`：昼夜过渡、滚动条、全页粒子与短拖尾、作品选中和完整原图预览。新增视觉效果通过根节点 `data-motion` / `homepage:motionchange` 协调；首屏装饰离屏时停止，全页绘制在标签页隐藏或预览打开时暂停，预览关闭后恢复焦点与阅读位置。
 - `_includes/research-controls.html`、`_includes/research-preferences.html`、`assets/js/research-controls.js`：昼夜启动与导航音乐控件；首访浅色，尊重用户记住的选择；有声自动播放以浏览器许可为边界，不能写成无条件强制成功。

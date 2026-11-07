@@ -409,7 +409,7 @@ html[lang="en"] .research-home h2 { font-size: 35px; font-weight: 600; }
   object-fit: contain;
 }
 .project-media--pixel { background: #dedee6; }
-.project-media--pixel img { image-rendering: pixelated; }
+.project-media--pixel img[src$=".gif"] { image-rendering: pixelated; }
 .media-controls { position: absolute; right: 10px; bottom: 10px; display: flex; gap: 4px; }
 .media-controls button { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 1px solid #bacdc3; border-radius: 4px; background: #ffffff; color: var(--ink); font-size: 11px; cursor: pointer; }
 .media-controls button:hover { background: #dcece5; }
@@ -419,9 +419,10 @@ html[lang="en"] .research-home h2 { font-size: 35px; font-weight: 600; }
 .publication-row b { display: inline-block; margin-top: 8px; color: #637269; font-size: 12px; font-weight: 500; }
 .project-credit { display: block; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; line-height: 1.8; }
 
-.meme-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; max-width: 640px; margin: 46px auto 0; }
+.home-section--memes { padding-top: 12px; padding-bottom: 24px; }
+.meme-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin: 0 auto; }
 .meme-interlude { width: 100%; margin: 0; padding: 8px; overflow: hidden; border: 1px solid #cadcd1; border-radius: 5px; background: #ffffff; }
-.meme-interlude img { display: block; width: 100%; height: 245px; margin: 0; object-fit: contain; }
+.meme-interlude img { display: block; width: 100%; height: 200px; margin: 0; object-fit: contain; }
 
 .text-card { margin: 0 0 27px; padding: 0; }
 .text-card:last-child { margin-bottom: 0; }
@@ -545,6 +546,7 @@ html[lang="en"] .research-home h2 { font-size: 35px; font-weight: 600; }
   .pub-media-rotator { height: 225px; }
   .publication-row > div:last-child:not(.pub-media-rotator) { padding: 20px; }
   .project-grid { gap: 26px 22px; }
+  .meme-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 640px; gap: 18px; }
 }
 
 @media (max-width: 640px) {
@@ -596,7 +598,8 @@ html[lang="en"] .research-home h2 { font-size: 35px; font-weight: 600; }
   .publication-row > div:last-child:not(.pub-media-rotator) { padding: 20px; font-size: 13px; }
   .publication-row > div > strong:first-child { font-size: 17px; }
   .project-credit { font-size: 10px; }
-  .meme-pair { gap: 13px; margin-top: 29px; }
+  .home-section--memes { padding-top: 8px; padding-bottom: 18px; }
+  .meme-gallery { gap: 13px; }
   .meme-interlude { padding: 5px; }
   .meme-interlude img { height: 154px; }
   .compact-list li { margin-bottom: 11px; font-size: 13px; }
