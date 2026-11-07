@@ -3,5 +3,9 @@
   var theme = 'day';
   try { if (localStorage.getItem('homepage-theme') === 'night') theme = 'night'; } catch (_) {}
   document.documentElement.dataset.theme = theme;
+  var motion = 'full';
+  try { if (localStorage.getItem('nightcity-effects') === 'off') motion = 'paused'; } catch (_) {}
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) motion = 'reduced';
+  document.documentElement.dataset.motion = motion;
 })();
 </script>

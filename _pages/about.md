@@ -8,6 +8,7 @@ stylesheets:
   - /assets/css/home.css?v=20261103c2
   - /assets/css/night-city.css?v=20261103f2
   - /assets/css/day-city.css?v=20261103g4
+  - /assets/css/research-motion.css?v=20261107b
 redirect_from:
   - /about/
   - /about.html
@@ -125,6 +126,22 @@ redirect_from:
 <section class="home-section home-section--tint" aria-labelledby="projects">
 <h2 id="projects">项目与作品</h2>
 <div class="project-grid">
+
+<div class="project-card project-card--featured" id="sanguo-sandtable">
+  <div class="publication-row">
+    <div class="pub-media-rotator" data-interval="4500">
+      <img src="/images/project-sanguo-overview.webp" alt="《三国推演志》官渡开局的沙盘地图与驻城人物卡" width="1440" height="900" loading="lazy" decoding="async">
+      <img src="/images/project-sanguo-characters.webp" alt="《三国推演志》人物志中的人物搜索、小传与参考四维" width="1405" height="507" loading="lazy" decoding="async">
+    </div>
+    <div>
+      <strong>《三国推演志》</strong><br>
+      <i>基于 Godot 的离线单机三国沙盘。</i><br>
+      提供 90 位人物和 6 个开局，可自由拖放与编组，并通过命名快照、纪事和自动保存记录自己的三国推演。<br>
+      <b><i>Open-source Game</i></b> <a href="https://github.com/minkaiwang/sanguo-sandtable" target="_blank" rel="noopener">[GitHub]</a> <a href="https://github.com/minkaiwang/sanguo-sandtable/releases" target="_blank" rel="noopener">[Windows]</a>
+      <small class="project-credit">代码采用 MIT 许可；史料与素材署名见仓库。</small>
+    </div>
+  </div>
+</div>
 
 <div class="project-card">
   <div class="publication-row">
@@ -386,5 +403,6 @@ redirect_from:
   </div>
 </div>
 </section>
-<script src="/assets/js/research-home.js?v=20261103g" defer></script>
-<script src="/assets/js/research-controls.js?v=20261103g2" defer></script>
+<script src="/assets/js/research-home.js?v=20261107b" defer></script>
+<script src="/assets/js/research-controls.js?v=20261106a" defer></script>
+<script src="/assets/js/research-gallery.js?v=20261106a" defer></script>

@@ -1,0 +1,18 @@
+{% assign gallery_english = false %}
+{% if page.locale == 'en-US' %}{% assign gallery_english = true %}{% endif %}
+<dialog class="image-viewer" aria-labelledby="image-viewer-title">
+  <header class="image-viewer__header">
+    <p id="image-viewer-title" class="image-viewer__title"></p>
+    <a class="image-viewer__original" target="_blank" rel="noopener" aria-label="{% if gallery_english %}Open original image{% else %}打开原图{% endif %}" title="{% if gallery_english %}Open original image{% else %}打开原图{% endif %}"><i class="fas fa-up-right-from-square" aria-hidden="true"></i></a>
+    <button class="image-viewer__close" type="button" autofocus aria-label="{% if gallery_english %}Close image preview{% else %}关闭图片预览{% endif %}" title="{% if gallery_english %}Close image preview{% else %}关闭图片预览{% endif %}"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+  </header>
+  <div class="image-viewer__stage">
+    <img class="image-viewer__image" src="{{ base_path }}/images/night-city-parade.webp" alt="" decoding="async" hidden>
+    <p class="image-viewer__status" role="status" hidden></p>
+  </div>
+  <footer class="image-viewer__footer">
+    <button class="image-viewer__previous" type="button" aria-label="{% if gallery_english %}Previous image{% else %}上一张图片{% endif %}" title="{% if gallery_english %}Previous image{% else %}上一张图片{% endif %}"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+    <span class="image-viewer__counter" aria-live="polite" aria-atomic="true"></span>
+    <button class="image-viewer__next" type="button" aria-label="{% if gallery_english %}Next image{% else %}下一张图片{% endif %}" title="{% if gallery_english %}Next image{% else %}下一张图片{% endif %}"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+  </footer>
+</dialog>

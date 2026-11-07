@@ -8,22 +8,22 @@
   <div class="scene-scan" aria-hidden="true"></div>
   <div class="scene-atmosphere" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
   <div class="research-hero__copy">
-    <h1 class="main-heading">{% if home_is_english %}Minkai Wang{% else %}王珉锴{% endif %}<span class="hero-glitch" aria-hidden="true" data-copy="{% if home_is_english %}Minkai Wang{% else %}王珉锴{% endif %}"></span></h1>
+    <h1 class="main-heading">{% if home_is_english %}Minkai Wang{% else %}王珉锴{% endif %}<span class="hero-glitch" aria-hidden="true" data-copy="{% if home_is_english %}Minkai Wang{% else %}王珉锴{% endif %}"></span><span class="hero-arrival" aria-hidden="true"></span></h1>
     <p class="research-hero__name" aria-hidden="true">{% if home_is_english %}王珉锴{% else %}Minkai Wang{% endif %}</p>
     <div class="welcome-banner">{% if home_is_english %}Good morning, Night City!{% else %}早上好，夜之城！{% endif %}</div>
     <div class="top-actions">
       {%- if home_is_english %}
       <a class="language-pill" href="/" hreflang="zh-CN" lang="zh-CN"><i class="fas fa-language" aria-hidden="true"></i>中文</a>
-      <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download><i class="fas fa-download" aria-hidden="true"></i>Download PDF Resume</a>
+      <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf?v=20261107" download><i class="fas fa-download" aria-hidden="true"></i>Download PDF Resume</a>
       {%- else %}
       <a class="language-pill" href="/en/" hreflang="en" lang="en"><i class="fas fa-language" aria-hidden="true"></i>English</a>
-      <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download><i class="fas fa-download" aria-hidden="true"></i>导出 PDF 简历</a>
+      <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf?v=20261107" download><i class="fas fa-download" aria-hidden="true"></i>导出 PDF 简历</a>
       {%- endif %}
     </div>
   </div>
   <a class="research-hero__next" href="#profile" aria-label="{% if home_is_english %}About Minkai Wang{% else %}了解王珉锴{% endif %}" title="{% if home_is_english %}About Minkai Wang{% else %}了解王珉锴{% endif %}"><i class="fas fa-arrow-down" aria-hidden="true"></i></a>
   <a class="scene-original-link" href="{{ base_path }}/images/night-city-parade.webp" target="_blank" rel="noopener" aria-label="{% if home_is_english %}View the full background image{% else %}查看完整背景图{% endif %}" title="{% if home_is_english %}View the full background image{% else %}查看完整背景图{% endif %}"><i class="fas fa-expand" aria-hidden="true"></i></a>
-  <button class="scene-effects-toggle" type="button" aria-pressed="true" aria-label="{% if home_is_english %}Pause visual effects{% else %}暂停场景动效{% endif %}" title="{% if home_is_english %}Pause visual effects{% else %}暂停场景动效{% endif %}" data-on="{% if home_is_english %}Pause visual effects{% else %}暂停场景动效{% endif %}" data-off="{% if home_is_english %}Enable visual effects{% else %}开启场景动效{% endif %}" data-system="{% if home_is_english %}Reduced motion is enabled in system settings{% else %}系统已启用减少动态效果{% endif %}"><i class="fas fa-pause" aria-hidden="true"></i></button>
+  <button class="scene-effects-toggle" type="button" aria-pressed="true" aria-label="{% if home_is_english %}Pause visual effects{% else %}暂停视觉动效{% endif %}" title="{% if home_is_english %}Pause visual effects{% else %}暂停视觉动效{% endif %}" data-on="{% if home_is_english %}Pause visual effects{% else %}暂停视觉动效{% endif %}" data-off="{% if home_is_english %}Enable visual effects{% else %}开启视觉动效{% endif %}" data-system="{% if home_is_english %}Reduced motion is enabled in system settings{% else %}系统已启用减少动态效果{% endif %}"><i class="fas fa-pause" aria-hidden="true"></i></button>
 </header>
 
 <section id="profile" class="home-profile" aria-label="{% if home_is_english %}Profile and contact{% else %}个人资料与联系方式{% endif %}">

@@ -10,6 +10,7 @@ stylesheets:
   - /assets/css/home.css?v=20261103c2
   - /assets/css/night-city.css?v=20261103f2
   - /assets/css/day-city.css?v=20261103g4
+  - /assets/css/research-motion.css?v=20261107b
 ---
 
 {% include home-enhancements.html %}
@@ -124,6 +125,22 @@ stylesheets:
 <section class="home-section home-section--tint" aria-labelledby="projects">
 <h2 id="projects">Projects</h2>
 <div class="project-grid">
+
+<div class="project-card project-card--featured" id="sanguo-sandtable">
+  <div class="publication-row">
+    <div class="pub-media-rotator" data-interval="4500">
+      <img src="/images/project-sanguo-overview.webp" alt="Three Kingdoms Sandtable: Guandu scenario map with stationed character cards" width="1440" height="900" loading="lazy" decoding="async">
+      <img src="/images/project-sanguo-characters.webp" alt="Three Kingdoms Sandtable: character search, biographies, and reference attributes" width="1405" height="507" loading="lazy" decoding="async">
+    </div>
+    <div>
+      <strong>Three Kingdoms Sandtable</strong><br>
+      <i>An offline, single-player Three Kingdoms sandbox built with Godot.</i><br>
+      Arrange and group 90 characters across six starting scenarios, then record your own Three Kingdoms story with named snapshots, chronicles, and automatic saves.<br>
+      <b><i>Open-source Game</i></b> <a href="https://github.com/minkaiwang/sanguo-sandtable" target="_blank" rel="noopener">[GitHub]</a> <a href="https://github.com/minkaiwang/sanguo-sandtable/releases" target="_blank" rel="noopener">[Windows]</a>
+      <small class="project-credit">Code licensed under MIT; see the repository for historical-source and asset credits.</small>
+    </div>
+  </div>
+</div>
 
 <div class="project-card">
   <div class="publication-row">
@@ -375,5 +392,6 @@ stylesheets:
   </div>
 </div>
 </section>
-<script src="/assets/js/research-home.js?v=20261103g" defer></script>
-<script src="/assets/js/research-controls.js?v=20261103g2" defer></script>
+<script src="/assets/js/research-home.js?v=20261107b" defer></script>
+<script src="/assets/js/research-controls.js?v=20261106a" defer></script>
+<script src="/assets/js/research-gallery.js?v=20261106a" defer></script>

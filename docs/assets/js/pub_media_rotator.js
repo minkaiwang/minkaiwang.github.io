@@ -19,7 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let idx = 0;
     let timerId = null;
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let paused = reduceMotion.matches;
+    let paused = false;
+    let visible = false;
+    const motionStopped = () => reduceMotion.matches ||
+      (document.documentElement.dataset.motion && document.documentElement.dataset.motion !== 'full');
 
     const clearTimer = () => {
       if (!timerId) return;
@@ -55,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scheduleNext = () => {
       clearTimer();
-      if (paused || document.hidden) return;
+      if (paused || motionStopped() || !visible || document.hidden || document.documentElement.classList.contains('image-viewer-open')) return;
 
       const current = items[idx];
       if (!current) return;
@@ -138,19 +141,27 @@ document.addEventListener('DOMContentLoaded', () => {
       scheduleNext();
     });
     function updatePause() {
-      const label = paused ? (english ? 'Play slideshow' : '播放轮播') : (english ? 'Pause slideshow' : '暂停轮播');
+      const stopped = paused || motionStopped();
+      const label = motionStopped() ? (english ? 'Visual effects are paused' : '视觉动效已暂停') : paused ? (english ? 'Play slideshow' : '播放轮播') : (english ? 'Pause slideshow' : '暂停轮播');
       pauseButton.title = label;
       pauseButton.setAttribute('aria-label', label);
-      pauseButton.querySelector('i').className = 'fas fa-' + (paused ? 'play' : 'pause');
+      pauseButton.disabled = Boolean(motionStopped());
+      pauseButton.querySelector('i').className = 'fas fa-' + (stopped ? 'play' : 'pause');
     }
     control(english ? 'Next image' : '下一张图片', 'chevron-right', advance);
     rotator.appendChild(controls);
-    reduceMotion.addEventListener('change', () => {
-      paused = reduceMotion.matches;
+    const syncMotion = () => {
       updatePause();
       scheduleNext();
-    });
+    };
+    reduceMotion.addEventListener('change', syncMotion);
+    document.addEventListener('homepage:motionchange', syncMotion);
+    document.addEventListener('homepage:gallerychange', scheduleNext);
     document.addEventListener('visibilitychange', scheduleNext);
+    new IntersectionObserver((entries) => {
+      visible = entries[0].isIntersecting;
+      scheduleNext();
+    }).observe(rotator);
     updatePause();
     show(idx);
     scheduleNext();

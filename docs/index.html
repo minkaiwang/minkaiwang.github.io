@@ -9,6 +9,10 @@
   var theme = 'day';
   try { if (localStorage.getItem('homepage-theme') === 'night') theme = 'night'; } catch (_) {}
   document.documentElement.dataset.theme = theme;
+  var motion = 'full';
+  try { if (localStorage.getItem('nightcity-effects') === 'off') motion = 'paused'; } catch (_) {}
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) motion = 'reduced';
+  document.documentElement.dataset.motion = motion;
 })();
 </script>
 
@@ -117,6 +121,7 @@
     <link rel="stylesheet" href="/assets/css/home.css?v=20261103c2">
     <link rel="stylesheet" href="/assets/css/night-city.css?v=20261103f2">
     <link rel="stylesheet" href="/assets/css/day-city.css?v=20261103g4">
+    <link rel="stylesheet" href="/assets/css/research-motion.css?v=20261107b">
 
 
 <meta http-equiv="cleartype" content="on">
@@ -165,6 +170,8 @@
       <li><a href="/#services">服务</a></li>
       <li><a href="/#talks">会议</a></li>
       <li><a href="/#teaching">教学</a></li>
+      <li class="research-nav__motion" hidden></li>
+      <li class="research-nav__top" hidden></li>
     </ul>
 
 <div class="site-controls" role="group" aria-label="配色与音乐">
@@ -175,6 +182,8 @@
       <summary aria-label="音乐音量设置" title="音乐音量设置"><i class="fas fa-sliders" aria-hidden="true"></i></summary>
       <div class="music-panel">
         <div class="music-panel__track"><i class="fas fa-music" aria-hidden="true"></i><strong>V</strong><span class="music-clock" aria-hidden="true">0:00 / 2:34</span></div>
+        <div class="music-spectrum" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <progress class="music-progress" max="1" value="0" aria-label="背景音乐播放进度"></progress>
         <div class="music-volume-row">
           <button class="music-mute" type="button" aria-pressed="false" aria-label="静音背景音乐" title="静音背景音乐"><i class="fas fa-volume-low" aria-hidden="true"></i></button>
           <input id="music-volume" type="range" min="0" max="100" value="25" aria-label="背景音乐音量">
@@ -292,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<script src="/assets/js/pub_media_rotator.js?v=20261102b2" defer=""></script>
+<script src="/assets/js/pub_media_rotator.js?v=20261106a" defer=""></script>
 
 <header class="research-hero">
   <picture class="research-hero__landscape" aria-hidden="true">
@@ -302,17 +311,17 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="scene-scan" aria-hidden="true"></div>
   <div class="scene-atmosphere" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
   <div class="research-hero__copy">
-    <h1 class="main-heading">王珉锴<span class="hero-glitch" aria-hidden="true" data-copy="王珉锴"></span></h1>
+    <h1 class="main-heading">王珉锴<span class="hero-glitch" aria-hidden="true" data-copy="王珉锴"></span><span class="hero-arrival" aria-hidden="true"></span></h1>
     <p class="research-hero__name" aria-hidden="true">Minkai Wang</p>
     <div class="welcome-banner">早上好，夜之城！</div>
     <div class="top-actions">
       <a class="language-pill" href="/en/" hreflang="en" lang="en"><i class="fas fa-language" aria-hidden="true"></i>English</a>
-      <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download=""><i class="fas fa-download" aria-hidden="true"></i>导出 PDF 简历</a>
+      <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf?v=20261107" download=""><i class="fas fa-download" aria-hidden="true"></i>导出 PDF 简历</a>
     </div>
   </div>
   <a class="research-hero__next" href="#profile" aria-label="了解王珉锴" title="了解王珉锴"><i class="fas fa-arrow-down" aria-hidden="true"></i></a>
   <a class="scene-original-link" href="/images/night-city-parade.webp" target="_blank" rel="noopener" aria-label="查看完整背景图" title="查看完整背景图"><i class="fas fa-expand" aria-hidden="true"></i></a>
-  <button class="scene-effects-toggle" type="button" aria-pressed="true" aria-label="暂停场景动效" title="暂停场景动效" data-on="暂停场景动效" data-off="开启场景动效" data-system="系统已启用减少动态效果"><i class="fas fa-pause" aria-hidden="true"></i></button>
+  <button class="scene-effects-toggle" type="button" aria-pressed="true" aria-label="暂停视觉动效" title="暂停视觉动效" data-on="暂停视觉动效" data-off="开启视觉动效" data-system="系统已启用减少动态效果"><i class="fas fa-pause" aria-hidden="true"></i></button>
 </header>
 
 <section id="profile" class="home-profile" aria-label="个人资料与联系方式">
@@ -528,6 +537,22 @@ document.addEventListener("DOMContentLoaded", function () {
 <section class="home-section home-section--tint" aria-labelledby="projects">
 <h2 id="projects">项目与作品</h2>
 <div class="project-grid">
+
+<div class="project-card project-card--featured" id="sanguo-sandtable">
+  <div class="publication-row">
+    <div class="pub-media-rotator" data-interval="4500">
+      <img src="/images/project-sanguo-overview.webp" alt="《三国推演志》官渡开局的沙盘地图与驻城人物卡" width="1440" height="900" loading="lazy" decoding="async" />
+      <img src="/images/project-sanguo-characters.webp" alt="《三国推演志》人物志中的人物搜索、小传与参考四维" width="1405" height="507" loading="lazy" decoding="async" />
+    </div>
+    <div>
+      <strong>《三国推演志》</strong><br />
+      <i>基于 Godot 的离线单机三国沙盘。</i><br />
+      提供 90 位人物和 6 个开局，可自由拖放与编组，并通过命名快照、纪事和自动保存记录自己的三国推演。<br />
+      <b><i>Open-source Game</i></b> <a href="https://github.com/minkaiwang/sanguo-sandtable" target="_blank" rel="noopener">[GitHub]</a> <a href="https://github.com/minkaiwang/sanguo-sandtable/releases" target="_blank" rel="noopener">[Windows]</a>
+      <small class="project-credit">代码采用 MIT 许可；史料与素材署名见仓库。</small>
+    </div>
+  </div>
+</div>
 
 <div class="project-card">
   <div class="publication-row">
@@ -789,14 +814,36 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
 </section>
-<script src="/assets/js/research-home.js?v=20261103g" defer=""></script>
+<script src="/assets/js/research-home.js?v=20261107b" defer=""></script>
 
-<script src="/assets/js/research-controls.js?v=20261103g2" defer=""></script>
+<script src="/assets/js/research-controls.js?v=20261106a" defer=""></script>
+
+<script src="/assets/js/research-gallery.js?v=20261106a" defer=""></script>
 
 </div>
     </div>
   </article>
 </main>
+<canvas class="scene-particles" aria-hidden="true"></canvas>
+
+
+<dialog class="image-viewer" aria-labelledby="image-viewer-title">
+  <header class="image-viewer__header">
+    <p id="image-viewer-title" class="image-viewer__title"></p>
+    <a class="image-viewer__original" target="_blank" rel="noopener" aria-label="打开原图" title="打开原图"><i class="fas fa-up-right-from-square" aria-hidden="true"></i></a>
+    <button class="image-viewer__close" type="button" autofocus aria-label="关闭图片预览" title="关闭图片预览"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+  </header>
+  <div class="image-viewer__stage">
+    <img class="image-viewer__image" src="/images/night-city-parade.webp" alt="" decoding="async" hidden>
+    <p class="image-viewer__status" role="status" hidden></p>
+  </div>
+  <footer class="image-viewer__footer">
+    <button class="image-viewer__previous" type="button" aria-label="上一张图片" title="上一张图片"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+    <span class="image-viewer__counter" aria-live="polite" aria-atomic="true"></span>
+    <button class="image-viewer__next" type="button" aria-label="下一张图片" title="下一张图片"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+  </footer>
+</dialog>
+
 
 
     <div class="page__footer">

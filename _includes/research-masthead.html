@@ -12,6 +12,8 @@
       {%- for link in nav_links %}
       <li><a href="{% unless link.url contains 'http' %}{{ base_path }}{% endunless %}{{ link.url }}">{{ link.title }}</a></li>
       {%- endfor %}
+      <li class="research-nav__motion" hidden></li>
+      <li class="research-nav__top" hidden></li>
     </ul>
     {%- include research-controls.html %}
   </nav>

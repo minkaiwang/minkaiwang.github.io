@@ -9,6 +9,10 @@
   var theme = 'day';
   try { if (localStorage.getItem('homepage-theme') === 'night') theme = 'night'; } catch (_) {}
   document.documentElement.dataset.theme = theme;
+  var motion = 'full';
+  try { if (localStorage.getItem('nightcity-effects') === 'off') motion = 'paused'; } catch (_) {}
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) motion = 'reduced';
+  document.documentElement.dataset.motion = motion;
 })();
 </script>
 
@@ -117,6 +121,7 @@
     <link rel="stylesheet" href="/assets/css/home.css?v=20261103c2">
     <link rel="stylesheet" href="/assets/css/night-city.css?v=20261103f2">
     <link rel="stylesheet" href="/assets/css/day-city.css?v=20261103g4">
+    <link rel="stylesheet" href="/assets/css/research-motion.css?v=20261107b">
 
 
 <meta http-equiv="cleartype" content="on">
@@ -165,6 +170,8 @@
       <li><a href="/en/#services">Services</a></li>
       <li><a href="/en/#talks">Talks</a></li>
       <li><a href="/en/#teaching">Teaching</a></li>
+      <li class="research-nav__motion" hidden></li>
+      <li class="research-nav__top" hidden></li>
     </ul>
 
 <div class="site-controls" role="group" aria-label="Appearance and music">
@@ -175,6 +182,8 @@
       <summary aria-label="Music volume settings" title="Music volume settings"><i class="fas fa-sliders" aria-hidden="true"></i></summary>
       <div class="music-panel">
         <div class="music-panel__track"><i class="fas fa-music" aria-hidden="true"></i><strong>V</strong><span class="music-clock" aria-hidden="true">0:00 / 2:34</span></div>
+        <div class="music-spectrum" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <progress class="music-progress" max="1" value="0" aria-label="Background music playback progress"></progress>
         <div class="music-volume-row">
           <button class="music-mute" type="button" aria-pressed="false" aria-label="Mute background music" title="Mute background music"><i class="fas fa-volume-low" aria-hidden="true"></i></button>
           <input id="music-volume" type="range" min="0" max="100" value="25" aria-label="Music volume">
@@ -292,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<script src="/assets/js/pub_media_rotator.js?v=20261102b2" defer=""></script>
+<script src="/assets/js/pub_media_rotator.js?v=20261106a" defer=""></script>
 
 <header class="research-hero">
   <picture class="research-hero__landscape" aria-hidden="true">
@@ -302,12 +311,12 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="scene-scan" aria-hidden="true"></div>
   <div class="scene-atmosphere" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
   <div class="research-hero__copy">
-    <h1 class="main-heading">Minkai Wang<span class="hero-glitch" aria-hidden="true" data-copy="Minkai Wang"></span></h1>
+    <h1 class="main-heading">Minkai Wang<span class="hero-glitch" aria-hidden="true" data-copy="Minkai Wang"></span><span class="hero-arrival" aria-hidden="true"></span></h1>
     <p class="research-hero__name" aria-hidden="true">王珉锴</p>
     <div class="welcome-banner">Good morning, Night City!</div>
     <div class="top-actions">
       <a class="language-pill" href="/" hreflang="zh-CN" lang="zh-CN"><i class="fas fa-language" aria-hidden="true"></i>中文</a>
-      <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf" download=""><i class="fas fa-download" aria-hidden="true"></i>Download PDF Resume</a>
+      <a class="resume-download" href="/files/Minkai_Wang_Resume_CN.pdf?v=20261107" download=""><i class="fas fa-download" aria-hidden="true"></i>Download PDF Resume</a>
     </div>
   </div>
   <a class="research-hero__next" href="#profile" aria-label="About Minkai Wang" title="About Minkai Wang"><i class="fas fa-arrow-down" aria-hidden="true"></i></a>
@@ -528,6 +537,22 @@ document.addEventListener("DOMContentLoaded", function () {
 <section class="home-section home-section--tint" aria-labelledby="projects">
 <h2 id="projects">Projects</h2>
 <div class="project-grid">
+
+<div class="project-card project-card--featured" id="sanguo-sandtable">
+  <div class="publication-row">
+    <div class="pub-media-rotator" data-interval="4500">
+      <img src="/images/project-sanguo-overview.webp" alt="Three Kingdoms Sandtable: Guandu scenario map with stationed character cards" width="1440" height="900" loading="lazy" decoding="async" />
+      <img src="/images/project-sanguo-characters.webp" alt="Three Kingdoms Sandtable: character search, biographies, and reference attributes" width="1405" height="507" loading="lazy" decoding="async" />
+    </div>
+    <div>
+      <strong>Three Kingdoms Sandtable</strong><br />
+      <i>An offline, single-player Three Kingdoms sandbox built with Godot.</i><br />
+      Arrange and group 90 characters across six starting scenarios, then record your own Three Kingdoms story with named snapshots, chronicles, and automatic saves.<br />
+      <b><i>Open-source Game</i></b> <a href="https://github.com/minkaiwang/sanguo-sandtable" target="_blank" rel="noopener">[GitHub]</a> <a href="https://github.com/minkaiwang/sanguo-sandtable/releases" target="_blank" rel="noopener">[Windows]</a>
+      <small class="project-credit">Code licensed under MIT; see the repository for historical-source and asset credits.</small>
+    </div>
+  </div>
+</div>
 
 <div class="project-card">
   <div class="publication-row">
@@ -779,14 +804,36 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
 </section>
-<script src="/assets/js/research-home.js?v=20261103g" defer=""></script>
+<script src="/assets/js/research-home.js?v=20261107b" defer=""></script>
 
-<script src="/assets/js/research-controls.js?v=20261103g2" defer=""></script>
+<script src="/assets/js/research-controls.js?v=20261106a" defer=""></script>
+
+<script src="/assets/js/research-gallery.js?v=20261106a" defer=""></script>
 
 </div>
     </div>
   </article>
 </main>
+<canvas class="scene-particles" aria-hidden="true"></canvas>
+
+
+<dialog class="image-viewer" aria-labelledby="image-viewer-title">
+  <header class="image-viewer__header">
+    <p id="image-viewer-title" class="image-viewer__title"></p>
+    <a class="image-viewer__original" target="_blank" rel="noopener" aria-label="Open original image" title="Open original image"><i class="fas fa-up-right-from-square" aria-hidden="true"></i></a>
+    <button class="image-viewer__close" type="button" autofocus aria-label="Close image preview" title="Close image preview"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+  </header>
+  <div class="image-viewer__stage">
+    <img class="image-viewer__image" src="/images/night-city-parade.webp" alt="" decoding="async" hidden>
+    <p class="image-viewer__status" role="status" hidden></p>
+  </div>
+  <footer class="image-viewer__footer">
+    <button class="image-viewer__previous" type="button" aria-label="Previous image" title="Previous image"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+    <span class="image-viewer__counter" aria-live="polite" aria-atomic="true"></span>
+    <button class="image-viewer__next" type="button" aria-label="Next image" title="Next image"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+  </footer>
+</dialog>
+
 
 
     <div class="page__footer">
