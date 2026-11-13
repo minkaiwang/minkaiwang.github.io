@@ -8,7 +8,7 @@ stylesheets:
   - /assets/css/home.css?v=20261107a
   - /assets/css/night-city.css?v=20261103f2
   - /assets/css/day-city.css?v=20261103g4
-  - /assets/css/research-motion.css?v=20261107d
+  - /assets/css/research-motion.css?v=20261113c
 redirect_from:
   - /about/
   - /about.html
@@ -397,6 +397,6 @@ redirect_from:
   </div>
 </div>
 </section>
-<script src="/assets/js/research-home.js?v=20261107c" defer></script>
+<script src="/assets/js/research-home.js?v=20261113b" defer></script>
 <script src="/assets/js/research-controls.js?v=20261106a" defer></script>
 <script src="/assets/js/research-gallery.js?v=20261106a" defer></script>

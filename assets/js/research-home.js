@@ -61,6 +61,23 @@ document.addEventListener('DOMContentLoaded', function () {
   let heroTop = 0;
   let heroHeight = 0;
   let arrivalTimer = 0;
+  const sceneFocus = hero.querySelector('.scene-focus');
+  let focusX = 0;
+  let focusY = 0;
+  let hoverSurface = null;
+  let hoverBounds = null;
+  let hoverX = 0;
+  let hoverY = 0;
+
+  function resetHover() {
+    if (hoverSurface) {
+      hoverSurface.classList.remove('is-tracking');
+      ['--hover-x', '--hover-dx', '--hover-dy'].forEach(function (property) { hoverSurface.style.removeProperty(property); });
+    }
+    hoverSurface = hoverBounds = null;
+    hero.classList.remove('scene-inspecting');
+  }
+  function canTrack() { return motionActive() && !lightEffects && finePointer.matches; }
 
   function motionActive() {
     return !reduceMotion.matches && !effectsPaused && !document.hidden && !root.classList.contains('image-viewer-open');
@@ -222,6 +239,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   function syncActivity() {
     const active = motionActive();
+    if (!active || lightEffects) resetHover();
     hero.classList.toggle('scene-suspended', !active || !heroVisible);
     const homeTools = document.querySelector('.home-tools');
     const menuDocked = !heroVisible && window.innerWidth <= 1180;
@@ -261,10 +279,18 @@ document.addEventListener('DOMContentLoaded', function () {
       masthead.style.setProperty('--reading-progress', (maxScroll > 0 ? Math.min(100, window.scrollY / maxScroll * 100) : 0).toFixed(2) + '%');
       progressDirty = false;
     }
+    if (hoverSurface && canTrack()) {
+      hoverSurface.style.setProperty('--hover-x', Math.max(0, Math.min(hoverBounds.width - 84, hoverX - 42)).toFixed(1) + 'px');
+      hoverSurface.style.setProperty('--hover-dx', ((hoverX / hoverBounds.width - .5) * 6).toFixed(2) + 'px');
+      hoverSurface.style.setProperty('--hover-dy', ((hoverY / hoverBounds.height - .5) * 4).toFixed(2) + 'px');
+    }
     if (!motionActive() || !heroVisible) return;
     const progress = Math.min(1, Math.max(0, window.scrollY / heroHeight));
     hero.style.setProperty('--scene-x', pointerX.toFixed(2) + 'px');
     hero.style.setProperty('--scene-y', (pointerY + progress * 28).toFixed(2) + 'px');
+    if (sceneFocus && hero.classList.contains('scene-inspecting')) {
+      sceneFocus.style.transform = 'translate3d(' + focusX.toFixed(1) + 'px,' + focusY.toFixed(1) + 'px,0)';
+    }
   }
 
   function requestRender() {
@@ -309,11 +335,38 @@ document.addEventListener('DOMContentLoaded', function () {
   if (backToTop) backToTop.addEventListener('click', closeNavigation);
   hero.querySelector('h1').addEventListener('pointerenter', glitch);
 
+  document.querySelectorAll('.top-actions a, .project-card .pub-media-rotator').forEach(function (surface) {
+    surface.addEventListener('pointerenter', function (event) {
+      if (event.pointerType === 'touch' || !canTrack()) return;
+      resetHover();
+      hoverSurface = surface;
+      hoverBounds = surface.getBoundingClientRect();
+    });
+    surface.addEventListener('pointermove', function (event) {
+      if (event.pointerType === 'touch' || !canTrack()) return;
+      if (hoverSurface !== surface) {
+        resetHover();
+        hoverSurface = surface;
+        hoverBounds = surface.getBoundingClientRect();
+      }
+      hoverX = Math.max(0, Math.min(hoverBounds.width, event.clientX - hoverBounds.left));
+      hoverY = Math.max(0, Math.min(hoverBounds.height, event.clientY - hoverBounds.top));
+      surface.classList.add('is-tracking');
+      requestRender();
+    }, { passive: true });
+    surface.addEventListener('pointerleave', function () { if (hoverSurface === surface) resetHover(); });
+  });
+
   document.addEventListener('pointermove', function (event) {
     if (!finePointer.matches || event.pointerType === 'touch' || !motionActive()) return;
     if (!lightEffects && heroVisible && event.target.closest('.research-hero')) {
       pointerX = (event.clientX / width - 0.5) * 12;
       pointerY = ((event.clientY + window.scrollY - heroTop) / heroHeight - 0.5) * 8;
+      const localY = event.clientY + window.scrollY - heroTop;
+      const inspecting = event.clientX > width * .52 && localY > 60 && localY < heroHeight - 90 && !event.target.closest('a, button');
+      hero.classList.toggle('scene-inspecting', inspecting);
+      focusX = Math.max(width * .52, Math.min(width - 184, event.clientX - 80));
+      focusY = Math.max(32, Math.min(heroHeight - 150, localY - 52));
       requestRender();
     }
     updateExclusion();
@@ -345,11 +398,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     scheduleParticles(true);
   }, { passive: true });
-  document.addEventListener('pointerleave', function () { trailGroup++; });
-  window.addEventListener('blur', function () { trailGroup++; });
+  document.addEventListener('pointerleave', function () { trailGroup++; resetHover(); });
+  window.addEventListener('blur', function () { trailGroup++; resetHover(); });
 
   hero.addEventListener('pointerleave', function () {
     pointerX = pointerY = 0;
+    hero.classList.remove('scene-inspecting');
     requestRender();
   });
 
@@ -378,10 +432,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', function () {
     trailGroup++;
+    resetHover();
     progressDirty = true;
     requestRender();
   }, { passive: true });
-  window.addEventListener('resize', function () { progressDirty = true; sizeParticles(); syncActivity(); requestRender(); });
+  window.addEventListener('resize', function () { progressDirty = true; resetHover(); sizeParticles(); syncActivity(); requestRender(); });
   sizeParticles();
   if (document.fonts) document.fonts.ready.then(function () { sizeParticles(true); });
   updateEffects();
