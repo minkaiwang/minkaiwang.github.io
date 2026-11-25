@@ -107,12 +107,18 @@ html[lang="en"] .research-home h2 { font-size: 38px; font-weight: 700; }
 .pub-list-authors strong { color: #dbc89e; }
 .pub-list-badge { color: var(--accent); border-color: #315d67; background: #0c1c23; border-radius: 0; }
 .pub-list-badge--pub { color: #9aefbe; border-color: #3b7a59; background: #10281d; }
+.pub-list-badge--acc { color: #9fd8f0; border-color: #3b6f8a; background: #102430; }
 .pub-list-badge--esi { color: #ddc795; border-color: #7a6a48; background: #302b21; }
 .pub-list-metric { color: #ccb78a; }
 .pub-list-links a:hover { color: #080b0d; background: var(--accent); }
 .text-card strong, .compact-list strong { color: #f3f7f8; }
 .teaching-group--wide { border-top-color: #34434b; }
-.project-grid { gap: 35px 28px; }
+.project-shelf-btn { color: var(--accent); border-color: #597580; background: #080f14; border-radius: 0; }
+.project-shelf-btn:hover:not(:disabled) { color: #080b0d; background: var(--accent); border-color: var(--accent); }
+.project-grid { gap: 28px; scrollbar-color: var(--accent) #11171a; }
+.project-grid::-webkit-scrollbar-track { background: #11171a; border-radius: 0; }
+.project-grid::-webkit-scrollbar-thumb { background: #5a8289; border-radius: 0; }
+.project-grid::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 .project-card { background: var(--surface); border-radius: 0; box-shadow: none; }
 .project-card:hover { box-shadow: none; }
 .pub-media-rotator { background: #151c21; }

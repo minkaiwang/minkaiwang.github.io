@@ -1,10 +1,24 @@
 # 当前状态
 
 - 项目：`D:\learning\minkaiwang\minkaiwang.github.io`，Jekyll 个人学术主页。
-- 当前任务（2026-11-13）：首屏与作品区交互打磨已提交推送，GitHub Pages 部署成功，线上验证通过；本轮发布已完成。
-- 编辑者：Codex；本轮为单人编辑，未调用子智能体。
+- 当前任务（2026-11-25）：经用户确认，完成全部 5 项更新、体验账号登录截图补齐及中英文文案/动态润色，准备提交并推送 `main` 发布上线。
+- 编辑者：Antigravity；本轮为单人编辑，未调用子智能体。
 - 权威内容：`_pages/about.md`、`_pages/en.md`；PDF 内容以 `_pages/resume.html` 为准。
-- 当前线上界面：交互细化版提交 `f4f9239`，已推送 `main`；GitHub Pages 工作流 `43369202938` 的 build/deploy 均成功，线上中英文及手机检查通过。上一线上界面为图库与性能优化版 `9e1d0da`，其发布记录提交为 `8b793f3`。
+- 当前线上界面：上一线上交互细化版提交 `f4f9239`（记录提交 `9bc6aa8`）；本轮新提交即将推送 `main`。
+- 本轮完成（2026-11-25）：
+  - ① **数字竞技潜能测评系统重新截图与简介同步**：按 2026-11-25 线上新版界面重新截取 4 张 WebP（`project-assessment-{home,experience,cbti,cognitive}-20261125.webp`，均 1440×900，无 Cookie 提示条；保留历史文件未删），同步中英文项目介绍（12 项体验测试、CBTI 趣味人格、三维专业测评、排名与数据化反馈）及 PDF 条目。
+  - ② **项目与作品改为一行横向滚动 + 新增两项参与设计/开发的网站**：`.project-grid` 改为单行横向滚动轨道（`scroll-snap` + 顶部 `01 / 09` 计数与左右翻页按钮 + 主题适配细滚动条，打印视图自动恢复双列网格），`pub_media_rotator.js` 兼容单图与多图底栏对齐，`research-home.js` 将 `.project-grid` 整体纳入粒子遮罩避免横滑错位。新增「教育技术情报雷达 / EdTech Radar」（`https://radar.science-hub.cn/`，3 张实机截图：首页共著预览、知识图谱、数字孪生大屏）与「STEM 科学枢纽 / STEM Science Hub」（`https://science-hub.cn/`，经用户授权体验账号实机截取 3 张：首页互动作品社区、交互式《地球自转与公转模拟器》、对话式创作空间；凭据不写入站点或文档）。当前共 9 项作品、26 张作品图。
+  - ③ **新增录用论文**：顶部新增 *Education and Information Technologies* 录用论文《Investigating the effectiveness and boundary conditions of generative AI scaffolding in science game-based learning》（Gong, Y., **Wang, M.**, Li, W., Gu, H., Peng, H., Chi, H., & Qian, Y., 2026；EAIT 徽章 + 蓝青色 `Accepted` 徽章；Springer 官方页核实 JCR Q1，IF = 7.2），中英文与 PDF 同步，总论文数 12 篇。
+  - ④ **新增审稿期刊**：新增 *Computers & Education Open* 与 *International Journal of Educational Research Open*，审稿期刊共 29 本（中英文与 PDF 同步）。
+  - ⑤ **新增期刊编委**：经 JGTI 官方编委页（`https://journals.weyoungpress.com/jgti/en/about/editorialMasthead`）核实职务为 `Editorial Board Member`（2026 – ），在「专业服务与交流」首位新增「期刊编委 Editorial Board」模块并附官网链接，中英文与 PDF 同步。
+  - ⑥ **经用户确认的顺手优化**：修复英文页博士入学时间（`Expected Sept 2026` → `Sept 2026 – Present`）与科研项目术语（`Replacing Reality Games` → `Alternate Reality Games`）；中英文导语及 PDF 简介补充 *npj Digital Medicine* 与 *Education and Information Technologies*；「最新动态 / News」新增 `2026.11` 条目（共 3 条）。
+  - PDF 简历已从 `/resume/` 重生成为 3 页 A4（442,032 字节），`files/Minkai_Wang_Resume_CN.pdf` 与 `docs/files/` 完全一致，下载链接版本更新为 `?v=20261125a`，旧 PDF 备份于 `output/update-20261125/Minkai_Wang_Resume_CN_before.pdf`。
+- 本轮验证（2026-11-25）：`node --check` 语法检查通过；`bundle exec jekyll build` 生产构建通过，确认 `docs/index.html`、`docs/en/index.html`、`docs/sitemap.xml` 无 `localhost` / `127.0.0.1` 残留；Playwright 本地实测桌面（1440×900 昼/夜中英文）与移动端（390×844 触控）：3 条动态、12 篇论文、9 项单行横向滚动作品、26 张作品图、29 本审稿期刊与编委条目正确，左右翻页按钮与计数（`01 / 09` → `02 / 09`）、灯箱预览及 Esc 关闭通过，页面级横向溢出为 False、脚本错误与本地资源错误均为 0；已实际查看桌面昼/夜、英文、手机截图及新版 PDF 全部 3 页渲染图（位于 `output/update-20261125/`，由 Git 与 Jekyll 排除）。
+- 本轮交接：Antigravity → 用户及后续维护工具；改动源文件为 `_pages/about.md`、`_pages/en.md`、`_pages/resume.html`、`_includes/research-hero.html`、`_includes/home-enhancements.html`、`assets/css/home.css`、`assets/css/night-city.css`、`assets/css/day-city.css`、`assets/js/pub_media_rotator.js`、`assets/js/research-home.js`、`files/Minkai_Wang_Resume_CN.pdf` 及 10 张 `images/project-*.webp`，并同步生成 `docs/`。资源版本参数为 `20261125a`。
+
+## 2026-11-13 线上发布记录（f4f9239）
+
+- 2026-11-13 交互细化版提交 `f4f9239`（记录提交 `9bc6aa8`），已推送 `main`；GitHub Pages 工作流 `43369202938` 的 build/deploy 均成功，线上中英文及手机检查通过。上一线上界面为图库与性能优化版 `9e1d0da`，其发布记录提交为 `8b793f3`。
 - 本轮完成：首屏右侧局部取景角标、按钮内部图标响应、作品顶边跟随与角标反馈、220ms 切图过渡和每组图片序号。实际查看小样后将序号及轮播按钮放到图下方的 52px 工具栏，完整露出截图；手机按钮保持 44×44px。设计、状态与退出路径见 `DESIGN.md` 的「2026-11-13 交互细化」。
 - 第二轮完成：鼠标浏览时暂缓轮播、离开后恢复，键盘焦点进入时暂停并支持当前作品左右方向键切图；工具栏增加低亮度切换进度线，手机/轻量档维持静态。手动切图更新辅助技术播报标记，自动轮播保持安静。原有正式轮播间隔、截图尺寸和内容不变。
 - 当前阶段：界面提交已推送、Pages 部署成功，线上验证通过；本文件为本轮发布记录。发布前 fetch 确认原 `HEAD` 与 `origin/main` 均为 `8b793f3`，本次正常提交推送，无需合并或强制推送。

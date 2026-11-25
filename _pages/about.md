@@ -5,9 +5,9 @@ author_profile: true
 seo_title: "王珉锴 Minkai Wang · 个人简历 CV"
 description: "王珉锴的个人学术主页与简历（CV），聚焦游戏化学习、人工智能教育应用、数字游戏与电竞教育。"
 stylesheets:
-  - /assets/css/home.css?v=20261107a
-  - /assets/css/night-city.css?v=20261103f2
-  - /assets/css/day-city.css?v=20261103g4
+  - /assets/css/home.css?v=20261125a
+  - /assets/css/night-city.css?v=20261125a
+  - /assets/css/day-city.css?v=20261125a
   - /assets/css/research-motion.css?v=20261113c
 redirect_from:
   - /about/
@@ -23,7 +23,7 @@ redirect_from:
 </p>
 
 <p>
-  他的研究关注大语言模型、虚拟代理、自适应机制与数字游戏如何重塑学习体验、学习投入、认知负荷与行为模式。相关成果发表于 <em>Journal of Computer Assisted Learning</em>、<em>Journal of Educational Computing Research</em>、<em>Entertainment Computing</em> 等期刊。
+  他的研究关注大语言模型、虚拟代理、自适应机制与数字游戏如何重塑学习体验、学习投入、认知负荷与行为模式。相关成果发表于 <em>npj Digital Medicine</em>、<em>Journal of Computer Assisted Learning</em>、<em>Journal of Educational Computing Research</em>、<em>Education and Information Technologies</em>、<em>Entertainment Computing</em> 等期刊。
 </p>
 
 </section>
@@ -33,6 +33,7 @@ redirect_from:
 
 <div class="news-box">
   <ul class="news-list">
+    <li><span class="news-date"><em>2026.11</em></span> 合作论文被 <em>Education and Information Technologies</em> 录用，受邀加入 <em>Journal of Games, Technology &amp; Interaction</em> 编委会，并上线「教育技术情报雷达」与「STEM 科学枢纽」等网页平台。</li>
     <li><span class="news-date"><em>2026.09</em></span> 忙于科研和上课，无法自拔中~</li>
     <li><span class="news-date"><em>2026.08</em></span> 正在梳理总结硕士期间成果~并奔赴广阔的研究小宇宙！</li>
   </ul>
@@ -108,6 +109,7 @@ redirect_from:
 
 <div id="full-publications" class="publication-view">
   <ul class="full-publication-list">
+    <li><span class="pub-list-badge">EAIT</span> <span class="pub-list-badge pub-list-badge--acc">Accepted</span> <span class="pub-list-title">Investigating the effectiveness and boundary conditions of generative AI scaffolding in science game-based learning</span><br><span class="pub-list-authors">Gong, Y., <strong>Wang, M. (王珉锴)</strong>, Li, W., Gu, H., Peng, H., Chi, H., &amp; Qian, Y. (2026).</span> <span class="pub-list-note"><em>Education and Information Technologies</em>. 已录用，待见刊。<span class="pub-list-metric">（JCR Q1，IF = 7.2）</span></span></li>
     <li><span class="pub-list-badge">npj DM</span> <span class="pub-list-badge pub-list-badge--pub">Published</span> <span class="pub-list-title">Intervention fidelity and competency translation of serious games in pharmacy education: a scoping umbrella review</span><br><span class="pub-list-authors">Yu, Y.<sup>†</sup>, <strong>Wang, M. (王珉锴)<sup>†</sup></strong>, Gong, Y., Zhang, D., Wu, F., &amp; Gu, H. (2026).</span> <span class="pub-list-note"><em>npj Digital Medicine</em>. <span class="pub-list-metric">（<sup>†</sup>共同第一作者；IF = 18.0）</span></span> <span class="pub-list-links"><a href="https://doi.org/10.1038/s41746-026-03182-4" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">CSSCI</span> <span class="pub-list-title">智能时代，教育何为——2026 世界数字教育大会综述</span><br><span class="pub-list-authors">翟雪松, <strong>王珉锴</strong>, 程莉莉, 赵川 (2026).</span> <span class="pub-list-note"><em>开放教育研究</em>, 32(3), 59-66. <span class="pub-list-metric">（CSSCI，复合 IF = 11.401）</span></span> <span class="pub-list-links"><a href="https://openedu.sou.edu.cn/frontsite/series_details.aspx?id=2800" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">JECR</span> <span class="pub-list-title">Generative Scaffolding in Pre-Trip Games: Effects of a GenAI-Chatbot on Inquiry-Based Learning</span><br><span class="pub-list-authors">Chen, Q., Gong, Y., <strong>Wang, M. (王珉锴)</strong>, Lin, J., Gu, H., Peng, H., &amp; Chi, H. (2026).</span> <span class="pub-list-note"><em>Journal of Educational Computing Research</em>. Advance online publication. <span class="pub-list-metric">（JCR Q1，IF = 8.5）</span></span> <span class="pub-list-links"><a href="https://doi.org/10.1177/07356331261474369" target="_blank" rel="noopener">[Link]</a></span></li>
@@ -125,8 +127,15 @@ redirect_from:
 
 </section>
 <section class="home-section home-section--tint" aria-labelledby="projects">
-<h2 id="projects">项目与作品</h2>
-<div class="project-grid">
+<div class="project-shelf-header">
+  <h2 id="projects">项目与作品</h2>
+  <div class="project-shelf-controls" role="group" aria-label="横向滚动浏览项目与作品">
+    <output class="project-shelf-counter" aria-live="off">01 / 09</output>
+    <button type="button" class="project-shelf-btn project-shelf-btn--prev" aria-label="向左滚动项目" title="向左滚动"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+    <button type="button" class="project-shelf-btn project-shelf-btn--next" aria-label="向右滚动项目" title="向右滚动"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+  </div>
+</div>
+<div class="project-grid" tabindex="0" aria-label="项目与作品横向列表">
 
 <div class="project-card" id="sanguo-sandtable">
   <div class="publication-row">
@@ -140,6 +149,55 @@ redirect_from:
       提供 90 位人物和 6 个开局，由玩家自行决定人物去向、阵营与战斗结局，用命名快照和纪事保留自己的三国故事。<br>
       <b><i>Open-source Game</i></b> <a href="https://github.com/minkaiwang/sanguo-sandtable" target="_blank" rel="noopener">[GitHub]</a> <a href="https://github.com/minkaiwang/sanguo-sandtable/releases" target="_blank" rel="noopener">[Windows]</a>
       <small class="project-credit">代码采用 MIT 许可；史料与素材署名见仓库。</small>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator" data-interval="4500">
+      <img src="/images/project-radar-home.webp" alt="教育技术情报雷达首页检索与游戏化学习学者共著关系预览" width="1440" height="900" loading="lazy" decoding="async">
+      <img src="/images/project-radar-kg.webp" alt="教育技术情报雷达《远程教育杂志》知识图谱概念聚类与文献面板" width="1440" height="900" loading="lazy" decoding="async">
+      <img src="/images/project-radar-twin.webp" alt="教育技术情报雷达数字孪生大屏知识星图视图" width="1440" height="900" loading="lazy" decoding="async">
+    </div>
+    <div>
+      <strong>教育技术情报雷达</strong><br>
+      <i>参与设计 / 开发的教育技术学术检索与知识图谱平台。</i><br>
+      整合学者档案、C 刊文献、科研课题与《远程教育杂志》专题知识图谱，支持共著关系网络、概念聚类、数字孪生大屏与研究资源发现。<br>
+      <b><i>Web Project</i></b> <a href="https://radar.science-hub.cn/" target="_blank" rel="noopener">[Website]</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator" data-interval="4500">
+      <img src="/images/project-science-hub-home.webp" alt="STEM 科学枢纽首页热门科学互动作品社区与每日签到" width="1440" height="900" loading="lazy" decoding="async">
+      <img src="/images/project-science-hub-work.webp" alt="STEM 科学枢纽交互式模拟作品《地球自转与公转模拟器》运行画面" width="1440" height="900" loading="lazy" decoding="async">
+      <img src="/images/project-science-hub-studio.webp" alt="STEM 科学枢纽对话式创作空间与实时作品预览界面" width="1440" height="900" loading="lazy" decoding="async">
+    </div>
+    <div>
+      <strong>STEM 科学枢纽（Science Hub）</strong><br>
+      <i>参与设计 / 开发的面向基础教育的科学学习开源社区与创作平台。</i><br>
+      面向中小学师生提供游戏化科学实验与数学互动体验，支持具身交互、社区作品探索、对话式创作与班级分享。<br>
+      <b><i>Web Project</i></b> <a href="https://science-hub.cn/" target="_blank" rel="noopener">[Website]</a>
+    </div>
+  </div>
+</div>
+
+<div class="project-card">
+  <div class="publication-row">
+    <div class="pub-media-rotator" data-interval="4500">
+      <img src="/images/project-assessment-home-20261125.webp" alt="数字竞技人机协同能力测评系统新版首页与能力小测试、CBTI 入口" width="1440" height="900" loading="lazy" decoding="async">
+      <img src="/images/project-assessment-experience-20261125.webp" alt="数字竞技体验中心 12 项基础反应、记忆认知与控制追踪任务及任务预演" width="1440" height="900" loading="lazy" decoding="async">
+      <img src="/images/project-assessment-cbti-20261125.webp" alt="CBTI 赛博竞技人格图鉴新版趣味体验入口" width="1440" height="900" loading="lazy" decoding="async">
+      <img src="/images/project-assessment-cognitive-20261125.webp" alt="数字竞技人机协同能力专业测评服务与生理—心理—认知三维方案概览" width="1440" height="900" loading="lazy" decoding="async">
+    </div>
+    <div>
+      <strong>数字竞技潜能测评系统</strong><br>
+      <i>参与设计 / 开发的网页系统。</i><br>
+      面向电竞及人机协同能力画像与成长追踪，提供 12 项反应/记忆/操作能力体验、CBTI 趣味人格、三维专业测评、排名与数据化反馈等功能。<br>
+      <b><i>Web Project</i></b> <a href="https://www.esports-data.online/assessment/" target="_blank" rel="noopener">[Website]</a>
     </div>
   </div>
 </div>
@@ -188,23 +246,6 @@ redirect_from:
       <i>ITCH 平台红色旅游教育游戏。</i><br>
       通过情境探索与角色扮演支持红色文化学习的教育游戏作品。<br>
       <b><i>Game Project</i></b> <a href="https://charmpoint.itch.io/bncsj" target="_blank" rel="noopener">[itch.io]</a> <a href="https://weixin.qq.com/sph/AMLBDMhxYC" target="_blank" rel="noopener">[视频演示]</a>
-    </div>
-  </div>
-</div>
-
-<div class="project-card">
-  <div class="publication-row">
-    <div class="pub-media-rotator" data-interval="4500">
-      <img src="/images/esports-assessment-system-20261103.webp" alt="数字竞技潜能测评系统页面截图" loading="lazy" decoding="async">
-      <img src="/images/project-assessment-experience.webp" alt="数字竞技能力体验项目目录与瞄准训练任务预演" width="1440" height="960" loading="lazy" decoding="async">
-      <img src="/images/project-assessment-cbti.webp" alt="CBTI 赛博竞技人格图鉴的趣味体验入口" width="1440" height="768" loading="lazy" decoding="async">
-      <img src="/images/project-assessment-dimensions.webp" alt="专业测评服务中的生理、心理与认知三维测评体系" width="1296" height="699" loading="lazy" decoding="async">
-    </div>
-    <div>
-      <strong>数字竞技潜能测评系统</strong><br>
-      <i>参与设计 / 开发的网页系统。</i><br>
-      面向电竞选手能力画像与成长追踪，支持体验、测评、排名与数据化反馈等功能。<br>
-      <b><i>Web Project</i></b> <a href="https://www.esports-data.online/assessment/" target="_blank" rel="noopener">[Website]</a>
     </div>
   </div>
 </div>
@@ -299,6 +340,13 @@ redirect_from:
 <h2 id="services">专业服务与交流</h2>
 
 <div class="text-card">
+  <strong>期刊编委 Editorial Board</strong>
+  <ul class="compact-list">
+    <li><em>Journal of Games, Technology &amp; Interaction</em>（Editorial Board Member，2026 – ）<a href="https://journals.weyoungpress.com/jgti/en" target="_blank" rel="noopener">[Website]</a></li>
+  </ul>
+</div>
+
+<div class="text-card">
   <strong>期刊审稿人 Reviewer</strong>
   <ul class="two-column-list journal-list">
     <li><em>Artificial Intelligence Review</em></li>
@@ -328,6 +376,8 @@ redirect_from:
     <li><em>Social Sciences &amp; Humanities Open</em></li>
     <li><em>Discover Artificial Intelligence</em></li>
     <li><em>Discover Psychology</em></li>
+    <li><em>Computers &amp; Education Open</em></li>
+    <li><em>International Journal of Educational Research Open</em></li>
   </ul>
 </div>
 
@@ -397,6 +447,6 @@ redirect_from:
   </div>
 </div>
 </section>
-<script src="/assets/js/research-home.js?v=20261113b" defer></script>
+<script src="/assets/js/research-home.js?v=20261125a" defer></script>
 <script src="/assets/js/research-controls.js?v=20261106a" defer></script>
 <script src="/assets/js/research-gallery.js?v=20261106a" defer></script>

@@ -12,9 +12,9 @@
 - 手机裁切重点场景；首屏右下角的展开图标在页面内预览完整 1920×1080 图片，预览中仍可独立打开原图，不要求所有画面细节同时塞进每一种屏幕比例。
 - 原件不改动，网页只使用压缩版、响应式裁切和文字区域的局部暗化；不增加室外办公物件或其他虚构设施。
 - 头像、完整作者简介与联系方式置于首屏下方；全部链接直接可见。
-- 简介、动态、经历、完整论文、七个项目、科研、荣誉、专业服务与交流、教学全部展开。
-- 项目为两列大图，手机为单列；图片使用 contain，保留原图完整内容。
-- 《三国推演志》保留项目区首位，与其余六个作品使用相同宽度和图片框，不再独占一行。地图与人物志截图沿用现有切换、暂停与原图预览。
+- 简介、动态、经历、完整论文、九个项目、科研、荣誉、专业服务与交流、教学全部展开。
+- 项目区改为单行横向滚动轨道（`.project-grid` 配合顶部计数 `01 / 09` 与左右翻页按钮及主题细滚动条），桌面单屏展示两张完整卡片与第三张卡片边缘提示，手机展示单卡加下一张边缘提示；图片继续使用 contain 与 52px 工具栏，单图作品保留 `01 / 01` 对齐底栏，打印视图恢复双列网格。
+- 《三国推演志》保留项目区首位，紧随其后展示「教育技术情报雷达」「STEM 科学枢纽（Science Hub）」「数字竞技潜能测评系统」等全部九项作品，所有作品使用相同宽度与图片框。
 - 四张趣味图片集中在简介之后、最新动态之前，由 `_includes/research-interlude.html` 统一维护。大屏四列，960px 及以下两列，手机保持两列；完整显示图片，不叠加正文。婚礼工具的两张截图保留，并可手动切换或暂停轮播。
 - 《等一个蛋》、爱弥斯、《小树芽出发》《百年穿梭机》各增加两张实际画面，优先显示真实界面，原封面和桌宠 GIF 仍在对应轮播与原图预览中。视频号使用普通链接，不嵌入自动播放视频。
 
@@ -96,6 +96,11 @@
 - `project-aemeath-thesis.webp` / `project-aemeath-appearance.webp`：基于公开仓库 `minkaiwang/AemeathDeskPet` 提交 `418a4c15293943100eb34134146e5a5e2f346ff9` 的 `resc/workbench/research_workbench.html`、本地样式和同步占位模块，在隔离浏览器中实际打开并截图。使用初始空数据，展示论文进度和配色界面，未读取个人科研数据；原桌宠 GIF 和上游署名保留。
 - `project-sprout-station.webp` / `project-sprout-title.webp`：从公开 itch.io 版 `html/5966563/xsycf/index.html` 启动并截取完整 1536×720 游戏画布，分别为新生旅程的“动车站台”和标题菜单。原封面 `game2.png` 保留，用户提供的视频号演示链接仍可访问。
 - `project-shuttle-story.webp` / `project-shuttle-title.webp`：从公开 itch.io 版 `html/6414846/index.html` 启动并截取完整游戏画布，分别为“下姜村招待所”的剧情对话和标题菜单。原封面 `game3.png` 保留，并增加用户提供的视频号演示入口。两个视频号桌面页提示微信内观看，本轮未提取受限视频；截图来自公开可运行游戏。
+
+- 2026-11-25 测评截图更新：从 `https://www.esports-data.online/assessment/` 及其 `/experience`、`/cbti`、`/cognitive` 页面重新抓取新版界面（含新版 3D 角色首页、12 项体验任务预演、新版 CBTI 入口与三维专业测评概览），存为 `images/project-assessment-{home,experience,cbti,cognitive}-20261125.webp`（均 1440×900，无 Cookie 浮条），旧版 11-03/11-07 文件保留不删。
+- `project-radar-home.webp`、`project-radar-kg.webp`、`project-radar-twin.webp`：2026-11-25 从 `https://radar.science-hub.cn/`、`/kg` 与 `/kg?mode=twin` 实机截取（1440×900），展示教育技术情报雷达首页共著关系预览、知识图谱概念聚类与数字孪生大屏。
+- `project-science-hub-home.webp`、`project-science-hub-work.webp`、`project-science-hub-studio.webp`：2026-11-25 经用户提供公开体验账号登录后从 `https://science-hub.cn/` 实机截取（1440×900），展示首页热门科学互动作品社区、交互式《地球自转与公转模拟器》运行画面与对话式创作空间；体验凭据不写入站点或文档。
+- 2026-11-25 验收材料、旧 PDF 备份及三页 PDF 渲染位于 `output/update-20261125/`，由 Git 与 Jekyll 排除。
 
 ## 验证入口
 

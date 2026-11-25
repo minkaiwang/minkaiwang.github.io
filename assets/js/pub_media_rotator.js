@@ -15,7 +15,27 @@ document.addEventListener('DOMContentLoaded', () => {
       return Boolean(src && src.trim());
     });
 
-    if (items.length <= 1) return;
+    if (items.length === 0) return;
+
+    if (items.length === 1) {
+      const english = document.documentElement.lang === 'en';
+      const controls = document.createElement('div');
+      controls.className = 'media-controls';
+      const counter = document.createElement('output');
+      counter.className = 'media-counter';
+      counter.setAttribute('aria-live', 'off');
+      counter.textContent = '01 / 01';
+      counter.setAttribute('aria-label', (english ? 'Image ' : '图片 ') + '01 / 01');
+      controls.appendChild(counter);
+      const projectTitle = rotator.closest('.project-card')?.querySelector('strong');
+      if (projectTitle) {
+        rotator.setAttribute('role', 'group');
+        rotator.setAttribute('aria-label', projectTitle.textContent.trim());
+      }
+      rotator.dataset.imageIndex = '0';
+      rotator.appendChild(controls);
+      return;
+    }
 
     let idx = 0;
     let timerId = null;
@@ -225,4 +245,49 @@ document.addEventListener('DOMContentLoaded', () => {
     show(idx);
     scheduleNext();
   });
+
+  const shelf = document.querySelector('.project-grid');
+  if (shelf) {
+    const cards = Array.from(shelf.querySelectorAll('.project-card'));
+    const prevBtn = document.querySelector('.project-shelf-btn--prev');
+    const nextBtn = document.querySelector('.project-shelf-btn--next');
+    const shelfCounter = document.querySelector('.project-shelf-counter');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const english = document.documentElement.lang === 'en';
+    let scrollRaf = 0;
+
+    const getStep = () => {
+      const first = cards[0];
+      if (!first) return 440;
+      const gap = Number.parseFloat(getComputedStyle(shelf).columnGap || getComputedStyle(shelf).gap || '28') || 28;
+      return first.getBoundingClientRect().width + gap;
+    };
+
+    const updateShelf = () => {
+      scrollRaf = 0;
+      const maxScroll = Math.max(0, shelf.scrollWidth - shelf.clientWidth);
+      if (prevBtn) prevBtn.disabled = shelf.scrollLeft <= 2;
+      if (nextBtn) nextBtn.disabled = shelf.scrollLeft >= maxScroll - 2;
+      if (shelfCounter && cards.length) {
+        const step = getStep();
+        const current = Math.min(cards.length, Math.max(1, Math.round(shelf.scrollLeft / step) + 1));
+        const text = String(current).padStart(2, '0') + ' / ' + String(cards.length).padStart(2, '0');
+        shelfCounter.textContent = text;
+        shelfCounter.setAttribute('aria-label', (english ? 'Project ' : '项目 ') + text);
+      }
+    };
+
+    const scrollShelf = (direction) => {
+      const instant = reduceMotion.matches || (document.documentElement.dataset.motion && document.documentElement.dataset.motion !== 'full');
+      shelf.scrollBy({ left: direction * getStep(), behavior: instant ? 'auto' : 'smooth' });
+    };
+
+    if (prevBtn) prevBtn.addEventListener('click', () => scrollShelf(-1));
+    if (nextBtn) nextBtn.addEventListener('click', () => scrollShelf(1));
+    shelf.addEventListener('scroll', () => {
+      if (!scrollRaf) scrollRaf = requestAnimationFrame(updateShelf);
+    }, { passive: true });
+    window.addEventListener('resize', updateShelf);
+    updateShelf();
+  }
 });

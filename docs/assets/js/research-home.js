@@ -117,13 +117,15 @@ document.addEventListener('DOMContentLoaded', function () {
       const range = document.createRange();
       let node;
       while ((node = walker.nextNode())) {
-        if (!node.textContent.trim() || node.parentElement.closest('script, style, [aria-hidden="true"]')) continue;
+        if (!node.textContent.trim() || node.parentElement.closest('script, style, [aria-hidden="true"], .project-grid')) continue;
         range.selectNodeContents(node);
         Array.from(range.getClientRects()).forEach(function (rect) { remember(rect, 2); });
       }
     });
+    const projectGrid = document.querySelector('.project-grid');
+    if (projectGrid) remember(projectGrid.getBoundingClientRect(), 4);
     document.querySelectorAll('.research-home img, .research-home a, .research-home button, .page__footer a').forEach(function (element) {
-      if (element.closest('.home-tools') || (element.tagName === 'IMG' && element.closest('.research-hero'))) return;
+      if (element.closest('.home-tools, .project-grid') || (element.tagName === 'IMG' && element.closest('.research-hero'))) return;
       remember(element.getBoundingClientRect(), 4);
     });
     updateExclusion(true);
