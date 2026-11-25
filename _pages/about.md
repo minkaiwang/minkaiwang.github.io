@@ -121,7 +121,6 @@ redirect_from:
     <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Impact of a Digital Game-Based AI Chatbot on Students' Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum</span><br><span class="pub-list-authors">Xu, Y., Zhu, J., <strong>Wang, M. (王珉锴)</strong>, Qian, F., Yang, Y., &amp; Zhang, J. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6418. <span class="pub-list-metric">（JCR Q2，IF = 2.9）</span></span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6418" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture</span><br><span class="pub-list-authors">Zhang, J., Zhu, J., Tu, W., <strong>Wang, M. (王珉锴)</strong>, Yang, Y., Qian, F., &amp; Xu, Y. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6484. <span class="pub-list-metric">（JCR Q2，IF = 2.9）</span></span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6484" target="_blank" rel="noopener">[Link]</a></span></li>
   </ul>
-  <p class="metric-note">期刊指标依据各条目最近一次核实信息标注；IF 为期刊层面指标。ESI 高被引状态依据 Web of Science 检索结果，名单会随 ESI 更新而变化。</p>
 </div>
 
 </section>
@@ -399,6 +398,7 @@ redirect_from:
     <li>“科技+电竞”亚洲青年领袖沙龙（2026，杭州）<span class="activity-role">｜参会</span></li>
     <li>第20届亚洲运动会（2026/爱知·名古屋）电子竞技国家集训队（2026，昆明）<span class="activity-role">｜科研保障</span></li>
     <li>全球南方国家AI素养提升共创营（2026，杭州）<span class="activity-role">｜培训保障</span></li>
+    <li>AG电竞集团华东总部启用仪式（2026，嘉兴）<span class="activity-role">｜参加</span></li>
     <li>联合国大学澳门人工智能大会（2026，澳门）<span class="activity-role">｜参会</span></li>
   </ul>
 </div>

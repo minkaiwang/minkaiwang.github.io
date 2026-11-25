@@ -120,7 +120,6 @@ stylesheets:
     <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Impact of a Digital Game-Based AI Chatbot on Students' Academic Performance, Higher-Order Thinking, and Behavioral Patterns in an Information Technology Curriculum</span><br><span class="pub-list-authors">Xu, Y., Zhu, J., <strong>Wang, M.</strong>, Qian, F., Yang, Y., &amp; Zhang, J. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6418. <span class="pub-list-metric">(JCR Q2, IF = 2.9)</span></span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6418" target="_blank" rel="noopener">[Link]</a></span></li>
     <li><span class="pub-list-badge">AS</span> <span class="pub-list-title">The Effectiveness of a Digital Twin Learning System in Assisting Engineering Education Courses: A Case of Landscape Architecture</span><br><span class="pub-list-authors">Zhang, J., Zhu, J., Tu, W., <strong>Wang, M.</strong>, Yang, Y., Qian, F., &amp; Xu, Y. (2024).</span> <span class="pub-list-note"><em>Applied Sciences</em>, 14(15): 6484. <span class="pub-list-metric">(JCR Q2, IF = 2.9)</span></span> <span class="pub-list-links"><a href="https://www.mdpi.com/2076-3417/14/15/6484" target="_blank" rel="noopener">[Link]</a></span></li>
   </ul>
-  <p class="metric-note">Journal metrics reflect the most recently verified information for each entry; impact factors are journal-level indicators. The ESI Highly Cited status follows the supplied Web of Science record and may change with ESI updates.</p>
 </div>
 
 </section>
@@ -388,6 +387,7 @@ stylesheets:
     <li>Asian Young Leaders Salon on "Technology + Esports" (2026, Hangzhou) <span class="activity-role">| Attendee</span></li>
     <li>National Esports Training Team for the 20th Asian Games (2026, Aichi-Nagoya), training in Kunming (2026) <span class="activity-role">| Research support</span></li>
     <li>AI Literacy Co-creation Camp for Global South Countries (2026, Hangzhou) <span class="activity-role">| Training support</span></li>
+    <li>Opening Ceremony of AG Esports Group East China Headquarters (2026, Jiaxing) <span class="activity-role">| Attendee</span></li>
     <li>UNU Macau AI Conference (2026, Macau) <span class="activity-role">| Attendee</span></li>
   </ul>
 </div>
