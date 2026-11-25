@@ -99,10 +99,10 @@ html[lang="en"] .research-home .research-hero__name { font-family: "Research San
 .home-intro strong, .key-achievement { color: #e0cfab; background: linear-gradient(transparent 66%, #3b3529 66%); }
 .home-section { position: relative; }
 .home-section h2 { display: block; color: #e5eae8; font-family: var(--display-font); font-size: 32px; font-weight: 800; }
-.home-section h2::after { display: block; margin-top: 15px; width: 58px; height: 2px; background: var(--accent); clip-path: polygon(0 0, 100% 0, calc(100% - 4px) 100%, 0 100%); }
+.home-section h2::after { display: block; margin-top: 10px; width: 58px; height: 2px; background: var(--accent); clip-path: polygon(0 0, 100% 0, calc(100% - 4px) 100%, 0 100%); }
 html[lang="en"] .research-home h2 { font-size: 38px; font-weight: 700; }
 .news-date { color: var(--accent); }
-.full-publication-list li { border-top-color: var(--line); font-size: 15px; line-height: 1.85; }
+.full-publication-list li { border-top-color: var(--line); font-size: 15px; line-height: 1.64; }
 .pub-list-title { color: #eef4f7; }
 .pub-list-authors strong { color: #dbc89e; }
 .pub-list-badge { color: var(--accent); border-color: #315d67; background: #0c1c23; border-radius: 0; }

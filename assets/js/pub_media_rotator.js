@@ -249,12 +249,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const shelf = document.querySelector('.project-grid');
   if (shelf) {
     const cards = Array.from(shelf.querySelectorAll('.project-card'));
+    const controlsWrap = document.querySelector('.project-shelf-controls');
     const prevBtn = document.querySelector('.project-shelf-btn--prev');
+    const pauseBtn = document.querySelector('.project-shelf-btn--pause');
     const nextBtn = document.querySelector('.project-shelf-btn--next');
     const shelfCounter = document.querySelector('.project-shelf-counter');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
     const english = document.documentElement.lang === 'en';
+    const autoIntervalMs = 6500;
     let scrollRaf = 0;
+    let autoTimer = 0;
+    let shelfPaused = false;
+    let shelfVisible = false;
+    let shelfHovering = false;
+
+    const motionStopped = () => reduceMotion.matches ||
+      (document.documentElement.dataset.motion && document.documentElement.dataset.motion !== 'full');
 
     const getStep = () => {
       const first = cards[0];
@@ -263,31 +274,115 @@ document.addEventListener('DOMContentLoaded', () => {
       return first.getBoundingClientRect().width + gap;
     };
 
+    const updatePauseBtn = () => {
+      if (!pauseBtn) return;
+      const stopped = shelfPaused || motionStopped();
+      const label = motionStopped()
+        ? (english ? 'Visual effects are paused' : '视觉动效已暂停')
+        : shelfPaused
+          ? (english ? 'Play project carousel' : '播放项目轮播')
+          : (english ? 'Pause project carousel' : '暂停项目轮播');
+      pauseBtn.title = label;
+      pauseBtn.setAttribute('aria-label', label);
+      pauseBtn.disabled = Boolean(motionStopped());
+      const icon = pauseBtn.querySelector('i');
+      if (icon) icon.className = 'fas fa-' + (stopped ? 'play' : 'pause');
+    };
+
+    const clearAuto = () => {
+      if (autoTimer) window.clearTimeout(autoTimer);
+      autoTimer = 0;
+    };
+
+    const scrollShelf = (direction, loop = true) => {
+      const maxScroll = Math.max(0, shelf.scrollWidth - shelf.clientWidth);
+      if (maxScroll <= 4) return;
+      const instant = reduceMotion.matches || motionStopped();
+      const behavior = instant ? 'auto' : 'smooth';
+      if (direction > 0 && shelf.scrollLeft >= maxScroll - 8) {
+        if (loop) shelf.scrollTo({ left: 0, behavior });
+        return;
+      }
+      if (direction < 0 && shelf.scrollLeft <= 8) {
+        if (loop) shelf.scrollTo({ left: maxScroll, behavior });
+        return;
+      }
+      shelf.scrollBy({ left: direction * getStep(), behavior });
+    };
+
+    const scheduleAuto = () => {
+      clearAuto();
+      if (shelfPaused || shelfHovering || motionStopped() || !shelfVisible || document.hidden || document.documentElement.classList.contains('image-viewer-open')) return;
+      autoTimer = window.setTimeout(() => {
+        scrollShelf(1, true);
+        scheduleAuto();
+      }, autoIntervalMs);
+    };
+
     const updateShelf = () => {
       scrollRaf = 0;
-      const maxScroll = Math.max(0, shelf.scrollWidth - shelf.clientWidth);
-      if (prevBtn) prevBtn.disabled = shelf.scrollLeft <= 2;
-      if (nextBtn) nextBtn.disabled = shelf.scrollLeft >= maxScroll - 2;
       if (shelfCounter && cards.length) {
         const step = getStep();
-        const current = Math.min(cards.length, Math.max(1, Math.round(shelf.scrollLeft / step) + 1));
+        const maxScroll = Math.max(0, shelf.scrollWidth - shelf.clientWidth);
+        const atEnd = maxScroll > 4 && shelf.scrollLeft >= maxScroll - 8;
+        const current = atEnd ? cards.length : Math.min(cards.length, Math.max(1, Math.round(shelf.scrollLeft / step) + 1));
         const text = String(current).padStart(2, '0') + ' / ' + String(cards.length).padStart(2, '0');
         shelfCounter.textContent = text;
         shelfCounter.setAttribute('aria-label', (english ? 'Project ' : '项目 ') + text);
       }
     };
 
-    const scrollShelf = (direction) => {
-      const instant = reduceMotion.matches || (document.documentElement.dataset.motion && document.documentElement.dataset.motion !== 'full');
-      shelf.scrollBy({ left: direction * getStep(), behavior: instant ? 'auto' : 'smooth' });
-    };
+    if (prevBtn) prevBtn.addEventListener('click', () => { scrollShelf(-1, true); scheduleAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { scrollShelf(1, true); scheduleAuto(); });
+    if (pauseBtn) pauseBtn.addEventListener('click', () => {
+      shelfPaused = !shelfPaused;
+      updatePauseBtn();
+      scheduleAuto();
+    });
 
-    if (prevBtn) prevBtn.addEventListener('click', () => scrollShelf(-1));
-    if (nextBtn) nextBtn.addEventListener('click', () => scrollShelf(1));
+    [shelf, controlsWrap].forEach((el) => {
+      if (!el) return;
+      el.addEventListener('pointerenter', (event) => {
+        if (!finePointer.matches || event.pointerType === 'touch') return;
+        shelfHovering = true;
+        clearAuto();
+      });
+      el.addEventListener('pointerleave', () => {
+        if (!shelfHovering) return;
+        shelfHovering = false;
+        scheduleAuto();
+      });
+    });
+
+    shelf.addEventListener('focusin', (event) => {
+      if (!event.target.matches(':focus-visible')) return;
+      shelfPaused = true;
+      updatePauseBtn();
+      clearAuto();
+    });
+    shelf.addEventListener('touchstart', () => { scheduleAuto(); }, { passive: true });
+    shelf.addEventListener('wheel', () => { scheduleAuto(); }, { passive: true });
+
     shelf.addEventListener('scroll', () => {
       if (!scrollRaf) scrollRaf = requestAnimationFrame(updateShelf);
     }, { passive: true });
+
+    const syncShelfMotion = () => {
+      updatePauseBtn();
+      scheduleAuto();
+    };
+    reduceMotion.addEventListener('change', syncShelfMotion);
+    document.addEventListener('homepage:motionchange', syncShelfMotion);
+    document.addEventListener('homepage:gallerychange', syncShelfMotion);
+    document.addEventListener('visibilitychange', syncShelfMotion);
     window.addEventListener('resize', updateShelf);
+    new IntersectionObserver((entries) => {
+      shelfVisible = entries[0].isIntersecting;
+      scheduleAuto();
+    }).observe(shelf);
+
+    updatePauseBtn();
     updateShelf();
+    scheduleAuto();
   }
 });

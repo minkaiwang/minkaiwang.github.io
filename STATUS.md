@@ -1,11 +1,16 @@
 # 当前状态
 
 - 项目：`D:\learning\minkaiwang\minkaiwang.github.io`，Jekyll 个人学术主页。
-- 当前任务（2026-11-25）：经用户确认，完成全部 5 项更新、体验账号登录截图补齐及中英文文案/动态润色，准备提交并推送 `main` 发布上线。
+- 当前任务（2026-11-25）：第二轮体验打磨完成并推送发布（动态保持 09 月、新增联合国大学澳门人工智能大会、作品区慢速自动轮播与全站间距/行距收紧）。
 - 编辑者：Antigravity；本轮为单人编辑，未调用子智能体。
 - 权威内容：`_pages/about.md`、`_pages/en.md`；PDF 内容以 `_pages/resume.html` 为准。
-- 当前线上界面：上一线上交互细化版提交 `f4f9239`（记录提交 `9bc6aa8`）；本轮新提交即将推送 `main`。
-- 本轮完成（2026-11-25）：
+- 当前线上界面：本轮第一版已推 `7f12fe1`，现推送第二轮间距与自动轮播打磨版至 `main`。
+- 第二轮完成（2026-11-25，资源版本 `20261125b`）：
+  - ① 最新动态恢复保留至 `2026.09` / `2026.08`（中英文共 2 条）。
+  - ② 项目与作品横向轨道增加慢速自动轮播（6.5 秒间隔，末尾循环回首张），标题右侧配套 `< || >` 控制组；细指针悬停、键盘焦点、离屏、标签页隐藏、灯箱打开、全局动效暂停及减少动态效果时自动暂停，触控/滚轮操作后重置计时不与浏览冲突。
+  - ③ 「会议与活动参与」新增「联合国大学澳门人工智能大会（2026，澳门）｜参会」/ `UNU Macau AI Conference (2026, Macau) | Attendee`（现共 7 项），中英文与 PDF 同步。
+  - ④ 全站行距与分区留白统一收紧（桌面分区 padding 68px→44px、标题底距 31px→20px、论文条目 padding 25px→14px 且行距 1.85→1.62、审稿与列表项间距 13px→6~7px、作品图高 276px→248px，移动端同步压缩），桌面单屏信息密度显著提升且无拥挤或溢出；PDF 重生成保持 3 页 A4（`files/` 与 `docs/files/` 字节一致）。
+- 本轮第一版完成（2026-11-25，提交 `7f12fe1`）：
   - ① **数字竞技潜能测评系统重新截图与简介同步**：按 2026-11-25 线上新版界面重新截取 4 张 WebP（`project-assessment-{home,experience,cbti,cognitive}-20261125.webp`，均 1440×900，无 Cookie 提示条；保留历史文件未删），同步中英文项目介绍（12 项体验测试、CBTI 趣味人格、三维专业测评、排名与数据化反馈）及 PDF 条目。
   - ② **项目与作品改为一行横向滚动 + 新增两项参与设计/开发的网站**：`.project-grid` 改为单行横向滚动轨道（`scroll-snap` + 顶部 `01 / 09` 计数与左右翻页按钮 + 主题适配细滚动条，打印视图自动恢复双列网格），`pub_media_rotator.js` 兼容单图与多图底栏对齐，`research-home.js` 将 `.project-grid` 整体纳入粒子遮罩避免横滑错位。新增「教育技术情报雷达 / EdTech Radar」（`https://radar.science-hub.cn/`，3 张实机截图：首页共著预览、知识图谱、数字孪生大屏）与「STEM 科学枢纽 / STEM Science Hub」（`https://science-hub.cn/`，经用户授权体验账号实机截取 3 张：首页互动作品社区、交互式《地球自转与公转模拟器》、对话式创作空间；凭据不写入站点或文档）。当前共 9 项作品、26 张作品图。
   - ③ **新增录用论文**：顶部新增 *Education and Information Technologies* 录用论文《Investigating the effectiveness and boundary conditions of generative AI scaffolding in science game-based learning》（Gong, Y., **Wang, M.**, Li, W., Gu, H., Peng, H., Chi, H., & Qian, Y., 2026；EAIT 徽章 + 蓝青色 `Accepted` 徽章；Springer 官方页核实 JCR Q1，IF = 7.2），中英文与 PDF 同步，总论文数 12 篇。

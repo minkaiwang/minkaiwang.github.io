@@ -7,8 +7,8 @@ locale: en-US
 seo_title: "Minkai Wang · Academic Homepage & CV"
 description: "Minkai Wang's academic homepage and CV, featuring research on game-based learning, AI in education, digital games, and esports education."
 stylesheets:
-  - /assets/css/home.css?v=20261125a
-  - /assets/css/night-city.css?v=20261125a
+  - /assets/css/home.css?v=20261125b
+  - /assets/css/night-city.css?v=20261125b
   - /assets/css/day-city.css?v=20261125a
   - /assets/css/research-motion.css?v=20261113c
 ---
@@ -32,7 +32,6 @@ stylesheets:
 
 <div class="news-box">
   <ul class="news-list">
-    <li><span class="news-date"><em>Nov 2026</em></span> Our paper on generative AI scaffolding in science game-based learning was accepted by <em>Education and Information Technologies</em>; joined the Editorial Board of <em>Journal of Games, Technology &amp; Interaction</em>; and launched web platforms including EdTech Radar and STEM Science Hub.</li>
     <li><span class="news-date"><em>Sept 2026</em></span> Fully immersed in research and classes, with no escape in sight~</li>
     <li><span class="news-date"><em>Aug 2026</em></span> Reviewing and consolidating the work from my master's studies, then setting off into the wider universe of research!</li>
   </ul>
@@ -131,6 +130,7 @@ stylesheets:
   <div class="project-shelf-controls" role="group" aria-label="Scroll projects horizontally">
     <output class="project-shelf-counter" aria-live="off">01 / 09</output>
     <button type="button" class="project-shelf-btn project-shelf-btn--prev" aria-label="Previous projects" title="Scroll left"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+    <button type="button" class="project-shelf-btn project-shelf-btn--pause" aria-label="Pause project carousel" title="Pause project carousel"><i class="fas fa-pause" aria-hidden="true"></i></button>
     <button type="button" class="project-shelf-btn project-shelf-btn--next" aria-label="Next projects" title="Scroll right"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
   </div>
 </div>
@@ -388,6 +388,7 @@ stylesheets:
     <li>Asian Young Leaders Salon on "Technology + Esports" (2026, Hangzhou) <span class="activity-role">| Attendee</span></li>
     <li>National Esports Training Team for the 20th Asian Games (2026, Aichi-Nagoya), training in Kunming (2026) <span class="activity-role">| Research support</span></li>
     <li>AI Literacy Co-creation Camp for Global South Countries (2026, Hangzhou) <span class="activity-role">| Training support</span></li>
+    <li>UNU Macau AI Conference (2026, Macau) <span class="activity-role">| Attendee</span></li>
   </ul>
 </div>
 

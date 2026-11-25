@@ -5,8 +5,8 @@ author_profile: true
 seo_title: "王珉锴 Minkai Wang · 个人简历 CV"
 description: "王珉锴的个人学术主页与简历（CV），聚焦游戏化学习、人工智能教育应用、数字游戏与电竞教育。"
 stylesheets:
-  - /assets/css/home.css?v=20261125a
-  - /assets/css/night-city.css?v=20261125a
+  - /assets/css/home.css?v=20261125b
+  - /assets/css/night-city.css?v=20261125b
   - /assets/css/day-city.css?v=20261125a
   - /assets/css/research-motion.css?v=20261113c
 redirect_from:
@@ -33,7 +33,6 @@ redirect_from:
 
 <div class="news-box">
   <ul class="news-list">
-    <li><span class="news-date"><em>2026.11</em></span> 合作论文被 <em>Education and Information Technologies</em> 录用，受邀加入 <em>Journal of Games, Technology &amp; Interaction</em> 编委会，并上线「教育技术情报雷达」与「STEM 科学枢纽」等网页平台。</li>
     <li><span class="news-date"><em>2026.09</em></span> 忙于科研和上课，无法自拔中~</li>
     <li><span class="news-date"><em>2026.08</em></span> 正在梳理总结硕士期间成果~并奔赴广阔的研究小宇宙！</li>
   </ul>
@@ -132,6 +131,7 @@ redirect_from:
   <div class="project-shelf-controls" role="group" aria-label="横向滚动浏览项目与作品">
     <output class="project-shelf-counter" aria-live="off">01 / 09</output>
     <button type="button" class="project-shelf-btn project-shelf-btn--prev" aria-label="向左滚动项目" title="向左滚动"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+    <button type="button" class="project-shelf-btn project-shelf-btn--pause" aria-label="暂停项目轮播" title="暂停项目轮播"><i class="fas fa-pause" aria-hidden="true"></i></button>
     <button type="button" class="project-shelf-btn project-shelf-btn--next" aria-label="向右滚动项目" title="向右滚动"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
   </div>
 </div>
@@ -399,6 +399,7 @@ redirect_from:
     <li>“科技+电竞”亚洲青年领袖沙龙（2026，杭州）<span class="activity-role">｜参会</span></li>
     <li>第20届亚洲运动会（2026/爱知·名古屋）电子竞技国家集训队（2026，昆明）<span class="activity-role">｜科研保障</span></li>
     <li>全球南方国家AI素养提升共创营（2026，杭州）<span class="activity-role">｜培训保障</span></li>
+    <li>联合国大学澳门人工智能大会（2026，澳门）<span class="activity-role">｜参会</span></li>
   </ul>
 </div>
 
