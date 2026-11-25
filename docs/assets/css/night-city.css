@@ -131,7 +131,9 @@ html[lang="en"] .research-home h2 { font-size: 38px; font-weight: 700; }
 .project-card:hover .pub-media-rotator { outline: 2px solid var(--accent); outline-offset: -2px; }
 .media-controls button { color: var(--accent); border-color: #597580; background: #080f14; border-radius: 0; }
 .media-controls button:hover { color: #080b0d; background: var(--accent); }
-.meme-interlude { border-color: var(--line); border-radius: 0; background: var(--surface); }
+.meme-interlude { border-color: var(--line); border-radius: 0; background: var(--surface-soft); }
+.pub-filter-btn { border-radius: 0; }
+.pub-filter-btn.is-active { color: var(--accent); background: #1d3138; border-color: var(--accent); }
 
 .home-section--tint { color: var(--ink); background: var(--surface-soft); }
 .home-section--tint::before { content: ""; position: absolute; top: -13px; left: 0; right: 0; height: 14px; background: var(--surface-soft); clip-path: polygon(0 95%, 8% 95%, 8.5% 45%, 19% 45%, 20% 95%, 37% 95%, 37.6% 0, 39% 0, 39.6% 45%, 64% 45%, 65% 95%, 88% 95%, 88.8% 25%, 90% 25%, 90.8% 95%, 100% 95%, 100% 100%, 0 100%); }

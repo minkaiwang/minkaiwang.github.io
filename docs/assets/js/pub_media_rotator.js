@@ -385,4 +385,32 @@ document.addEventListener('DOMContentLoaded', () => {
     updateShelf();
     scheduleAuto();
   }
+
+  const pubFilterBar = document.querySelector('.pub-filter-bar');
+  const pubList = document.querySelector('.full-publication-list');
+  if (pubFilterBar && pubList) {
+    const pubItems = Array.from(pubList.querySelectorAll(':scope > li'));
+    const filterButtons = Array.from(pubFilterBar.querySelectorAll('.pub-filter-btn'));
+    const matchesFilter = (item, filter) => {
+      if (filter === 'all') return true;
+      if (filter === 'lead') return item.dataset.lead === 'true';
+      return item.dataset.year === filter;
+    };
+    filterButtons.forEach((btn) => {
+      const filter = btn.dataset.filter || 'all';
+      const count = pubItems.filter((item) => matchesFilter(item, filter)).length;
+      const badge = btn.querySelector('.pub-filter-count');
+      if (badge) badge.textContent = String(count);
+      btn.addEventListener('click', () => {
+        filterButtons.forEach((other) => {
+          const active = other === btn;
+          other.classList.toggle('is-active', active);
+          other.setAttribute('aria-pressed', String(active));
+        });
+        pubItems.forEach((item) => {
+          item.hidden = !matchesFilter(item, filter);
+        });
+      });
+    });
+  }
 });

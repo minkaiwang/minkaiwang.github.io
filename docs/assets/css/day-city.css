@@ -134,7 +134,12 @@ html[data-theme="day"] .project-grid::-webkit-scrollbar-track { background: #dce
 html[data-theme="day"] .project-grid::-webkit-scrollbar-thumb { background: #5a8994; }
 html[data-theme="day"] .project-grid::-webkit-scrollbar-thumb:hover { background: #3c7280; }
 html[data-theme="day"] .teaching-group--wide { border-color: var(--line); }
-html[data-theme="day"] .page__footer { color: #53676f; }
+html[data-theme="day"] .page__footer { color: #53676f; background: var(--surface); }
+html[data-theme="day"] .page__footer a { color: var(--muted); }
+html[data-theme="day"] .page__footer a:hover { color: var(--accent); }
+html[data-theme="day"] .meme-interlude { background: #eef3f3; border-color: #d0dcdd; border-radius: 4px; }
+html[data-theme="day"] .pub-filter-btn { border-radius: 3px; }
+html[data-theme="day"] .pub-filter-btn.is-active { color: #20454e; background: #dce9ea; border-color: #3c7280; }
 html[data-theme="day"] .back-to-top { color: #365e68; background: #f8fbfa; border-color: #9bb5ba; }
 html[data-theme="day"] .back-to-top:hover { color: #1c3b43; background: #dceaea; }
 

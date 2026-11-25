@@ -1,25 +1,28 @@
 {% include base_path %}
-{% assign text_locale = page.locale | default: site.locale %}
-{% assign ui_text = site.data.ui-text[text_locale] %}
-{% unless ui_text %}{% assign ui_text = site.data.ui-text[site.locale] %}{% endunless %}
+{% assign footer_is_english = false %}
+{% if page.locale == 'en-US' %}{% assign footer_is_english = true %}{% endif %}
 
-{% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if ui_text.follow_label %}
-      <li><strong>{{ ui_text.follow_label }}</strong></li>
+<div class="research-footer">
+  <div class="research-footer__copy">
+    &copy; {{ site.time | date: '%Y' }} {% if footer_is_english %}Minkai Wang{% else %}王珉锴 Minkai Wang{% endif %}
+  </div>
+  <ul class="research-footer__links">
+    {% if site.author.email %}
+      <li><a href="mailto:{{ site.author.email }}"><i class="fas fa-envelope" aria-hidden="true"></i>{% if footer_is_english %}Email{% else %}邮箱{% endif %}</a></li>
+    {% endif %}
+    {% if site.author.googlescholar %}
+      <li><a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener"><i class="fas fa-graduation-cap" aria-hidden="true"></i>Google Scholar</a></li>
+    {% endif %}
+    {% if site.author.orcid %}
+      <li><a href="{{ site.author.orcid }}" target="_blank" rel="noopener"><i class="ai ai-orcid" aria-hidden="true"></i>ORCID</a></li>
     {% endif %}
     {% if site.author.github %}
-      <li><a href="http://github.com/{{ site.author.github }}"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a></li>
     {% endif %}
-    {% if site.author.bitbucket %}
-      <li><a href="http://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
-    {% endif %}
-    {% if site.atom_feed.hide != true %}
-    <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> {{ ui_text.feed_label | default: "Feed" }}</a></li>
+    {% if footer_is_english %}
+      <li><a href="/" hreflang="zh-CN" lang="zh-CN"><i class="fas fa-language" aria-hidden="true"></i>中文</a></li>
+    {% else %}
+      <li><a href="/en/" hreflang="en" lang="en"><i class="fas fa-language" aria-hidden="true"></i>English</a></li>
     {% endif %}
   </ul>
 </div>
-{% endif %}
-
-<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ ui_text.powered_by | default: "Powered by" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>. Template designed by <a href="https://selen-suyue.github.io" rel="nofollow">Selen-Suyue</a>. Modified by Minkai Wang.</div>

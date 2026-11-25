@@ -182,10 +182,10 @@ document.addEventListener('DOMContentLoaded', function () {
       if (particle.y < 16) particle.y = height - 30;
       const x = particle.x + Math.sin(now / 3800 + particle.phase) * particle.drift;
       const scene = onScene(particle.y);
-      const intensity = scene ? (day ? .9 : 1) : .65;
       const light = day && !scene;
+      const intensity = scene ? (day ? .9 : 1) : (light ? .22 : .65);
       const alpha = (.28 + particle.depth * .12 + .16 * Math.sin(now / 2600 + particle.phase)) * intensity;
-      context.fillStyle = particle.gold ? (light ? '#8b6b35' : '#d4b77b') : (light ? '#3c7280' : '#b3d8dc');
+      context.fillStyle = particle.gold ? (light ? '#b79b68' : '#d4b77b') : (light ? '#7fa6ad' : '#b3d8dc');
       context.globalAlpha = alpha * .16;
       context.fillRect(x - 2, particle.y - 2, particle.size + 4, particle.size + 4);
       context.globalAlpha = alpha;
